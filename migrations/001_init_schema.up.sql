@@ -26,6 +26,14 @@ CREATE TABLE units (
   faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   points INT NOT NULL,
+  
+
+  -- CORE AoS STATS
+  move TEXT,
+  wounds INT,
+  save TEXT,
+  ward TEXT,
+  control INT,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
