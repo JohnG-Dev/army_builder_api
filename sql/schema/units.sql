@@ -4,7 +4,7 @@ CREATE TABLE units (
   name TEXT NOT NULL,
   points INT NOT NULL,
   move TEXT,
-  wounds INT,
+  health INT,
   save TEXT,
   ward TEXT,
   control INT,
