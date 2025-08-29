@@ -7,9 +7,12 @@ import (
 	"os"
 
 	"github.com/jackc/pgx/v5/pgxpool"
+	"go.uber.org/zap"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/api"
+	"github.com/JohnG-Dev/army_builder_api/internal/config"
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
+	"github.com/JohnG-Dev/army_builder_api/internal/handlers"
+	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
 func main() {
@@ -17,6 +20,16 @@ func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = ":8080"
+	}
+
+	env := os.Getenv("ENV")
+	if env == "" {
+		env = "dev"
+	}
+
+	cfg := &config.Config{
+		Env:  env,
+		Port: port,
 	}
 
 	dbURL := os.Getenv("DATABASE_URL")
@@ -29,16 +42,34 @@ func main() {
 	if err != nil {
 		log.Fatalf("Unable to connect to database: %v\n", err)
 	}
+	defer dbpool.Close()
 
 	queries := database.New(dbpool)
 
-	apiCfg := &api.APIConfig{
-		DB: queries,
+	var logger *zap.Logger
+	if cfg.Env == "dev" {
+		logger, _ = zap.NewDevelopment()
+	} else {
+		logger, _ = zap.NewProduction()
 	}
 
-	http.HandleFunc("/games", apiCfg.GetGames)
+	defer logger.Sync()
 
-	log.Printf("Server Starting on %s", port)
+	s := &state.State{
+		DB:     queries,
+		Cfg:    cfg,
+		Logger: logger,
+	}
+
+	http.HandleFunc("/games", func(w http.ResponseWriter, r *http.Request) {
+		handlers.GetGames(s, w, r)
+	})
+
+	s.Logger.Info("Server Starting",
+		zap.String("env", cfg.Env),
+		zap.String("port", cfg.Port),
+	)
+
 	err = http.ListenAndServe(port, nil)
 	if err != nil {
 		log.Fatalf("Server failed: %v\n", err)
