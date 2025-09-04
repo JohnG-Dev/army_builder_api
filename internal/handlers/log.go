@@ -5,24 +5,27 @@ import (
 
 	"go.uber.org/zap"
 
+	"github.com/JohnG-Dev/army_builder_api/internal/middleware"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
-func LogError(s *state.State, r *http.Request, msg string, err error) {
+func logRequestError(s *state.State, r *http.Request, msg string, err error) {
 	s.Logger.Error(
 		msg,
 		zap.Error(err),
 		zap.String("method", r.Method),
 		zap.String("path", r.URL.Path),
 		zap.String("remote_addr", r.RemoteAddr),
+		zap.String("request_id", middleware.GetRequestID(r)),
 	)
 }
 
-func LogInfo(s *state.State, r *http.Request, msg string, fields ...zap.Field) {
+func logRequestInfo(s *state.State, r *http.Request, msg string, fields ...zap.Field) {
 	allFields := append(fields,
 		zap.String("method", r.Method),
 		zap.String("path", r.URL.Path),
 		zap.String("remote_addr", r.RemoteAddr),
+		zap.String("request_id", middleware.GetRequestID(r)),
 	)
 	s.Logger.Info(
 		msg,

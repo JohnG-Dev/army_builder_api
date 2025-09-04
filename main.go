@@ -12,6 +12,7 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/config"
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	"github.com/JohnG-Dev/army_builder_api/internal/handlers"
+	"github.com/JohnG-Dev/army_builder_api/internal/middleware"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
@@ -70,7 +71,9 @@ func main() {
 		zap.String("port", cfg.Port),
 	)
 
-	err = http.ListenAndServe(port, nil)
+	wrappedMux := middleware.MiddlewareRequestID(http.DefaultServeMux)
+
+	err = http.ListenAndServe(port, wrappedMux)
 	if err != nil {
 		log.Fatalf("Server failed: %v\n", err)
 	}
