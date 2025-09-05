@@ -96,12 +96,12 @@ func (q *Queries) GetFaction(ctx context.Context, id uuid.UUID) (Faction, error)
 	return i, err
 }
 
-const getFactions = `-- name: GetFactions :many
+const getFactionsByID = `-- name: GetFactionsByID :many
 SELECT id, game_id, name, allegiance, created_at, updated_at FROM factions WHERE game_id = $1 ORDER BY created_at DESC
 `
 
-func (q *Queries) GetFactions(ctx context.Context, gameID uuid.UUID) ([]Faction, error) {
-	rows, err := q.db.Query(ctx, getFactions, gameID)
+func (q *Queries) GetFactionsByID(ctx context.Context, gameID uuid.UUID) ([]Faction, error) {
+	rows, err := q.db.Query(ctx, getFactionsByID, gameID)
 	if err != nil {
 		return nil, err
 	}
