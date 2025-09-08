@@ -1,6 +1,8 @@
 package handlers
 
 import (
+	"database/sql"
+	"errors"
 	"net/http"
 
 	"github.com/JohnG-Dev/army_builder_api/internal/services"
@@ -46,4 +48,33 @@ func ListFactions(s *state.State, w http.ResponseWriter, r *http.Request) {
 	)
 
 	respondWithJSON(w, http.StatusOK, dbFactionList)
+}
+
+func GetFactionByID(s *state.State, w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+
+	factionID, err := uuid.Parse(id)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "failed to parse uuid", err)
+		return
+	}
+
+	faction, err := services.GetFactionByID(s, r.Context(), factionID)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			logRequestInfo(s, r, "Faction not found in DB")
+
+			respondWithError(w, http.StatusNotFound, "Faction not found in DB", err)
+		} else {
+			logRequestError(s, r, "failed to fetch faction", err)
+
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch faction", err)
+		}
+
+		return
+	}
+
+	logRequestInfo(s, r, "Fetched faction successfully")
+
+	respondWithJSON(w, http.StatusOK, faction)
 }
