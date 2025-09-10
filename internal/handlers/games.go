@@ -9,16 +9,20 @@ import (
 	"go.uber.org/zap"
 )
 
-func GetGames(s *state.State, w http.ResponseWriter, r *http.Request) {
-	dbGames, err := services.GetGames(s, r.Context())
+type GamesHandlers struct {
+	S *state.State
+}
+
+func (h *GamesHandlers) GetGames(w http.ResponseWriter, r *http.Request) {
+	dbGames, err := services.GetGames(h.S, r.Context())
 	if err != nil {
 
-		logRequestError(s, r, "Failed to fetch games", err)
-		respondWithError(w, http.StatusInternalServerError, "Couldn't access database", err)
+		logRequestError(h.S, r, "Failed to fetch games", err)
+		respondWithError(w, http.StatusInternalServerError, "Internal server error", err)
 		return
 	}
 
-	logRequestInfo(s, r, "Fetched games successfully",
+	logRequestInfo(h.S, r, "Fetched games successfully",
 		zap.Int("count", len(dbGames)),
 	)
 	respondWithJSON(w, http.StatusOK, dbGames)

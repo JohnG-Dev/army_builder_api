@@ -12,15 +12,19 @@ import (
 	"go.uber.org/zap"
 )
 
-func ListFactions(s *state.State, w http.ResponseWriter, r *http.Request) {
+type FactionHandlers struct {
+	S *state.State
+}
+
+func (h *FactionHandlers) ListFactions(w http.ResponseWriter, r *http.Request) {
 
 	gameIDString := r.URL.Query().Get("game_id")
 
 	if gameIDString == "" {
-		dbFactionList, err := services.ListFactions(s, r.Context(), nil)
+		dbFactionList, err := services.ListFactions(h.S, r.Context(), nil)
 		if err != nil {
 
-			logRequestError(s, r, "failed to fetch factions", err)
+			logRequestError(h.S, r, "failed to fetch factions", err)
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch factions", err)
 			return
 		}
@@ -35,22 +39,22 @@ func ListFactions(s *state.State, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dbFactionList, err := services.ListFactions(s, r.Context(), &gameID)
+	dbFactionList, err := services.ListFactions(h.S, r.Context(), &gameID)
 	if err != nil {
-		logRequestError(s, r, "failed to fetch factions", err)
+		logRequestError(h.S, r, "failed to fetch factions", err)
 
 		respondWithError(w, http.StatusInternalServerError, "failed to find factions", err)
 		return
 	}
 
-	logRequestInfo(s, r, "Fetched Factions successfully",
+	logRequestInfo(h.S, r, "Fetched Factions successfully",
 		zap.Int("count", len(dbFactionList)),
 	)
 
 	respondWithJSON(w, http.StatusOK, dbFactionList)
 }
 
-func GetFactionByID(s *state.State, w http.ResponseWriter, r *http.Request) {
+func (h *FactionHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request) {
 	id := r.PathValue("id")
 
 	factionID, err := uuid.Parse(id)
@@ -59,14 +63,14 @@ func GetFactionByID(s *state.State, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	faction, err := services.GetFactionByID(s, r.Context(), factionID)
+	faction, err := services.GetFactionByID(h.S, r.Context(), factionID)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			logRequestInfo(s, r, "Faction not found in DB")
+			logRequestInfo(h.S, r, "Faction not found")
 
-			respondWithError(w, http.StatusNotFound, "Faction not found in DB", err)
+			respondWithError(w, http.StatusNotFound, "Faction not found", nil)
 		} else {
-			logRequestError(s, r, "failed to fetch faction", err)
+			logRequestError(h.S, r, "failed to fetch faction", err)
 
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch faction", err)
 		}
@@ -74,7 +78,7 @@ func GetFactionByID(s *state.State, w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	logRequestInfo(s, r, "Fetched faction successfully")
+	logRequestInfo(h.S, r, "Fetched faction successfully")
 
 	respondWithJSON(w, http.StatusOK, faction)
 }
