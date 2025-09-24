@@ -53,11 +53,12 @@ func setupTestState(t *testing.T) *state.State {
 // ✅ Test: Normal case (returns one game)
 func TestGetGames_ReturnsGame(t *testing.T) {
 	s := setupTestState(t)
+	gHandlers := &GamesHandlers{S: s}
 
 	req := httptest.NewRequest(http.MethodGet, "/games", nil)
 	w := httptest.NewRecorder()
 
-	GetGames(s, w, req)
+	gHandlers.GetGames(w, req)
 
 	res := w.Result()
 	defer res.Body.Close()
@@ -90,7 +91,8 @@ func TestGetGames_EmptyDB(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/games", nil)
 	w := httptest.NewRecorder()
 
-	GetGames(s, w, req)
+	gHandlers := &GamesHandlers{S: s}
+	gHandlers.GetGames(w, req)
 
 	res := w.Result()
 	defer res.Body.Close()
@@ -109,6 +111,7 @@ func TestGetGames_EmptyDB(t *testing.T) {
 // ✅ Test: Invalid method (should return 405)
 func TestGetGames_InvalidMethod(t *testing.T) {
 	s := setupTestState(t)
+	gHandlers := &GamesHandlers{S: s}
 
 	req := httptest.NewRequest(http.MethodPost, "/games", nil) // wrong method
 	w := httptest.NewRecorder()
@@ -117,7 +120,7 @@ func TestGetGames_InvalidMethod(t *testing.T) {
 	if req.Method != http.MethodGet {
 		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
 	} else {
-		GetGames(s, w, req)
+		gHandlers.GetGames(w, req)
 	}
 
 	res := w.Result()
@@ -144,10 +147,12 @@ func TestGetGames_MultipleGames(t *testing.T) {
 	logger, _ := zap.NewDevelopment()
 	s := &state.State{DB: queries, Cfg: cfg, Logger: logger}
 
+	gHandlers := &GamesHandlers{S: s}
+
 	req := httptest.NewRequest(http.MethodGet, "/games", nil)
 	w := httptest.NewRecorder()
 
-	GetGames(s, w, req)
+	gHandlers.GetGames(w, req)
 
 	res := w.Result()
 	defer res.Body.Close()
@@ -162,4 +167,3 @@ func TestGetGames_MultipleGames(t *testing.T) {
 		t.Errorf("expected body to contain both games, got %s", string(body))
 	}
 }
-
