@@ -66,12 +66,12 @@ func (q *Queries) DeleteUnit(ctx context.Context, id uuid.UUID) error {
 	return err
 }
 
-const getUnit = `-- name: GetUnit :one
+const getUnitByID = `-- name: GetUnitByID :one
 SELECT id, faction_id, name, points, move, health, save, ward, control, created_at, updated_at FROM units WHERE id = $1
 `
 
-func (q *Queries) GetUnit(ctx context.Context, id uuid.UUID) (Unit, error) {
-	row := q.db.QueryRow(ctx, getUnit, id)
+func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
+	row := q.db.QueryRow(ctx, getUnitByID, id)
 	var i Unit
 	err := row.Scan(
 		&i.ID,
@@ -95,6 +95,42 @@ SELECT id, faction_id, name, points, move, health, save, ward, control, created_
 
 func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, error) {
 	rows, err := q.db.Query(ctx, getUnits, factionID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Unit
+	for rows.Next() {
+		var i Unit
+		if err := rows.Scan(
+			&i.ID,
+			&i.FactionID,
+			&i.Name,
+			&i.Points,
+			&i.Move,
+			&i.Health,
+			&i.Save,
+			&i.Ward,
+			&i.Control,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const listUnits = `-- name: ListUnits :many
+SELECt id, faction_id, name, points, move, health, save, ward, control, created_at, updated_at FROM units
+`
+
+func (q *Queries) ListUnits(ctx context.Context) ([]Unit, error) {
+	rows, err := q.db.Query(ctx, listUnits)
 	if err != nil {
 		return nil, err
 	}
