@@ -12,11 +12,11 @@ import (
 	"go.uber.org/zap"
 )
 
-type FactionHandlers struct {
+type FactionsHandlers struct {
 	S *state.State
 }
 
-func (h *FactionHandlers) ListFactions(w http.ResponseWriter, r *http.Request) {
+func (h *FactionsHandlers) ListFactions(w http.ResponseWriter, r *http.Request) {
 
 	gameIDString := r.URL.Query().Get("game_id")
 
@@ -54,7 +54,7 @@ func (h *FactionHandlers) ListFactions(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, dbFactionList)
 }
 
-func (h *FactionHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request) {
+func (h *FactionsHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request) {
 	id := r.PathValue("id")
 
 	factionID, err := uuid.Parse(id)

@@ -1,4 +1,4 @@
--- name: GetFactions :many
+-- name: GetFactionsByID :many
 SELECT * FROM factions WHERE game_id = $1 ORDER BY created_at DESC;
 
 -- name: GetFaction :one

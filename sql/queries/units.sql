@@ -1,8 +1,11 @@
 -- name: GetUnits :many
 SELECT * FROM units WHERE faction_id = $1 ORDER BY created_at DESC;
 
--- name: GetUnit :one
+-- name: GetUnitByID :one
 SELECT * FROM units WHERE id = $1;
+
+-- name: ListUnits :many
+SELECt * FROM units;
 
 -- name: CreateUnit :one
 INSERT INTO units (faction_id, name, points, move, health, save, ward, control)
