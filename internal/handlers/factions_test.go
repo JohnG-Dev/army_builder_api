@@ -58,7 +58,7 @@ func setupTestFactionState(t *testing.T) *state.State {
 
 func TestListFactions_ReturnsFaction(t *testing.T) {
 	s := setupTestFactionState(t)
-	fHandlers := &FactionHandlers{S: s}
+	fHandlers := &FactionsHandlers{S: s}
 
 	req := httptest.NewRequest(http.MethodGet, "/factions", nil)
 	w := httptest.NewRecorder()
@@ -81,7 +81,7 @@ func TestListFactions_ReturnsFaction(t *testing.T) {
 
 func TestGetFactionByID_NotFound(t *testing.T) {
 	s := setupTestFactionState(t)
-	fHandlers := &FactionHandlers{S: s}
+	fHandlers := &FactionsHandlers{S: s}
 
 	// Use a random UUID that won’t exist
 	req := httptest.NewRequest(http.MethodGet, "/factions/"+uuid.NewString(), nil)
@@ -114,7 +114,7 @@ func TestListFactions_Empty(t *testing.T) {
 	logger, _ := zap.NewDevelopment()
 	s := &state.State{DB: queries, Cfg: cfg, Logger: logger}
 
-	fHandlers := &FactionHandlers{S: s}
+	fHandlers := &FactionsHandlers{S: s}
 
 	req := httptest.NewRequest(http.MethodGet, "/factions", nil)
 	w := httptest.NewRecorder()
@@ -160,7 +160,7 @@ func TestListFactions_FilterByGameID(t *testing.T) {
 	cfg := &config.Config{Env: "test", Port: ":8080"}
 	logger, _ := zap.NewDevelopment()
 	s := &state.State{DB: queries, Cfg: cfg, Logger: logger}
-	fHandlers := &FactionHandlers{S: s}
+	fHandlers := &FactionsHandlers{S: s}
 
 	// ✅ Request with game_id filter (AoS)
 	req := httptest.NewRequest(http.MethodGet, "/factions?game_id="+aosID.String(), nil)

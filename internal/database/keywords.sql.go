@@ -99,7 +99,7 @@ func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]G
 }
 
 const getUnitsWithKeyword = `-- name: GetUnitsWithKeyword :many
-SELECT u.id, u.faction_id, u.name, u.points, u.move, u.health, u.save, u.ward, u.control, u.created_at, u.updated_at
+SELECT u.id, u.faction_id, u.name, u.points, u.move, u.health, u.save, u.ward, u.control, u.min_size, u.max_size, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON uk.unit_id = u.id
 JOIN keywords k ON k.id = uk.keyword_id
@@ -125,6 +125,8 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.MinSize,
+			&i.MaxSize,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {
@@ -139,7 +141,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 }
 
 const getUnitsWithKeywordAndValue = `-- name: GetUnitsWithKeywordAndValue :many
-SELECT u.id, u.faction_id, u.name, u.points, u.move, u.health, u.save, u.ward, u.control, u.created_at, u.updated_at
+SELECT u.id, u.faction_id, u.name, u.points, u.move, u.health, u.save, u.ward, u.control, u.min_size, u.max_size, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON uk.unit_id = u.id
 JOIN keywords k ON k.id = uk.keyword_id
@@ -171,6 +173,8 @@ func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsW
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.MinSize,
+			&i.MaxSize,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {

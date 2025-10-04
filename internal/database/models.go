@@ -59,6 +59,8 @@ type Unit struct {
 	Save      pgtype.Text
 	Ward      pgtype.Text
 	Control   pgtype.Int4
+	MinSize   int32
+	MaxSize   int32
 	CreatedAt pgtype.Timestamp
 	UpdatedAt pgtype.Timestamp
 }

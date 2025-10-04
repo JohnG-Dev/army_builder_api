@@ -13,9 +13,9 @@ import (
 )
 
 const createUnit = `-- name: CreateUnit :one
-INSERT INTO units (faction_id, name, points, move, health, save, ward, control)
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-RETURNING id, faction_id, name, points, move, health, save, ward, control, created_at, updated_at
+INSERT INTO units (faction_id, name, points, move, health, save, ward, control, min_size, max_size)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+RETURNING id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at
 `
 
 type CreateUnitParams struct {
@@ -27,6 +27,8 @@ type CreateUnitParams struct {
 	Save      pgtype.Text
 	Ward      pgtype.Text
 	Control   pgtype.Int4
+	MinSize   int32
+	MaxSize   int32
 }
 
 func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, error) {
@@ -39,6 +41,8 @@ func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, e
 		arg.Save,
 		arg.Ward,
 		arg.Control,
+		arg.MinSize,
+		arg.MaxSize,
 	)
 	var i Unit
 	err := row.Scan(
@@ -51,6 +55,8 @@ func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, e
 		&i.Save,
 		&i.Ward,
 		&i.Control,
+		&i.MinSize,
+		&i.MaxSize,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -67,7 +73,7 @@ func (q *Queries) DeleteUnit(ctx context.Context, id uuid.UUID) error {
 }
 
 const getUnitByID = `-- name: GetUnitByID :one
-SELECT id, faction_id, name, points, move, health, save, ward, control, created_at, updated_at FROM units WHERE id = $1
+SELECT id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at FROM units WHERE id = $1
 `
 
 func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
@@ -83,6 +89,8 @@ func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
 		&i.Save,
 		&i.Ward,
 		&i.Control,
+		&i.MinSize,
+		&i.MaxSize,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -90,7 +98,7 @@ func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
 }
 
 const getUnits = `-- name: GetUnits :many
-SELECT id, faction_id, name, points, move, health, save, ward, control, created_at, updated_at FROM units WHERE faction_id = $1 ORDER BY created_at DESC
+SELECT id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at FROM units WHERE faction_id = $1 ORDER BY created_at DESC
 `
 
 func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, error) {
@@ -112,6 +120,8 @@ func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, er
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.MinSize,
+			&i.MaxSize,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {
@@ -126,7 +136,7 @@ func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, er
 }
 
 const listUnits = `-- name: ListUnits :many
-SELECt id, faction_id, name, points, move, health, save, ward, control, created_at, updated_at FROM units
+SELECt id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at FROM units
 `
 
 func (q *Queries) ListUnits(ctx context.Context) ([]Unit, error) {
@@ -148,6 +158,8 @@ func (q *Queries) ListUnits(ctx context.Context) ([]Unit, error) {
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.MinSize,
+			&i.MaxSize,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {
