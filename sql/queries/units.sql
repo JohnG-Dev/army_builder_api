@@ -8,8 +8,8 @@ SELECT * FROM units WHERE id = $1;
 SELECt * FROM units;
 
 -- name: CreateUnit :one
-INSERT INTO units (faction_id, name, points, move, health, save, ward, control)
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+INSERT INTO units (faction_id, name, points, move, health, save, ward, control, min_size, max_size)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
 RETURNING *;
 
 -- name: DeleteUnit :exec

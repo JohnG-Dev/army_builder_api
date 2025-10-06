@@ -9,4 +9,16 @@ import (
 	"github.com/google/uuid"
 )
 
-func GetWeapons(s *state.State, ctx context.Context)
+func GetWeaponsForUnit(s *state.State, ctx context.Context, unitID *uuid.UUID) ([]database.Weapon, error) {
+
+}
+
+func GetWeapon(s *state.State, ctx context.Context, id uuid.UUID) (database.Weapon, error) {
+
+	weapon, err := s.DB.GetWeapon(ctx, id)
+	if err != nil {
+		return database.Weapon{}, err
+	}
+
+	return weapon, nil
+}

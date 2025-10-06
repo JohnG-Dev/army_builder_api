@@ -8,6 +8,8 @@ CREATE TABLE units (
   save TEXT,
   ward TEXT,
   control INT,
+  min_size INT DEFAULT 1 NOT NULL,
+  max_size INT DEFAULT 1 NOT NULL,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
