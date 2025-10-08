@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
-	appErr "github.com/JohnG-Dev/army_builder_api/internal/error"
+	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 
 	"github.com/google/uuid"
@@ -17,6 +17,14 @@ func GetWeaponsForUnit(s *state.State, ctx context.Context, unitID *uuid.UUID) (
 	}
 
 	weapons, err := s.DB.GetWeaponsForUnit(ctx, *unitID)
+	if err != nil {
+		return nil, err
+	}
+	if weapons == nil {
+		return []database.Weapon{}, nil
+	}
+
+	return weapons, nil
 
 }
 
