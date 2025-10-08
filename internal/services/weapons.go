@@ -28,9 +28,9 @@ func GetWeaponsForUnit(s *state.State, ctx context.Context, unitID *uuid.UUID) (
 
 }
 
-func GetWeapon(s *state.State, ctx context.Context, id uuid.UUID) (database.Weapon, error) {
+func GetWeaponByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Weapon, error) {
 
-	weapon, err := s.DB.GetWeapon(ctx, id)
+	weapon, err := s.DB.GetWeaponByID(ctx, id)
 	if err != nil {
 		return database.Weapon{}, err
 	}

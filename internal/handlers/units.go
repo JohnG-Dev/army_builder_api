@@ -23,8 +23,8 @@ func (u *UnitsHandlers) GetUnits(w http.ResponseWriter, r *http.Request) {
 	if factionIDString == "" {
 		dbUnitList, err := services.GetUnits(u.S, r.Context(), nil)
 		if err != nil {
-			logRequestError(u.S, r, "Failed to fetch units", err)
-			respondWithError(w, http.StatusInternalServerError, "Failed to fetch units", err)
+			logRequestError(u.S, r, "failed to fetch units", err)
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch units", err)
 			return
 		}
 
@@ -33,14 +33,14 @@ func (u *UnitsHandlers) GetUnits(w http.ResponseWriter, r *http.Request) {
 	}
 	factionID, err := uuid.Parse(factionIDString)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Failed to parse faction ID", err)
+		respondWithError(w, http.StatusBadRequest, "failed to parse faction ID", err)
 		return
 	}
 	dbUnitList, err := services.GetUnits(u.S, r.Context(), &factionID)
 	if err != nil {
-		logRequestError(u.S, r, "Failed to fetch units", err)
+		logRequestError(u.S, r, "failed to fetch units", err)
 
-		respondWithError(w, http.StatusInternalServerError, "Failed to fetch units", err)
+		respondWithError(w, http.StatusInternalServerError, "failed to fetch units", err)
 		return
 	}
 
@@ -55,20 +55,20 @@ func (u *UnitsHandlers) GetUnitByID(w http.ResponseWriter, r *http.Request) {
 
 	unitID, err := uuid.Parse(id)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid unit id", err)
+		respondWithError(w, http.StatusBadRequest, "invalid unit id", err)
 		return
 	}
 
 	unit, err := services.GetUnitByID(u.S, r.Context(), unitID)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			logRequestInfo(u.S, r, "Unit not found")
+			logRequestError(u.S, r, "unit not found", err)
 
-			respondWithError(w, http.StatusNotFound, "Unit not found", err)
+			respondWithError(w, http.StatusNotFound, "unit not found", err)
 		} else {
-			logRequestError(u.S, r, "Failed to fetch unit", err)
+			logRequestError(u.S, r, "failed to fetch unit", err)
 
-			respondWithError(w, http.StatusInternalServerError, "Failed to fetch unit", err)
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch unit", err)
 		}
 
 		return

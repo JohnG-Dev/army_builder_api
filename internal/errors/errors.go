@@ -3,5 +3,6 @@ package errors
 import "errors"
 
 var (
-	ErrMissingUnitID = errors.New("Unit_ID paramater required")
+	//ErrMissingUnitID is returned when a weapon request is missing a unit_id
+	ErrMissingUnitID = errors.New("unit_id parameter required")
 )

@@ -17,12 +17,12 @@ func (h *GamesHandlers) GetGames(w http.ResponseWriter, r *http.Request) {
 	dbGames, err := services.GetGames(h.S, r.Context())
 	if err != nil {
 
-		logRequestError(h.S, r, "Failed to fetch games", err)
-		respondWithError(w, http.StatusInternalServerError, "Internal server error", err)
+		logRequestError(h.S, r, "failed to fetch games", err)
+		respondWithError(w, http.StatusInternalServerError, "internal server error", err)
 		return
 	}
 
-	logRequestInfo(h.S, r, "Fetched games successfully",
+	logRequestInfo(h.S, r, "Successfully fetched games",
 		zap.Int("count", len(dbGames)),
 	)
 	respondWithJSON(w, http.StatusOK, dbGames)

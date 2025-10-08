@@ -1,7 +1,7 @@
 -- name: GetWeaponsForUnit :many
 SELECT * FROM weapons WHERE unit_id = $1 ORDER BY created_at DESC;
 
--- name: GetWeapon :one
+-- name: GetWeaponByID :one
 SELECT * FROM weapons WHERE id = $1;
 
 -- name: CreateWeapon :one

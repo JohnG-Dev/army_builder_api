@@ -47,7 +47,7 @@ func (h *FactionsHandlers) ListFactions(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
-	logRequestInfo(h.S, r, "Fetched Factions successfully",
+	logRequestInfo(h.S, r, "Successfully fetched Factions",
 		zap.Int("count", len(dbFactionList)),
 	)
 
@@ -66,9 +66,9 @@ func (h *FactionsHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request
 	faction, err := services.GetFactionByID(h.S, r.Context(), factionID)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			logRequestInfo(h.S, r, "Faction not found")
+			logRequestError(h.S, r, "faction not found", err)
 
-			respondWithError(w, http.StatusNotFound, "Faction not found", nil)
+			respondWithError(w, http.StatusNotFound, "faction not found", nil)
 		} else {
 			logRequestError(h.S, r, "failed to fetch faction", err)
 
@@ -78,7 +78,7 @@ func (h *FactionsHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	logRequestInfo(h.S, r, "Fetched faction successfully")
+	logRequestInfo(h.S, r, "Successfully fetched faction")
 
 	respondWithJSON(w, http.StatusOK, faction)
 }

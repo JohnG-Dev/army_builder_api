@@ -66,12 +66,12 @@ func (q *Queries) DeleteWeapon(ctx context.Context, id uuid.UUID) error {
 	return err
 }
 
-const getWeapon = `-- name: GetWeapon :one
+const getWeaponByID = `-- name: GetWeaponByID :one
 SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, created_at, updated_at FROM weapons WHERE id = $1
 `
 
-func (q *Queries) GetWeapon(ctx context.Context, id uuid.UUID) (Weapon, error) {
-	row := q.db.QueryRow(ctx, getWeapon, id)
+func (q *Queries) GetWeaponByID(ctx context.Context, id uuid.UUID) (Weapon, error) {
+	row := q.db.QueryRow(ctx, getWeaponByID, id)
 	var i Weapon
 	err := row.Scan(
 		&i.ID,
