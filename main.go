@@ -65,6 +65,7 @@ func main() {
 	fHandlers := &handlers.FactionsHandlers{S: s}
 	gHandlers := &handlers.GamesHandlers{S: s}
 	uHandlers := &handlers.UnitsHandlers{S: s}
+	wHandlers := &handlers.WeaponsHandlers{S: s}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /games", gHandlers.GetGames)
@@ -72,6 +73,8 @@ func main() {
 	mux.HandleFunc("GET /factions/{id}", fHandlers.GetFactionByID)
 	mux.HandleFunc("GET /units", uHandlers.GetUnits)
 	mux.HandleFunc("GET /units/{id}", uHandlers.GetUnitByID)
+	mux.HandleFunc("GET /weapons", wHandlers.GetWeaponsForUnit)
+	mux.HandleFunc("GET /weapons/{id}", wHandlers.GetWeaponsByID)
 
 	s.Logger.Info("Server Starting",
 		zap.String("env", cfg.Env),
