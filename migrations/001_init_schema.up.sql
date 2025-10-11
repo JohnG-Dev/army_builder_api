@@ -20,20 +20,17 @@ CREATE TABLE factions (
   updated_at TIMESTAMP DEFAULT NOW()
 );
 
--- Units (AoS only for Phase 1)
+-- Units
 CREATE TABLE units (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   points INT NOT NULL,
-
-  -- Core AoS stats
-  move TEXT,          -- e.g., "6\"" or "12\""
-  health INT,         -- per model (renamed from wounds)
-  save TEXT,          -- e.g., "4+" or "3+"
-  ward TEXT,          -- e.g., "5+" or NULL if no ward
-  control INT,        -- AoS "Control" score
-
+  move TEXT,
+  health INT,
+  save TEXT,
+  ward TEXT,
+  control INT,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -44,7 +41,7 @@ CREATE TABLE weapons (
   unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   range TEXT,
-  attacks TEXT,       -- e.g., "2", "D6", "2D3"
+  attacks TEXT,
   to_hit TEXT,
   to_wound TEXT,
   rend TEXT,
@@ -56,19 +53,23 @@ CREATE TABLE weapons (
 -- Abilities
 CREATE TABLE abilities (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
+  unit_id UUID REFERENCES units(id) ON DELETE CASCADE,
+  faction_id UUID REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   description TEXT,
+  type TEXT,    -- 'passive', 'spell', 'prayer', 'trait', etc.
+  phase TEXT,   -- 'hero', 'movement', 'charge', 'combat', 'end_of_turn', etc.
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
 
--- Rules
+-- Rules (refactored for rule_type)
 CREATE TABLE rules (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   game_id UUID NOT NULL REFERENCES games(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   description TEXT NOT NULL,
+  rule_type TEXT,  -- 'core', 'battle_tactic', 'grand_strategy', 'special'
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -79,10 +80,23 @@ CREATE TABLE keywords (
   name TEXT NOT NULL UNIQUE
 );
 
--- Unit ↔ Keywords (many-to-many, with optional value)
+-- Unit / Manifestation ↔ Keywords
 CREATE TABLE unit_keywords (
   unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
   keyword_id UUID NOT NULL REFERENCES keywords(id) ON DELETE CASCADE,
-  value TEXT,  -- optional, e.g., "2" for Wizard(2)
+  value TEXT,
   PRIMARY KEY (unit_id, keyword_id)
 );
+
+-- Enhancements
+CREATE TABLE enhancements (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  description TEXT,
+  points INT,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+
