@@ -13,22 +13,38 @@ import (
 )
 
 const createUnit = `-- name: CreateUnit :one
-INSERT INTO units (faction_id, name, points, move, health, save, ward, control, min_size, max_size)
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
-RETURNING id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at
+INSERT INTO units (
+  faction_id, name, points, move, health, save, ward,
+  control, rend, attacks, damage, summon_cost, banishment,
+  is_manifestation, min_size, max_size, version, source
+)
+VALUES (
+  $1,$2,$3,$4,$5,$6,$7,
+  $8,$9,$10,$11,$12,$13,
+  $14,$15,$16,$17,$18
+)
+RETURNING id, faction_id, name, points, move, health, save, ward, control, rend, attacks, damage, summon_cost, banishment, is_manifestation, min_size, max_size, version, source, created_at, updated_at
 `
 
 type CreateUnitParams struct {
-	FactionID uuid.UUID
-	Name      string
-	Points    int32
-	Move      pgtype.Text
-	Health    pgtype.Int4
-	Save      pgtype.Text
-	Ward      pgtype.Text
-	Control   pgtype.Int4
-	MinSize   int32
-	MaxSize   int32
+	FactionID       uuid.UUID
+	Name            string
+	Points          pgtype.Int4
+	Move            pgtype.Text
+	Health          pgtype.Int4
+	Save            pgtype.Text
+	Ward            pgtype.Text
+	Control         pgtype.Int4
+	Rend            pgtype.Text
+	Attacks         pgtype.Text
+	Damage          pgtype.Text
+	SummonCost      pgtype.Text
+	Banishment      pgtype.Text
+	IsManifestation pgtype.Bool
+	MinSize         int32
+	MaxSize         int32
+	Version         pgtype.Text
+	Source          pgtype.Text
 }
 
 func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, error) {
@@ -41,8 +57,16 @@ func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, e
 		arg.Save,
 		arg.Ward,
 		arg.Control,
+		arg.Rend,
+		arg.Attacks,
+		arg.Damage,
+		arg.SummonCost,
+		arg.Banishment,
+		arg.IsManifestation,
 		arg.MinSize,
 		arg.MaxSize,
+		arg.Version,
+		arg.Source,
 	)
 	var i Unit
 	err := row.Scan(
@@ -55,8 +79,16 @@ func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, e
 		&i.Save,
 		&i.Ward,
 		&i.Control,
+		&i.Rend,
+		&i.Attacks,
+		&i.Damage,
+		&i.SummonCost,
+		&i.Banishment,
+		&i.IsManifestation,
 		&i.MinSize,
 		&i.MaxSize,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -64,7 +96,8 @@ func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, e
 }
 
 const deleteUnit = `-- name: DeleteUnit :exec
-DELETE FROM units WHERE id = $1
+DELETE FROM units 
+WHERE id = $1
 `
 
 func (q *Queries) DeleteUnit(ctx context.Context, id uuid.UUID) error {
@@ -72,8 +105,139 @@ func (q *Queries) DeleteUnit(ctx context.Context, id uuid.UUID) error {
 	return err
 }
 
+const getManifestationByID = `-- name: GetManifestationByID :one
+SELECT id, faction_id, name, points, move, health, save, ward, control, rend, attacks, damage, summon_cost, banishment, is_manifestation, min_size, max_size, version, source, created_at, updated_at FROM units
+WHERE id = $1 AND is_manifestation = TRUE
+`
+
+func (q *Queries) GetManifestationByID(ctx context.Context, id uuid.UUID) (Unit, error) {
+	row := q.db.QueryRow(ctx, getManifestationByID, id)
+	var i Unit
+	err := row.Scan(
+		&i.ID,
+		&i.FactionID,
+		&i.Name,
+		&i.Points,
+		&i.Move,
+		&i.Health,
+		&i.Save,
+		&i.Ward,
+		&i.Control,
+		&i.Rend,
+		&i.Attacks,
+		&i.Damage,
+		&i.SummonCost,
+		&i.Banishment,
+		&i.IsManifestation,
+		&i.MinSize,
+		&i.MaxSize,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
+}
+
+const getManifestations = `-- name: GetManifestations :many
+SELECT id, faction_id, name, points, move, health, save, ward, control, rend, attacks, damage, summon_cost, banishment, is_manifestation, min_size, max_size, version, source, created_at, updated_at FROM units
+WHERE is_manifestation = TRUE
+ORDER BY name ASC
+`
+
+func (q *Queries) GetManifestations(ctx context.Context) ([]Unit, error) {
+	rows, err := q.db.Query(ctx, getManifestations)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Unit
+	for rows.Next() {
+		var i Unit
+		if err := rows.Scan(
+			&i.ID,
+			&i.FactionID,
+			&i.Name,
+			&i.Points,
+			&i.Move,
+			&i.Health,
+			&i.Save,
+			&i.Ward,
+			&i.Control,
+			&i.Rend,
+			&i.Attacks,
+			&i.Damage,
+			&i.SummonCost,
+			&i.Banishment,
+			&i.IsManifestation,
+			&i.MinSize,
+			&i.MaxSize,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const getNonManifestationUnits = `-- name: GetNonManifestationUnits :many
+SELECT id, faction_id, name, points, move, health, save, ward, control, rend, attacks, damage, summon_cost, banishment, is_manifestation, min_size, max_size, version, source, created_at, updated_at FROM units
+WHERE is_manifestation = FALSE
+ORDER BY name ASC
+`
+
+func (q *Queries) GetNonManifestationUnits(ctx context.Context) ([]Unit, error) {
+	rows, err := q.db.Query(ctx, getNonManifestationUnits)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Unit
+	for rows.Next() {
+		var i Unit
+		if err := rows.Scan(
+			&i.ID,
+			&i.FactionID,
+			&i.Name,
+			&i.Points,
+			&i.Move,
+			&i.Health,
+			&i.Save,
+			&i.Ward,
+			&i.Control,
+			&i.Rend,
+			&i.Attacks,
+			&i.Damage,
+			&i.SummonCost,
+			&i.Banishment,
+			&i.IsManifestation,
+			&i.MinSize,
+			&i.MaxSize,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getUnitByID = `-- name: GetUnitByID :one
-SELECT id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at FROM units WHERE id = $1
+SELECT id, faction_id, name, points, move, health, save, ward, control, rend, attacks, damage, summon_cost, banishment, is_manifestation, min_size, max_size, version, source, created_at, updated_at FROM units 
+WHERE id = $1
 `
 
 func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
@@ -89,8 +253,16 @@ func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
 		&i.Save,
 		&i.Ward,
 		&i.Control,
+		&i.Rend,
+		&i.Attacks,
+		&i.Damage,
+		&i.SummonCost,
+		&i.Banishment,
+		&i.IsManifestation,
 		&i.MinSize,
 		&i.MaxSize,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -98,7 +270,9 @@ func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
 }
 
 const getUnits = `-- name: GetUnits :many
-SELECT id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at FROM units WHERE faction_id = $1 ORDER BY created_at DESC
+SELECT id, faction_id, name, points, move, health, save, ward, control, rend, attacks, damage, summon_cost, banishment, is_manifestation, min_size, max_size, version, source, created_at, updated_at FROM units
+WHERE faction_id = $1 AND is_manifestation = FALSE
+ORDER BY name ASC
 `
 
 func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, error) {
@@ -120,8 +294,16 @@ func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, er
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.Rend,
+			&i.Attacks,
+			&i.Damage,
+			&i.SummonCost,
+			&i.Banishment,
+			&i.IsManifestation,
 			&i.MinSize,
 			&i.MaxSize,
+			&i.Version,
+			&i.Source,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {
@@ -136,7 +318,7 @@ func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, er
 }
 
 const listUnits = `-- name: ListUnits :many
-SELECt id, faction_id, name, points, move, health, save, ward, control, min_size, max_size, created_at, updated_at FROM units
+SELECt id, faction_id, name, points, move, health, save, ward, control, rend, attacks, damage, summon_cost, banishment, is_manifestation, min_size, max_size, version, source, created_at, updated_at FROM units
 `
 
 func (q *Queries) ListUnits(ctx context.Context) ([]Unit, error) {
@@ -158,8 +340,16 @@ func (q *Queries) ListUnits(ctx context.Context) ([]Unit, error) {
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.Rend,
+			&i.Attacks,
+			&i.Damage,
+			&i.SummonCost,
+			&i.Banishment,
+			&i.IsManifestation,
 			&i.MinSize,
 			&i.MaxSize,
+			&i.Version,
+			&i.Source,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {

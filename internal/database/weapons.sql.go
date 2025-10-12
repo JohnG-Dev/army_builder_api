@@ -15,7 +15,7 @@ import (
 const createWeapon = `-- name: CreateWeapon :one
 INSERT INTO weapons (unit_id, name, range, attacks, to_hit, to_wound, rend, damage)
 VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-RETURNING id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, created_at, updated_at
+RETURNING id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at
 `
 
 type CreateWeaponParams struct {
@@ -51,6 +51,8 @@ func (q *Queries) CreateWeapon(ctx context.Context, arg CreateWeaponParams) (Wea
 		&i.ToWound,
 		&i.Rend,
 		&i.Damage,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -58,7 +60,8 @@ func (q *Queries) CreateWeapon(ctx context.Context, arg CreateWeaponParams) (Wea
 }
 
 const deleteWeapon = `-- name: DeleteWeapon :exec
-DELETE FROM weapons WHERE id = $1
+DELETE FROM weapons 
+WHERE id = $1
 `
 
 func (q *Queries) DeleteWeapon(ctx context.Context, id uuid.UUID) error {
@@ -67,7 +70,8 @@ func (q *Queries) DeleteWeapon(ctx context.Context, id uuid.UUID) error {
 }
 
 const getWeaponByID = `-- name: GetWeaponByID :one
-SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, created_at, updated_at FROM weapons WHERE id = $1
+SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at FROM weapons 
+WHERE id = $1
 `
 
 func (q *Queries) GetWeaponByID(ctx context.Context, id uuid.UUID) (Weapon, error) {
@@ -83,6 +87,8 @@ func (q *Queries) GetWeaponByID(ctx context.Context, id uuid.UUID) (Weapon, erro
 		&i.ToWound,
 		&i.Rend,
 		&i.Damage,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -90,7 +96,9 @@ func (q *Queries) GetWeaponByID(ctx context.Context, id uuid.UUID) (Weapon, erro
 }
 
 const getWeaponsForUnit = `-- name: GetWeaponsForUnit :many
-SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, created_at, updated_at FROM weapons WHERE unit_id = $1 ORDER BY created_at DESC
+SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at FROM weapons 
+WHERE unit_id = $1
+ORDER BY unit_id, name ASC
 `
 
 func (q *Queries) GetWeaponsForUnit(ctx context.Context, unitID uuid.UUID) ([]Weapon, error) {
@@ -112,6 +120,8 @@ func (q *Queries) GetWeaponsForUnit(ctx context.Context, unitID uuid.UUID) ([]We
 			&i.ToWound,
 			&i.Rend,
 			&i.Damage,
+			&i.Version,
+			&i.Source,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {

@@ -14,7 +14,7 @@ import (
 const createGame = `-- name: CreateGame :one
 INSERT INTO games (name, edition)
 VALUES ($1, $2)
-RETURNING id, name, edition, created_at, updated_at
+RETURNING id, name, edition, version, source, created_at, updated_at
 `
 
 type CreateGameParams struct {
@@ -29,6 +29,8 @@ func (q *Queries) CreateGame(ctx context.Context, arg CreateGameParams) (Game, e
 		&i.ID,
 		&i.Name,
 		&i.Edition,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -36,7 +38,8 @@ func (q *Queries) CreateGame(ctx context.Context, arg CreateGameParams) (Game, e
 }
 
 const deleteGame = `-- name: DeleteGame :exec
-DELETE FROM games where id = $1
+DELETE FROM games 
+WHERE id = $1
 `
 
 func (q *Queries) DeleteGame(ctx context.Context, id uuid.UUID) error {
@@ -45,7 +48,8 @@ func (q *Queries) DeleteGame(ctx context.Context, id uuid.UUID) error {
 }
 
 const getGame = `-- name: GetGame :one
-SELECT id, name, edition, created_at, updated_at FROM games WHERE id = $1
+SELECT id, name, edition, version, source, created_at, updated_at FROM games 
+WHERE id = $1
 `
 
 func (q *Queries) GetGame(ctx context.Context, id uuid.UUID) (Game, error) {
@@ -55,6 +59,8 @@ func (q *Queries) GetGame(ctx context.Context, id uuid.UUID) (Game, error) {
 		&i.ID,
 		&i.Name,
 		&i.Edition,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -62,7 +68,8 @@ func (q *Queries) GetGame(ctx context.Context, id uuid.UUID) (Game, error) {
 }
 
 const getGames = `-- name: GetGames :many
-SELECT id, name, edition, created_at, updated_at FROM games ORDER BY created_at DESC
+SELECT id, name, edition, version, source, created_at, updated_at FROM games
+ORDER BY name ASC
 `
 
 func (q *Queries) GetGames(ctx context.Context) ([]Game, error) {
@@ -78,6 +85,8 @@ func (q *Queries) GetGames(ctx context.Context) ([]Game, error) {
 			&i.ID,
 			&i.Name,
 			&i.Edition,
+			&i.Version,
+			&i.Source,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {

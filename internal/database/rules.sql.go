@@ -9,28 +9,38 @@ import (
 	"context"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createRule = `-- name: CreateRule :one
-INSERT INTO rules (game_id, name, description)
-VALUES ($1, $2, $3)
-RETURNING id, game_id, name, description, created_at, updated_at
+INSERT INTO rules (game_id, name, description, rule_type)
+VALUES ($1, $2, $3, $4)
+RETURNING id, game_id, name, description, rule_type, version, source, created_at, updated_at
 `
 
 type CreateRuleParams struct {
 	GameID      uuid.UUID
 	Name        string
 	Description string
+	RuleType    pgtype.Text
 }
 
 func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, error) {
-	row := q.db.QueryRow(ctx, createRule, arg.GameID, arg.Name, arg.Description)
+	row := q.db.QueryRow(ctx, createRule,
+		arg.GameID,
+		arg.Name,
+		arg.Description,
+		arg.RuleType,
+	)
 	var i Rule
 	err := row.Scan(
 		&i.ID,
 		&i.GameID,
 		&i.Name,
 		&i.Description,
+		&i.RuleType,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -38,7 +48,8 @@ func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, e
 }
 
 const deleteRule = `-- name: DeleteRule :exec
-DELETE FROM rules WHERE id = $1
+DELETE FROM rules 
+WHERE id = $1
 `
 
 func (q *Queries) DeleteRule(ctx context.Context, id uuid.UUID) error {
@@ -46,26 +57,68 @@ func (q *Queries) DeleteRule(ctx context.Context, id uuid.UUID) error {
 	return err
 }
 
-const getRule = `-- name: GetRule :one
-SELECT id, game_id, name, description, created_at, updated_at FROM rules WHERE id = $1
+const getRuleByID = `-- name: GetRuleByID :one
+SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at FROM rules 
+WHERE id = $1
 `
 
-func (q *Queries) GetRule(ctx context.Context, id uuid.UUID) (Rule, error) {
-	row := q.db.QueryRow(ctx, getRule, id)
+func (q *Queries) GetRuleByID(ctx context.Context, id uuid.UUID) (Rule, error) {
+	row := q.db.QueryRow(ctx, getRuleByID, id)
 	var i Rule
 	err := row.Scan(
 		&i.ID,
 		&i.GameID,
 		&i.Name,
 		&i.Description,
+		&i.RuleType,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
 	return i, err
 }
 
+const getRulesByType = `-- name: GetRulesByType :many
+SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at FROM rules 
+WHERE rule_type = $1 
+ORDER BY name ASC
+`
+
+func (q *Queries) GetRulesByType(ctx context.Context, ruleType pgtype.Text) ([]Rule, error) {
+	rows, err := q.db.Query(ctx, getRulesByType, ruleType)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Rule
+	for rows.Next() {
+		var i Rule
+		if err := rows.Scan(
+			&i.ID,
+			&i.GameID,
+			&i.Name,
+			&i.Description,
+			&i.RuleType,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getRulesForGame = `-- name: GetRulesForGame :many
-SELECT id, game_id, name, description, created_at, updated_at FROM rules WHERE game_id = $1 ORDER BY created_at DESC
+SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at FROM rules 
+WHERE game_id = $1 
+ORDER BY rule_type ASC, name ASC
 `
 
 func (q *Queries) GetRulesForGame(ctx context.Context, gameID uuid.UUID) ([]Rule, error) {
@@ -82,6 +135,9 @@ func (q *Queries) GetRulesForGame(ctx context.Context, gameID uuid.UUID) ([]Rule
 			&i.GameID,
 			&i.Name,
 			&i.Description,
+			&i.RuleType,
+			&i.Version,
+			&i.Source,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {

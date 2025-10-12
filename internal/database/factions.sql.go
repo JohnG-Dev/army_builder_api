@@ -15,7 +15,7 @@ import (
 const createFaction = `-- name: CreateFaction :one
 INSERT INTO factions (game_id, name, allegiance)
 VALUES ($1, $2, $3)
-RETURNING id, game_id, name, allegiance, created_at, updated_at
+RETURNING id, game_id, name, allegiance, version, source, created_at, updated_at
 `
 
 type CreateFactionParams struct {
@@ -32,6 +32,8 @@ func (q *Queries) CreateFaction(ctx context.Context, arg CreateFactionParams) (F
 		&i.GameID,
 		&i.Name,
 		&i.Allegiance,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -39,7 +41,8 @@ func (q *Queries) CreateFaction(ctx context.Context, arg CreateFactionParams) (F
 }
 
 const delteFaction = `-- name: DelteFaction :exec
-DELETE FROM factions where id = $1
+DELETE FROM factions 
+WHERE id = $1
 `
 
 func (q *Queries) DelteFaction(ctx context.Context, id uuid.UUID) error {
@@ -48,7 +51,8 @@ func (q *Queries) DelteFaction(ctx context.Context, id uuid.UUID) error {
 }
 
 const getAllFactions = `-- name: GetAllFactions :many
-SELECT id, game_id, name, allegiance, created_at, updated_at FROM factions ORDER BY name
+SELECT id, game_id, name, allegiance, version, source, created_at, updated_at FROM factions 
+ORDER BY game_id, name ASC
 `
 
 func (q *Queries) GetAllFactions(ctx context.Context) ([]Faction, error) {
@@ -65,6 +69,8 @@ func (q *Queries) GetAllFactions(ctx context.Context) ([]Faction, error) {
 			&i.GameID,
 			&i.Name,
 			&i.Allegiance,
+			&i.Version,
+			&i.Source,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {
@@ -79,7 +85,8 @@ func (q *Queries) GetAllFactions(ctx context.Context) ([]Faction, error) {
 }
 
 const getFaction = `-- name: GetFaction :one
-SELECT id, game_id, name, allegiance, created_at, updated_at FROM factions where id = $1
+SELECT id, game_id, name, allegiance, version, source, created_at, updated_at FROM factions 
+WHERE id = $1
 `
 
 func (q *Queries) GetFaction(ctx context.Context, id uuid.UUID) (Faction, error) {
@@ -90,6 +97,8 @@ func (q *Queries) GetFaction(ctx context.Context, id uuid.UUID) (Faction, error)
 		&i.GameID,
 		&i.Name,
 		&i.Allegiance,
+		&i.Version,
+		&i.Source,
 		&i.CreatedAt,
 		&i.UpdatedAt,
 	)
@@ -97,7 +106,9 @@ func (q *Queries) GetFaction(ctx context.Context, id uuid.UUID) (Faction, error)
 }
 
 const getFactionsByID = `-- name: GetFactionsByID :many
-SELECT id, game_id, name, allegiance, created_at, updated_at FROM factions WHERE game_id = $1 ORDER BY created_at DESC
+SELECT id, game_id, name, allegiance, version, source, created_at, updated_at FROM factions 
+WHERE game_id = $1 
+ORDER BY name ASC
 `
 
 func (q *Queries) GetFactionsByID(ctx context.Context, gameID uuid.UUID) ([]Faction, error) {
@@ -114,6 +125,8 @@ func (q *Queries) GetFactionsByID(ctx context.Context, gameID uuid.UUID) ([]Fact
 			&i.GameID,
 			&i.Name,
 			&i.Allegiance,
+			&i.Version,
+			&i.Source,
 			&i.CreatedAt,
 			&i.UpdatedAt,
 		); err != nil {

@@ -11,9 +11,38 @@ import (
 
 type Ability struct {
 	ID          uuid.UUID
-	UnitID      uuid.UUID
+	UnitID      pgtype.UUID
+	FactionID   pgtype.UUID
 	Name        string
 	Description pgtype.Text
+	Type        pgtype.Text
+	Phase       pgtype.Text
+	Version     pgtype.Text
+	Source      pgtype.Text
+	CreatedAt   pgtype.Timestamp
+	UpdatedAt   pgtype.Timestamp
+}
+
+type BattleFormation struct {
+	ID          uuid.UUID
+	GameID      uuid.UUID
+	FactionID   uuid.UUID
+	Name        string
+	Description pgtype.Text
+	Version     pgtype.Text
+	Source      pgtype.Text
+	CreatedAt   pgtype.Timestamp
+	UpdatedAt   pgtype.Timestamp
+}
+
+type Enhancement struct {
+	ID          uuid.UUID
+	FactionID   uuid.UUID
+	Name        string
+	Description pgtype.Text
+	Points      pgtype.Int4
+	Version     pgtype.Text
+	Source      pgtype.Text
 	CreatedAt   pgtype.Timestamp
 	UpdatedAt   pgtype.Timestamp
 }
@@ -23,6 +52,8 @@ type Faction struct {
 	GameID     uuid.UUID
 	Name       string
 	Allegiance pgtype.Text
+	Version    pgtype.Text
+	Source     pgtype.Text
 	CreatedAt  pgtype.Timestamp
 	UpdatedAt  pgtype.Timestamp
 }
@@ -31,13 +62,21 @@ type Game struct {
 	ID        uuid.UUID
 	Name      string
 	Edition   string
+	Version   pgtype.Text
+	Source    pgtype.Text
 	CreatedAt pgtype.Timestamp
 	UpdatedAt pgtype.Timestamp
 }
 
 type Keyword struct {
-	ID   uuid.UUID
-	Name string
+	ID          uuid.UUID
+	GameID      pgtype.UUID
+	Name        string
+	Description pgtype.Text
+	Version     pgtype.Text
+	Source      pgtype.Text
+	CreatedAt   pgtype.Timestamp
+	UpdatedAt   pgtype.Timestamp
 }
 
 type Rule struct {
@@ -45,24 +84,35 @@ type Rule struct {
 	GameID      uuid.UUID
 	Name        string
 	Description string
+	RuleType    pgtype.Text
+	Version     pgtype.Text
+	Source      pgtype.Text
 	CreatedAt   pgtype.Timestamp
 	UpdatedAt   pgtype.Timestamp
 }
 
 type Unit struct {
-	ID        uuid.UUID
-	FactionID uuid.UUID
-	Name      string
-	Points    int32
-	Move      pgtype.Text
-	Health    pgtype.Int4
-	Save      pgtype.Text
-	Ward      pgtype.Text
-	Control   pgtype.Int4
-	MinSize   int32
-	MaxSize   int32
-	CreatedAt pgtype.Timestamp
-	UpdatedAt pgtype.Timestamp
+	ID              uuid.UUID
+	FactionID       uuid.UUID
+	Name            string
+	Points          pgtype.Int4
+	Move            pgtype.Text
+	Health          pgtype.Int4
+	Save            pgtype.Text
+	Ward            pgtype.Text
+	Control         pgtype.Int4
+	Rend            pgtype.Text
+	Attacks         pgtype.Text
+	Damage          pgtype.Text
+	SummonCost      pgtype.Text
+	Banishment      pgtype.Text
+	IsManifestation pgtype.Bool
+	MinSize         int32
+	MaxSize         int32
+	Version         pgtype.Text
+	Source          pgtype.Text
+	CreatedAt       pgtype.Timestamp
+	UpdatedAt       pgtype.Timestamp
 }
 
 type UnitKeyword struct {
@@ -81,6 +131,8 @@ type Weapon struct {
 	ToWound   pgtype.Text
 	Rend      pgtype.Text
 	Damage    pgtype.Text
+	Version   pgtype.Text
+	Source    pgtype.Text
 	CreatedAt pgtype.Timestamp
 	UpdatedAt pgtype.Timestamp
 }
