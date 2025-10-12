@@ -4,6 +4,8 @@ CREATE TABLE enhancements (
   name TEXT NOT NULL,
   description TEXT,
   points INT,
+  version TEXT,
+  source TEXT,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );

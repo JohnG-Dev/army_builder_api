@@ -6,6 +6,8 @@ CREATE TABLE abilities (
   description TEXT,
   type TEXT,    -- 'passive', 'spell', 'prayer', 'trait'
   phase TEXT,   -- 'hero', 'movement', 'charge', 'combat', 'end_of_turn'
+  version TEXT,
+  source TEXT,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );

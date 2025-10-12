@@ -4,6 +4,8 @@ CREATE TABLE rules (
   name TEXT NOT NULL,
   description TEXT NOT NULL,
   rule_type TEXT,  -- 'core', 'battle_tactic', 'grand_strategy', 'special'
+  version TEXT,
+  source TEXT,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
