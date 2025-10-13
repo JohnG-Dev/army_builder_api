@@ -42,3 +42,32 @@ func GetUnitByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Un
 	return unit, nil
 
 }
+
+func GetManifestations(s *state.State, ctx context.Context) ([]database.Unit, error) {
+
+	manifestations, err := s.DB.GetManifestations(ctx)
+	if err != nil {
+		return []database.Unit{}, err
+	}
+	return manifestations, nil
+}
+
+func GetNonManifestationUnits(s *state.State, ctx context.Context) ([]database.Unit, error) {
+
+	units, err := s.DB.GetNonManifestationUnits(ctx)
+	if err != nil {
+		return []database.Unit{}, err
+	}
+
+	return units, nil
+}
+
+func GetManifestationByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Unit, error) {
+
+	manifestation, err := s.DB.GetManifestationByID(ctx, id)
+	if err != nil {
+		return database.Unit{}, err
+	}
+
+	return manifestation, nil
+}
