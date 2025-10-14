@@ -14,6 +14,8 @@ CREATE TABLE units (
   summon_cost TEXT,
   banishment TEXT,
   is_manifestation BOOLEAN DEFAULT FALSE,
+  min_size INT DEFAULT 1 NOT NULL,
+  max_size INT DEFAULT 1 NOT NULL,
   version TEXT,
   source TEXT,
   created_at TIMESTAMP DEFAULT NOW(),
