@@ -17,7 +17,7 @@ import (
 	"github.com/google/uuid"
 )
 
-func setupTestUnitState(t *testing.T) *state.State {
+func setupTestWeaponState(t *testing.T) *state.State {
 	dbURL := "postgres://postgres:postgres@localhost:5432/army_builder_api?sslmode=disable"
 	ctx := context.Background()
 	dbpool, err := pgxpool.New(ctx, dbURL)

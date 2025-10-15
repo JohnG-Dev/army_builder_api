@@ -94,7 +94,7 @@ func (u *UnitsHandlers) GetManifestations(w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	logRequestInfo(u.S, r, "Successfully fetched mainfestations",
+	logRequestInfo(u.S, r, "Successfully fetched manifestations",
 		zap.Int("count", len(dbManifestations)),
 	)
 
@@ -117,7 +117,7 @@ func (u *UnitsHandlers) GetNonManifestationUnits(w http.ResponseWriter, r *http.
 		return
 	}
 
-	logRequestInfo(u.S, r, "Successfuly fetched units",
+	logRequestInfo(u.S, r, "Successfully fetched units",
 		zap.Int("count", len(dbUnits)),
 	)
 
@@ -130,6 +130,7 @@ func (u *UnitsHandlers) GetManifestationByID(w http.ResponseWriter, r *http.Requ
 	manifestationID, err := uuid.Parse(id)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid unit id", err)
+		return
 	}
 
 	manifestation, err := services.GetManifestationByID(u.S, r.Context(), manifestationID)
@@ -147,7 +148,7 @@ func (u *UnitsHandlers) GetManifestationByID(w http.ResponseWriter, r *http.Requ
 		return
 	}
 
-	logRequestInfo(u.S, r, "Successfuly fetched manifestation")
+	logRequestInfo(u.S, r, "Successfully fetched manifestation")
 
 	respondWithJSON(w, http.StatusOK, manifestation)
 }
