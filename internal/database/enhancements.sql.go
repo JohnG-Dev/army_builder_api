@@ -79,6 +79,41 @@ func (q *Queries) GetEnhancementByID(ctx context.Context, id uuid.UUID) (Enhance
 	return i, err
 }
 
+const getEnhancements = `-- name: GetEnhancements :many
+SELECT id, faction_id, name, description, points, version, source, created_at, updated_at FROM enhancements
+ORDER BY faction_id, name ASC
+`
+
+func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
+	rows, err := q.db.Query(ctx, getEnhancements)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Enhancement
+	for rows.Next() {
+		var i Enhancement
+		if err := rows.Scan(
+			&i.ID,
+			&i.FactionID,
+			&i.Name,
+			&i.Description,
+			&i.Points,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getEnhancementsForFaction = `-- name: GetEnhancementsForFaction :many
 SELECT id, faction_id, name, description, points, version, source, created_at, updated_at FROM enhancements
 WHERE faction_id = $1

@@ -3,6 +3,10 @@ SELECT * FROM enhancements
 WHERE faction_id = $1
 ORDER BY faction_id, name ASC;
 
+-- name: GetEnhancements :many
+SELECT * FROM enhancements
+ORDER BY faction_id, name ASC;
+
 -- name: GetEnhancementByID :one
 SELECT * FROM enhancements 
 WHERE id = $1;

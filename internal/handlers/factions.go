@@ -5,23 +5,26 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/services"
-	"github.com/JohnG-Dev/army_builder_api/internal/state"
-
 	"github.com/google/uuid"
 	"go.uber.org/zap"
+
+	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
+	"github.com/JohnG-Dev/army_builder_api/internal/services"
+	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
 type FactionsHandlers struct {
 	S *state.State
 }
 
-func (h *FactionsHandlers) ListFactions(w http.ResponseWriter, r *http.Request) {
+func (h *FactionsHandlers) GetFactions(w http.ResponseWriter, r *http.Request) {
+	gameIDStr := r.URL.Query().Get("game_id")
 
-	gameIDString := r.URL.Query().Get("game_id")
+	var factions []database.Faction
+	var err error
 
-	if gameIDString == "" {
-		dbFactionList, err := services.ListFactions(h.S, r.Context(), nil)
+	if gameIDStr == "" {
+		factions, err = services.GetFactions(h.S, r.Context(), nil)
 		if err != nil {
 
 			logRequestError(h.S, r, "failed to fetch factions", err)
@@ -29,17 +32,17 @@ func (h *FactionsHandlers) ListFactions(w http.ResponseWriter, r *http.Request) 
 			return
 		}
 
-		respondWithJSON(w, http.StatusOK, dbFactionList)
+		respondWithJSON(w, http.StatusOK, factions)
 		return
 	}
 
-	gameID, err := uuid.Parse(gameIDString)
+	gameID, err := uuid.Parse(gameIDStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to parse uuid", err)
 		return
 	}
 
-	dbFactionList, err := services.ListFactions(h.S, r.Context(), &gameID)
+	factions, err := services.GetFactions(h.S, r.Context(), &gameID)
 	if err != nil {
 		logRequestError(h.S, r, "failed to fetch factions", err)
 
@@ -48,10 +51,10 @@ func (h *FactionsHandlers) ListFactions(w http.ResponseWriter, r *http.Request) 
 	}
 
 	logRequestInfo(h.S, r, "Successfully fetched Factions",
-		zap.Int("count", len(dbFactionList)),
+		zap.Int("count", len(factions)),
 	)
 
-	respondWithJSON(w, http.StatusOK, dbFactionList)
+	respondWithJSON(w, http.StatusOK, factions)
 }
 
 func (h *FactionsHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request) {

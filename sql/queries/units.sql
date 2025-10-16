@@ -7,7 +7,7 @@ ORDER BY name ASC;
 SELECT * FROM units 
 WHERE id = $1;
 
--- name: ListUnits :many
+-- name: GetAllUnits :many
 SELECt * FROM units;
 
 -- name: GetNonManifestationUnits :many

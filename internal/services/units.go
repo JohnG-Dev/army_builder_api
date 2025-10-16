@@ -2,31 +2,32 @@ package services
 
 import (
 	"context"
+	"database/sql"
+	"errors"
+
+	"github.com/google/uuid"
 
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
+	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
-	"github.com/google/uuid"
 )
 
 func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]database.Unit, error) {
+	var units []database.Unit
+	var err error
 
 	if factionID == nil {
-		unitsList, err := s.DB.ListUnits(ctx)
-		if err != nil {
-			return nil, err
-		}
-		if unitsList == nil {
-			return []database.Unit{}, nil
-		}
-		return unitsList, nil
+		units, err = s.DB.GetAllUnits(ctx)
+	} else {
+		units, err = s.DB.GetUnits(ctx, *factionID)
 	}
 
-	units, err := s.DB.GetUnits(ctx, *factionID)
 	if err != nil {
 		return nil, err
 	}
+
 	if units == nil {
-		return []database.Unit{}, nil
+		units = []database.Unit{}
 	}
 
 	return units, nil
@@ -34,20 +35,29 @@ func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]data
 
 func GetUnitByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Unit, error) {
 
+	if id == uuid.Nil {
+		return database.Unit{}, appErr.ErrMissingID
+	}
+
 	unit, err := s.DB.GetUnitByID(ctx, id)
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return database.Unit{}, appErr.ErrNotFound
+		}
 		return database.Unit{}, err
 	}
 
 	return unit, nil
-
 }
 
 func GetManifestations(s *state.State, ctx context.Context) ([]database.Unit, error) {
 
 	manifestations, err := s.DB.GetManifestations(ctx)
 	if err != nil {
-		return []database.Unit{}, err
+		return nil, err
+	}
+	if manifestations == nil {
+		manifestations = []database.Unit{}
 	}
 	return manifestations, nil
 }
@@ -56,7 +66,10 @@ func GetNonManifestationUnits(s *state.State, ctx context.Context) ([]database.U
 
 	units, err := s.DB.GetNonManifestationUnits(ctx)
 	if err != nil {
-		return []database.Unit{}, err
+		return nil, err
+	}
+	if units == nil {
+		units = []database.Unit{}
 	}
 
 	return units, nil
@@ -64,8 +77,15 @@ func GetNonManifestationUnits(s *state.State, ctx context.Context) ([]database.U
 
 func GetManifestationByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Unit, error) {
 
+	if id == uuid.Nil {
+		return database.Unit{}, appErr.ErrMissingID
+	}
+
 	manifestation, err := s.DB.GetManifestationByID(ctx, id)
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return database.Unit{}, appErr.ErrNotFound
+		}
 		return database.Unit{}, err
 	}
 

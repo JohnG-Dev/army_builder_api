@@ -8,13 +8,14 @@ import (
 )
 
 func GetGames(s *state.State, ctx context.Context) ([]database.Game, error) {
+
 	games, err := s.DB.GetGames(ctx)
 	if err != nil {
 		return nil, err
 	}
 
 	if games == nil {
-		return []database.Game{}, nil
+		games = []database.Game{}
 	}
 
 	return games, nil
