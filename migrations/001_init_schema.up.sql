@@ -79,6 +79,29 @@ CREATE TABLE abilities (
   updated_at TIMESTAMP DEFAULT NOW()
 );
 
+-- ABILITY EFFECTS TABLE (child of abilities)
+CREATE TABLE ability_effects (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+    ability_id UUID NOT NULL
+        REFERENCES abilities(id)
+        ON DELETE CASCADE,
+
+    stat TEXT NOT NULL,            -- field affected: damage / attacks / save / etc.
+    modifier INT NOT NULL,         -- +1 / -1 / etc.
+    condition TEXT,                -- e.g. 'on_charge', 'while_dueling'
+    description TEXT,              -- human-readable context text
+    version TEXT,                  -- edition field
+    source TEXT,                   -- battlescroll or rulebook reference
+
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Index for deterministic ordering
+CREATE INDEX ability_effects_ability_idx
+    ON ability_effects (ability_id, stat ASC);
+
 -- Rules
 CREATE TABLE rules (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -137,3 +160,5 @@ CREATE TABLE battle_formations (
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
+
+

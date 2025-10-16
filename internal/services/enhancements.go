@@ -42,7 +42,7 @@ func GetEnhancementsByFaction(s *state.State, ctx context.Context, factionID *uu
 	return enhancements, nil
 }
 
-func GetEnhancementsByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Enhancement, error) {
+func GetEnhancementByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Enhancement, error) {
 
 	if id == uuid.Nil {
 		return database.Enhancement{}, appErr.ErrMissingID

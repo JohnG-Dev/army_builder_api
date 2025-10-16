@@ -23,6 +23,19 @@ type Ability struct {
 	UpdatedAt   pgtype.Timestamp
 }
 
+type AbilityEffect struct {
+	ID          uuid.UUID
+	AbilityID   uuid.UUID
+	Stat        string
+	Modifier    int32
+	Condition   pgtype.Text
+	Description pgtype.Text
+	Version     pgtype.Text
+	Source      pgtype.Text
+	CreatedAt   pgtype.Timestamp
+	UpdatedAt   pgtype.Timestamp
+}
+
 type BattleFormation struct {
 	ID          uuid.UUID
 	GameID      uuid.UUID

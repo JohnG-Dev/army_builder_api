@@ -1,154 +1,138 @@
 package handlers
 
 import (
-	"database/sql"
 	"errors"
 	"net/http"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/services"
-	"github.com/JohnG-Dev/army_builder_api/internal/state"
-
 	"github.com/google/uuid"
 	"go.uber.org/zap"
+
+	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
+	"github.com/JohnG-Dev/army_builder_api/internal/models"
+	"github.com/JohnG-Dev/army_builder_api/internal/services"
+	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
 type UnitsHandlers struct {
 	S *state.State
 }
 
-func (u *UnitsHandlers) GetUnits(w http.ResponseWriter, r *http.Request) {
+func (h *UnitsHandlers) GetUnits(w http.ResponseWriter, r *http.Request) {
+	factionIDStr := r.URL.Query().Get("faction_id")
+	var units []models.Unit
+	var err error
 
-	factionIDString := r.URL.Query().Get("faction_id")
-
-	if factionIDString == "" {
-		dbUnitList, err := services.GetUnits(u.S, r.Context(), nil)
-		if err != nil {
-			logRequestError(u.S, r, "failed to fetch units", err)
-			respondWithError(w, http.StatusInternalServerError, "failed to fetch units", err)
+	if factionIDStr == "" {
+		units, err = services.GetUnits(h.S, r.Context(), nil)
+	} else {
+		factionID, parseErr := uuid.Parse(factionIDStr)
+		if parseErr != nil {
+			respondWithError(w, http.StatusBadRequest, "invalid faction id", parseErr)
 			return
 		}
-
-		respondWithJSON(w, http.StatusOK, dbUnitList)
-		return
+		units, err = services.GetUnits(h.S, r.Context(), &factionID)
 	}
-	factionID, err := uuid.Parse(factionIDString)
+
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "invalid faction id", err)
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "units not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch units", err)
+		}
+		logRequestError(h.S, r, "failed to fetch units", err)
 		return
 	}
-	dbUnitList, err := services.GetUnits(u.S, r.Context(), &factionID)
-	if err != nil {
-		logRequestError(u.S, r, "failed to fetch units", err)
 
-		respondWithError(w, http.StatusInternalServerError, "failed to fetch units", err)
-		return
-	}
-
-	logRequestInfo(u.S, r, "Successfully fetched units",
-		zap.Int("count", len(dbUnitList)),
-	)
-	respondWithJSON(w, http.StatusOK, dbUnitList)
+	logRequestInfo(h.S, r, "Successfully fetched units", zap.Int("count", len(units)))
+	respondWithJSON(w, http.StatusOK, units)
 }
 
-func (u *UnitsHandlers) GetUnitByID(w http.ResponseWriter, r *http.Request) {
-	id := r.PathValue("id")
+func (h *UnitsHandlers) GetUnitByID(w http.ResponseWriter, r *http.Request) {
+	idStr := r.PathValue("id")
 
-	unitID, err := uuid.Parse(id)
+	id, err := uuid.Parse(idStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid unit id", err)
 		return
 	}
 
-	unit, err := services.GetUnitByID(u.S, r.Context(), unitID)
+	unit, err := services.GetUnitByID(h.S, r.Context(), id)
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
-			logRequestError(u.S, r, "unit not found", err)
-
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
 			respondWithError(w, http.StatusNotFound, "unit not found", err)
-		} else {
-			logRequestError(u.S, r, "failed to fetch unit", err)
-
+		default:
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch unit", err)
 		}
 
+		logRequestError(h.S, r, "failed to fetch unit", err)
 		return
 	}
 
-	logRequestInfo(u.S, r, "Successfully fetched unit")
-
+	logRequestInfo(h.S, r, "Successfully fetched unit")
 	respondWithJSON(w, http.StatusOK, unit)
 }
 
-func (u *UnitsHandlers) GetManifestations(w http.ResponseWriter, r *http.Request) {
-	dbManifestations, err := services.GetManifestations(u.S, r.Context())
+func (h *UnitsHandlers) GetManifestations(w http.ResponseWriter, r *http.Request) {
+
+	manifestations, err := services.GetManifestations(h.S, r.Context())
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
-			logRequestError(u.S, r, "manifestations not found", err)
-
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
 			respondWithError(w, http.StatusNotFound, "manifestations not found", err)
-		} else {
-			logRequestError(u.S, r, "failed to fetch manifestations", err)
-
+		default:
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch manifestations", err)
 		}
+
+		logRequestError(h.S, r, "failed to fetch manifestations", err)
 		return
 	}
 
-	logRequestInfo(u.S, r, "Successfully fetched manifestations",
-		zap.Int("count", len(dbManifestations)),
-	)
-
-	respondWithJSON(w, http.StatusOK, dbManifestations)
+	logRequestInfo(h.S, r, "Successfully fetched manifestations", zap.Int("count", len(manifestations)))
+	respondWithJSON(w, http.StatusOK, manifestations)
 }
 
-func (u *UnitsHandlers) GetNonManifestationUnits(w http.ResponseWriter, r *http.Request) {
-	dbUnits, err := services.GetNonManifestationUnits(u.S, r.Context())
+func (h *UnitsHandlers) GetNonManifestationUnits(w http.ResponseWriter, r *http.Request) {
 
+	units, err := services.GetNonManifestationUnits(h.S, r.Context())
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
-			logRequestError(u.S, r, "units not found", err)
-
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
 			respondWithError(w, http.StatusNotFound, "units not found", err)
-		} else {
-			logRequestError(u.S, r, "failed to fetch units", err)
-
-			respondWithError(w, http.StatusInternalServerError, "failed to fetch units", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch non-manifestation units", err)
 		}
+
+		logRequestError(h.S, r, "failed to fetch non-manifestation units", err)
 		return
 	}
 
-	logRequestInfo(u.S, r, "Successfully fetched units",
-		zap.Int("count", len(dbUnits)),
-	)
-
-	respondWithJSON(w, http.StatusOK, dbUnits)
+	logRequestInfo(h.S, r, "Successfully fetched non-manifestation units", zap.Int("count", len(units)))
+	respondWithJSON(w, http.StatusOK, units)
 }
 
-func (u *UnitsHandlers) GetManifestationByID(w http.ResponseWriter, r *http.Request) {
-	id := r.PathValue("id")
+func (h *UnitsHandlers) GetManifestationByID(w http.ResponseWriter, r *http.Request) {
+	idStr := r.PathValue("id")
 
-	manifestationID, err := uuid.Parse(id)
+	id, err := uuid.Parse(idStr)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "invalid unit id", err)
+		respondWithError(w, http.StatusBadRequest, "invalid manifestations id", err)
 		return
 	}
 
-	manifestation, err := services.GetManifestationByID(u.S, r.Context(), manifestationID)
+	manifestation, err := services.GetManifestationByID(h.S, r.Context(), id)
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
-			logRequestError(u.S, r, "manifestation not found", err)
-
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
 			respondWithError(w, http.StatusNotFound, "manifestation not found", err)
-		} else {
-			logRequestError(u.S, r, "failed to fetch manifestation", err)
-
+		default:
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch manifestation", err)
 		}
-
+		logRequestError(h.S, r, "failed to fetch manifestation", err)
 		return
 	}
 
-	logRequestInfo(u.S, r, "Successfully fetched manifestation")
-
+	logRequestInfo(h.S, r, "Successfully fetched manifestation")
 	respondWithJSON(w, http.StatusOK, manifestation)
 }
