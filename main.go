@@ -69,10 +69,13 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /games", gHandlers.GetGames)
-	mux.HandleFunc("GET /factions", fHandlers.ListFactions)
+	mux.HandleFunc("GET /factions", fHandlers.GetFactions)
 	mux.HandleFunc("GET /factions/{id}", fHandlers.GetFactionByID)
 	mux.HandleFunc("GET /units", uHandlers.GetUnits)
 	mux.HandleFunc("GET /units/{id}", uHandlers.GetUnitByID)
+	mux.HandleFunc("GET /manifestations", uHandlers.GetManifestations)
+	mux.HandleFunc("GET /manifestations/{id}", uHandlers.GetManifestationByID)
+	mux.HandleFunc("GET /units/nonmanifestations", uHandlers.GetNonManifestationUnits)
 	mux.HandleFunc("GET /weapons", wHandlers.GetWeaponsForUnit)
 	mux.HandleFunc("GET /weapons/{id}", wHandlers.GetWeaponsByID)
 
