@@ -9,25 +9,40 @@ import (
 
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
+	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
-func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]database.Faction, error) {
-	var factions []database.Faction
+func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]models.Faction, error) {
+	var dbFactions []database.Faction
 	var err error
 
 	if gameID == nil {
-		factions, err = s.DB.GetAllFactions(ctx)
+		dbFactions, err = s.DB.GetAllFactions(ctx)
 	} else {
-		factions, err = s.DB.GetFactionsByID(ctx, *gameID)
+		dbFactions, err = s.DB.GetFactionsByID(ctx, *gameID)
 	}
 
 	if err != nil {
 		return nil, err
 	}
 
-	if factions == nil {
-		factions = []database.Faction{}
+	if dbFactions == nil {
+		return []models.Faction{}, nil
+	}
+
+	factions := make([]models.Faction, len(dbFactions))
+	for i, f := range dbFactions {
+		factions[i] = models.Faction{
+			ID:         f.ID,
+			GameID:     f.GameID,
+			Name:       f.Name,
+			Allegiance: f.Allegiance,
+			Version:    f.Version,
+			Source:     f.Source,
+			CreatedAt:  f.CreatedAt,
+			UpdatedAt:  f.Updated,
+		}
 	}
 
 	return factions, nil
