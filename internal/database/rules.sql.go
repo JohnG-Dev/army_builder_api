@@ -9,7 +9,6 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createRule = `-- name: CreateRule :one
@@ -22,7 +21,7 @@ type CreateRuleParams struct {
 	GameID      uuid.UUID
 	Name        string
 	Description string
-	RuleType    pgtype.Text
+	RuleType    string
 }
 
 func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, error) {
@@ -85,7 +84,7 @@ WHERE rule_type = $1
 ORDER BY name ASC
 `
 
-func (q *Queries) GetRulesByType(ctx context.Context, ruleType pgtype.Text) ([]Rule, error) {
+func (q *Queries) GetRulesByType(ctx context.Context, ruleType string) ([]Rule, error) {
 	rows, err := q.db.Query(ctx, getRulesByType, ruleType)
 	if err != nil {
 		return nil, err

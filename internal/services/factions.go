@@ -41,25 +41,36 @@ func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]mode
 			Version:    f.Version,
 			Source:     f.Source,
 			CreatedAt:  f.CreatedAt,
-			UpdatedAt:  f.Updated,
+			UpdatedAt:  f.UpdatedAt,
 		}
 	}
 
 	return factions, nil
 }
 
-func GetFactionByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Faction, error) {
+func GetFactionByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Faction, error) {
 
 	if id == uuid.Nil {
-		return database.Faction{}, appErr.ErrMissingID
+		return models.Faction{}, appErr.ErrMissingID
 	}
 
-	faction, err := s.DB.GetFaction(ctx, id)
+	dbFaction, err := s.DB.GetFaction(ctx, id)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return database.Faction{}, appErr.ErrNotFound
+			return models.Faction{}, appErr.ErrNotFound
 		}
-		return database.Faction{}, err
+		return models.Faction{}, err
+	}
+
+	faction := models.Faction{
+		ID:         dbFaction.ID,
+		GameID:     dbFaction.GameID,
+		Name:       dbFaction.Name,
+		Allegiance: dbFaction.Allegiance,
+		Version:    dbFaction.Version,
+		Source:     dbFaction.Source,
+		CreatedAt:  dbFaction.CreatedAt,
+		UpdatedAt:  dbFaction.UpdatedAt,
 	}
 
 	return faction, nil

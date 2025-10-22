@@ -22,9 +22,9 @@ type CreateAbilityParams struct {
 	UnitID      pgtype.UUID
 	FactionID   pgtype.UUID
 	Name        string
-	Description pgtype.Text
-	Type        pgtype.Text
-	Phase       pgtype.Text
+	Description string
+	Type        string
+	Phase       string
 }
 
 func (q *Queries) CreateAbility(ctx context.Context, arg CreateAbilityParams) (Ability, error) {
@@ -69,7 +69,7 @@ WHERE phase = $1
 ORDER BY name ASC
 `
 
-func (q *Queries) GetAbilitiesByPhase(ctx context.Context, phase pgtype.Text) ([]Ability, error) {
+func (q *Queries) GetAbilitiesByPhase(ctx context.Context, phase string) ([]Ability, error) {
 	rows, err := q.db.Query(ctx, getAbilitiesByPhase, phase)
 	if err != nil {
 		return nil, err
@@ -106,7 +106,7 @@ SELECT id, unit_id, faction_id, name, description, type, phase, version, source,
 ORDER BY name ASC
 `
 
-func (q *Queries) GetAbilitiesByType(ctx context.Context, type_ pgtype.Text) ([]Ability, error) {
+func (q *Queries) GetAbilitiesByType(ctx context.Context, type_ string) ([]Ability, error) {
 	rows, err := q.db.Query(ctx, getAbilitiesByType, type_)
 	if err != nil {
 		return nil, err

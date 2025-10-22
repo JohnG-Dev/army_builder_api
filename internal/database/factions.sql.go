@@ -9,7 +9,6 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createFaction = `-- name: CreateFaction :one
@@ -21,7 +20,7 @@ RETURNING id, game_id, name, allegiance, version, source, created_at, updated_at
 type CreateFactionParams struct {
 	GameID     uuid.UUID
 	Name       string
-	Allegiance pgtype.Text
+	Allegiance string
 }
 
 func (q *Queries) CreateFaction(ctx context.Context, arg CreateFactionParams) (Faction, error) {

@@ -9,28 +9,29 @@ import (
 
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
+	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
-func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]database.Unit, error) {
-	var units []database.Unit
+func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]models.Unit, error) {
+	var dbUnits []database.Unit
 	var err error
 
 	if factionID == nil {
-		units, err = s.DB.GetAllUnits(ctx)
+		dbUnits, err = s.DB.GetAllUnits(ctx)
 	} else {
-		units, err = s.DB.GetUnits(ctx, *factionID)
+		dbUnits, err = s.DB.GetUnits(ctx, *factionID)
 	}
 
 	if err != nil {
 		return nil, err
 	}
 
-	if units == nil {
-		units = []database.Unit{}
+	if dbUnits == nil {
+		dbUnits = []database.Unit{}
 	}
 
-	return units, nil
+	return dbUnits, nil
 }
 
 func GetUnitByID(s *state.State, ctx context.Context, id uuid.UUID) (database.Unit, error) {

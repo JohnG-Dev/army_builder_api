@@ -9,7 +9,6 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createWeapon = `-- name: CreateWeapon :one
@@ -21,12 +20,12 @@ RETURNING id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, ver
 type CreateWeaponParams struct {
 	UnitID  uuid.UUID
 	Name    string
-	Range   pgtype.Text
-	Attacks pgtype.Text
-	ToHit   pgtype.Text
-	ToWound pgtype.Text
-	Rend    pgtype.Text
-	Damage  pgtype.Text
+	Range   string
+	Attacks string
+	ToHit   string
+	ToWound string
+	Rend    string
+	Damage  string
 }
 
 func (q *Queries) CreateWeapon(ctx context.Context, arg CreateWeaponParams) (Weapon, error) {

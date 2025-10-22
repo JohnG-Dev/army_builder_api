@@ -9,7 +9,6 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createBattleFormation = `-- name: CreateBattleFormation :one
@@ -22,9 +21,9 @@ type CreateBattleFormationParams struct {
 	GameID      uuid.UUID
 	FactionID   uuid.UUID
 	Name        string
-	Description pgtype.Text
-	Version     pgtype.Text
-	Source      pgtype.Text
+	Description string
+	Version     string
+	Source      string
 }
 
 func (q *Queries) CreateBattleFormation(ctx context.Context, arg CreateBattleFormationParams) (BattleFormation, error) {

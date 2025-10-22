@@ -9,7 +9,6 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const addKeywordToUnit = `-- name: AddKeywordToUnit :exec
@@ -20,7 +19,7 @@ VALUES ($1, $2, $3)
 type AddKeywordToUnitParams struct {
 	UnitID    uuid.UUID
 	KeywordID uuid.UUID
-	Value     pgtype.Text
+	Value     string
 }
 
 func (q *Queries) AddKeywordToUnit(ctx context.Context, arg AddKeywordToUnitParams) error {
@@ -95,7 +94,7 @@ ORDER BY k.name ASC
 type GetKeywordsForUnitRow struct {
 	ID    uuid.UUID
 	Name  string
-	Value pgtype.Text
+	Value string
 }
 
 func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]GetKeywordsForUnitRow, error) {
@@ -119,7 +118,7 @@ func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]G
 }
 
 const getUnitsWithKeyword = `-- name: GetUnitsWithKeyword :many
-SELECT u.id, u.faction_id, u.name, u.points, u.move, u.health, u.save, u.ward, u.control, u.rend, u.attacks, u.damage, u.summon_cost, u.banishment, u.is_manifestation, u.min_size, u.max_size, u.version, u.source, u.created_at, u.updated_at
+SELECT u.id, u.faction_id, u.name, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON uk.unit_id = u.id
 JOIN keywords k ON k.id = uk.keyword_id
@@ -140,18 +139,18 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 			&i.ID,
 			&i.FactionID,
 			&i.Name,
-			&i.Points,
+			&i.IsManifestation,
 			&i.Move,
 			&i.Health,
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.Points,
+			&i.SummonCost,
+			&i.Banishment,
 			&i.Rend,
 			&i.Attacks,
 			&i.Damage,
-			&i.SummonCost,
-			&i.Banishment,
-			&i.IsManifestation,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.Version,
@@ -170,7 +169,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 }
 
 const getUnitsWithKeywordAndValue = `-- name: GetUnitsWithKeywordAndValue :many
-SELECT u.id, u.faction_id, u.name, u.points, u.move, u.health, u.save, u.ward, u.control, u.rend, u.attacks, u.damage, u.summon_cost, u.banishment, u.is_manifestation, u.min_size, u.max_size, u.version, u.source, u.created_at, u.updated_at
+SELECT u.id, u.faction_id, u.name, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON uk.unit_id = u.id
 JOIN keywords k ON k.id = uk.keyword_id
@@ -181,7 +180,7 @@ ORDER BY u.name ASC
 
 type GetUnitsWithKeywordAndValueParams struct {
 	Name  string
-	Value pgtype.Text
+	Value string
 }
 
 func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsWithKeywordAndValueParams) ([]Unit, error) {
@@ -197,18 +196,18 @@ func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsW
 			&i.ID,
 			&i.FactionID,
 			&i.Name,
-			&i.Points,
+			&i.IsManifestation,
 			&i.Move,
 			&i.Health,
 			&i.Save,
 			&i.Ward,
 			&i.Control,
+			&i.Points,
+			&i.SummonCost,
+			&i.Banishment,
 			&i.Rend,
 			&i.Attacks,
 			&i.Damage,
-			&i.SummonCost,
-			&i.Banishment,
-			&i.IsManifestation,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.Version,
