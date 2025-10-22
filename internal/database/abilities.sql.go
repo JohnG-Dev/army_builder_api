@@ -13,8 +13,8 @@ import (
 )
 
 const createAbility = `-- name: CreateAbility :one
-INSERT INTO abilities (unit_id, faction_id, name, description, type, phase)
-VALUES ($1, $2, $3, $4, $5, $6)
+INSERT INTO abilities (unit_id, faction_id, name, description, type, phase, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
 RETURNING id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
 `
 
@@ -25,6 +25,8 @@ type CreateAbilityParams struct {
 	Description string
 	Type        string
 	Phase       string
+	Version     string
+	Source      string
 }
 
 func (q *Queries) CreateAbility(ctx context.Context, arg CreateAbilityParams) (Ability, error) {
@@ -35,6 +37,8 @@ func (q *Queries) CreateAbility(ctx context.Context, arg CreateAbilityParams) (A
 		arg.Description,
 		arg.Type,
 		arg.Phase,
+		arg.Version,
+		arg.Source,
 	)
 	var i Ability
 	err := row.Scan(
@@ -54,7 +58,7 @@ func (q *Queries) CreateAbility(ctx context.Context, arg CreateAbilityParams) (A
 }
 
 const deleteAbility = `-- name: DeleteAbility :exec
-DELETE FROM abilities 
+DELETE FROM abilities
 WHERE id = $1
 `
 
@@ -64,8 +68,9 @@ func (q *Queries) DeleteAbility(ctx context.Context, id uuid.UUID) error {
 }
 
 const getAbilitiesByPhase = `-- name: GetAbilitiesByPhase :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at FROM abilities 
-WHERE phase = $1 
+SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+FROM abilities
+WHERE phase = $1
 ORDER BY name ASC
 `
 
@@ -102,7 +107,9 @@ func (q *Queries) GetAbilitiesByPhase(ctx context.Context, phase string) ([]Abil
 }
 
 const getAbilitiesByType = `-- name: GetAbilitiesByType :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at FROM abilities WHERE type = $1 
+SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+FROM abilities
+WHERE type = $1
 ORDER BY name ASC
 `
 
@@ -138,9 +145,49 @@ func (q *Queries) GetAbilitiesByType(ctx context.Context, type_ string) ([]Abili
 	return items, nil
 }
 
+const getAbilitiesForFaction = `-- name: GetAbilitiesForFaction :many
+SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+FROM abilities
+WHERE faction_id = $1
+ORDER BY phase ASC, name ASC
+`
+
+func (q *Queries) GetAbilitiesForFaction(ctx context.Context, factionID pgtype.UUID) ([]Ability, error) {
+	rows, err := q.db.Query(ctx, getAbilitiesForFaction, factionID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Ability
+	for rows.Next() {
+		var i Ability
+		if err := rows.Scan(
+			&i.ID,
+			&i.UnitID,
+			&i.FactionID,
+			&i.Name,
+			&i.Description,
+			&i.Type,
+			&i.Phase,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getAbilitiesForUnit = `-- name: GetAbilitiesForUnit :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at FROM abilities 
-WHERE unit_id = $1 
+SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+FROM abilities
+WHERE unit_id = $1
 ORDER BY phase ASC, name ASC
 `
 
@@ -177,12 +224,95 @@ func (q *Queries) GetAbilitiesForUnit(ctx context.Context, unitID pgtype.UUID) (
 }
 
 const getAbilityByID = `-- name: GetAbilityByID :one
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at FROM abilities 
+SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+FROM abilities
 WHERE id = $1
 `
 
 func (q *Queries) GetAbilityByID(ctx context.Context, id uuid.UUID) (Ability, error) {
 	row := q.db.QueryRow(ctx, getAbilityByID, id)
+	var i Ability
+	err := row.Scan(
+		&i.ID,
+		&i.UnitID,
+		&i.FactionID,
+		&i.Name,
+		&i.Description,
+		&i.Type,
+		&i.Phase,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
+}
+
+const getAllAbilities = `-- name: GetAllAbilities :many
+SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+FROM abilities
+ORDER BY unit_id, faction_id, phase ASC, name ASC
+`
+
+func (q *Queries) GetAllAbilities(ctx context.Context) ([]Ability, error) {
+	rows, err := q.db.Query(ctx, getAllAbilities)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Ability
+	for rows.Next() {
+		var i Ability
+		if err := rows.Scan(
+			&i.ID,
+			&i.UnitID,
+			&i.FactionID,
+			&i.Name,
+			&i.Description,
+			&i.Type,
+			&i.Phase,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const updateAbility = `-- name: UpdateAbility :one
+UPDATE abilities
+SET name = $2, description = $3, type = $4, phase = $5, version = $6, source = $7, updated_at = now()
+WHERE id = $1
+RETURNING id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+`
+
+type UpdateAbilityParams struct {
+	ID          uuid.UUID
+	Name        string
+	Description string
+	Type        string
+	Phase       string
+	Version     string
+	Source      string
+}
+
+func (q *Queries) UpdateAbility(ctx context.Context, arg UpdateAbilityParams) (Ability, error) {
+	row := q.db.QueryRow(ctx, updateAbility,
+		arg.ID,
+		arg.Name,
+		arg.Description,
+		arg.Type,
+		arg.Phase,
+		arg.Version,
+		arg.Source,
+	)
 	var i Ability
 	err := row.Scan(
 		&i.ID,

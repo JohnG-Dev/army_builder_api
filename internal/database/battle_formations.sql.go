@@ -51,7 +51,7 @@ func (q *Queries) CreateBattleFormation(ctx context.Context, arg CreateBattleFor
 }
 
 const deleteBattleFormation = `-- name: DeleteBattleFormation :exec
-DELETE FROM battle_formations 
+DELETE FROM battle_formations
 WHERE id = $1
 `
 
@@ -60,8 +60,45 @@ func (q *Queries) DeleteBattleFormation(ctx context.Context, id uuid.UUID) error
 	return err
 }
 
+const getAllBattleFormations = `-- name: GetAllBattleFormations :many
+SELECT id, game_id, faction_id, name, description, version, source, created_at, updated_at
+FROM battle_formations
+ORDER BY game_id, faction_id, name ASC
+`
+
+func (q *Queries) GetAllBattleFormations(ctx context.Context) ([]BattleFormation, error) {
+	rows, err := q.db.Query(ctx, getAllBattleFormations)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []BattleFormation
+	for rows.Next() {
+		var i BattleFormation
+		if err := rows.Scan(
+			&i.ID,
+			&i.GameID,
+			&i.FactionID,
+			&i.Name,
+			&i.Description,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getBattleFormationByID = `-- name: GetBattleFormationByID :one
-SELECT id, game_id, faction_id, name, description, version, source, created_at, updated_at FROM battle_formations 
+SELECT id, game_id, faction_id, name, description, version, source, created_at, updated_at
+FROM battle_formations
 WHERE id = $1
 `
 
@@ -83,7 +120,8 @@ func (q *Queries) GetBattleFormationByID(ctx context.Context, id uuid.UUID) (Bat
 }
 
 const getBattleFormationsForFaction = `-- name: GetBattleFormationsForFaction :many
-SELECT id, game_id, faction_id, name, description, version, source, created_at, updated_at FROM battle_formations
+SELECT id, game_id, faction_id, name, description, version, source, created_at, updated_at
+FROM battle_formations
 WHERE faction_id = $1
 ORDER BY name ASC
 `
@@ -116,4 +154,79 @@ func (q *Queries) GetBattleFormationsForFaction(ctx context.Context, factionID u
 		return nil, err
 	}
 	return items, nil
+}
+
+const getBattleFormationsForGame = `-- name: GetBattleFormationsForGame :many
+SELECT id, game_id, faction_id, name, description, version, source, created_at, updated_at
+FROM battle_formations
+WHERE game_id = $1
+ORDER BY faction_id, name ASC
+`
+
+func (q *Queries) GetBattleFormationsForGame(ctx context.Context, gameID uuid.UUID) ([]BattleFormation, error) {
+	rows, err := q.db.Query(ctx, getBattleFormationsForGame, gameID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []BattleFormation
+	for rows.Next() {
+		var i BattleFormation
+		if err := rows.Scan(
+			&i.ID,
+			&i.GameID,
+			&i.FactionID,
+			&i.Name,
+			&i.Description,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const updateBattleFormation = `-- name: UpdateBattleFormation :one
+UPDATE battle_formations
+SET name = $2, description = $3, version = $4, source = $5, updated_at = now()
+WHERE id = $1
+RETURNING id, game_id, faction_id, name, description, version, source, created_at, updated_at
+`
+
+type UpdateBattleFormationParams struct {
+	ID          uuid.UUID
+	Name        string
+	Description string
+	Version     string
+	Source      string
+}
+
+func (q *Queries) UpdateBattleFormation(ctx context.Context, arg UpdateBattleFormationParams) (BattleFormation, error) {
+	row := q.db.QueryRow(ctx, updateBattleFormation,
+		arg.ID,
+		arg.Name,
+		arg.Description,
+		arg.Version,
+		arg.Source,
+	)
+	var i BattleFormation
+	err := row.Scan(
+		&i.ID,
+		&i.GameID,
+		&i.FactionID,
+		&i.Name,
+		&i.Description,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }

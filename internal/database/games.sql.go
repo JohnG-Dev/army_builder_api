@@ -12,18 +12,25 @@ import (
 )
 
 const createGame = `-- name: CreateGame :one
-INSERT INTO games (name, edition)
-VALUES ($1, $2)
+INSERT INTO games (name, edition, version, source)
+VALUES ($1, $2, $3, $4)
 RETURNING id, name, edition, version, source, created_at, updated_at
 `
 
 type CreateGameParams struct {
 	Name    string
 	Edition string
+	Version string
+	Source  string
 }
 
 func (q *Queries) CreateGame(ctx context.Context, arg CreateGameParams) (Game, error) {
-	row := q.db.QueryRow(ctx, createGame, arg.Name, arg.Edition)
+	row := q.db.QueryRow(ctx, createGame,
+		arg.Name,
+		arg.Edition,
+		arg.Version,
+		arg.Source,
+	)
 	var i Game
 	err := row.Scan(
 		&i.ID,
@@ -38,7 +45,7 @@ func (q *Queries) CreateGame(ctx context.Context, arg CreateGameParams) (Game, e
 }
 
 const deleteGame = `-- name: DeleteGame :exec
-DELETE FROM games 
+DELETE FROM games
 WHERE id = $1
 `
 
@@ -48,7 +55,8 @@ func (q *Queries) DeleteGame(ctx context.Context, id uuid.UUID) error {
 }
 
 const getGame = `-- name: GetGame :one
-SELECT id, name, edition, version, source, created_at, updated_at FROM games 
+SELECT id, name, edition, version, source, created_at, updated_at
+FROM games
 WHERE id = $1
 `
 
@@ -67,8 +75,30 @@ func (q *Queries) GetGame(ctx context.Context, id uuid.UUID) (Game, error) {
 	return i, err
 }
 
+const getGameByName = `-- name: GetGameByName :one
+SELECT id, name, edition, version, source, created_at, updated_at
+FROM games
+WHERE name = $1
+`
+
+func (q *Queries) GetGameByName(ctx context.Context, name string) (Game, error) {
+	row := q.db.QueryRow(ctx, getGameByName, name)
+	var i Game
+	err := row.Scan(
+		&i.ID,
+		&i.Name,
+		&i.Edition,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
+}
+
 const getGames = `-- name: GetGames :many
-SELECT id, name, edition, version, source, created_at, updated_at FROM games
+SELECT id, name, edition, version, source, created_at, updated_at
+FROM games
 ORDER BY name ASC
 `
 
@@ -98,4 +128,38 @@ func (q *Queries) GetGames(ctx context.Context) ([]Game, error) {
 		return nil, err
 	}
 	return items, nil
+}
+
+const updateGame = `-- name: UpdateGame :one
+UPDATE games
+SET edition = $2, version = $3, source = $4, updated_at = now()
+WHERE id = $1
+RETURNING id, name, edition, version, source, created_at, updated_at
+`
+
+type UpdateGameParams struct {
+	ID      uuid.UUID
+	Edition string
+	Version string
+	Source  string
+}
+
+func (q *Queries) UpdateGame(ctx context.Context, arg UpdateGameParams) (Game, error) {
+	row := q.db.QueryRow(ctx, updateGame,
+		arg.ID,
+		arg.Edition,
+		arg.Version,
+		arg.Source,
+	)
+	var i Game
+	err := row.Scan(
+		&i.ID,
+		&i.Name,
+		&i.Edition,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }

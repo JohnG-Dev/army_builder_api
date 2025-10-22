@@ -12,8 +12,8 @@ import (
 )
 
 const createRule = `-- name: CreateRule :one
-INSERT INTO rules (game_id, name, description, rule_type)
-VALUES ($1, $2, $3, $4)
+INSERT INTO rules (game_id, name, description, rule_type, version, source)
+VALUES ($1, $2, $3, $4, $5, $6)
 RETURNING id, game_id, name, description, rule_type, version, source, created_at, updated_at
 `
 
@@ -22,6 +22,8 @@ type CreateRuleParams struct {
 	Name        string
 	Description string
 	RuleType    string
+	Version     string
+	Source      string
 }
 
 func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, error) {
@@ -30,6 +32,8 @@ func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, e
 		arg.Name,
 		arg.Description,
 		arg.RuleType,
+		arg.Version,
+		arg.Source,
 	)
 	var i Rule
 	err := row.Scan(
@@ -47,7 +51,7 @@ func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, e
 }
 
 const deleteRule = `-- name: DeleteRule :exec
-DELETE FROM rules 
+DELETE FROM rules
 WHERE id = $1
 `
 
@@ -56,8 +60,45 @@ func (q *Queries) DeleteRule(ctx context.Context, id uuid.UUID) error {
 	return err
 }
 
+const getAllRules = `-- name: GetAllRules :many
+SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+FROM rules
+ORDER BY game_id, rule_type ASC, name ASC
+`
+
+func (q *Queries) GetAllRules(ctx context.Context) ([]Rule, error) {
+	rows, err := q.db.Query(ctx, getAllRules)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Rule
+	for rows.Next() {
+		var i Rule
+		if err := rows.Scan(
+			&i.ID,
+			&i.GameID,
+			&i.Name,
+			&i.Description,
+			&i.RuleType,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getRuleByID = `-- name: GetRuleByID :one
-SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at FROM rules 
+SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+FROM rules
 WHERE id = $1
 `
 
@@ -79,13 +120,19 @@ func (q *Queries) GetRuleByID(ctx context.Context, id uuid.UUID) (Rule, error) {
 }
 
 const getRulesByType = `-- name: GetRulesByType :many
-SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at FROM rules 
-WHERE rule_type = $1 
+SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+FROM rules
+WHERE game_id = $1 AND rule_type = $2
 ORDER BY name ASC
 `
 
-func (q *Queries) GetRulesByType(ctx context.Context, ruleType string) ([]Rule, error) {
-	rows, err := q.db.Query(ctx, getRulesByType, ruleType)
+type GetRulesByTypeParams struct {
+	GameID   uuid.UUID
+	RuleType string
+}
+
+func (q *Queries) GetRulesByType(ctx context.Context, arg GetRulesByTypeParams) ([]Rule, error) {
+	rows, err := q.db.Query(ctx, getRulesByType, arg.GameID, arg.RuleType)
 	if err != nil {
 		return nil, err
 	}
@@ -115,8 +162,9 @@ func (q *Queries) GetRulesByType(ctx context.Context, ruleType string) ([]Rule, 
 }
 
 const getRulesForGame = `-- name: GetRulesForGame :many
-SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at FROM rules 
-WHERE game_id = $1 
+SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+FROM rules
+WHERE game_id = $1
 ORDER BY rule_type ASC, name ASC
 `
 
@@ -148,4 +196,44 @@ func (q *Queries) GetRulesForGame(ctx context.Context, gameID uuid.UUID) ([]Rule
 		return nil, err
 	}
 	return items, nil
+}
+
+const updateRule = `-- name: UpdateRule :one
+UPDATE rules
+SET name = $2, description = $3, rule_type = $4, version = $5, source = $6, updated_at = now()
+WHERE id = $1
+RETURNING id, game_id, name, description, rule_type, version, source, created_at, updated_at
+`
+
+type UpdateRuleParams struct {
+	ID          uuid.UUID
+	Name        string
+	Description string
+	RuleType    string
+	Version     string
+	Source      string
+}
+
+func (q *Queries) UpdateRule(ctx context.Context, arg UpdateRuleParams) (Rule, error) {
+	row := q.db.QueryRow(ctx, updateRule,
+		arg.ID,
+		arg.Name,
+		arg.Description,
+		arg.RuleType,
+		arg.Version,
+		arg.Source,
+	)
+	var i Rule
+	err := row.Scan(
+		&i.ID,
+		&i.GameID,
+		&i.Name,
+		&i.Description,
+		&i.RuleType,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }

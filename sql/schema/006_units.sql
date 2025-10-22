@@ -2,6 +2,7 @@ CREATE TABLE units (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
+  description TEXT NOT NULL DEFAULT '',
   is_manifestation BOOLEAN NOT NULL DEFAULT false,
   
   -- Core stats
@@ -13,17 +14,17 @@ CREATE TABLE units (
   
   -- Points/cost
   points INT NOT NULL DEFAULT 0,
+  
+  -- Manifestation-specific (only relevant when is_manifestation = true)
   summon_cost TEXT NOT NULL DEFAULT '',
   banishment TEXT NOT NULL DEFAULT '',
-  
-  -- Offensive stats
-  rend TEXT NOT NULL DEFAULT '',
-  attacks TEXT NOT NULL DEFAULT '',
-  damage TEXT NOT NULL DEFAULT '',
   
   -- Reinforcement constraints
   min_size INT NOT NULL DEFAULT 1,
   max_size INT NOT NULL DEFAULT 999,
+  
+  -- Matched play / competitive flag
+  matched_play BOOLEAN NOT NULL DEFAULT true,
   
   -- Metadata
   version TEXT NOT NULL DEFAULT '',

@@ -31,6 +31,33 @@ func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]mode
 		dbUnits = []database.Unit{}
 	}
 
+	units := make([]models.Unit, len(dbUnits))
+	for i, u := range dbUnits {
+		units[i] = models.Unit{
+			ID:              u.ID,
+			FactionID:       u.FactionID,
+			Name:            u.Name,
+			IsManifestation: u.IsManifestation,
+			Move:            int(u.Move),
+			Health:          int(u.Health),
+			Save:            u.Save,
+			Ward:            u.Ward,
+			Control:         int(u.Control),
+			Points:          int(u.Points),
+			SummonCost:      u.SummonCost,
+			Banishment:      u.Banishment,
+			Rend:            u.Rend,
+			Attacks, u.Attacks,
+			Damage:    u.Damage,
+			MinSize:   int(u.MinSize),
+			MaxSize:   int(u.MaxSize),
+			Version:   u.Version,
+			Source:    u.Source,
+			CreatedAt: u.CreatedAt,
+			UpdatedAt: u.UpdatedAt,
+		}
+	}
+
 	return dbUnits, nil
 }
 

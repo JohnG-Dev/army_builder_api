@@ -111,6 +111,7 @@ type Unit struct {
 	ID              uuid.UUID
 	FactionID       uuid.UUID
 	Name            string
+	Description     string
 	IsManifestation bool
 	Move            int32
 	Health          int32
@@ -125,6 +126,7 @@ type Unit struct {
 	Damage          string
 	MinSize         int32
 	MaxSize         int32
+	MatchedPlay     bool
 	Version         string
 	Source          string
 	CreatedAt       time.Time

@@ -12,8 +12,8 @@ import (
 )
 
 const createFaction = `-- name: CreateFaction :one
-INSERT INTO factions (game_id, name, allegiance)
-VALUES ($1, $2, $3)
+INSERT INTO factions (game_id, name, allegiance, version, source)
+VALUES ($1, $2, $3, $4, $5)
 RETURNING id, game_id, name, allegiance, version, source, created_at, updated_at
 `
 
@@ -21,10 +21,18 @@ type CreateFactionParams struct {
 	GameID     uuid.UUID
 	Name       string
 	Allegiance string
+	Version    string
+	Source     string
 }
 
 func (q *Queries) CreateFaction(ctx context.Context, arg CreateFactionParams) (Faction, error) {
-	row := q.db.QueryRow(ctx, createFaction, arg.GameID, arg.Name, arg.Allegiance)
+	row := q.db.QueryRow(ctx, createFaction,
+		arg.GameID,
+		arg.Name,
+		arg.Allegiance,
+		arg.Version,
+		arg.Source,
+	)
 	var i Faction
 	err := row.Scan(
 		&i.ID,
@@ -39,18 +47,19 @@ func (q *Queries) CreateFaction(ctx context.Context, arg CreateFactionParams) (F
 	return i, err
 }
 
-const delteFaction = `-- name: DelteFaction :exec
-DELETE FROM factions 
+const deleteFaction = `-- name: DeleteFaction :exec
+DELETE FROM factions
 WHERE id = $1
 `
 
-func (q *Queries) DelteFaction(ctx context.Context, id uuid.UUID) error {
-	_, err := q.db.Exec(ctx, delteFaction, id)
+func (q *Queries) DeleteFaction(ctx context.Context, id uuid.UUID) error {
+	_, err := q.db.Exec(ctx, deleteFaction, id)
 	return err
 }
 
 const getAllFactions = `-- name: GetAllFactions :many
-SELECT id, game_id, name, allegiance, version, source, created_at, updated_at FROM factions 
+SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+FROM factions
 ORDER BY game_id, name ASC
 `
 
@@ -84,7 +93,8 @@ func (q *Queries) GetAllFactions(ctx context.Context) ([]Faction, error) {
 }
 
 const getFaction = `-- name: GetFaction :one
-SELECT id, game_id, name, allegiance, version, source, created_at, updated_at FROM factions 
+SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+FROM factions
 WHERE id = $1
 `
 
@@ -105,8 +115,9 @@ func (q *Queries) GetFaction(ctx context.Context, id uuid.UUID) (Faction, error)
 }
 
 const getFactionsByID = `-- name: GetFactionsByID :many
-SELECT id, game_id, name, allegiance, version, source, created_at, updated_at FROM factions 
-WHERE game_id = $1 
+SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+FROM factions
+WHERE game_id = $1
 ORDER BY name ASC
 `
 
@@ -137,4 +148,77 @@ func (q *Queries) GetFactionsByID(ctx context.Context, gameID uuid.UUID) ([]Fact
 		return nil, err
 	}
 	return items, nil
+}
+
+const getFactionsByName = `-- name: GetFactionsByName :many
+SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+FROM factions
+WHERE name ILIKE $1
+ORDER BY game_id, name ASC
+`
+
+func (q *Queries) GetFactionsByName(ctx context.Context, name string) ([]Faction, error) {
+	rows, err := q.db.Query(ctx, getFactionsByName, name)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Faction
+	for rows.Next() {
+		var i Faction
+		if err := rows.Scan(
+			&i.ID,
+			&i.GameID,
+			&i.Name,
+			&i.Allegiance,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const updateFaction = `-- name: UpdateFaction :one
+UPDATE factions
+SET name = $2, allegiance = $3, version = $4, source = $5, updated_at = now()
+WHERE id = $1
+RETURNING id, game_id, name, allegiance, version, source, created_at, updated_at
+`
+
+type UpdateFactionParams struct {
+	ID         uuid.UUID
+	Name       string
+	Allegiance string
+	Version    string
+	Source     string
+}
+
+func (q *Queries) UpdateFaction(ctx context.Context, arg UpdateFactionParams) (Faction, error) {
+	row := q.db.QueryRow(ctx, updateFaction,
+		arg.ID,
+		arg.Name,
+		arg.Allegiance,
+		arg.Version,
+		arg.Source,
+	)
+	var i Faction
+	err := row.Scan(
+		&i.ID,
+		&i.GameID,
+		&i.Name,
+		&i.Allegiance,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }

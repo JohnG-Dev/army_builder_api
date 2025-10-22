@@ -11,6 +11,58 @@ import (
 	"github.com/google/uuid"
 )
 
+const createAbilityEffect = `-- name: CreateAbilityEffect :one
+INSERT INTO ability_effects (ability_id, stat, modifier, condition, description, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7)
+RETURNING id, ability_id, stat, modifier, condition, description, version, source, created_at, updated_at
+`
+
+type CreateAbilityEffectParams struct {
+	AbilityID   uuid.UUID
+	Stat        string
+	Modifier    int32
+	Condition   string
+	Description string
+	Version     string
+	Source      string
+}
+
+func (q *Queries) CreateAbilityEffect(ctx context.Context, arg CreateAbilityEffectParams) (AbilityEffect, error) {
+	row := q.db.QueryRow(ctx, createAbilityEffect,
+		arg.AbilityID,
+		arg.Stat,
+		arg.Modifier,
+		arg.Condition,
+		arg.Description,
+		arg.Version,
+		arg.Source,
+	)
+	var i AbilityEffect
+	err := row.Scan(
+		&i.ID,
+		&i.AbilityID,
+		&i.Stat,
+		&i.Modifier,
+		&i.Condition,
+		&i.Description,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
+}
+
+const deleteAbilityEffect = `-- name: DeleteAbilityEffect :exec
+DELETE FROM ability_effects
+WHERE id = $1
+`
+
+func (q *Queries) DeleteAbilityEffect(ctx context.Context, id uuid.UUID) error {
+	_, err := q.db.Exec(ctx, deleteAbilityEffect, id)
+	return err
+}
+
 const getAbilityEffectByID = `-- name: GetAbilityEffectByID :one
 SELECT id, ability_id, stat, modifier, condition, description, version, source, created_at, updated_at
 FROM ability_effects
@@ -108,4 +160,47 @@ func (q *Queries) GetAllAbilityEffects(ctx context.Context) ([]AbilityEffect, er
 		return nil, err
 	}
 	return items, nil
+}
+
+const updateAbilityEffect = `-- name: UpdateAbilityEffect :one
+UPDATE ability_effects
+SET stat = $2, modifier = $3, condition = $4, description = $5, version = $6, source = $7, updated_at = now()
+WHERE id = $1
+RETURNING id, ability_id, stat, modifier, condition, description, version, source, created_at, updated_at
+`
+
+type UpdateAbilityEffectParams struct {
+	ID          uuid.UUID
+	Stat        string
+	Modifier    int32
+	Condition   string
+	Description string
+	Version     string
+	Source      string
+}
+
+func (q *Queries) UpdateAbilityEffect(ctx context.Context, arg UpdateAbilityEffectParams) (AbilityEffect, error) {
+	row := q.db.QueryRow(ctx, updateAbilityEffect,
+		arg.ID,
+		arg.Stat,
+		arg.Modifier,
+		arg.Condition,
+		arg.Description,
+		arg.Version,
+		arg.Source,
+	)
+	var i AbilityEffect
+	err := row.Scan(
+		&i.ID,
+		&i.AbilityID,
+		&i.Stat,
+		&i.Modifier,
+		&i.Condition,
+		&i.Description,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }

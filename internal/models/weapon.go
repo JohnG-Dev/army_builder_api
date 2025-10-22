@@ -11,7 +11,7 @@ type Weapon struct {
 	UnitID    uuid.UUID `json:"unit_id"`
 	Name      string    `json:"name"`
 	Range     string    `json:"range"`
-	Attacks   int       `json:"attacks"`
+	Attacks   string    `json:"attacks"`
 	ToHit     string    `json:"to_hit"`
 	ToWound   string    `json:"to_wound"`
 	Rend      string    `json:"rend"`
@@ -21,3 +21,4 @@ type Weapon struct {
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
 }
+

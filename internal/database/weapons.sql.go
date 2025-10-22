@@ -12,8 +12,8 @@ import (
 )
 
 const createWeapon = `-- name: CreateWeapon :one
-INSERT INTO weapons (unit_id, name, range, attacks, to_hit, to_wound, rend, damage)
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+INSERT INTO weapons (unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
 RETURNING id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at
 `
 
@@ -26,6 +26,8 @@ type CreateWeaponParams struct {
 	ToWound string
 	Rend    string
 	Damage  string
+	Version string
+	Source  string
 }
 
 func (q *Queries) CreateWeapon(ctx context.Context, arg CreateWeaponParams) (Weapon, error) {
@@ -38,6 +40,8 @@ func (q *Queries) CreateWeapon(ctx context.Context, arg CreateWeaponParams) (Wea
 		arg.ToWound,
 		arg.Rend,
 		arg.Damage,
+		arg.Version,
+		arg.Source,
 	)
 	var i Weapon
 	err := row.Scan(
@@ -59,7 +63,7 @@ func (q *Queries) CreateWeapon(ctx context.Context, arg CreateWeaponParams) (Wea
 }
 
 const deleteWeapon = `-- name: DeleteWeapon :exec
-DELETE FROM weapons 
+DELETE FROM weapons
 WHERE id = $1
 `
 
@@ -68,8 +72,49 @@ func (q *Queries) DeleteWeapon(ctx context.Context, id uuid.UUID) error {
 	return err
 }
 
+const getAllWeapons = `-- name: GetAllWeapons :many
+SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at
+FROM weapons
+ORDER BY unit_id, name ASC
+`
+
+func (q *Queries) GetAllWeapons(ctx context.Context) ([]Weapon, error) {
+	rows, err := q.db.Query(ctx, getAllWeapons)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Weapon
+	for rows.Next() {
+		var i Weapon
+		if err := rows.Scan(
+			&i.ID,
+			&i.UnitID,
+			&i.Name,
+			&i.Range,
+			&i.Attacks,
+			&i.ToHit,
+			&i.ToWound,
+			&i.Rend,
+			&i.Damage,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getWeaponByID = `-- name: GetWeaponByID :one
-SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at FROM weapons 
+SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at
+FROM weapons
 WHERE id = $1
 `
 
@@ -95,9 +140,10 @@ func (q *Queries) GetWeaponByID(ctx context.Context, id uuid.UUID) (Weapon, erro
 }
 
 const getWeaponsForUnit = `-- name: GetWeaponsForUnit :many
-SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at FROM weapons 
+SELECT id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at
+FROM weapons
 WHERE unit_id = $1
-ORDER BY unit_id, name ASC
+ORDER BY name ASC
 `
 
 func (q *Queries) GetWeaponsForUnit(ctx context.Context, unitID uuid.UUID) ([]Weapon, error) {
@@ -132,4 +178,56 @@ func (q *Queries) GetWeaponsForUnit(ctx context.Context, unitID uuid.UUID) ([]We
 		return nil, err
 	}
 	return items, nil
+}
+
+const updateWeapon = `-- name: UpdateWeapon :one
+UPDATE weapons
+SET name = $2, range = $3, attacks = $4, to_hit = $5, to_wound = $6, rend = $7, damage = $8, version = $9, source = $10, updated_at = now()
+WHERE id = $1
+RETURNING id, unit_id, name, range, attacks, to_hit, to_wound, rend, damage, version, source, created_at, updated_at
+`
+
+type UpdateWeaponParams struct {
+	ID      uuid.UUID
+	Name    string
+	Range   string
+	Attacks string
+	ToHit   string
+	ToWound string
+	Rend    string
+	Damage  string
+	Version string
+	Source  string
+}
+
+func (q *Queries) UpdateWeapon(ctx context.Context, arg UpdateWeaponParams) (Weapon, error) {
+	row := q.db.QueryRow(ctx, updateWeapon,
+		arg.ID,
+		arg.Name,
+		arg.Range,
+		arg.Attacks,
+		arg.ToHit,
+		arg.ToWound,
+		arg.Rend,
+		arg.Damage,
+		arg.Version,
+		arg.Source,
+	)
+	var i Weapon
+	err := row.Scan(
+		&i.ID,
+		&i.UnitID,
+		&i.Name,
+		&i.Range,
+		&i.Attacks,
+		&i.ToHit,
+		&i.ToWound,
+		&i.Rend,
+		&i.Damage,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }

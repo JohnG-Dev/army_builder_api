@@ -4,7 +4,7 @@ CREATE TABLE abilities (
   faction_id UUID NULL REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
-  type TEXT NOT NULL DEFAULT '',    -- 'passive', 'spell', 'prayer', 'trait'
+  type TEXT NOT NULL DEFAULT '',    -- 'passive', 'spell', 'prayer', 'trait', 'aura'
   phase TEXT NOT NULL DEFAULT '',   -- 'hero', 'movement', 'charge', 'combat', 'end_of_turn'
   version TEXT NOT NULL DEFAULT '',
   source TEXT NOT NULL DEFAULT '',

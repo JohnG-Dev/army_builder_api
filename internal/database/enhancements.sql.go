@@ -12,24 +12,30 @@ import (
 )
 
 const createEnhancement = `-- name: CreateEnhancement :one
-INSERT INTO enhancements (faction_id, name, description, points)
-VALUES ($1, $2, $3, $4)
+INSERT INTO enhancements (faction_id, name, enhancement_type, description, points, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7)
 RETURNING id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
 `
 
 type CreateEnhancementParams struct {
-	FactionID   uuid.UUID
-	Name        string
-	Description string
-	Points      int32
+	FactionID       uuid.UUID
+	Name            string
+	EnhancementType string
+	Description     string
+	Points          int32
+	Version         string
+	Source          string
 }
 
 func (q *Queries) CreateEnhancement(ctx context.Context, arg CreateEnhancementParams) (Enhancement, error) {
 	row := q.db.QueryRow(ctx, createEnhancement,
 		arg.FactionID,
 		arg.Name,
+		arg.EnhancementType,
 		arg.Description,
 		arg.Points,
+		arg.Version,
+		arg.Source,
 	)
 	var i Enhancement
 	err := row.Scan(
@@ -48,7 +54,7 @@ func (q *Queries) CreateEnhancement(ctx context.Context, arg CreateEnhancementPa
 }
 
 const deleteEnhancement = `-- name: DeleteEnhancement :exec
-DELETE FROM enhancements 
+DELETE FROM enhancements
 WHERE id = $1
 `
 
@@ -58,7 +64,8 @@ func (q *Queries) DeleteEnhancement(ctx context.Context, id uuid.UUID) error {
 }
 
 const getEnhancementByID = `-- name: GetEnhancementByID :one
-SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at FROM enhancements 
+SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+FROM enhancements
 WHERE id = $1
 `
 
@@ -81,7 +88,8 @@ func (q *Queries) GetEnhancementByID(ctx context.Context, id uuid.UUID) (Enhance
 }
 
 const getEnhancements = `-- name: GetEnhancements :many
-SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at FROM enhancements
+SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+FROM enhancements
 ORDER BY faction_id, name ASC
 `
 
@@ -116,10 +124,49 @@ func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
 	return items, nil
 }
 
-const getEnhancementsForFaction = `-- name: GetEnhancementsForFaction :many
-SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at FROM enhancements
-WHERE faction_id = $1
+const getEnhancementsByType = `-- name: GetEnhancementsByType :many
+SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+FROM enhancements
+WHERE enhancement_type = $1
 ORDER BY faction_id, name ASC
+`
+
+func (q *Queries) GetEnhancementsByType(ctx context.Context, enhancementType string) ([]Enhancement, error) {
+	rows, err := q.db.Query(ctx, getEnhancementsByType, enhancementType)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Enhancement
+	for rows.Next() {
+		var i Enhancement
+		if err := rows.Scan(
+			&i.ID,
+			&i.FactionID,
+			&i.Name,
+			&i.EnhancementType,
+			&i.Description,
+			&i.Points,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const getEnhancementsForFaction = `-- name: GetEnhancementsForFaction :many
+SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+FROM enhancements
+WHERE faction_id = $1
+ORDER BY name ASC
 `
 
 func (q *Queries) GetEnhancementsForFaction(ctx context.Context, factionID uuid.UUID) ([]Enhancement, error) {
@@ -151,4 +198,47 @@ func (q *Queries) GetEnhancementsForFaction(ctx context.Context, factionID uuid.
 		return nil, err
 	}
 	return items, nil
+}
+
+const updateEnhancement = `-- name: UpdateEnhancement :one
+UPDATE enhancements
+SET name = $2, enhancement_type = $3, description = $4, points = $5, version = $6, source = $7, updated_at = now()
+WHERE id = $1
+RETURNING id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+`
+
+type UpdateEnhancementParams struct {
+	ID              uuid.UUID
+	Name            string
+	EnhancementType string
+	Description     string
+	Points          int32
+	Version         string
+	Source          string
+}
+
+func (q *Queries) UpdateEnhancement(ctx context.Context, arg UpdateEnhancementParams) (Enhancement, error) {
+	row := q.db.QueryRow(ctx, updateEnhancement,
+		arg.ID,
+		arg.Name,
+		arg.EnhancementType,
+		arg.Description,
+		arg.Points,
+		arg.Version,
+		arg.Source,
+	)
+	var i Enhancement
+	err := row.Scan(
+		&i.ID,
+		&i.FactionID,
+		&i.Name,
+		&i.EnhancementType,
+		&i.Description,
+		&i.Points,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
 }

@@ -14,6 +14,7 @@ import (
 const addKeywordToUnit = `-- name: AddKeywordToUnit :exec
 INSERT INTO unit_keywords (unit_id, keyword_id, value)
 VALUES ($1, $2, $3)
+ON CONFLICT DO NOTHING
 `
 
 type AddKeywordToUnitParams struct {
@@ -28,13 +29,27 @@ func (q *Queries) AddKeywordToUnit(ctx context.Context, arg AddKeywordToUnitPara
 }
 
 const createKeyword = `-- name: CreateKeyword :one
-INSERT INTO keywords (name)
-VALUES ($1)
+INSERT INTO keywords (game_id, name, description, version, source)
+VALUES ($1, $2, $3, $4, $5)
 RETURNING id, game_id, name, description, version, source, created_at, updated_at
 `
 
-func (q *Queries) CreateKeyword(ctx context.Context, name string) (Keyword, error) {
-	row := q.db.QueryRow(ctx, createKeyword, name)
+type CreateKeywordParams struct {
+	GameID      uuid.UUID
+	Name        string
+	Description string
+	Version     string
+	Source      string
+}
+
+func (q *Queries) CreateKeyword(ctx context.Context, arg CreateKeywordParams) (Keyword, error) {
+	row := q.db.QueryRow(ctx, createKeyword,
+		arg.GameID,
+		arg.Name,
+		arg.Description,
+		arg.Version,
+		arg.Source,
+	)
 	var i Keyword
 	err := row.Scan(
 		&i.ID,
@@ -49,9 +64,20 @@ func (q *Queries) CreateKeyword(ctx context.Context, name string) (Keyword, erro
 	return i, err
 }
 
+const deleteKeyword = `-- name: DeleteKeyword :exec
+DELETE FROM keywords
+WHERE id = $1
+`
+
+func (q *Queries) DeleteKeyword(ctx context.Context, id uuid.UUID) error {
+	_, err := q.db.Exec(ctx, deleteKeyword, id)
+	return err
+}
+
 const getAllKeywords = `-- name: GetAllKeywords :many
-SELECT id, game_id, name, description, version, source, created_at, updated_at FROM keywords 
-ORDER BY name ASC
+SELECT id, game_id, name, description, version, source, created_at, updated_at
+FROM keywords
+ORDER BY game_id, name ASC
 `
 
 func (q *Queries) GetAllKeywords(ctx context.Context) ([]Keyword, error) {
@@ -83,30 +109,91 @@ func (q *Queries) GetAllKeywords(ctx context.Context) ([]Keyword, error) {
 	return items, nil
 }
 
+const getKeywordByID = `-- name: GetKeywordByID :one
+SELECT id, game_id, name, description, version, source, created_at, updated_at
+FROM keywords
+WHERE id = $1
+`
+
+func (q *Queries) GetKeywordByID(ctx context.Context, id uuid.UUID) (Keyword, error) {
+	row := q.db.QueryRow(ctx, getKeywordByID, id)
+	var i Keyword
+	err := row.Scan(
+		&i.ID,
+		&i.GameID,
+		&i.Name,
+		&i.Description,
+		&i.Version,
+		&i.Source,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
+}
+
+const getKeywordsByGame = `-- name: GetKeywordsByGame :many
+SELECT id, game_id, name, description, version, source, created_at, updated_at
+FROM keywords
+WHERE game_id = $1
+ORDER BY name ASC
+`
+
+func (q *Queries) GetKeywordsByGame(ctx context.Context, gameID uuid.UUID) ([]Keyword, error) {
+	rows, err := q.db.Query(ctx, getKeywordsByGame, gameID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Keyword
+	for rows.Next() {
+		var i Keyword
+		if err := rows.Scan(
+			&i.ID,
+			&i.GameID,
+			&i.Name,
+			&i.Description,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getKeywordsForUnit = `-- name: GetKeywordsForUnit :many
-SELECT k.id, k.name, uk.value
+SELECT k.id, k.game_id, k.name, k.description, k.version, k.source, k.created_at, k.updated_at
 FROM keywords k
-JOIN unit_keywords uk ON uk.keyword_id = k.id
+JOIN unit_keywords uk ON k.id = uk.keyword_id
 WHERE uk.unit_id = $1
 ORDER BY k.name ASC
 `
 
-type GetKeywordsForUnitRow struct {
-	ID    uuid.UUID
-	Name  string
-	Value string
-}
-
-func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]GetKeywordsForUnitRow, error) {
+func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]Keyword, error) {
 	rows, err := q.db.Query(ctx, getKeywordsForUnit, unitID)
 	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
-	var items []GetKeywordsForUnitRow
+	var items []Keyword
 	for rows.Next() {
-		var i GetKeywordsForUnitRow
-		if err := rows.Scan(&i.ID, &i.Name, &i.Value); err != nil {
+		var i Keyword
+		if err := rows.Scan(
+			&i.ID,
+			&i.GameID,
+			&i.Name,
+			&i.Description,
+			&i.Version,
+			&i.Source,
+			&i.CreatedAt,
+			&i.UpdatedAt,
+		); err != nil {
 			return nil, err
 		}
 		items = append(items, i)
@@ -118,10 +205,10 @@ func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]G
 }
 
 const getUnitsWithKeyword = `-- name: GetUnitsWithKeyword :many
-SELECT u.id, u.faction_id, u.name, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
-JOIN unit_keywords uk ON uk.unit_id = u.id
-JOIN keywords k ON k.id = uk.keyword_id
+JOIN unit_keywords uk ON u.id = uk.unit_id
+JOIN keywords k ON uk.keyword_id = k.id
 WHERE k.name = $1
 ORDER BY u.name ASC
 `
@@ -139,6 +226,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 			&i.ID,
 			&i.FactionID,
 			&i.Name,
+			&i.Description,
 			&i.IsManifestation,
 			&i.Move,
 			&i.Health,
@@ -153,6 +241,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
+			&i.MatchedPlay,
 			&i.Version,
 			&i.Source,
 			&i.CreatedAt,
@@ -169,12 +258,11 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 }
 
 const getUnitsWithKeywordAndValue = `-- name: GetUnitsWithKeywordAndValue :many
-SELECT u.id, u.faction_id, u.name, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
-JOIN unit_keywords uk ON uk.unit_id = u.id
-JOIN keywords k ON k.id = uk.keyword_id
-WHERE k.name = $1
-  AND uk.value = $2
+JOIN unit_keywords uk ON u.id = uk.unit_id
+JOIN keywords k ON uk.keyword_id = k.id
+WHERE k.name = $1 AND uk.value = $2
 ORDER BY u.name ASC
 `
 
@@ -196,6 +284,7 @@ func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsW
 			&i.ID,
 			&i.FactionID,
 			&i.Name,
+			&i.Description,
 			&i.IsManifestation,
 			&i.Move,
 			&i.Health,
@@ -210,6 +299,7 @@ func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsW
 			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
+			&i.MatchedPlay,
 			&i.Version,
 			&i.Source,
 			&i.CreatedAt,
@@ -237,5 +327,22 @@ type RemoveKeywordFromUnitParams struct {
 
 func (q *Queries) RemoveKeywordFromUnit(ctx context.Context, arg RemoveKeywordFromUnitParams) error {
 	_, err := q.db.Exec(ctx, removeKeywordFromUnit, arg.UnitID, arg.KeywordID)
+	return err
+}
+
+const updateKeywordValue = `-- name: UpdateKeywordValue :exec
+UPDATE unit_keywords
+SET value = $3
+WHERE unit_id = $1 AND keyword_id = $2
+`
+
+type UpdateKeywordValueParams struct {
+	UnitID    uuid.UUID
+	KeywordID uuid.UUID
+	Value     string
+}
+
+func (q *Queries) UpdateKeywordValue(ctx context.Context, arg UpdateKeywordValueParams) error {
+	_, err := q.db.Exec(ctx, updateKeywordValue, arg.UnitID, arg.KeywordID, arg.Value)
 	return err
 }
