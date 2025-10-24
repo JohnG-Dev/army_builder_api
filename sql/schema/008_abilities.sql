@@ -1,7 +1,7 @@
 CREATE TABLE abilities (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  unit_id UUID NULL REFERENCES units(id) ON DELETE CASCADE,
-  faction_id UUID NULL REFERENCES factions(id) ON DELETE CASCADE,
+  unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
+  faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
   type TEXT NOT NULL DEFAULT '',    -- 'passive', 'spell', 'prayer', 'trait', 'aura'

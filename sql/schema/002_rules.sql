@@ -3,6 +3,7 @@ CREATE TABLE rules (
   game_id UUID NOT NULL REFERENCES games(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   description TEXT NOT NULL,
+  text TEXT NOT NULL DEFAULT '',
   rule_type TEXT NOT NULL DEFAULT '',  -- 'core', 'battle_tactic', 'grand_strategy', 'special'
   version TEXT NOT NULL DEFAULT '',
   source TEXT NOT NULL DEFAULT '',

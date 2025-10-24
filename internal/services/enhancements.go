@@ -13,14 +13,14 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
-func GetEnhancements(s *state.State, ctx context.Context) ([]model.Enhancement, error) {
+func GetEnhancements(s *state.State, ctx context.Context) ([]models.Enhancement, error) {
 
 	dbEnhancements, err := s.DB.GetEnhancements(ctx)
 	if err != nil {
 		return nil, err
 	}
 	if dbEnhancements == nil {
-		return []database.Enhancement{}, nil
+		return []models.Enhancement{}, nil
 	}
 
 	enhancements := make([]models.Enhancement, len(dbEnhancements))
@@ -34,6 +34,8 @@ func GetEnhancements(s *state.State, ctx context.Context) ([]model.Enhancement, 
 			Points:          int(e.Points),
 			Version:         e.Version,
 			Source:          e.Source,
+			CreatedAt:       e.CreatedAt,
+			UpdatedAt:       e.UpdatedAt,
 		}
 	}
 
@@ -89,15 +91,16 @@ func GetEnhancementByID(s *state.State, ctx context.Context, id uuid.UUID) (mode
 	}
 
 	enhancement := models.Enhancement{
-		ID:          dbEnhancement.ID,
-		FactionID:   dbEnhancement.FactionID,
-		Name:        dbEnhancement.Name,
-		Description: dbEnhancement.Description,
-		Points:      int(dbEnhancement.Points),
-		Version:     dbEnhancement.Version,
-		Source:      dbEnhancement.Source,
-		CreatedAt:   dbEnhancement.CreatedAt,
-		UpdatedAt:   dbEnhancement.UpdatedAt,
+		ID:              dbEnhancement.ID,
+		FactionID:       dbEnhancement.FactionID,
+		Name:            dbEnhancement.Name,
+		EnhancementType: dbEnhancement.EnhancementType,
+		Description:     dbEnhancement.Description,
+		Points:          int(dbEnhancement.Points),
+		Version:         dbEnhancement.Version,
+		Source:          dbEnhancement.Source,
+		CreatedAt:       dbEnhancement.CreatedAt,
+		UpdatedAt:       dbEnhancement.UpdatedAt,
 	}
 
 	return enhancement, nil

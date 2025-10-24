@@ -7,17 +7,17 @@ import (
 )
 
 type Ability struct {
-	ID          uuid.UUID  `json:"id"`
-	FactionID   *uuid.UUID `json:"faction_id,omitempty"`
-	UnitID      *uuid.UUID `json:"unit_id,omitempty"`
-	Name        string     `json:"name"`
-	Type        string     `json:"type"`
-	Phase       string     `json:"phase"`
-	Description string     `json:"description"`
-	Version     string     `json:"version"`
-	Source      string     `json:"source"`
-	CreatedAt   time.Time  `json:"created_at"`
-	UpdatedAt   time.Time  `json:"updated_at"`
+	ID          uuid.UUID `json:"id"`
+	FactionID   uuid.UUID `json:"faction_id,omitempty"`
+	UnitID      uuid.UUID `json:"unit_id,omitempty"`
+	Name        string    `json:"name"`
+	Type        string    `json:"type"`
+	Phase       string    `json:"phase"`
+	Description string    `json:"description"`
+	Version     string    `json:"version"`
+	Source      string    `json:"source"`
+	CreatedAt   time.Time `json:"created_at"`
+	UpdatedAt   time.Time `json:"updated_at"`
 
 	// Relationships
 	Effects []AbilityEffect `json:"effects,omitempty"`

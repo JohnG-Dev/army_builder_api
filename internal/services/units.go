@@ -37,6 +37,7 @@ func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]mode
 			ID:              u.ID,
 			FactionID:       u.FactionID,
 			Name:            u.Name,
+			Description:     u.Description,
 			IsManifestation: u.IsManifestation,
 			Move:            int(u.Move),
 			Health:          int(u.Health),
@@ -102,7 +103,7 @@ func GetUnitByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Unit
 	abilities, _ := GetAbilitiesForUnit(s, ctx, id)
 	unit.Abilities = abilities
 
-	keywords, _ := GetKeyWordsForUnit(s, ctx, id)
+	keywords, _ := GetKeywordsForUnit(s, ctx, id)
 	unit.Keywords = keywords
 
 	return unit, nil
@@ -228,7 +229,7 @@ func GetManifestationByID(s *state.State, ctx context.Context, id uuid.UUID) (mo
 	abilities, _ := GetAbilitiesForUnit(s, ctx, id)
 	unit.Abilities = abilities
 
-	keyword, _ := GetKeywordsForUnit(s, ctx, id)
+	keywords, _ := GetKeywordsForUnit(s, ctx, id)
 	unit.Keywords = keywords
 
 	return unit, nil

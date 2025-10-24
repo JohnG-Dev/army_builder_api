@@ -28,6 +28,7 @@ type Unit struct {
 	CreatedAt       time.Time `json:"created_at"`
 	UpdatedAt       time.Time `json:"updated_at"`
 
-	Weapons   []Weapon  `json:"weapons,omitempty"`
-	Abilities []Ability `json:"abilities,omitempty"`
+	Weapons   []Weapon      `json:"weapons,omitempty"`
+	Abilities []Ability     `json:"abilities,omitempty"`
+	Keywords  []UnitKeyword `json:"keywords,omitempty"`
 }

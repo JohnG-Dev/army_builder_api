@@ -14,7 +14,7 @@ import (
 const createRule = `-- name: CreateRule :one
 INSERT INTO rules (game_id, name, description, rule_type, version, source)
 VALUES ($1, $2, $3, $4, $5, $6)
-RETURNING id, game_id, name, description, rule_type, version, source, created_at, updated_at
+RETURNING id, game_id, name, description, text, rule_type, version, source, created_at, updated_at
 `
 
 type CreateRuleParams struct {
@@ -41,6 +41,7 @@ func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, e
 		&i.GameID,
 		&i.Name,
 		&i.Description,
+		&i.Text,
 		&i.RuleType,
 		&i.Version,
 		&i.Source,
@@ -61,7 +62,7 @@ func (q *Queries) DeleteRule(ctx context.Context, id uuid.UUID) error {
 }
 
 const getAllRules = `-- name: GetAllRules :many
-SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+SELECT id, game_id, name, description, text, rule_type, version, source, created_at, updated_at
 FROM rules
 ORDER BY game_id, rule_type ASC, name ASC
 `
@@ -80,6 +81,7 @@ func (q *Queries) GetAllRules(ctx context.Context) ([]Rule, error) {
 			&i.GameID,
 			&i.Name,
 			&i.Description,
+			&i.Text,
 			&i.RuleType,
 			&i.Version,
 			&i.Source,
@@ -97,7 +99,7 @@ func (q *Queries) GetAllRules(ctx context.Context) ([]Rule, error) {
 }
 
 const getRuleByID = `-- name: GetRuleByID :one
-SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+SELECT id, game_id, name, description, text, rule_type, version, source, created_at, updated_at
 FROM rules
 WHERE id = $1
 `
@@ -110,6 +112,7 @@ func (q *Queries) GetRuleByID(ctx context.Context, id uuid.UUID) (Rule, error) {
 		&i.GameID,
 		&i.Name,
 		&i.Description,
+		&i.Text,
 		&i.RuleType,
 		&i.Version,
 		&i.Source,
@@ -120,7 +123,7 @@ func (q *Queries) GetRuleByID(ctx context.Context, id uuid.UUID) (Rule, error) {
 }
 
 const getRulesByType = `-- name: GetRulesByType :many
-SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+SELECT id, game_id, name, description, text, rule_type, version, source, created_at, updated_at
 FROM rules
 WHERE game_id = $1 AND rule_type = $2
 ORDER BY name ASC
@@ -145,6 +148,7 @@ func (q *Queries) GetRulesByType(ctx context.Context, arg GetRulesByTypeParams) 
 			&i.GameID,
 			&i.Name,
 			&i.Description,
+			&i.Text,
 			&i.RuleType,
 			&i.Version,
 			&i.Source,
@@ -162,7 +166,7 @@ func (q *Queries) GetRulesByType(ctx context.Context, arg GetRulesByTypeParams) 
 }
 
 const getRulesForGame = `-- name: GetRulesForGame :many
-SELECT id, game_id, name, description, rule_type, version, source, created_at, updated_at
+SELECT id, game_id, name, description, text, rule_type, version, source, created_at, updated_at
 FROM rules
 WHERE game_id = $1
 ORDER BY rule_type ASC, name ASC
@@ -182,6 +186,7 @@ func (q *Queries) GetRulesForGame(ctx context.Context, gameID uuid.UUID) ([]Rule
 			&i.GameID,
 			&i.Name,
 			&i.Description,
+			&i.Text,
 			&i.RuleType,
 			&i.Version,
 			&i.Source,
@@ -202,7 +207,7 @@ const updateRule = `-- name: UpdateRule :one
 UPDATE rules
 SET name = $2, description = $3, rule_type = $4, version = $5, source = $6, updated_at = now()
 WHERE id = $1
-RETURNING id, game_id, name, description, rule_type, version, source, created_at, updated_at
+RETURNING id, game_id, name, description, text, rule_type, version, source, created_at, updated_at
 `
 
 type UpdateRuleParams struct {
@@ -229,6 +234,7 @@ func (q *Queries) UpdateRule(ctx context.Context, arg UpdateRuleParams) (Rule, e
 		&i.GameID,
 		&i.Name,
 		&i.Description,
+		&i.Text,
 		&i.RuleType,
 		&i.Version,
 		&i.Source,

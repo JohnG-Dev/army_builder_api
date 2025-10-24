@@ -168,32 +168,23 @@ func (q *Queries) GetKeywordsByGame(ctx context.Context, gameID uuid.UUID) ([]Ke
 }
 
 const getKeywordsForUnit = `-- name: GetKeywordsForUnit :many
-SELECT k.id, k.game_id, k.name, k.description, k.version, k.source, k.created_at, k.updated_at
-FROM keywords k
-JOIN unit_keywords uk ON k.id = uk.keyword_id
+SELECT uk.unit_id, uk.keyword_id, uk.value
+FROM unit_keywords uk
+JOIN keywords k ON k.id = uk.keyword_id
 WHERE uk.unit_id = $1
 ORDER BY k.name ASC
 `
 
-func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]Keyword, error) {
+func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]UnitKeyword, error) {
 	rows, err := q.db.Query(ctx, getKeywordsForUnit, unitID)
 	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
-	var items []Keyword
+	var items []UnitKeyword
 	for rows.Next() {
-		var i Keyword
-		if err := rows.Scan(
-			&i.ID,
-			&i.GameID,
-			&i.Name,
-			&i.Description,
-			&i.Version,
-			&i.Source,
-			&i.CreatedAt,
-			&i.UpdatedAt,
-		); err != nil {
+		var i UnitKeyword
+		if err := rows.Scan(&i.UnitID, &i.KeywordID, &i.Value); err != nil {
 			return nil, err
 		}
 		items = append(items, i)
@@ -205,7 +196,7 @@ func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]K
 }
 
 const getUnitsWithKeyword = `-- name: GetUnitsWithKeyword :many
-SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON u.id = uk.unit_id
 JOIN keywords k ON uk.keyword_id = k.id
@@ -236,9 +227,6 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 			&i.Points,
 			&i.SummonCost,
 			&i.Banishment,
-			&i.Rend,
-			&i.Attacks,
-			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.MatchedPlay,
@@ -258,7 +246,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 }
 
 const getUnitsWithKeywordAndValue = `-- name: GetUnitsWithKeywordAndValue :many
-SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.rend, u.attacks, u.damage, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON u.id = uk.unit_id
 JOIN keywords k ON uk.keyword_id = k.id
@@ -294,9 +282,6 @@ func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsW
 			&i.Points,
 			&i.SummonCost,
 			&i.Banishment,
-			&i.Rend,
-			&i.Attacks,
-			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.MatchedPlay,

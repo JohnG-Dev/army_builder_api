@@ -15,16 +15,16 @@ const createUnit = `-- name: CreateUnit :one
 INSERT INTO units (
   faction_id, name, description, is_manifestation,
   move, health, save, ward, control, points,
-  summon_cost, banishment, rend, attacks, damage,
+  summon_cost, banishment,
   min_size, max_size, matched_play, version, source
 )
 VALUES (
   $1, $2, $3, $4,
   $5, $6, $7, $8, $9, $10,
-  $11, $12, $13, $14, $15,
-  $16, $17, $18, $19, $20
+  $11, $12,
+  $13, $14, $15, $16, $17
 )
-RETURNING id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+RETURNING id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 `
 
 type CreateUnitParams struct {
@@ -40,9 +40,6 @@ type CreateUnitParams struct {
 	Points          int32
 	SummonCost      string
 	Banishment      string
-	Rend            string
-	Attacks         string
-	Damage          string
 	MinSize         int32
 	MaxSize         int32
 	MatchedPlay     bool
@@ -64,9 +61,6 @@ func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, e
 		arg.Points,
 		arg.SummonCost,
 		arg.Banishment,
-		arg.Rend,
-		arg.Attacks,
-		arg.Damage,
 		arg.MinSize,
 		arg.MaxSize,
 		arg.MatchedPlay,
@@ -88,9 +82,6 @@ func (q *Queries) CreateUnit(ctx context.Context, arg CreateUnitParams) (Unit, e
 		&i.Points,
 		&i.SummonCost,
 		&i.Banishment,
-		&i.Rend,
-		&i.Attacks,
-		&i.Damage,
 		&i.MinSize,
 		&i.MaxSize,
 		&i.MatchedPlay,
@@ -113,7 +104,7 @@ func (q *Queries) DeleteUnit(ctx context.Context, id uuid.UUID) error {
 }
 
 const getAllUnits = `-- name: GetAllUnits :many
-SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 FROM units
 WHERE is_manifestation = false
 ORDER BY faction_id, name ASC
@@ -142,9 +133,6 @@ func (q *Queries) GetAllUnits(ctx context.Context) ([]Unit, error) {
 			&i.Points,
 			&i.SummonCost,
 			&i.Banishment,
-			&i.Rend,
-			&i.Attacks,
-			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.MatchedPlay,
@@ -164,7 +152,7 @@ func (q *Queries) GetAllUnits(ctx context.Context) ([]Unit, error) {
 }
 
 const getManifestationByID = `-- name: GetManifestationByID :one
-SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 FROM units
 WHERE id = $1 AND is_manifestation = true
 `
@@ -186,9 +174,6 @@ func (q *Queries) GetManifestationByID(ctx context.Context, id uuid.UUID) (Unit,
 		&i.Points,
 		&i.SummonCost,
 		&i.Banishment,
-		&i.Rend,
-		&i.Attacks,
-		&i.Damage,
 		&i.MinSize,
 		&i.MaxSize,
 		&i.MatchedPlay,
@@ -201,7 +186,7 @@ func (q *Queries) GetManifestationByID(ctx context.Context, id uuid.UUID) (Unit,
 }
 
 const getManifestations = `-- name: GetManifestations :many
-SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 FROM units
 WHERE is_manifestation = true
 ORDER BY faction_id, name ASC
@@ -230,9 +215,6 @@ func (q *Queries) GetManifestations(ctx context.Context) ([]Unit, error) {
 			&i.Points,
 			&i.SummonCost,
 			&i.Banishment,
-			&i.Rend,
-			&i.Attacks,
-			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.MatchedPlay,
@@ -252,7 +234,7 @@ func (q *Queries) GetManifestations(ctx context.Context) ([]Unit, error) {
 }
 
 const getNonManifestationUnits = `-- name: GetNonManifestationUnits :many
-SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 FROM units
 WHERE is_manifestation = false
 ORDER BY faction_id, name ASC
@@ -281,9 +263,6 @@ func (q *Queries) GetNonManifestationUnits(ctx context.Context) ([]Unit, error) 
 			&i.Points,
 			&i.SummonCost,
 			&i.Banishment,
-			&i.Rend,
-			&i.Attacks,
-			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.MatchedPlay,
@@ -303,7 +282,7 @@ func (q *Queries) GetNonManifestationUnits(ctx context.Context) ([]Unit, error) 
 }
 
 const getUnitByID = `-- name: GetUnitByID :one
-SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 FROM units
 WHERE id = $1
 `
@@ -325,9 +304,6 @@ func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
 		&i.Points,
 		&i.SummonCost,
 		&i.Banishment,
-		&i.Rend,
-		&i.Attacks,
-		&i.Damage,
 		&i.MinSize,
 		&i.MaxSize,
 		&i.MatchedPlay,
@@ -340,7 +316,7 @@ func (q *Queries) GetUnitByID(ctx context.Context, id uuid.UUID) (Unit, error) {
 }
 
 const getUnits = `-- name: GetUnits :many
-SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 FROM units
 WHERE faction_id = $1 AND is_manifestation = false
 ORDER BY name ASC
@@ -369,9 +345,6 @@ func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, er
 			&i.Points,
 			&i.SummonCost,
 			&i.Banishment,
-			&i.Rend,
-			&i.Attacks,
-			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.MatchedPlay,
@@ -391,7 +364,7 @@ func (q *Queries) GetUnits(ctx context.Context, factionID uuid.UUID) ([]Unit, er
 }
 
 const getUnitsByMatchedPlay = `-- name: GetUnitsByMatchedPlay :many
-SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+SELECT id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 FROM units
 WHERE faction_id = $1 AND matched_play = true AND is_manifestation = false
 ORDER BY name ASC
@@ -420,9 +393,6 @@ func (q *Queries) GetUnitsByMatchedPlay(ctx context.Context, factionID uuid.UUID
 			&i.Points,
 			&i.SummonCost,
 			&i.Banishment,
-			&i.Rend,
-			&i.Attacks,
-			&i.Damage,
 			&i.MinSize,
 			&i.MaxSize,
 			&i.MatchedPlay,
@@ -445,10 +415,9 @@ const updateUnit = `-- name: UpdateUnit :one
 UPDATE units
 SET name = $2, description = $3, move = $4, health = $5, save = $6, ward = $7,
     control = $8, points = $9, summon_cost = $10, banishment = $11,
-    rend = $12, attacks = $13, damage = $14, min_size = $15, max_size = $16,
-    matched_play = $17, version = $18, source = $19, updated_at = now()
+    min_size = $12, max_size = $13, matched_play = $14, version = $15, source = $16, updated_at = now()
 WHERE id = $1
-RETURNING id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, rend, attacks, damage, min_size, max_size, matched_play, version, source, created_at, updated_at
+RETURNING id, faction_id, name, description, is_manifestation, move, health, save, ward, control, points, summon_cost, banishment, min_size, max_size, matched_play, version, source, created_at, updated_at
 `
 
 type UpdateUnitParams struct {
@@ -463,9 +432,6 @@ type UpdateUnitParams struct {
 	Points      int32
 	SummonCost  string
 	Banishment  string
-	Rend        string
-	Attacks     string
-	Damage      string
 	MinSize     int32
 	MaxSize     int32
 	MatchedPlay bool
@@ -486,9 +452,6 @@ func (q *Queries) UpdateUnit(ctx context.Context, arg UpdateUnitParams) (Unit, e
 		arg.Points,
 		arg.SummonCost,
 		arg.Banishment,
-		arg.Rend,
-		arg.Attacks,
-		arg.Damage,
 		arg.MinSize,
 		arg.MaxSize,
 		arg.MatchedPlay,
@@ -510,9 +473,6 @@ func (q *Queries) UpdateUnit(ctx context.Context, arg UpdateUnitParams) (Unit, e
 		&i.Points,
 		&i.SummonCost,
 		&i.Banishment,
-		&i.Rend,
-		&i.Attacks,
-		&i.Damage,
 		&i.MinSize,
 		&i.MaxSize,
 		&i.MatchedPlay,

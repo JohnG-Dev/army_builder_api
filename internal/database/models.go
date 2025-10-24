@@ -8,13 +8,12 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 type Ability struct {
 	ID          uuid.UUID
-	UnitID      pgtype.UUID
-	FactionID   pgtype.UUID
+	UnitID      uuid.UUID
+	FactionID   uuid.UUID
 	Name        string
 	Description string
 	Type        string
@@ -100,6 +99,7 @@ type Rule struct {
 	GameID      uuid.UUID
 	Name        string
 	Description string
+	Text        string
 	RuleType    string
 	Version     string
 	Source      string
@@ -121,9 +121,6 @@ type Unit struct {
 	Points          int32
 	SummonCost      string
 	Banishment      string
-	Rend            string
-	Attacks         string
-	Damage          string
 	MinSize         int32
 	MaxSize         int32
 	MatchedPlay     bool

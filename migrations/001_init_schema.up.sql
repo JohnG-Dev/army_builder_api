@@ -1,164 +1,189 @@
 -- Enable pgcrypto for UUID generation
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
--- Games
+-- GAMES TABLE (no dependencies)
 CREATE TABLE games (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name TEXT NOT NULL UNIQUE,
   edition TEXT NOT NULL,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
--- Factions
-CREATE TABLE factions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  game_id UUID NOT NULL REFERENCES games(id) ON DELETE CASCADE,
-  name TEXT NOT NULL,
-  allegiance TEXT,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
-);
-
--- Units
-CREATE TABLE units (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
-  name TEXT NOT NULL,
-  points INT,
-  move TEXT,
-  health INT,
-  save TEXT,
-  ward TEXT,
-  control INT,
-  rend TEXT,
-  attacks TEXT,
-  damage TEXT,
-  summon_cost TEXT,
-  banishment TEXT,
-  is_manifestation BOOLEAN DEFAULT FALSE,
-  min_size INT DEFAULT 1 NOT NULL,
-  max_size INT DEFAULT 1 NOT NULL,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
-);
-
--- Weapons
-CREATE TABLE weapons (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
-  name TEXT NOT NULL,
-  range TEXT,
-  attacks TEXT,
-  to_hit TEXT,
-  to_wound TEXT,
-  rend TEXT,
-  damage TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
-);
-
--- Abilities
-CREATE TABLE abilities (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  unit_id UUID REFERENCES units(id) ON DELETE CASCADE,
-  faction_id UUID REFERENCES factions(id) ON DELETE CASCADE,
-  name TEXT NOT NULL,
-  description TEXT,
-  type TEXT,
-  phase TEXT,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
-);
-
--- ABILITY EFFECTS TABLE (child of abilities)
-CREATE TABLE ability_effects (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-
-    ability_id UUID NOT NULL
-        REFERENCES abilities(id)
-        ON DELETE CASCADE,
-
-    stat TEXT NOT NULL,            -- field affected: damage / attacks / save / etc.
-    modifier INT NOT NULL,         -- +1 / -1 / etc.
-    condition TEXT,                -- e.g. 'on_charge', 'while_dueling'
-    description TEXT,              -- human-readable context text
-    version TEXT,                  -- edition field
-    source TEXT,                   -- battlescroll or rulebook reference
-
-    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
--- Index for deterministic ordering
-CREATE INDEX ability_effects_ability_idx
-    ON ability_effects (ability_id, stat ASC);
-
--- Rules
+-- RULES TABLE (depends on games)
 CREATE TABLE rules (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   game_id UUID NOT NULL REFERENCES games(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
   description TEXT NOT NULL,
-  rule_type TEXT,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+  text TEXT NOT NULL DEFAULT '',
+  rule_type TEXT NOT NULL DEFAULT '',
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
--- Keywords
+CREATE INDEX rules_game_idx ON rules (game_id, name ASC);
+
+-- KEYWORDS TABLE (depends on games)
 CREATE TABLE keywords (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  game_id UUID REFERENCES games(id) ON DELETE CASCADE,
-  name TEXT NOT NULL UNIQUE,
-  description TEXT,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+  game_id UUID NOT NULL REFERENCES games(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  description TEXT NOT NULL DEFAULT '',
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
--- Unit Keywords
+CREATE INDEX keywords_game_idx ON keywords (game_id, name ASC);
+
+-- FACTIONS TABLE (depends on games)
+CREATE TABLE factions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  game_id UUID NOT NULL REFERENCES games(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  allegiance TEXT NOT NULL DEFAULT '',
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX factions_game_idx ON factions (game_id, name ASC);
+
+-- UNITS TABLE (depends on factions)
+CREATE TABLE units (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  description TEXT NOT NULL DEFAULT '',
+  is_manifestation BOOLEAN NOT NULL DEFAULT false,
+  
+  -- Core stats
+  move INT NOT NULL DEFAULT 0,
+  health INT NOT NULL DEFAULT 1,
+  save TEXT NOT NULL DEFAULT '7+',
+  ward TEXT NOT NULL DEFAULT '—',
+  control INT NOT NULL DEFAULT 0,
+  
+  -- Points/cost
+  points INT NOT NULL DEFAULT 0,
+  
+  -- Manifestation-specific (only relevant when is_manifestation = true)
+  summon_cost TEXT NOT NULL DEFAULT '',
+  banishment TEXT NOT NULL DEFAULT '',
+  
+  -- Reinforcement constraints
+  min_size INT NOT NULL DEFAULT 1,
+  max_size INT NOT NULL DEFAULT 999,
+  
+  -- Matched play / competitive flag
+  matched_play BOOLEAN NOT NULL DEFAULT true,
+  
+  -- Metadata
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX units_faction_idx ON units (faction_id, name ASC);
+CREATE INDEX units_manifestation_idx ON units (is_manifestation);
+
+-- UNIT_KEYWORDS TABLE (depends on units + keywords)
 CREATE TABLE unit_keywords (
   unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
   keyword_id UUID NOT NULL REFERENCES keywords(id) ON DELETE CASCADE,
-  value TEXT,
+  value TEXT NOT NULL DEFAULT '',
   PRIMARY KEY (unit_id, keyword_id)
 );
 
--- Enhancements
+-- WEAPONS TABLE (depends on units)
+CREATE TABLE weapons (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  range TEXT NOT NULL DEFAULT '',
+  attacks TEXT NOT NULL DEFAULT '',
+  to_hit TEXT NOT NULL DEFAULT '',
+  to_wound TEXT NOT NULL DEFAULT '',
+  rend TEXT NOT NULL DEFAULT '',
+  damage TEXT NOT NULL DEFAULT '',
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX weapons_unit_idx ON weapons (unit_id, name ASC);
+
+-- ABILITIES TABLE (depends on units + factions)
+CREATE TABLE abilities (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
+  faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  description TEXT NOT NULL DEFAULT '',
+  type TEXT NOT NULL DEFAULT '',
+  phase TEXT NOT NULL DEFAULT '',
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX abilities_unit_idx ON abilities (unit_id, name ASC);
+CREATE INDEX abilities_faction_idx ON abilities (faction_id, name ASC);
+
+-- ABILITY_EFFECTS TABLE (depends on abilities)
+CREATE TABLE ability_effects (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  ability_id UUID NOT NULL REFERENCES abilities(id) ON DELETE CASCADE,
+  stat TEXT NOT NULL,
+  modifier INT NOT NULL DEFAULT 0,
+  condition TEXT NOT NULL DEFAULT '',
+  description TEXT NOT NULL DEFAULT '',
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX ability_effects_ability_idx ON ability_effects (ability_id, stat ASC);
+
+-- ENHANCEMENTS TABLE (depends on factions)
 CREATE TABLE enhancements (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
-  description TEXT,
-  points INT,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+  enhancement_type TEXT NOT NULL DEFAULT '',
+  description TEXT NOT NULL DEFAULT '',
+  points INT NOT NULL DEFAULT 0,
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
--- Battle Formations
+CREATE INDEX enhancements_faction_idx ON enhancements (faction_id, name ASC);
+
+-- BATTLE_FORMATIONS TABLE (depends on games + factions)
 CREATE TABLE battle_formations (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   game_id UUID NOT NULL REFERENCES games(id) ON DELETE CASCADE,
   faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
   name TEXT NOT NULL,
-  description TEXT,
-  version TEXT,
-  source TEXT,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
+  description TEXT NOT NULL DEFAULT '',
+  version TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-
+CREATE INDEX battle_formations_game_idx ON battle_formations (game_id, name ASC);
+CREATE INDEX battle_formations_faction_idx ON battle_formations (faction_id, name ASC);
