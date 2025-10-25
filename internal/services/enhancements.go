@@ -7,7 +7,6 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
@@ -104,4 +103,42 @@ func GetEnhancementByID(s *state.State, ctx context.Context, id uuid.UUID) (mode
 	}
 
 	return enhancement, nil
+}
+
+func GetEnhancementsByType(s *state.State, ctx context.Context, enhancementType string) ([]models.Enhancement, error) {
+
+	if enhancementType == "" {
+		return nil, appErr.ErrMissingID
+	}
+
+	dbEnhancements, err := s.DB.GetEnhancementsByType(ctx, enhancementType)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Enhancement{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbEnhancements == nil {
+		return []models.Enhancement{}, nil
+	}
+
+	enhancements := make([]models.Enhancement, len(dbEnhancements))
+	for i, e := range dbEnhancements {
+		enhancements[i] = models.Enhancement{
+			ID:              e.ID,
+			FactionID:       e.FactionID,
+			Name:            e.Name,
+			EnhancementType: e.EnhancementType,
+			Description:     e.Description,
+			Points:          int(e.Points),
+			Version:         e.Version,
+			Source:          e.Source,
+			CreatedAt:       e.CreatedAt,
+			UpdatedAt:       e.UpdatedAt,
+		}
+	}
+
+	return enhancements, nil
 }

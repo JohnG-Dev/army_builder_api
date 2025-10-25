@@ -2,8 +2,12 @@ package services
 
 import (
 	"context"
+	"database/sql"
+	"errors"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/database"
+	"github.com/google/uuid"
+
+	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
@@ -33,4 +37,60 @@ func GetGames(s *state.State, ctx context.Context) ([]models.Game, error) {
 	}
 
 	return games, nil
+}
+
+func GetGame(s *state.State, ctx context.Context, id uuid.UUID) (models.Game, error) {
+
+	if id == uuid.Nil {
+		return models.Game{}, appErr.ErrMissingID
+	}
+
+	dbGame, err := s.DB.GetGame(ctx, id)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return models.Game{}, nil
+		}
+
+		return models.Game{}, err
+
+	}
+	game := models.Game{
+		ID:        dbGame.ID,
+		Name:      dbGame.Name,
+		Edition:   dbGame.Edition,
+		Version:   dbGame.Version,
+		Source:    dbGame.Source,
+		CreatedAt: dbGame.CreatedAt,
+		UpdatedAt: dbGame.UpdatedAt,
+	}
+
+	return game, nil
+}
+
+func GetGameByName(s *state.State, ctx context.Context, name string) (models.Game, error) {
+
+	if name == "" {
+		return models.Game{}, appErr.ErrMissingID
+	}
+
+	dbGame, err := s.DB.GetGameByName(ctx, name)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return models.Game{}, nil
+		}
+
+		return models.Game{}, err
+	}
+
+	game := models.Game{
+		ID:        dbGame.ID,
+		Name:      dbGame.Name,
+		Edition:   dbGame.Edition,
+		Version:   dbGame.Source,
+		Source:    dbGame.Source,
+		CreatedAt: dbGame.CreatedAt,
+		UpdatedAt: dbGame.UpdatedAt,
+	}
+
+	return game, nil
 }

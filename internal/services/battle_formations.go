@@ -7,11 +7,43 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
+
+func GetAllBattleFormations(s *state.State, ctx context.Context) ([]models.BattleFormation, error) {
+
+	dbBattleFormation, err := s.DB.GetAllBattleFormations(ctx)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.BattleFormation{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbBattleFormation == nil {
+		return []models.BattleFormation{}, nil
+	}
+
+	battleFormation := make([]models.BattleFormation, len(dbBattleFormation))
+	for i, f := range dbBattleFormation {
+		battleFormation[i] = models.BattleFormation{
+			ID:          f.ID,
+			GameID:      f.GameID,
+			FactionID:   f.FactionID,
+			Name:        f.Name,
+			Description: f.Description,
+			Version:     f.Version,
+			Source:      f.Source,
+			CreatedAt:   f.CreatedAt,
+			UpdatedAt:   f.UpdatedAt,
+		}
+	}
+
+	return battleFormation, nil
+}
 
 func GetBattleFormationsForGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.BattleFormation, error) {
 
@@ -22,7 +54,7 @@ func GetBattleFormationsForGame(s *state.State, ctx context.Context, gameID uuid
 	dbBattleFormation, err := s.DB.GetBattleFormationsForGame(ctx, gameID)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return []models.BattleFormation{}, appErr.ErrNotFound
+			return []models.BattleFormation{}, nil
 		}
 
 		return nil, err
@@ -59,7 +91,7 @@ func GetBattleFormationsForFaction(s *state.State, ctx context.Context, factionI
 	dbBattleFormation, err := s.DB.GetBattleFormationsForFaction(ctx, factionID)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return []models.BattleFormation{}, appErr.ErrNotFound
+			return []models.BattleFormation{}, nil
 		}
 
 		return nil, err
@@ -96,7 +128,7 @@ func GetBattleFormationByID(s *state.State, ctx context.Context, id uuid.UUID) (
 	dbBattleFormation, err := s.DB.GetBattleFormationByID(ctx, id)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return models.BattleFormation{}, appErr.ErrNotFound
+			return models.BattleFormation{}, nil
 		}
 
 		return models.BattleFormation{}, err

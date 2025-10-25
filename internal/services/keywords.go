@@ -13,6 +13,34 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
+func GetAllKeywords(s *state.State, ctx context.Context) ([]models.Keyword, error) {
+
+	dbKeywords, err := s.DB.GetAllKeywords(ctx)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Keyword{}, nil
+		}
+
+		return nil, err
+	}
+
+	keywords := make([]models.Keyword, len(dbKeywords))
+	for i, k := range dbKeywords {
+		keywords[i] = models.Keyword{
+			ID:          k.ID,
+			GameID:      k.GameID,
+			Name:        k.Name,
+			Description: k.Description,
+			Version:     k.Version,
+			Source:      k.Source,
+			CreatedAt:   k.CreatedAt,
+			UpdatedAt:   k.UpdatedAt,
+		}
+	}
+
+	return keywords, nil
+}
+
 func GetKeywordsForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) ([]models.UnitKeyword, error) {
 
 	if unitID == uuid.Nil {
@@ -98,7 +126,10 @@ func GetUnitsWithKeywordAndValue(s *state.State, ctx context.Context, name strin
 		return nil, appErr.ErrMissingID
 	}
 
-	dbUnits, err := s.DB.GetUnitsWithKeywordAndValue(ctx, name, value)
+	dbUnits, err := s.DB.GetUnitsWithKeywordAndValue(ctx, database.GetUnitsWithKeywordAndValueParams{
+		Name:  name,
+		Value: value,
+	})
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
 			return []models.Unit{}, nil
@@ -137,4 +168,69 @@ func GetUnitsWithKeywordAndValue(s *state.State, ctx context.Context, name strin
 	}
 
 	return units, nil
+}
+
+func GetKeywordsByGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.Keyword, error) {
+
+	if gameID == uuid.Nil {
+		return nil, appErr.ErrMissingID
+	}
+
+	dbKeywords, err := s.DB.GetKeywordsByGame(ctx, gameID)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Keyword{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbKeywords == nil {
+		return []models.Keyword{}, nil
+	}
+
+	keywords := make([]models.Keyword, len(dbKeywords))
+	for i, k := range dbKeywords {
+		keywords[i] = models.Keyword{
+			ID:          k.ID,
+			GameID:      k.GameID,
+			Name:        k.Name,
+			Description: k.Description,
+			Version:     k.Version,
+			Source:      k.Source,
+			CreatedAt:   k.CreatedAt,
+			UpdatedAt:   k.UpdatedAt,
+		}
+	}
+
+	return keywords, nil
+}
+
+func GetKeywordByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Keyword, error) {
+
+	if id == uuid.Nil {
+		return models.Keyword{}, nil
+	}
+
+	dbKeyword, err := s.DB.GetKeywordByID(ctx, id)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return models.Keyword{}, nil
+		}
+
+		return models.Keyword{}, err
+	}
+
+	keyword := models.Keyword{
+		ID:          dbKeyword.ID,
+		GameID:      dbKeyword.GameID,
+		Name:        dbKeyword.Name,
+		Description: dbKeyword.Description,
+		Version:     dbKeyword.Version,
+		Source:      dbKeyword.Source,
+		CreatedAt:   dbKeyword.CreatedAt,
+		UpdatedAt:   dbKeyword.UpdatedAt,
+	}
+
+	return keyword, nil
 }

@@ -113,6 +113,9 @@ func GetManifestations(s *state.State, ctx context.Context) ([]models.Unit, erro
 
 	dbManifestations, err := s.DB.GetManifestations(ctx)
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Unit{}, nil
+		}
 		return nil, err
 	}
 	if dbManifestations == nil {
@@ -152,6 +155,9 @@ func GetNonManifestationUnits(s *state.State, ctx context.Context) ([]models.Uni
 
 	dbUnits, err := s.DB.GetNonManifestationUnits(ctx)
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Unit{}, nil
+		}
 		return nil, err
 	}
 	if dbUnits == nil {
@@ -233,4 +239,52 @@ func GetManifestationByID(s *state.State, ctx context.Context, id uuid.UUID) (mo
 	unit.Keywords = keywords
 
 	return unit, nil
+}
+
+func GetUnitsByMatchedPlay(s *state.State, ctx context.Context, factionID uuid.UUID) ([]models.Unit, error) {
+
+	if factionID == uuid.Nil {
+		return nil, appErr.ErrMissingFactionID
+	}
+
+	dbUnits, err := s.DB.GetUnitsByMatchedPlay(ctx, factionID)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Unit{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbUnits == nil {
+		return []models.Unit{}, nil
+	}
+
+	units := make([]models.Unit, len(dbUnits))
+	for i, u := range dbUnits {
+		units[i] = models.Unit{
+			ID:              u.ID,
+			FactionID:       u.FactionID,
+			Name:            u.Name,
+			Description:     u.Description,
+			IsManifestation: u.IsManifestation,
+			Move:            int(u.Move),
+			Health:          int(u.Health),
+			Save:            u.Save,
+			Ward:            u.Ward,
+			Control:         int(u.Control),
+			Points:          int(u.Points),
+			SummonCost:      u.SummonCost,
+			Banishment:      u.Banishment,
+			MinSize:         int(u.MinSize),
+			MaxSize:         int(u.MaxSize),
+			MatchedPlay:     u.MatchedPlay,
+			Version:         u.Version,
+			Source:          u.Source,
+			CreatedAt:       u.CreatedAt,
+			UpdatedAt:       u.UpdatedAt,
+		}
+	}
+
+	return units, nil
 }

@@ -7,11 +7,47 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
+
+func GetAllWeapons(s *state.State, ctx context.Context) ([]models.Weapon, error) {
+
+	dbWeapons, err := s.DB.GetAllWeapons(ctx)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Weapon{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbWeapons == nil {
+		return []models.Weapon{}, nil
+	}
+
+	weapons := make([]models.Weapon, len(dbWeapons))
+	for i, w := range dbWeapons {
+		weapons[i] = models.Weapon{
+			ID:        w.ID,
+			UnitID:    w.UnitID,
+			Name:      w.Name,
+			Range:     w.Range,
+			Attacks:   w.Attacks,
+			ToHit:     w.ToHit,
+			ToWound:   w.ToWound,
+			Rend:      w.Rend,
+			Damage:    w.Damage,
+			Version:   w.Version,
+			Source:    w.Source,
+			CreatedAt: w.CreatedAt,
+			UpdatedAt: w.UpdatedAt,
+		}
+	}
+
+	return weapons, nil
+}
 
 func GetWeaponsForUnit(s *state.State, ctx context.Context, unitID *uuid.UUID) ([]models.Weapon, error) {
 

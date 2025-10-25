@@ -48,6 +48,38 @@ func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]mode
 	return factions, nil
 }
 
+func GetFactionsByName(s *state.State, ctx context.Context, name string) ([]models.Faction, error) {
+
+	if name == "" {
+		return nil, appErr.ErrMissingID
+	}
+
+	dbFactions, err := s.DB.GetFactionsByName(ctx, "%"+name+"%")
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Faction{}, nil
+		}
+
+		return nil, err
+	}
+
+	factions := make([]models.Faction, len(dbFactions))
+	for i, f := range dbFactions {
+		factions[i] = models.Faction{
+			ID:         f.ID,
+			GameID:     f.GameID,
+			Name:       f.Name,
+			Allegiance: f.Allegiance,
+			Version:    f.Version,
+			Source:     f.Source,
+			CreatedAt:  f.CreatedAt,
+			UpdatedAt:  f.UpdatedAt,
+		}
+	}
+
+	return factions, nil
+}
+
 func GetFactionByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Faction, error) {
 
 	if id == uuid.Nil {

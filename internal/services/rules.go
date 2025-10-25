@@ -13,6 +13,39 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
+func GetAllRules(s *state.State, ctx context.Context) ([]models.Rule, error) {
+
+	dbRules, err := s.DB.GetAllRules(ctx)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Rule{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbRules == nil {
+		return []models.Rule{}, nil
+	}
+
+	rules := make([]models.Rule, len(dbRules))
+	for i, r := range dbRules {
+		rules[i] = models.Rule{
+			ID:        r.ID,
+			GameID:    r.GameID,
+			Name:      r.Name,
+			RuleType:  r.RuleType,
+			Text:      r.Text,
+			Version:   r.Version,
+			Source:    r.Source,
+			CreatedAt: r.CreatedAt,
+			UpdatedAt: r.UpdatedAt,
+		}
+	}
+
+	return rules, nil
+}
+
 func GetRulesForGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.Rule, error) {
 
 	if gameID == uuid.Nil {

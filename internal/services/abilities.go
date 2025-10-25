@@ -7,7 +7,6 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
@@ -49,6 +48,44 @@ func GetAbilityEffectsForAbility(s *state.State, ctx context.Context, abilityID 
 	}
 
 	return effects, nil
+}
+
+func GetAllAbilities(s *state.State, ctx context.Context) ([]models.Ability, error) {
+
+	dbAbilities, err := s.DB.GetAllAbilities(ctx)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Ability{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbAbilities == nil {
+		return []models.Ability{}, nil
+	}
+
+	abilities := make([]models.Ability, len(dbAbilities))
+	for i, a := range dbAbilities {
+		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
+
+		abilities[i] = models.Ability{
+			ID:          a.ID,
+			UnitID:      a.UnitID,
+			FactionID:   a.FactionID,
+			Name:        a.Name,
+			Type:        a.Type,
+			Phase:       a.Phase,
+			Description: a.Description,
+			Version:     a.Version,
+			Source:      a.Source,
+			CreatedAt:   a.CreatedAt,
+			UpdatedAt:   a.UpdatedAt,
+			Effects:     effects,
+		}
+	}
+
+	return abilities, nil
 }
 
 func GetAbilitiesForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) ([]models.Ability, error) {
@@ -166,4 +203,87 @@ func GetAbilityByID(s *state.State, ctx context.Context, id uuid.UUID) (models.A
 	}
 
 	return ability, nil
+}
+
+func GetAbilityByType(s *state.State, ctx context.Context, abilityType string) ([]models.Ability, error) {
+
+	if abilityType == "" {
+		return nil, appErr.ErrMissingID
+	}
+
+	dbAbilities, err := s.DB.GetAbilitiesByType(ctx, abilityType)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Ability{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbAbilities == nil {
+		return []models.Ability{}, nil
+	}
+
+	abilities := make([]models.Ability, len(dbAbilities))
+	for i, a := range dbAbilities {
+		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
+
+		abilities[i] = models.Ability{
+			ID:          a.ID,
+			UnitID:      a.UnitID,
+			FactionID:   a.FactionID,
+			Name:        a.Name,
+			Type:        a.Type,
+			Phase:       a.Phase,
+			Description: a.Description,
+			Version:     a.Version,
+			Source:      a.Source,
+			CreatedAt:   a.CreatedAt,
+			UpdatedAt:   a.UpdatedAt,
+			Effects:     effects,
+		}
+	}
+
+	return abilities, nil
+}
+
+func GetAbilityByPhase(s *state.State, ctx context.Context, phase string) ([]models.Ability, error) {
+
+	if phase == "" {
+		return nil, appErr.ErrMissingID
+	}
+
+	dbAbilities, err := s.DB.GetAbilitiesByPhase(ctx, phase)
+	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Ability{}, nil
+		}
+
+		return nil, err
+	}
+
+	if dbAbilities == nil {
+		return []models.Ability{}, nil
+	}
+
+	abilities := make([]models.Ability, len(dbAbilities))
+	for i, a := range dbAbilities {
+		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
+		abilities[i] = models.Ability{
+			ID:          a.ID,
+			UnitID:      a.UnitID,
+			FactionID:   a.FactionID,
+			Name:        a.Name,
+			Type:        a.Type,
+			Phase:       a.Phase,
+			Description: a.Description,
+			Version:     a.Version,
+			Source:      a.Source,
+			CreatedAt:   a.CreatedAt,
+			UpdatedAt:   a.UpdatedAt,
+			Effects:     effects,
+		}
+	}
+
+	return abilities, nil
 }
