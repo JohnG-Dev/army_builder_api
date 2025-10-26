@@ -117,7 +117,7 @@ func (h *UnitsHandlers) GetManifestationByID(w http.ResponseWriter, r *http.Requ
 
 	id, err := uuid.Parse(idStr)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "invalid manifestations id", err)
+		respondWithError(w, http.StatusBadRequest, "invalid manifestation id", err)
 		return
 	}
 

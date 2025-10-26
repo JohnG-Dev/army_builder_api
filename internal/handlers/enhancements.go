@@ -51,7 +51,7 @@ func (h *EnhancementsHandlers) GetEnhancements(w http.ResponseWriter, r *http.Re
 	respondWithJSON(w, http.StatusOK, enhancements)
 }
 
-func (h *EnhancementsHandlers) GetEnhamcentByID(w http.ResponseWriter, r *http.Request) {
+func (h *EnhancementsHandlers) GetEnhancementByID(w http.ResponseWriter, r *http.Request) {
 	idStr := r.PathValue("id")
 
 	id, err := uuid.Parse(idStr)

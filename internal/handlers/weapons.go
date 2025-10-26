@@ -50,7 +50,7 @@ func (h *WeaponsHandlers) GetWeaponsForUnit(w http.ResponseWriter, r *http.Reque
 	respondWithJSON(w, http.StatusOK, weapons)
 }
 
-func (h *WeaponsHandlers) GetWeaponsByID(w http.ResponseWriter, r *http.Request) {
+func (h *WeaponsHandlers) GetWeaponByID(w http.ResponseWriter, r *http.Request) {
 	idStr := r.PathValue("id")
 
 	id, err := uuid.Parse(idStr)

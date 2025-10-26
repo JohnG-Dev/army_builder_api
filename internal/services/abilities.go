@@ -13,7 +13,6 @@ import (
 )
 
 func GetAbilityEffectsForAbility(s *state.State, ctx context.Context, abilityID uuid.UUID) ([]models.AbilityEffect, error) {
-
 	if abilityID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
@@ -51,7 +50,6 @@ func GetAbilityEffectsForAbility(s *state.State, ctx context.Context, abilityID 
 }
 
 func GetAllAbilities(s *state.State, ctx context.Context) ([]models.Ability, error) {
-
 	dbAbilities, err := s.DB.GetAllAbilities(ctx)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -89,7 +87,6 @@ func GetAllAbilities(s *state.State, ctx context.Context) ([]models.Ability, err
 }
 
 func GetAbilitiesForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) ([]models.Ability, error) {
-
 	if unitID == uuid.Nil {
 		return nil, appErr.ErrMissingUnitID
 	}
@@ -130,7 +127,6 @@ func GetAbilitiesForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) 
 }
 
 func GetAbilitiesForFaction(s *state.State, ctx context.Context, factionID uuid.UUID) ([]models.Ability, error) {
-
 	if factionID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
@@ -172,7 +168,6 @@ func GetAbilitiesForFaction(s *state.State, ctx context.Context, factionID uuid.
 }
 
 func GetAbilityByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Ability, error) {
-
 	if id == uuid.Nil {
 		return models.Ability{}, appErr.ErrMissingID
 	}
@@ -206,7 +201,6 @@ func GetAbilityByID(s *state.State, ctx context.Context, id uuid.UUID) (models.A
 }
 
 func GetAbilityByType(s *state.State, ctx context.Context, abilityType string) ([]models.Ability, error) {
-
 	if abilityType == "" {
 		return nil, appErr.ErrMissingID
 	}
@@ -248,7 +242,6 @@ func GetAbilityByType(s *state.State, ctx context.Context, abilityType string) (
 }
 
 func GetAbilityByPhase(s *state.State, ctx context.Context, phase string) ([]models.Ability, error) {
-
 	if phase == "" {
 		return nil, appErr.ErrMissingID
 	}

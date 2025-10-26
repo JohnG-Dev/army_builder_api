@@ -8,13 +8,29 @@ import (
 	"go.uber.org/zap"
 
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
-	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/services"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
 type AbilitiesHandlers struct {
 	S *state.State
+}
+
+func (h *AbilitiesHandlers) GetAbilities(w http.ResponseWriter, r *http.Request) {
+	abilities, err := services.GetAllAbilities(h.S, r.Context())
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "abilities not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch abilities", err)
+		}
+		logRequestError(h.S, r, "failed to fetch abiilities", err)
+		return
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched abilities", zap.Int("count", len(abilities)))
+	respondWithJSON(w, http.StatusOK, abilities)
 }
 
 func (h *AbilitiesHandlers) GetAbilitiesForUnit(w http.ResponseWriter, r *http.Request) {
@@ -78,4 +94,78 @@ func (h *AbilitiesHandlers) GetAbilitiesForFaction(w http.ResponseWriter, r *htt
 	respondWithJSON(w, http.StatusOK, abilities)
 }
 
-func (h *AbilitiesHandlers) GetAbilityByID(w http.ResponseWriter, r *http.Request)
+func (h *AbilitiesHandlers) GetAbilityByID(w http.ResponseWriter, r *http.Request) {
+	idStr := r.PathValue("id")
+
+	id, err := uuid.Parse(idStr)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid ability id", err)
+	}
+
+	ability, err := services.GetAbilityByID(h.S, r.Context(), id)
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "ability not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch ability", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch ability", err)
+		return
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched ability")
+	respondWithJSON(w, http.StatusOK, ability)
+}
+
+func (h *AbilitiesHandlers) GetAbilityByType(w http.ResponseWriter, r *http.Request) {
+	typeStr := r.URL.Query().Get("type")
+
+	if typeStr == "" {
+		respondWithError(w, http.StatusBadRequest, "missing ability type", nil)
+	}
+
+	ability, err := services.GetAbilityByType(h.S, r.Context(), typeStr)
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrMissingID):
+			respondWithError(w, http.StatusBadRequest, "missing ability type", err)
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "ability not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch ability", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch ability", err)
+		return
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched ability")
+	respondWithJSON(w, http.StatusOK, ability)
+}
+
+func (h *AbilitiesHandlers) GetAbilityByPhase(w http.ResponseWriter, r *http.Request) {
+	phaseStr := r.URL.Query().Get("phase")
+
+	if phaseStr == "" {
+		respondWithError(w, http.StatusBadRequest, "missing phase type", nil)
+	}
+
+	ability, err := services.GetAbilityByPhase(h.S, r.Context(), phaseStr)
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrMissingID):
+			respondWithError(w, http.StatusBadRequest, "missing phase", err)
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "ability not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch ability", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch ability", err)
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched ability")
+	respondWithJSON(w, http.StatusOK, ability)
+}
