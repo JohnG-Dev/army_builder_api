@@ -97,6 +97,10 @@ func (h *AbilitiesHandlers) GetAbilitiesForFaction(w http.ResponseWriter, r *htt
 func (h *AbilitiesHandlers) GetAbilityByID(w http.ResponseWriter, r *http.Request) {
 	idStr := r.PathValue("id")
 
+	if idStr == "" {
+		respondWithError(w, http.StatusBadRequest, "missing ability id", nil)
+	}
+
 	id, err := uuid.Parse(idStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid ability id", err)
