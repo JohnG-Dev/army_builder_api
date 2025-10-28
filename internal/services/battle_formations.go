@@ -13,7 +13,6 @@ import (
 )
 
 func GetAllBattleFormations(s *state.State, ctx context.Context) ([]models.BattleFormation, error) {
-
 	dbBattleFormation, err := s.DB.GetAllBattleFormations(ctx)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -46,7 +45,6 @@ func GetAllBattleFormations(s *state.State, ctx context.Context) ([]models.Battl
 }
 
 func GetBattleFormationsForGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.BattleFormation, error) {
-
 	if gameID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
@@ -83,7 +81,6 @@ func GetBattleFormationsForGame(s *state.State, ctx context.Context, gameID uuid
 }
 
 func GetBattleFormationsForFaction(s *state.State, ctx context.Context, factionID uuid.UUID) ([]models.BattleFormation, error) {
-
 	if factionID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
@@ -120,7 +117,6 @@ func GetBattleFormationsForFaction(s *state.State, ctx context.Context, factionI
 }
 
 func GetBattleFormationByID(s *state.State, ctx context.Context, id uuid.UUID) (models.BattleFormation, error) {
-
 	if id == uuid.Nil {
 		return models.BattleFormation{}, appErr.ErrMissingID
 	}
@@ -128,7 +124,7 @@ func GetBattleFormationByID(s *state.State, ctx context.Context, id uuid.UUID) (
 	dbBattleFormation, err := s.DB.GetBattleFormationByID(ctx, id)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return models.BattleFormation{}, nil
+			return models.BattleFormation{}, appErr.ErrNotFound
 		}
 
 		return models.BattleFormation{}, err

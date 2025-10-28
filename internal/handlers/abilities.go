@@ -38,11 +38,13 @@ func (h *AbilitiesHandlers) GetAbilitiesForUnit(w http.ResponseWriter, r *http.R
 
 	if unitIDStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing unit id", nil)
+		return
 	}
 
 	unitID, err := uuid.Parse(unitIDStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid unit id", err)
+		return
 	}
 
 	abilities, err := services.GetAbilitiesForUnit(h.S, r.Context(), unitID)
@@ -69,11 +71,13 @@ func (h *AbilitiesHandlers) GetAbilitiesForFaction(w http.ResponseWriter, r *htt
 
 	if factionIDStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing faction id", nil)
+		return
 	}
 
 	factionID, err := uuid.Parse(factionIDStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid faction id", err)
+		return
 	}
 
 	abilities, err := services.GetAbilitiesForFaction(h.S, r.Context(), factionID)
@@ -88,6 +92,7 @@ func (h *AbilitiesHandlers) GetAbilitiesForFaction(w http.ResponseWriter, r *htt
 		}
 
 		logRequestError(h.S, r, "failed to fetch abilities", err)
+		return
 	}
 
 	logRequestInfo(h.S, r, "Successfuly fetched abilities", zap.Int("count", len(abilities)))
@@ -99,11 +104,13 @@ func (h *AbilitiesHandlers) GetAbilityByID(w http.ResponseWriter, r *http.Reques
 
 	if idStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing ability id", nil)
+		return
 	}
 
 	id, err := uuid.Parse(idStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid ability id", err)
+		return
 	}
 
 	ability, err := services.GetAbilityByID(h.S, r.Context(), id)
@@ -128,6 +135,7 @@ func (h *AbilitiesHandlers) GetAbilityByType(w http.ResponseWriter, r *http.Requ
 
 	if typeStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing ability type", nil)
+		return
 	}
 
 	ability, err := services.GetAbilityByType(h.S, r.Context(), typeStr)
@@ -154,6 +162,7 @@ func (h *AbilitiesHandlers) GetAbilityByPhase(w http.ResponseWriter, r *http.Req
 
 	if phaseStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing phase type", nil)
+		return
 	}
 
 	ability, err := services.GetAbilityByPhase(h.S, r.Context(), phaseStr)

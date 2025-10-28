@@ -14,7 +14,6 @@ import (
 )
 
 func GetAllKeywords(s *state.State, ctx context.Context) ([]models.Keyword, error) {
-
 	dbKeywords, err := s.DB.GetAllKeywords(ctx)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -42,7 +41,6 @@ func GetAllKeywords(s *state.State, ctx context.Context) ([]models.Keyword, erro
 }
 
 func GetKeywordsForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) ([]models.UnitKeyword, error) {
-
 	if unitID == uuid.Nil {
 		return nil, appErr.ErrMissingUnitID
 	}
@@ -73,7 +71,6 @@ func GetKeywordsForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) (
 }
 
 func GetUnitsWithKeyword(s *state.State, ctx context.Context, name string) ([]models.Unit, error) {
-
 	if name == "" {
 		return nil, appErr.ErrMissingID
 	}
@@ -121,7 +118,6 @@ func GetUnitsWithKeyword(s *state.State, ctx context.Context, name string) ([]mo
 }
 
 func GetUnitsWithKeywordAndValue(s *state.State, ctx context.Context, name string, value string) ([]models.Unit, error) {
-
 	if name == "" {
 		return nil, appErr.ErrMissingID
 	}
@@ -171,7 +167,6 @@ func GetUnitsWithKeywordAndValue(s *state.State, ctx context.Context, name strin
 }
 
 func GetKeywordsByGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.Keyword, error) {
-
 	if gameID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
@@ -207,15 +202,14 @@ func GetKeywordsByGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([
 }
 
 func GetKeywordByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Keyword, error) {
-
 	if id == uuid.Nil {
-		return models.Keyword{}, nil
+		return models.Keyword{}, appErr.ErrMissingID
 	}
 
 	dbKeyword, err := s.DB.GetKeywordByID(ctx, id)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return models.Keyword{}, nil
+			return models.Keyword{}, appErr.ErrNotFound
 		}
 
 		return models.Keyword{}, err

@@ -26,7 +26,7 @@ func (h *RulesHandlers) GetRules(w http.ResponseWriter, r *http.Request) {
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch rules", err)
 		}
 
-		logRequestError(h.S, r, "failed to fetch errors", err)
+		logRequestError(h.S, r, "failed to fetch rules", err)
 		return
 	}
 
@@ -97,11 +97,11 @@ func (h *RulesHandlers) GetRulesByType(w http.ResponseWriter, r *http.Request) {
 	}
 
 	logRequestInfo(h.S, r, "Successfully fetched rules", zap.Int("count", len(rules)))
-	respondWithJSON(w, http.StatusOK, "rules")
+	respondWithJSON(w, http.StatusOK, rules)
 }
 
 func (h *RulesHandlers) GetRuleByID(w http.ResponseWriter, r *http.Request) {
-	ruleStr := r.PathValue("rule_id")
+	ruleStr := r.PathValue("id")
 
 	if ruleStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing rule id", nil)
