@@ -8,13 +8,30 @@ import (
 	"go.uber.org/zap"
 
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
-	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/services"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
 type WeaponsHandlers struct {
 	S *state.State
+}
+
+func (h *WeaponsHandlers) GetWeapons(w http.ResponseWriter, r *http.Request) {
+	weapons, err := services.GetAllWeapons(h.S, r.Context())
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "weapons not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch weapons", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch weapons", err)
+		return
+	}
+
+	logRequestInfo(h.S, r, "Scuessfully fetched weapons", zap.Int("count", len(weapons)))
+	respondWithJSON(w, http.StatusOK, weapons)
 }
 
 func (h *WeaponsHandlers) GetWeaponsForUnit(w http.ResponseWriter, r *http.Request) {
@@ -74,5 +91,4 @@ func (h *WeaponsHandlers) GetWeaponByID(w http.ResponseWriter, r *http.Request) 
 
 	logRequestInfo(h.S, r, "Successfully fetched weapon")
 	respondWithJSON(w, http.StatusOK, weapon)
-
 }
