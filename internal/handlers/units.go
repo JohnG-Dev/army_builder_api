@@ -75,7 +75,6 @@ func (h *UnitsHandlers) GetUnitByID(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *UnitsHandlers) GetManifestations(w http.ResponseWriter, r *http.Request) {
-
 	manifestations, err := services.GetManifestations(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -94,7 +93,6 @@ func (h *UnitsHandlers) GetManifestations(w http.ResponseWriter, r *http.Request
 }
 
 func (h *UnitsHandlers) GetNonManifestationUnits(w http.ResponseWriter, r *http.Request) {
-
 	units, err := services.GetNonManifestationUnits(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -135,4 +133,37 @@ func (h *UnitsHandlers) GetManifestationByID(w http.ResponseWriter, r *http.Requ
 
 	logRequestInfo(h.S, r, "Successfully fetched manifestation")
 	respondWithJSON(w, http.StatusOK, manifestation)
+}
+
+func (h *UnitsHandlers) GetUnitsByMatchedPlay(w http.ResponseWriter, r *http.Request) {
+	factionIDStr := r.URL.Query().Get("faction_id")
+
+	if factionIDStr == "" {
+		respondWithError(w, http.StatusBadRequest, "missing faction id", nil)
+		return
+	}
+
+	factionID, err := uuid.Parse(factionIDStr)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid faction id", err)
+		return
+	}
+
+	units, err := services.GetUnitsByMatchedPlay(h.S, r.Context(), factionID)
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrMissingID):
+			respondWithError(w, http.StatusBadRequest, "missing faction id", err)
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "units not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch units", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch units", err)
+		return
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched units", zap.Int("count", len(units)))
+	respondWithJSON(w, http.StatusOK, units)
 }

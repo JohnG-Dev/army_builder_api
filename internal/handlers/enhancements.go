@@ -76,3 +76,30 @@ func (h *EnhancementsHandlers) GetEnhancementByID(w http.ResponseWriter, r *http
 	logRequestInfo(h.S, r, "Successfully fetched enhancement")
 	respondWithJSON(w, http.StatusOK, enhancement)
 }
+
+func (h *EnhancementsHandlers) GetEnhancementsByType(w http.ResponseWriter, r *http.Request) {
+	typeStr := r.URL.Query().Get("type")
+
+	if typeStr == "" {
+		respondWithError(w, http.StatusBadRequest, "missing enhancements type", nil)
+		return
+	}
+
+	enhancements, err := services.GetEnhancementsByType(h.S, r.Context(), typeStr)
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrMissingID):
+			respondWithError(w, http.StatusBadRequest, "missing enhancement type", err)
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "enhancements not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch enhancements", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch enhancements", err)
+		return
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched ehnahncements", zap.Int("count", len(enhancements)))
+	respondWithJSON(w, http.StatusOK, enhancements)
+}
