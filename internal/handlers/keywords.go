@@ -35,7 +35,7 @@ func (h *KeywordsHandlers) GetKeywords(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *KeywordsHandlers) GetKeywordsByGame(w http.ResponseWriter, r *http.Request) {
-	gameStr := r.URL.Query().Get("gameID")
+	gameStr := r.URL.Query().Get("game_id")
 
 	if gameStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing game id", nil)
@@ -77,7 +77,7 @@ func (h *KeywordsHandlers) GetKeywordsForUnit(w http.ResponseWriter, r *http.Req
 
 	unitID, err := uuid.Parse(unitStr)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "invalid unit it", err)
+		respondWithError(w, http.StatusBadRequest, "invalid unit id", err)
 		return
 	}
 
@@ -167,6 +167,7 @@ func (h *KeywordsHandlers) GetKeywordByID(w http.ResponseWriter, r *http.Request
 	id, err := uuid.Parse(idStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid keyword id", err)
+		return
 	}
 
 	keyword, err := services.GetKeywordByID(h.S, r.Context(), id)

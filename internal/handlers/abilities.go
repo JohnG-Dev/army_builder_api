@@ -25,7 +25,7 @@ func (h *AbilitiesHandlers) GetAbilities(w http.ResponseWriter, r *http.Request)
 		default:
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch abilities", err)
 		}
-		logRequestError(h.S, r, "failed to fetch abiilities", err)
+		logRequestError(h.S, r, "failed to fetch abilities", err)
 		return
 	}
 

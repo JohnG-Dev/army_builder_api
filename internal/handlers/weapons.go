@@ -30,7 +30,7 @@ func (h *WeaponsHandlers) GetWeapons(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	logRequestInfo(h.S, r, "Scuessfully fetched weapons", zap.Int("count", len(weapons)))
+	logRequestInfo(h.S, r, "Successfully fetched weapons", zap.Int("count", len(weapons)))
 	respondWithJSON(w, http.StatusOK, weapons)
 }
 

@@ -68,7 +68,7 @@ func (h *BattleFormationsHandlers) GetBattleFormationsForGame(w http.ResponseWri
 }
 
 func (h *BattleFormationsHandlers) GetBattleFormationsForFaction(w http.ResponseWriter, r *http.Request) {
-	factionIDStr := r.URL.Query().Get("faction_ID")
+	factionIDStr := r.URL.Query().Get("faction_id")
 
 	if factionIDStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing faction id", nil)
@@ -78,6 +78,7 @@ func (h *BattleFormationsHandlers) GetBattleFormationsForFaction(w http.Response
 	factionID, err := uuid.Parse(factionIDStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid faction id", err)
+		return
 	}
 
 	battleFormations, err := services.GetBattleFormationsForFaction(h.S, r.Context(), factionID)
@@ -89,12 +90,14 @@ func (h *BattleFormationsHandlers) GetBattleFormationsForFaction(w http.Response
 			respondWithError(w, http.StatusNotFound, "unable to find battle formations", err)
 		default:
 			respondWithError(w, http.StatusInternalServerError, "failed to fetch battle formations", err)
-			return
 		}
 
-		logRequestInfo(h.S, r, "Successfully fetched battle formations", zap.Int("count", len(battleFormations)))
-		respondWithJSON(w, http.StatusOK, battleFormations)
+		logRequestError(h.S, r, "failed to fetch battle formations", err)
+		return
 	}
+
+	logRequestInfo(h.S, r, "Successfully fetched battle formations", zap.Int("count", len(battleFormations)))
+	respondWithJSON(w, http.StatusOK, battleFormations)
 }
 
 func (h *BattleFormationsHandlers) GetBattleFormationByID(w http.ResponseWriter, r *http.Request) {

@@ -100,6 +100,6 @@ func (h *EnhancementsHandlers) GetEnhancementsByType(w http.ResponseWriter, r *h
 		return
 	}
 
-	logRequestInfo(h.S, r, "Successfully fetched ehnahncements", zap.Int("count", len(enhancements)))
+	logRequestInfo(h.S, r, "Successfully fetched enhancements", zap.Int("count", len(enhancements)))
 	respondWithJSON(w, http.StatusOK, enhancements)
 }

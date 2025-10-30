@@ -39,11 +39,13 @@ func (h *RulesHandlers) GetRulesForGame(w http.ResponseWriter, r *http.Request) 
 
 	if gameStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing game id", nil)
+		return
 	}
 
 	gameID, err := uuid.Parse(gameStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid game id", err)
+		return
 	}
 
 	rules, err := services.GetRulesForGame(h.S, r.Context(), gameID)
@@ -72,10 +74,12 @@ func (h *RulesHandlers) GetRulesByType(w http.ResponseWriter, r *http.Request) {
 
 	if gameStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing game id", nil)
+		return
 	}
 
 	if typeStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing type paramter", nil)
+		return
 	}
 
 	gameID, err := uuid.Parse(gameStr)
@@ -105,11 +109,13 @@ func (h *RulesHandlers) GetRuleByID(w http.ResponseWriter, r *http.Request) {
 
 	if ruleStr == "" {
 		respondWithError(w, http.StatusBadRequest, "missing rule id", nil)
+		return
 	}
 
 	ruleID, err := uuid.Parse(ruleStr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid rule id", err)
+		return
 	}
 
 	rule, err := services.GetRuleByID(h.S, r.Context(), ruleID)
