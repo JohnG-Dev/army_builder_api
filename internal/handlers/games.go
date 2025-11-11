@@ -17,6 +17,17 @@ type GamesHandlers struct {
 }
 
 func (h *GamesHandlers) GetGames(w http.ResponseWriter, r *http.Request) {
+	name := r.URL.Query().Get("name")
+
+	if name != "" {
+		h.getGameByName(w, r)
+		return
+	}
+
+	h.getAllGames(w, r)
+}
+
+func (h *GamesHandlers) getAllGames(w http.ResponseWriter, r *http.Request) {
 	games, err := services.GetGames(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -36,7 +47,7 @@ func (h *GamesHandlers) GetGames(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, games)
 }
 
-func (h *GamesHandlers) GetGameByName(w http.ResponseWriter, r *http.Request) {
+func (h *GamesHandlers) getGameByName(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
 
 	if name == "" {
@@ -61,7 +72,7 @@ func (h *GamesHandlers) GetGameByName(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, game)
 }
 
-func (h *GamesHandlers) GetGame(w http.ResponseWriter, r *http.Request) {
+func (h *GamesHandlers) GetGameByID(w http.ResponseWriter, r *http.Request) {
 	idStr := r.PathValue("id")
 
 	if idStr == "" {

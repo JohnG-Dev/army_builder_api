@@ -18,6 +18,17 @@ type FactionsHandlers struct {
 }
 
 func (h *FactionsHandlers) GetFactions(w http.ResponseWriter, r *http.Request) {
+	name := r.URL.Query().Get("name")
+
+	if name != "" {
+		h.getFactionsByName(w, r)
+		return
+	}
+
+	h.getAllFactions(w, r)
+}
+
+func (h *FactionsHandlers) getAllFactions(w http.ResponseWriter, r *http.Request) {
 	gameIDStr := r.URL.Query().Get("game_id")
 	var factions []models.Faction
 	var err error
@@ -50,6 +61,31 @@ func (h *FactionsHandlers) GetFactions(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, factions)
 }
 
+func (h *FactionsHandlers) getFactionsByName(w http.ResponseWriter, r *http.Request) {
+	name := r.URL.Query().Get("name")
+
+	if name == "" {
+		respondWithError(w, http.StatusBadRequest, "missing name", nil)
+		return
+	}
+
+	factions, err := services.GetFactionsByName(h.S, r.Context(), name)
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "factions not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch factions", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch factions", err)
+		return
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched factions", zap.Int("count", len(factions)))
+	respondWithJSON(w, http.StatusOK, factions)
+}
+
 func (h *FactionsHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request) {
 	id := r.PathValue("id")
 
@@ -74,29 +110,4 @@ func (h *FactionsHandlers) GetFactionByID(w http.ResponseWriter, r *http.Request
 
 	logRequestInfo(h.S, r, "Successfully fetched faction")
 	respondWithJSON(w, http.StatusOK, faction)
-}
-
-func (h *FactionsHandlers) GetFactionsByName(w http.ResponseWriter, r *http.Request) {
-	name := r.URL.Query().Get("name")
-
-	if name == "" {
-		respondWithError(w, http.StatusBadRequest, "missing name", nil)
-		return
-	}
-
-	factions, err := services.GetFactionsByName(h.S, r.Context(), name)
-	if err != nil {
-		switch {
-		case errors.Is(err, appErr.ErrNotFound):
-			respondWithError(w, http.StatusNotFound, "factions not found", err)
-		default:
-			respondWithError(w, http.StatusInternalServerError, "failed to fetch factions", err)
-		}
-
-		logRequestError(h.S, r, "failed to fetch factions", err)
-		return
-	}
-
-	logRequestInfo(h.S, r, "Successfully fetched factions", zap.Int("count", len(factions)))
-	respondWithJSON(w, http.StatusOK, factions)
 }
