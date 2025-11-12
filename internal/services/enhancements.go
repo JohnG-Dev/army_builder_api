@@ -13,9 +13,11 @@ import (
 )
 
 func GetEnhancements(s *state.State, ctx context.Context) ([]models.Enhancement, error) {
-
 	dbEnhancements, err := s.DB.GetEnhancements(ctx)
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Enhancement{}, nil
+		}
 		return nil, err
 	}
 	if dbEnhancements == nil {
@@ -42,7 +44,6 @@ func GetEnhancements(s *state.State, ctx context.Context) ([]models.Enhancement,
 }
 
 func GetEnhancementsByFaction(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]models.Enhancement, error) {
-
 	if factionID == nil {
 		return nil, appErr.ErrMissingFactionID
 	}
@@ -76,7 +77,6 @@ func GetEnhancementsByFaction(s *state.State, ctx context.Context, factionID *uu
 }
 
 func GetEnhancementByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Enhancement, error) {
-
 	if id == uuid.Nil {
 		return models.Enhancement{}, appErr.ErrMissingID
 	}
@@ -106,7 +106,6 @@ func GetEnhancementByID(s *state.State, ctx context.Context, id uuid.UUID) (mode
 }
 
 func GetEnhancementsByType(s *state.State, ctx context.Context, enhancementType string) ([]models.Enhancement, error) {
-
 	if enhancementType == "" {
 		return nil, appErr.ErrMissingID
 	}

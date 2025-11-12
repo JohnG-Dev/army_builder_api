@@ -13,9 +13,11 @@ import (
 )
 
 func GetGames(s *state.State, ctx context.Context) ([]models.Game, error) {
-
 	dbGames, err := s.DB.GetGames(ctx)
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Game{}, nil
+		}
 		return nil, err
 	}
 
@@ -40,7 +42,6 @@ func GetGames(s *state.State, ctx context.Context) ([]models.Game, error) {
 }
 
 func GetGame(s *state.State, ctx context.Context, id uuid.UUID) (models.Game, error) {
-
 	if id == uuid.Nil {
 		return models.Game{}, appErr.ErrMissingID
 	}
@@ -68,7 +69,6 @@ func GetGame(s *state.State, ctx context.Context, id uuid.UUID) (models.Game, er
 }
 
 func GetGameByName(s *state.State, ctx context.Context, name string) (models.Game, error) {
-
 	if name == "" {
 		return models.Game{}, appErr.ErrMissingID
 	}

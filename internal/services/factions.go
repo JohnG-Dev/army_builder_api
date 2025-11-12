@@ -24,6 +24,9 @@ func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]mode
 	}
 
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Faction{}, nil
+		}
 		return nil, err
 	}
 
@@ -49,7 +52,6 @@ func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]mode
 }
 
 func GetFactionsByName(s *state.State, ctx context.Context, name string) ([]models.Faction, error) {
-
 	if name == "" {
 		return nil, appErr.ErrMissingID
 	}
@@ -81,7 +83,6 @@ func GetFactionsByName(s *state.State, ctx context.Context, name string) ([]mode
 }
 
 func GetFactionByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Faction, error) {
-
 	if id == uuid.Nil {
 		return models.Faction{}, appErr.ErrMissingID
 	}

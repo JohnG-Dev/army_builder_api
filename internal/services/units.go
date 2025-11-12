@@ -24,6 +24,9 @@ func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]mode
 	}
 
 	if err != nil {
+		if errors.Is(err, sql.ErrNoRows) {
+			return []models.Unit{}, nil
+		}
 		return nil, err
 	}
 
