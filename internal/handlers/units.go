@@ -18,6 +18,28 @@ type UnitsHandlers struct {
 }
 
 func (h *UnitsHandlers) GetUnits(w http.ResponseWriter, r *http.Request) {
+	matchedPlay := r.URL.Query().Get("matched_play")
+	factionID := r.URL.Query().Get("faction_id")
+
+	if matchedPlay == "true" {
+		if factionID == "" {
+			respondWithError(w, http.StatusBadRequest, "missing faction id for matched play", nil)
+			return
+		}
+
+		h.getUnitsByMatchedPlay(w, r)
+		return
+	}
+
+	if factionID != "" {
+		h.getUnitsByFaction(w, r)
+		return
+	}
+
+	h.getAllUnits(w, r)
+}
+
+func (h *UnitsHandlers) getAllUnits(w http.ResponseWriter, r *http.Request) {
 	factionIDStr := r.URL.Query().Get("faction_id")
 	var units []models.Unit
 	var err error
@@ -45,6 +67,37 @@ func (h *UnitsHandlers) GetUnits(w http.ResponseWriter, r *http.Request) {
 	}
 
 	logRequestInfo(h.S, r, "Successfully fetched units", zap.Int("count", len(units)))
+	respondWithJSON(w, http.StatusOK, units)
+}
+
+func (h *UnitsHandlers) getUnitsByFaction(w http.ResponseWriter, r *http.Request) {
+	factionIDStr := r.URL.Query().Get("faction_id")
+	if factionIDStr == "" {
+		respondWithError(w, http.StatusBadRequest, "missing faction id", nil)
+		return
+	}
+
+	factionID, err := uuid.Parse(factionIDStr)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid faction id", err)
+		return
+	}
+
+	units, err := services.GetUnitsByFaction(h.S, r.Context(), factionID)
+	if err != nil {
+		switch {
+		case errors.Is(err, appErr.ErrMissingFactionID):
+			respondWithError(w, http.StatusBadRequest, "missing faction id", err)
+		case errors.Is(err, appErr.ErrNotFound):
+			respondWithError(w, http.StatusNotFound, "faction not found", err)
+		default:
+			respondWithError(w, http.StatusInternalServerError, "failed to fetch factions", err)
+		}
+
+		logRequestError(h.S, r, "failed to fetch factions", err)
+	}
+
+	logRequestInfo(h.S, r, "Successfully fetched factions", zap.Int("count", len(units)))
 	respondWithJSON(w, http.StatusOK, units)
 }
 
@@ -135,7 +188,7 @@ func (h *UnitsHandlers) GetManifestationByID(w http.ResponseWriter, r *http.Requ
 	respondWithJSON(w, http.StatusOK, manifestation)
 }
 
-func (h *UnitsHandlers) GetUnitsByMatchedPlay(w http.ResponseWriter, r *http.Request) {
+func (h *UnitsHandlers) getUnitsByMatchedPlay(w http.ResponseWriter, r *http.Request) {
 	factionIDStr := r.URL.Query().Get("faction_id")
 
 	if factionIDStr == "" {

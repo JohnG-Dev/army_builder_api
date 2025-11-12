@@ -17,6 +17,17 @@ type WeaponsHandlers struct {
 }
 
 func (h *WeaponsHandlers) GetWeapons(w http.ResponseWriter, r *http.Request) {
+	unitID := r.URL.Query().Get("unit id")
+
+	if unitID != "" {
+		h.getWeaponsForUnit(w, r)
+		return
+	}
+
+	h.getAllWeapons(w, r)
+}
+
+func (h *WeaponsHandlers) getAllWeapons(w http.ResponseWriter, r *http.Request) {
 	weapons, err := services.GetAllWeapons(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -34,7 +45,7 @@ func (h *WeaponsHandlers) GetWeapons(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, weapons)
 }
 
-func (h *WeaponsHandlers) GetWeaponsForUnit(w http.ResponseWriter, r *http.Request) {
+func (h *WeaponsHandlers) getWeaponsForUnit(w http.ResponseWriter, r *http.Request) {
 	unitIDStr := r.URL.Query().Get("unit_id")
 
 	if unitIDStr == "" {

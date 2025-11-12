@@ -131,15 +131,15 @@ func (q *Queries) GetKeywordByID(ctx context.Context, id uuid.UUID) (Keyword, er
 	return i, err
 }
 
-const getKeywordsByGame = `-- name: GetKeywordsByGame :many
+const getKeywordsForGame = `-- name: GetKeywordsForGame :many
 SELECT id, game_id, name, description, version, source, created_at, updated_at
 FROM keywords
 WHERE game_id = $1
 ORDER BY name ASC
 `
 
-func (q *Queries) GetKeywordsByGame(ctx context.Context, gameID uuid.UUID) ([]Keyword, error) {
-	rows, err := q.db.Query(ctx, getKeywordsByGame, gameID)
+func (q *Queries) GetKeywordsForGame(ctx context.Context, gameID uuid.UUID) ([]Keyword, error) {
+	rows, err := q.db.Query(ctx, getKeywordsForGame, gameID)
 	if err != nil {
 		return nil, err
 	}

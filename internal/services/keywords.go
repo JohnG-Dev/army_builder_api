@@ -166,12 +166,12 @@ func GetUnitsWithKeywordAndValue(s *state.State, ctx context.Context, name strin
 	return units, nil
 }
 
-func GetKeywordsByGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.Keyword, error) {
+func GetKeywordsForGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.Keyword, error) {
 	if gameID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
 
-	dbKeywords, err := s.DB.GetKeywordsByGame(ctx, gameID)
+	dbKeywords, err := s.DB.GetKeywordsForGame(ctx, gameID)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
 			return []models.Keyword{}, nil

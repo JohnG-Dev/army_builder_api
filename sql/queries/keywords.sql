@@ -3,7 +3,7 @@ SELECT *
 FROM keywords
 ORDER BY game_id, name ASC;
 
--- name: GetKeywordsByGame :many
+-- name: GetKeywordsForGame :many
 SELECT *
 FROM keywords
 WHERE game_id = $1

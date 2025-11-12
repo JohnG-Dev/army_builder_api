@@ -20,7 +20,7 @@ func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]mode
 	if factionID == nil {
 		dbUnits, err = s.DB.GetAllUnits(ctx)
 	} else {
-		dbUnits, err = s.DB.GetUnits(ctx, *factionID)
+		dbUnits, err = s.DB.GetUnitsByFaction(ctx, *factionID)
 	}
 
 	if err != nil {
@@ -60,8 +60,15 @@ func GetUnits(s *state.State, ctx context.Context, factionID *uuid.UUID) ([]mode
 	return units, nil
 }
 
-func GetUnitByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Unit, error) {
+func GetUnitsByFaction(s *state.State, ctx context.Context, factionID uuid.UUID) ([]models.Unit, error) {
+	if factionID == uuid.Nil {
+		return nil, appErr.ErrMissingID
+	}
 
+	return GetUnits(s, ctx, &factionID)
+}
+
+func GetUnitByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Unit, error) {
 	if id == uuid.Nil {
 		return models.Unit{}, appErr.ErrMissingID
 	}
@@ -110,7 +117,6 @@ func GetUnitByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Unit
 }
 
 func GetManifestations(s *state.State, ctx context.Context) ([]models.Unit, error) {
-
 	dbManifestations, err := s.DB.GetManifestations(ctx)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -152,7 +158,6 @@ func GetManifestations(s *state.State, ctx context.Context) ([]models.Unit, erro
 }
 
 func GetNonManifestationUnits(s *state.State, ctx context.Context) ([]models.Unit, error) {
-
 	dbUnits, err := s.DB.GetNonManifestationUnits(ctx)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -194,7 +199,6 @@ func GetNonManifestationUnits(s *state.State, ctx context.Context) ([]models.Uni
 }
 
 func GetManifestationByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Unit, error) {
-
 	if id == uuid.Nil {
 		return models.Unit{}, appErr.ErrMissingID
 	}
@@ -242,7 +246,6 @@ func GetManifestationByID(s *state.State, ctx context.Context, id uuid.UUID) (mo
 }
 
 func GetUnitsByMatchedPlay(s *state.State, ctx context.Context, factionID uuid.UUID) ([]models.Unit, error) {
-
 	if factionID == uuid.Nil {
 		return nil, appErr.ErrMissingFactionID
 	}

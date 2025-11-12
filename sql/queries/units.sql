@@ -4,7 +4,7 @@ FROM units
 WHERE is_manifestation = false
 ORDER BY faction_id, name ASC;
 
--- name: GetUnits :many
+-- name: GetUnitsByFaction :many
 SELECT *
 FROM units
 WHERE faction_id = $1 AND is_manifestation = false

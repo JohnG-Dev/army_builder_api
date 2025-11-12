@@ -200,7 +200,7 @@ func GetAbilityByID(s *state.State, ctx context.Context, id uuid.UUID) (models.A
 	return ability, nil
 }
 
-func GetAbilityByType(s *state.State, ctx context.Context, abilityType string) ([]models.Ability, error) {
+func GetAbilitiesByType(s *state.State, ctx context.Context, abilityType string) ([]models.Ability, error) {
 	if abilityType == "" {
 		return nil, appErr.ErrMissingID
 	}
@@ -241,7 +241,7 @@ func GetAbilityByType(s *state.State, ctx context.Context, abilityType string) (
 	return abilities, nil
 }
 
-func GetAbilityByPhase(s *state.State, ctx context.Context, phase string) ([]models.Ability, error) {
+func GetAbilitiesByPhase(s *state.State, ctx context.Context, phase string) ([]models.Ability, error) {
 	if phase == "" {
 		return nil, appErr.ErrMissingID
 	}

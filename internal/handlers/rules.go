@@ -17,6 +17,23 @@ type RulesHandlers struct {
 }
 
 func (h *RulesHandlers) GetRules(w http.ResponseWriter, r *http.Request) {
+	gameID := r.URL.Query().Get("game_id")
+	ruleType := r.URL.Query().Get("type")
+
+	if gameID != "" && ruleType != "" {
+		h.getRulesByType(w, r)
+		return
+	}
+
+	if gameID != "" {
+		h.getRulesForGame(w, r)
+		return
+	}
+
+	h.getAllRules(w, r)
+}
+
+func (h *RulesHandlers) getAllRules(w http.ResponseWriter, r *http.Request) {
 	rules, err := services.GetAllRules(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -34,7 +51,7 @@ func (h *RulesHandlers) GetRules(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, rules)
 }
 
-func (h *RulesHandlers) GetRulesForGame(w http.ResponseWriter, r *http.Request) {
+func (h *RulesHandlers) getRulesForGame(w http.ResponseWriter, r *http.Request) {
 	gameStr := r.URL.Query().Get("game_id")
 
 	if gameStr == "" {
@@ -68,7 +85,7 @@ func (h *RulesHandlers) GetRulesForGame(w http.ResponseWriter, r *http.Request) 
 	respondWithJSON(w, http.StatusOK, rules)
 }
 
-func (h *RulesHandlers) GetRulesByType(w http.ResponseWriter, r *http.Request) {
+func (h *RulesHandlers) getRulesByType(w http.ResponseWriter, r *http.Request) {
 	gameStr := r.URL.Query().Get("game_id")
 	typeStr := r.URL.Query().Get("type")
 

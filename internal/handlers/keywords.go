@@ -17,6 +17,23 @@ type KeywordsHandlers struct {
 }
 
 func (h *KeywordsHandlers) GetKeywords(w http.ResponseWriter, r *http.Request) {
+	gameID := r.URL.Query().Get("game_id")
+	unitID := r.URL.Query().Get("unit_id")
+
+	if gameID != "" {
+		h.getKeywordsForGame(w, r)
+		return
+	}
+
+	if unitID != "" {
+		h.getKeywordsForUnit(w, r)
+		return
+	}
+
+	h.getAllKeywords(w, r)
+}
+
+func (h *KeywordsHandlers) getAllKeywords(w http.ResponseWriter, r *http.Request) {
 	keywords, err := services.GetAllKeywords(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -34,7 +51,7 @@ func (h *KeywordsHandlers) GetKeywords(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, keywords)
 }
 
-func (h *KeywordsHandlers) GetKeywordsByGame(w http.ResponseWriter, r *http.Request) {
+func (h *KeywordsHandlers) getKeywordsForGame(w http.ResponseWriter, r *http.Request) {
 	gameStr := r.URL.Query().Get("game_id")
 
 	if gameStr == "" {
@@ -48,7 +65,7 @@ func (h *KeywordsHandlers) GetKeywordsByGame(w http.ResponseWriter, r *http.Requ
 		return
 	}
 
-	keywords, err := services.GetKeywordsByGame(h.S, r.Context(), gameID)
+	keywords, err := services.GetKeywordsForGame(h.S, r.Context(), gameID)
 	if err != nil {
 		switch {
 		case errors.Is(err, appErr.ErrMissingID):
@@ -67,7 +84,7 @@ func (h *KeywordsHandlers) GetKeywordsByGame(w http.ResponseWriter, r *http.Requ
 	respondWithJSON(w, http.StatusOK, keywords)
 }
 
-func (h *KeywordsHandlers) GetKeywordsForUnit(w http.ResponseWriter, r *http.Request) {
+func (h *KeywordsHandlers) getKeywordsForUnit(w http.ResponseWriter, r *http.Request) {
 	unitStr := r.URL.Query().Get("unit_id")
 
 	if unitStr == "" {

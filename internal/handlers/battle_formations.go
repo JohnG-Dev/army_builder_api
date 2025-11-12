@@ -17,6 +17,23 @@ type BattleFormationsHandlers struct {
 }
 
 func (h *BattleFormationsHandlers) GetBattleFormations(w http.ResponseWriter, r *http.Request) {
+	gameID := r.URL.Query().Get("game id")
+	factionID := r.URL.Query().Get("faction_id")
+
+	if gameID != "" {
+		h.getBattleFormationsForGame(w, r)
+		return
+	}
+
+	if factionID != "" {
+		h.getBattleFormationsForFaction(w, r)
+		return
+	}
+
+	h.getAllBattleFormations(w, r)
+}
+
+func (h *BattleFormationsHandlers) getAllBattleFormations(w http.ResponseWriter, r *http.Request) {
 	battleFormations, err := services.GetAllBattleFormations(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -34,7 +51,7 @@ func (h *BattleFormationsHandlers) GetBattleFormations(w http.ResponseWriter, r 
 	respondWithJSON(w, http.StatusOK, battleFormations)
 }
 
-func (h *BattleFormationsHandlers) GetBattleFormationsForGame(w http.ResponseWriter, r *http.Request) {
+func (h *BattleFormationsHandlers) getBattleFormationsForGame(w http.ResponseWriter, r *http.Request) {
 	gameIDStr := r.URL.Query().Get("game_id")
 
 	if gameIDStr == "" {
@@ -67,7 +84,7 @@ func (h *BattleFormationsHandlers) GetBattleFormationsForGame(w http.ResponseWri
 	respondWithJSON(w, http.StatusOK, battleFormations)
 }
 
-func (h *BattleFormationsHandlers) GetBattleFormationsForFaction(w http.ResponseWriter, r *http.Request) {
+func (h *BattleFormationsHandlers) getBattleFormationsForFaction(w http.ResponseWriter, r *http.Request) {
 	factionIDStr := r.URL.Query().Get("faction_id")
 
 	if factionIDStr == "" {

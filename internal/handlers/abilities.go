@@ -17,6 +17,34 @@ type AbilitiesHandlers struct {
 }
 
 func (h *AbilitiesHandlers) GetAbilities(w http.ResponseWriter, r *http.Request) {
+	unitID := r.URL.Query().Get("unit_id")
+	factionID := r.URL.Query().Get("faction_id")
+	typeName := r.URL.Query().Get("type")
+	phase := r.URL.Query().Get("phase")
+
+	if unitID != "" {
+		h.getAbilitiesForUnit(w, r)
+		return
+	}
+
+	if factionID != "" {
+		h.getAbilitiesForFaction(w, r)
+		return
+	}
+
+	if typeName != "" {
+		h.getAbilitiesByType(w, r)
+		return
+	}
+
+	if phase != "" {
+		h.getAbilitiesByPhase(w, r)
+	}
+
+	h.getAllAbilities(w, r)
+}
+
+func (h *AbilitiesHandlers) getAllAbilities(w http.ResponseWriter, r *http.Request) {
 	abilities, err := services.GetAllAbilities(h.S, r.Context())
 	if err != nil {
 		switch {
@@ -33,7 +61,7 @@ func (h *AbilitiesHandlers) GetAbilities(w http.ResponseWriter, r *http.Request)
 	respondWithJSON(w, http.StatusOK, abilities)
 }
 
-func (h *AbilitiesHandlers) GetAbilitiesForUnit(w http.ResponseWriter, r *http.Request) {
+func (h *AbilitiesHandlers) getAbilitiesForUnit(w http.ResponseWriter, r *http.Request) {
 	unitIDStr := r.URL.Query().Get("unit_id")
 
 	if unitIDStr == "" {
@@ -66,7 +94,7 @@ func (h *AbilitiesHandlers) GetAbilitiesForUnit(w http.ResponseWriter, r *http.R
 	respondWithJSON(w, http.StatusOK, abilities)
 }
 
-func (h *AbilitiesHandlers) GetAbilitiesForFaction(w http.ResponseWriter, r *http.Request) {
+func (h *AbilitiesHandlers) getAbilitiesForFaction(w http.ResponseWriter, r *http.Request) {
 	factionIDStr := r.URL.Query().Get("faction_id")
 
 	if factionIDStr == "" {
@@ -130,7 +158,7 @@ func (h *AbilitiesHandlers) GetAbilityByID(w http.ResponseWriter, r *http.Reques
 	respondWithJSON(w, http.StatusOK, ability)
 }
 
-func (h *AbilitiesHandlers) GetAbilityByType(w http.ResponseWriter, r *http.Request) {
+func (h *AbilitiesHandlers) getAbilitiesByType(w http.ResponseWriter, r *http.Request) {
 	typeStr := r.URL.Query().Get("type")
 
 	if typeStr == "" {
@@ -138,7 +166,7 @@ func (h *AbilitiesHandlers) GetAbilityByType(w http.ResponseWriter, r *http.Requ
 		return
 	}
 
-	ability, err := services.GetAbilityByType(h.S, r.Context(), typeStr)
+	ability, err := services.GetAbilitiesByType(h.S, r.Context(), typeStr)
 	if err != nil {
 		switch {
 		case errors.Is(err, appErr.ErrMissingID):
@@ -157,7 +185,7 @@ func (h *AbilitiesHandlers) GetAbilityByType(w http.ResponseWriter, r *http.Requ
 	respondWithJSON(w, http.StatusOK, ability)
 }
 
-func (h *AbilitiesHandlers) GetAbilityByPhase(w http.ResponseWriter, r *http.Request) {
+func (h *AbilitiesHandlers) getAbilitiesByPhase(w http.ResponseWriter, r *http.Request) {
 	phaseStr := r.URL.Query().Get("phase")
 
 	if phaseStr == "" {
@@ -165,7 +193,7 @@ func (h *AbilitiesHandlers) GetAbilityByPhase(w http.ResponseWriter, r *http.Req
 		return
 	}
 
-	ability, err := services.GetAbilityByPhase(h.S, r.Context(), phaseStr)
+	ability, err := services.GetAbilitiesByPhase(h.S, r.Context(), phaseStr)
 	if err != nil {
 		switch {
 		case errors.Is(err, appErr.ErrMissingID):
