@@ -93,9 +93,9 @@ func main() {
 	mux.HandleFunc("GET /battle_formations", bHandlers.GetBattleFormations)
 	mux.HandleFunc("GET /battle_formations/{id}", bHandlers.GetBattleFormationByID)
 	mux.HandleFunc("GET /enhancements", eHandlers.GetEnhancements)
-	mux.HandleFunc("GET /ehancements/{id}", eHandlers.GetEnhancementByID)
+	mux.HandleFunc("GET /enhancements/{id}", eHandlers.GetEnhancementByID)
 
-	wrappedMux := middleware.MiddlewareRequestID(http.DefaultServeMux)
+	wrappedMux := middleware.MiddlewareRequestID(mux)
 
 	s.Logger.Info("Server Starting",
 		zap.String("env", cfg.Env),
