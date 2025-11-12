@@ -24,4 +24,3 @@ type UnitKeyword struct {
 	KeywordID uuid.UUID `json:"keyword_id"`
 	Value     string    `json:"value"`
 }
-

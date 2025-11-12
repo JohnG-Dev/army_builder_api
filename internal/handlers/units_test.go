@@ -247,4 +247,3 @@ func TestGetUnits_FilterByFactionID(t *testing.T) {
 		t.Errorf("expected no Orruk units, got %s", body)
 	}
 }
-
