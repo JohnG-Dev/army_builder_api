@@ -17,7 +17,6 @@ import (
 )
 
 func main() {
-
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = ":8080"
@@ -66,6 +65,11 @@ func main() {
 	gHandlers := &handlers.GamesHandlers{S: s}
 	uHandlers := &handlers.UnitsHandlers{S: s}
 	wHandlers := &handlers.WeaponsHandlers{S: s}
+	aHandlers := &handlers.AbilitiesHandlers{S: s}
+	rHandlers := &handlers.RulesHandlers{S: s}
+	kHandlers := &handlers.KeywordsHandlers{S: s}
+	bHandlers := &handlers.BattleFormationsHandlers{S: s}
+	eHandlers := &handlers.EnhancementsHandlers{S: s}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /games", gHandlers.GetGames)
@@ -76,19 +80,30 @@ func main() {
 	mux.HandleFunc("GET /manifestations", uHandlers.GetManifestations)
 	mux.HandleFunc("GET /manifestations/{id}", uHandlers.GetManifestationByID)
 	mux.HandleFunc("GET /units/nonmanifestations", uHandlers.GetNonManifestationUnits)
-	mux.HandleFunc("GET /weapons", wHandlers.GetWeaponsForUnit)
-	mux.HandleFunc("GET /weapons/{id}", wHandlers.GetWeaponsByID)
+	mux.HandleFunc("GET /weapons", wHandlers.GetWeapons)
+	mux.HandleFunc("GET /weapons/{id}", wHandlers.GetWeaponByID)
+	mux.HandleFunc("GET /abilities", aHandlers.GetAbilities)
+	mux.HandleFunc("GET /abilities/{id}", aHandlers.GetAbilityByID)
+	mux.HandleFunc("GET /rules", rHandlers.GetRules)
+	mux.HandleFunc("GET /rules/{id}", rHandlers.GetRuleByID)
+	mux.HandleFunc("GET /keywords", kHandlers.GetKeywords)
+	mux.HandleFunc("GET /keywords/{id}", kHandlers.GetKeywordByID)
+	mux.HandleFunc("GET /keywords/{name}/units", kHandlers.GetUnitsWithKeyword)
+	mux.HandleFunc("GET /keywords/{name}/units/value/{value}", kHandlers.GetUnitsWithKeywordAndValue)
+	mux.HandleFunc("GET /battle_formations", bHandlers.GetBattleFormations)
+	mux.HandleFunc("GET /battle_formations/{id}", bHandlers.GetBattleFormationByID)
+	mux.HandleFunc("GET /enhancements", eHandlers.GetEnhancements)
+	mux.HandleFunc("GET /ehancements/{id}", eHandlers.GetEnhancementByID)
+
+	wrappedMux := middleware.MiddlewareRequestID(http.DefaultServeMux)
 
 	s.Logger.Info("Server Starting",
 		zap.String("env", cfg.Env),
 		zap.String("port", cfg.Port),
 	)
 
-	wrappedMux := middleware.MiddlewareRequestID(http.DefaultServeMux)
-
 	err = http.ListenAndServe(port, wrappedMux)
 	if err != nil {
 		log.Fatalf("Server failed: %v\n", err)
 	}
-
 }
