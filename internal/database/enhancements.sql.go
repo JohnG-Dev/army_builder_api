@@ -14,7 +14,7 @@ import (
 const createEnhancement = `-- name: CreateEnhancement :one
 INSERT INTO enhancements (faction_id, name, enhancement_type, description, points, version, source)
 VALUES ($1, $2, $3, $4, $5, $6, $7)
-RETURNING id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+RETURNING id, faction_id, name, enhancement_type, description, points, is_unique, version, source, created_at, updated_at
 `
 
 type CreateEnhancementParams struct {
@@ -45,6 +45,7 @@ func (q *Queries) CreateEnhancement(ctx context.Context, arg CreateEnhancementPa
 		&i.EnhancementType,
 		&i.Description,
 		&i.Points,
+		&i.IsUnique,
 		&i.Version,
 		&i.Source,
 		&i.CreatedAt,
@@ -64,7 +65,7 @@ func (q *Queries) DeleteEnhancement(ctx context.Context, id uuid.UUID) error {
 }
 
 const getEnhancementByID = `-- name: GetEnhancementByID :one
-SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+SELECT id, faction_id, name, enhancement_type, description, points, is_unique, version, source, created_at, updated_at
 FROM enhancements
 WHERE id = $1
 `
@@ -79,6 +80,7 @@ func (q *Queries) GetEnhancementByID(ctx context.Context, id uuid.UUID) (Enhance
 		&i.EnhancementType,
 		&i.Description,
 		&i.Points,
+		&i.IsUnique,
 		&i.Version,
 		&i.Source,
 		&i.CreatedAt,
@@ -88,7 +90,7 @@ func (q *Queries) GetEnhancementByID(ctx context.Context, id uuid.UUID) (Enhance
 }
 
 const getEnhancements = `-- name: GetEnhancements :many
-SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+SELECT id, faction_id, name, enhancement_type, description, points, is_unique, version, source, created_at, updated_at
 FROM enhancements
 ORDER BY faction_id, name ASC
 `
@@ -109,6 +111,7 @@ func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
 			&i.EnhancementType,
 			&i.Description,
 			&i.Points,
+			&i.IsUnique,
 			&i.Version,
 			&i.Source,
 			&i.CreatedAt,
@@ -125,7 +128,7 @@ func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
 }
 
 const getEnhancementsByType = `-- name: GetEnhancementsByType :many
-SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+SELECT id, faction_id, name, enhancement_type, description, points, is_unique, version, source, created_at, updated_at
 FROM enhancements
 WHERE enhancement_type = $1
 ORDER BY faction_id, name ASC
@@ -147,6 +150,7 @@ func (q *Queries) GetEnhancementsByType(ctx context.Context, enhancementType str
 			&i.EnhancementType,
 			&i.Description,
 			&i.Points,
+			&i.IsUnique,
 			&i.Version,
 			&i.Source,
 			&i.CreatedAt,
@@ -163,7 +167,7 @@ func (q *Queries) GetEnhancementsByType(ctx context.Context, enhancementType str
 }
 
 const getEnhancementsForFaction = `-- name: GetEnhancementsForFaction :many
-SELECT id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+SELECT id, faction_id, name, enhancement_type, description, points, is_unique, version, source, created_at, updated_at
 FROM enhancements
 WHERE faction_id = $1
 ORDER BY name ASC
@@ -185,6 +189,7 @@ func (q *Queries) GetEnhancementsForFaction(ctx context.Context, factionID uuid.
 			&i.EnhancementType,
 			&i.Description,
 			&i.Points,
+			&i.IsUnique,
 			&i.Version,
 			&i.Source,
 			&i.CreatedAt,
@@ -204,7 +209,7 @@ const updateEnhancement = `-- name: UpdateEnhancement :one
 UPDATE enhancements
 SET name = $2, enhancement_type = $3, description = $4, points = $5, version = $6, source = $7, updated_at = now()
 WHERE id = $1
-RETURNING id, faction_id, name, enhancement_type, description, points, version, source, created_at, updated_at
+RETURNING id, faction_id, name, enhancement_type, description, points, is_unique, version, source, created_at, updated_at
 `
 
 type UpdateEnhancementParams struct {
@@ -235,6 +240,7 @@ func (q *Queries) UpdateEnhancement(ctx context.Context, arg UpdateEnhancementPa
 		&i.EnhancementType,
 		&i.Description,
 		&i.Points,
+		&i.IsUnique,
 		&i.Version,
 		&i.Source,
 		&i.CreatedAt,

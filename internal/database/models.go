@@ -12,8 +12,8 @@ import (
 
 type Ability struct {
 	ID          uuid.UUID
-	UnitID      uuid.UUID
-	FactionID   uuid.UUID
+	UnitID      uuid.NullUUID
+	FactionID   uuid.NullUUID
 	Name        string
 	Description string
 	Type        string
@@ -56,6 +56,7 @@ type Enhancement struct {
 	EnhancementType string
 	Description     string
 	Points          int32
+	IsUnique        bool
 	Version         string
 	Source          string
 	CreatedAt       time.Time
@@ -113,6 +114,7 @@ type Unit struct {
 	Name            string
 	Description     string
 	IsManifestation bool
+	IsUnique        bool
 	Move            int32
 	Health          int32
 	Save            string

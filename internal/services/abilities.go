@@ -7,6 +7,7 @@ import (
 
 	"github.com/google/uuid"
 
+	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
@@ -69,8 +70,8 @@ func GetAllAbilities(s *state.State, ctx context.Context) ([]models.Ability, err
 
 		abilities[i] = models.Ability{
 			ID:          a.ID,
-			UnitID:      a.UnitID,
-			FactionID:   a.FactionID,
+			UnitID:      database.NullUUIDToPtr(a.UnitID),
+			FactionID:   database.NullUUIDToPtr(a.FactionID),
 			Name:        a.Name,
 			Type:        a.Type,
 			Phase:       a.Phase,
@@ -91,7 +92,7 @@ func GetAbilitiesForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) 
 		return nil, appErr.ErrMissingUnitID
 	}
 
-	dbAbilities, err := s.DB.GetAbilitiesForUnit(ctx, unitID)
+	dbAbilities, err := s.DB.GetAbilitiesForUnit(ctx, database.UUIDToNullUUID(unitID))
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
 			return []models.Ability{}, nil
@@ -109,8 +110,8 @@ func GetAbilitiesForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) 
 
 		abilities[i] = models.Ability{
 			ID:          a.ID,
-			UnitID:      a.UnitID,
-			FactionID:   a.FactionID,
+			UnitID:      database.NullUUIDToPtr(a.UnitID),
+			FactionID:   database.NullUUIDToPtr(a.FactionID),
 			Name:        a.Name,
 			Type:        a.Type,
 			Phase:       a.Phase,
@@ -131,7 +132,7 @@ func GetAbilitiesForFaction(s *state.State, ctx context.Context, factionID uuid.
 		return nil, appErr.ErrMissingID
 	}
 
-	dbAbilities, err := s.DB.GetAbilitiesForFaction(ctx, factionID)
+	dbAbilities, err := s.DB.GetAbilitiesForFaction(ctx, database.UUIDToNullUUID(factionID))
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
 			return []models.Ability{}, nil
@@ -150,8 +151,8 @@ func GetAbilitiesForFaction(s *state.State, ctx context.Context, factionID uuid.
 
 		abilities[i] = models.Ability{
 			ID:          a.ID,
-			UnitID:      a.UnitID,
-			FactionID:   a.FactionID,
+			UnitID:      database.NullUUIDToPtr(a.UnitID),
+			FactionID:   database.NullUUIDToPtr(a.FactionID),
 			Name:        a.Name,
 			Type:        a.Type,
 			Phase:       a.Phase,
@@ -184,8 +185,8 @@ func GetAbilityByID(s *state.State, ctx context.Context, id uuid.UUID) (models.A
 
 	ability := models.Ability{
 		ID:          dbAbility.ID,
-		UnitID:      dbAbility.UnitID,
-		FactionID:   dbAbility.FactionID,
+		UnitID:      database.NullUUIDToPtr(dbAbility.UnitID),
+		FactionID:   database.NullUUIDToPtr(dbAbility.FactionID),
 		Name:        dbAbility.Name,
 		Type:        dbAbility.Type,
 		Phase:       dbAbility.Phase,
@@ -224,8 +225,8 @@ func GetAbilitiesByType(s *state.State, ctx context.Context, abilityType string)
 
 		abilities[i] = models.Ability{
 			ID:          a.ID,
-			UnitID:      a.UnitID,
-			FactionID:   a.FactionID,
+			UnitID:      database.NullUUIDToPtr(a.UnitID),
+			FactionID:   database.NullUUIDToPtr(a.FactionID),
 			Name:        a.Name,
 			Type:        a.Type,
 			Phase:       a.Phase,
@@ -264,8 +265,8 @@ func GetAbilitiesByPhase(s *state.State, ctx context.Context, phase string) ([]m
 		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
 		abilities[i] = models.Ability{
 			ID:          a.ID,
-			UnitID:      a.UnitID,
-			FactionID:   a.FactionID,
+			UnitID:      database.NullUUIDToPtr(a.UnitID),
+			FactionID:   database.NullUUIDToPtr(a.FactionID),
 			Name:        a.Name,
 			Type:        a.Type,
 			Phase:       a.Phase,

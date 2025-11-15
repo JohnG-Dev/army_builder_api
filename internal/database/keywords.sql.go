@@ -196,7 +196,7 @@ func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]U
 }
 
 const getUnitsWithKeyword = `-- name: GetUnitsWithKeyword :many
-SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.is_unique, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON u.id = uk.unit_id
 JOIN keywords k ON uk.keyword_id = k.id
@@ -219,6 +219,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 			&i.Name,
 			&i.Description,
 			&i.IsManifestation,
+			&i.IsUnique,
 			&i.Move,
 			&i.Health,
 			&i.Save,
@@ -246,7 +247,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 }
 
 const getUnitsWithKeywordAndValue = `-- name: GetUnitsWithKeywordAndValue :many
-SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.is_unique, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_size, u.max_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON u.id = uk.unit_id
 JOIN keywords k ON uk.keyword_id = k.id
@@ -274,6 +275,7 @@ func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsW
 			&i.Name,
 			&i.Description,
 			&i.IsManifestation,
+			&i.IsUnique,
 			&i.Move,
 			&i.Health,
 			&i.Save,

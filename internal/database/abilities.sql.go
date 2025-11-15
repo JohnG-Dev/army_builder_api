@@ -18,8 +18,8 @@ RETURNING id, unit_id, faction_id, name, description, type, phase, version, sour
 `
 
 type CreateAbilityParams struct {
-	UnitID      uuid.UUID
-	FactionID   uuid.UUID
+	UnitID      uuid.NullUUID
+	FactionID   uuid.NullUUID
 	Name        string
 	Description string
 	Type        string
@@ -151,7 +151,7 @@ WHERE faction_id = $1
 ORDER BY phase ASC, name ASC
 `
 
-func (q *Queries) GetAbilitiesForFaction(ctx context.Context, factionID uuid.UUID) ([]Ability, error) {
+func (q *Queries) GetAbilitiesForFaction(ctx context.Context, factionID uuid.NullUUID) ([]Ability, error) {
 	rows, err := q.db.Query(ctx, getAbilitiesForFaction, factionID)
 	if err != nil {
 		return nil, err
@@ -190,7 +190,7 @@ WHERE unit_id = $1
 ORDER BY phase ASC, name ASC
 `
 
-func (q *Queries) GetAbilitiesForUnit(ctx context.Context, unitID uuid.UUID) ([]Ability, error) {
+func (q *Queries) GetAbilitiesForUnit(ctx context.Context, unitID uuid.NullUUID) ([]Ability, error) {
 	rows, err := q.db.Query(ctx, getAbilitiesForUnit, unitID)
 	if err != nil {
 		return nil, err
