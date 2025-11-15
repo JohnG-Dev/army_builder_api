@@ -1,7 +1,12 @@
 CREATE TABLE abilities (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
-  faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
+  unit_id UUID REFERENCES units(id) ON DELETE CASCADE,
+  faction_id UUID REFERENCES factions(id) ON DELETE CASCADE,
+  
+  CONSTRAINT chk_unit_xor_faction CHECK (
+    (unit_id IS NOT NULL)::integer + (faction_id IS NOT NULL)::integer = 1
+  ),
+  
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
   type TEXT NOT NULL DEFAULT '',    -- 'passive', 'spell', 'prayer', 'trait', 'aura'
@@ -12,8 +17,8 @@ CREATE TABLE abilities (
   updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-CREATE INDEX abilities_unit_idx ON abilities (unit_id, name ASC);
-CREATE INDEX abilities_faction_idx ON abilities (faction_id, name ASC);
+CREATE INDEX abilities_unit_idx ON abilities (unit_id, name ASC) WHERE unit_id IS NOT NULL;
+CREATE INDEX abilities_faction_idx ON abilities (faction_id, name ASC) WHERE faction_id IS NOT NULL;
 
 CREATE TABLE ability_effects (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

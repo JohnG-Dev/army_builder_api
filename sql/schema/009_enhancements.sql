@@ -5,6 +5,7 @@ CREATE TABLE enhancements (
   enhancement_type TEXT NOT NULL DEFAULT '',
   description TEXT NOT NULL DEFAULT '',
   points INT NOT NULL DEFAULT 0,
+  is_unique BOOLEAN NOT NULL DEFAULT false,
   version TEXT NOT NULL DEFAULT '',
   source TEXT NOT NULL DEFAULT '',
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),

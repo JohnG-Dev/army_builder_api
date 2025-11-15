@@ -14,6 +14,7 @@ type Enhancement struct {
 	EnhancementType string    `json:"enhancement_type"`
 	Description     string    `json:"description"`
 	Points          int       `json:"points"`
+	IsUnique        bool      `json:is_unique"`
 	Version         string    `json:"version"`
 	Source          string    `json:"source"`
 	CreatedAt       time.Time `json:"created_at"`

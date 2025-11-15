@@ -16,3 +16,5 @@ DROP EXTENSION IF EXISTS "pgcrypto";
 
 -- Re-enable foreign key checks
 SET session_replication_role = DEFAULT;
+
+

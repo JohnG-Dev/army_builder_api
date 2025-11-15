@@ -10,6 +10,7 @@ type Unit struct {
 	ID              uuid.UUID `json:"id"`
 	FactionID       uuid.UUID `json:"faction_id"`
 	Name            string    `json:"name"`
+	IsUnique        bool      `json:"is_unique"`
 	Description     string    `json:"description"`
 	IsManifestation bool      `json:"is_manifestation"`
 	Move            int       `json:"move"`

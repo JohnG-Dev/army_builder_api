@@ -4,6 +4,7 @@ CREATE TABLE units (
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
   is_manifestation BOOLEAN NOT NULL DEFAULT false,
+  is_unique BOOLEAN NOT NULL DEFAULT false,
   
   -- Core stats
   move INT NOT NULL DEFAULT 0,

@@ -63,6 +63,7 @@ CREATE TABLE units (
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
   is_manifestation BOOLEAN NOT NULL DEFAULT false,
+  is_unique BOOLEAN NOT NULL DEFAULT false,
   
   -- Core stats
   move INT NOT NULL DEFAULT 0,
@@ -125,8 +126,11 @@ CREATE INDEX weapons_unit_idx ON weapons (unit_id, name ASC);
 -- ABILITIES TABLE (depends on units + factions)
 CREATE TABLE abilities (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  unit_id UUID NOT NULL REFERENCES units(id) ON DELETE CASCADE,
-  faction_id UUID NOT NULL REFERENCES factions(id) ON DELETE CASCADE,
+  unit_id UUID REFERENCES units(id) ON DELETE CASCADE,
+  faction_id UUID REFERENCES factions(id) ON DELETE CASCADE,
+  CONSTRAINT chk_unit_xor_faction CHECK (
+    (unit_id IS NOT NULL)::integer + (faction_id IS NOT NULL)::integer = 1
+  ),
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
   type TEXT NOT NULL DEFAULT '',
@@ -137,8 +141,8 @@ CREATE TABLE abilities (
   updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-CREATE INDEX abilities_unit_idx ON abilities (unit_id, name ASC);
-CREATE INDEX abilities_faction_idx ON abilities (faction_id, name ASC);
+CREATE INDEX abilities_unit_idx ON abilities (unit_id, name ASC) WHERE unit_id IS NOT NULL;
+CREATE INDEX abilities_faction_idx ON abilities (faction_id, name ASC) WHERE faction_id IS NOT NULL;
 
 -- ABILITY_EFFECTS TABLE (depends on abilities)
 CREATE TABLE ability_effects (
@@ -164,6 +168,7 @@ CREATE TABLE enhancements (
   enhancement_type TEXT NOT NULL DEFAULT '',
   description TEXT NOT NULL DEFAULT '',
   points INT NOT NULL DEFAULT 0,
+  is_unique BOOLEAN NOT NULL DEFAULT false,
   version TEXT NOT NULL DEFAULT '',
   source TEXT NOT NULL DEFAULT '',
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
