@@ -5,6 +5,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"net/url"
 	"strings"
 	"testing"
 
@@ -150,7 +151,10 @@ func TestGetGameByName(t *testing.T) {
 
 	handler := &GamesHandlers{S: s}
 
-	req := httptest.NewRequest(http.MethodGet, "/games?name=Age of Sigmar", nil)
+	gameName := "Age of Sigmar"
+	encodedName := url.QueryEscape(gameName)
+
+	req := httptest.NewRequest(http.MethodGet, "/games?name="+encodedName, nil)
 	w := httptest.NewRecorder()
 
 	handler.GetGames(w, req)
