@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
 	"go.uber.org/zap"
@@ -102,7 +103,16 @@ func main() {
 		zap.String("port", cfg.Port),
 	)
 
-	err = http.ListenAndServe(port, wrappedMux)
+	server := &http.Server{
+		Addr:           port,
+		Handler:        wrappedMux,
+		ReadTimeout:    15 * time.Second,
+		WriteTimeout:   15 * time.Second,
+		IdleTimeout:    60 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+
+	err = server.ListenAndServe()
 	if err != nil {
 		log.Fatalf("Server failed: %v\n", err)
 	}
