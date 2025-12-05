@@ -80,8 +80,8 @@ CREATE TABLE units (
   banishment TEXT NOT NULL DEFAULT '',
   
   -- Reinforcement constraints
-  min_size INT NOT NULL DEFAULT 1,
-  max_size INT NOT NULL DEFAULT 999,
+  min_unit_size INT NOT NULL DEFAULT 1,
+  max_unit_size INT NOT NULL DEFAULT 999,
   
   -- Matched play / competitive flag
   matched_play BOOLEAN NOT NULL DEFAULT true,

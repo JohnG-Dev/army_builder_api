@@ -40,16 +40,16 @@ WHERE id = $1 AND is_manifestation = true;
 
 -- name: CreateUnit :one
 INSERT INTO units (
-  faction_id, name, description, is_manifestation,
+  faction_id, name, description, is_manifestation, is_unique,
   move, health, save, ward, control, points,
   summon_cost, banishment,
-  min_size, max_size, matched_play, version, source
+  min_unit_size, max_unit_size, matched_play, version, source
 )
 VALUES (
-  $1, $2, $3, $4,
-  $5, $6, $7, $8, $9, $10,
-  $11, $12,
-  $13, $14, $15, $16, $17
+  $1, $2, $3, $4, $5,
+  $6, $7, $8, $9, $10, $11,
+  $12, $13,
+  $14, $15, $16, $17, $18
 )
 RETURNING *;
 
@@ -57,7 +57,7 @@ RETURNING *;
 UPDATE units
 SET name = $2, description = $3, move = $4, health = $5, save = $6, ward = $7,
     control = $8, points = $9, summon_cost = $10, banishment = $11,
-    min_size = $12, max_size = $13, matched_play = $14, version = $15, source = $16, updated_at = now()
+    min_unit_size = $12, max_unit_size = $13, matched_play = $14, version = $15, source = $16, updated_at = now()
 WHERE id = $1
 RETURNING *;
 
