@@ -67,8 +67,8 @@ func TestGetUnits_ReturnsUnits(t *testing.T) {
 	_, _ = s.DB.CreateUnit(ctx, database.CreateUnitParams{
 		FactionID:   factionID,
 		Name:        "Liberators",
-		MinSize:     5,
-		MaxSize:     15,
+		MinUnitSize: 5,
+		MaxUnitSize: 15,
 		Points:      95,
 		Move:        5,
 		Health:      2,
@@ -135,18 +135,18 @@ func TestGetUnits_FilterByFactionID(t *testing.T) {
 
 	// Insert units for both factions
 	_, _ = s.DB.CreateUnit(ctx, database.CreateUnitParams{
-		FactionID: factionID,
-		Name:      "Liberators",
-		Points:    95,
-		MinSize:   5,
-		MaxSize:   15,
+		FactionID:   factionID,
+		Name:        "Liberators",
+		Points:      95,
+		MinUnitSize: 5,
+		MaxUnitSize: 15,
 	})
 	_, _ = s.DB.CreateUnit(ctx, database.CreateUnitParams{
-		FactionID: faction2.ID,
-		Name:      "Brutes",
-		Points:    150,
-		MinSize:   5,
-		MaxSize:   10,
+		FactionID:   faction2.ID,
+		Name:        "Brutes",
+		Points:      150,
+		MinUnitSize: 5,
+		MaxUnitSize: 10,
 	})
 
 	handler := &UnitsHandlers{S: s}
@@ -186,8 +186,8 @@ func TestGetManifestations_ReturnsManifestations(t *testing.T) {
 		Name:            "Celestant Prime Manifestation",
 		IsManifestation: true,
 		Points:          200,
-		MinSize:         1,
-		MaxSize:         1,
+		MinUnitSize:     1,
+		MaxUnitSize:     1,
 	})
 
 	handler := &UnitsHandlers{S: s}
@@ -216,11 +216,11 @@ func TestGetUnitByID_Success(t *testing.T) {
 	ctx := context.Background()
 
 	unit, _ := s.DB.CreateUnit(ctx, database.CreateUnitParams{
-		FactionID: factionID,
-		Name:      "Liberators",
-		Points:    95,
-		MinSize:   5,
-		MaxSize:   15,
+		FactionID:   factionID,
+		Name:        "Liberators",
+		Points:      95,
+		MinUnitSize: 5,
+		MaxUnitSize: 15,
 	})
 
 	handler := &UnitsHandlers{S: s}

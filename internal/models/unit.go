@@ -21,8 +21,8 @@ type Unit struct {
 	Points          int       `json:"points"`
 	SummonCost      string    `json:"summon_cost"` // Conditional: only when is_manifestation = true
 	Banishment      string    `json:"banishment"`  // Conditional: only when is_manifestation = true
-	MinSize         int       `json:"min_size"`
-	MaxSize         int       `json:"max_size"`
+	MinUnitSize     int       `json:"min_unit_size"`
+	MaxUnitSize     int       `json:"max_unit_size"`
 	MatchedPlay     bool      `json:"matched_play"`
 	Version         string    `json:"version"`
 	Source          string    `json:"source"`
