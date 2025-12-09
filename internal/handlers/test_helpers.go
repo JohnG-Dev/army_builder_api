@@ -2,11 +2,6 @@ package handlers
 
 import (
 	"context"
-	"io"
-	"net/http"
-	"net/http/httptest"
-	"net/url"
-	"strings"
 	"testing"
 
 	"github.com/google/uuid"
@@ -129,4 +124,35 @@ func createTestWeapon(t *testing.T, s *state.State, unitID uuid.UUID) uuid.UUID 
 
 	weaponID := weapon.ID
 	return weaponID
+}
+
+func createTestManifestation(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
+		FactionID:       factionID,
+		Name:            "Test Manifestation",
+		Move:            10,
+		Health:          7,
+		Save:            "5+",
+		Ward:            "6+",
+		Control:         1,
+		Points:          100,
+		SummonCost:      "7",
+		Banishment:      "5",
+		MinUnitSize:     4,
+		MaxUnitSize:     8,
+		MatchedPlay:     true,
+		IsManifestation: true,
+		IsUnique:        false,
+		Version:         "1.0",
+		Source:          "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create unit: %v", err)
+	}
+
+	unitID := unit.ID
+
+	return unitID
 }

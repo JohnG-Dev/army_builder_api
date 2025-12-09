@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"context"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -9,76 +8,16 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-
-	"github.com/JohnG-Dev/army_builder_api/internal/database"
 )
 
 func TestGetWeapons_ReturnsWeapons(t *testing.T) {
 	s := setupTestDB(t)
-	ctx := context.Background()
 
-	game, err := s.DB.CreateGame(ctx, database.CreateGameParams{
-		Name:    "Test Game",
-		Edition: "Test Edition",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
+	gameID := createTestGame(t, s)
+	factionID := createTestFaction(t, s, gameID)
+	unitID := createTestUnit(t, s, factionID)
 
-	if err != nil {
-		t.Fatalf("failed to create game: %v", err)
-	}
-
-	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
-		GameID:  game.ID,
-		Name:    "Test Faction",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create faction: %v", err)
-	}
-
-	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
-		FactionID:       faction.ID,
-		Name:            "Test unit",
-		Move:            6,
-		Health:          4,
-		Save:            "4+",
-		Ward:            "6+",
-		Control:         1,
-		Points:          100,
-		SummonCost:      "",
-		Banishment:      "",
-		MinUnitSize:     5,
-		MaxUnitSize:     10,
-		MatchedPlay:     true,
-		IsManifestation: false,
-		IsUnique:        false,
-		Version:         "1.0",
-		Source:          "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create unit: %v", err)
-	}
-
-	_, err = s.DB.CreateWeapon(ctx, database.CreateWeaponParams{
-		UnitID:  unit.ID,
-		Name:    "Test AoS Weapon",
-		Range:   "12\"",
-		Attacks: "3",
-		ToHit:   "3+",
-		ToWound: "3+",
-		Rend:    "-1",
-		Damage:  "2",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create weapon: %v", err)
-	}
+	createTestWeapon(t, s, unitID)
 
 	handler := &WeaponsHandlers{S: s}
 
@@ -127,80 +66,18 @@ func TestGetWeapons_EmptyDB(t *testing.T) {
 	if !strings.Contains(bodyStr, "[]") {
 		t.Errorf("expected body to contain '[]', got %s", bodyStr)
 	}
-
 }
 
 func TestGetWeapons_FilterByUnitID(t *testing.T) {
 	s := setupTestDB(t)
 
-	ctx := context.Background()
-
-	game, err := s.DB.CreateGame(ctx, database.CreateGameParams{
-		Name:    "Test Game",
-		Edition: "Test Edition",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create game: %v", err)
-	}
-
-	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
-		GameID:  game.ID,
-		Name:    "Test Faction",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create faction: %v", err)
-	}
-
-	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
-		FactionID:       faction.ID,
-		Name:            "Test Unit",
-		Description:     "A test unit",
-		Move:            6,
-		Health:          3,
-		Save:            "4+",
-		Ward:            "6+",
-		Control:         1,
-		Points:          100,
-		SummonCost:      "",
-		Banishment:      "",
-		MinUnitSize:     5,
-		MaxUnitSize:     10,
-		MatchedPlay:     true,
-		IsManifestation: false,
-		IsUnique:        false,
-		Version:         "1.0",
-		Source:          "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create unit: %v", err)
-	}
-
-	_, err = s.DB.CreateWeapon(ctx, database.CreateWeaponParams{
-		UnitID:  unit.ID,
-		Name:    "Test AoS Weapon",
-		Range:   "12\"",
-		Attacks: "3",
-		ToHit:   "3+",
-		ToWound: "3+",
-		Rend:    "-1",
-		Damage:  "2",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create weapon: %v", err)
-	}
+	gameID := createTestGame(t, s)
+	factionID := createTestFaction(t, s, gameID)
+	unitID := createTestUnit(t, s, factionID)
+	createTestWeapon(t, s, unitID)
 
 	handler := &WeaponsHandlers{S: s}
-	req := httptest.NewRequest(http.MethodGet, "/weapons?unit_id="+unit.ID.String(), nil)
+	req := httptest.NewRequest(http.MethodGet, "/weapons?unit_id="+unitID.String(), nil)
 
 	w := httptest.NewRecorder()
 
@@ -224,75 +101,15 @@ func TestGetWeapons_FilterByUnitID(t *testing.T) {
 func TestGetWeaponByID_Success(t *testing.T) {
 	s := setupTestDB(t)
 
-	ctx := context.Background()
-
-	game, err := s.DB.CreateGame(ctx, database.CreateGameParams{
-		Name:    "Test Game",
-		Edition: "Test Edition",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create game: %v", err)
-	}
-
-	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
-		GameID:  game.ID,
-		Name:    "Test Faction",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create faction: %v", err)
-	}
-
-	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
-		FactionID:       faction.ID,
-		Name:            "Test Unit",
-		Move:            6,
-		Health:          3,
-		Save:            "3+",
-		Ward:            "6+",
-		Control:         1,
-		Points:          100,
-		SummonCost:      "",
-		Banishment:      "",
-		MinUnitSize:     3,
-		MaxUnitSize:     6,
-		MatchedPlay:     true,
-		IsManifestation: false,
-		IsUnique:        false,
-		Version:         "1.0",
-		Source:          "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create unit: %v", err)
-	}
-
-	_, err = s.DB.CreateWeapon(ctx, database.CreateWeaponParams{
-		UnitID:  unit.ID,
-		Name:    "Test AoS Weapon",
-		Range:   "10\"",
-		Attacks: "5",
-		ToHit:   "3+",
-		ToWound: "3+",
-		Rend:    "-1",
-		Damage:  "2",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-
-	if err != nil {
-		t.Fatalf("failed to create weapon: %v", err)
-	}
+	gameID := createTestGame(t, s)
+	factionID := createTestFaction(t, s, gameID)
+	unitID := createTestUnit(t, s, factionID)
+	weaponID := createTestWeapon(t, s, unitID)
 
 	handler := &WeaponsHandlers{S: s}
 
-	req := httptest.NewRequest(http.MethodGet, "/weapons/"+unit.ID.String(), nil)
-	req.SetPathValue("id", unit.ID.String())
+	req := httptest.NewRequest(http.MethodGet, "/weapons/"+weaponID.String(), nil)
+	req.SetPathValue("id", weaponID.String())
 
 	w := httptest.NewRecorder()
 
@@ -318,9 +135,9 @@ func TestGetWeaponByID_NotFound(t *testing.T) {
 
 	handler := &WeaponsHandlers{S: s}
 
-	nonExistentID := uuid.NewString()
-	req := httptest.NewRequest(http.MethodGet, "/weapons/"+nonExistentID, nil)
-	req.SetPathValue("id", nonExistentID)
+	nonExistentID := uuid.New()
+	req := httptest.NewRequest(http.MethodGet, "/weapons/"+nonExistentID.String(), nil)
+	req.SetPathValue("id", nonExistentID.String())
 	w := httptest.NewRecorder()
 
 	handler.GetWeaponByID(w, req)
@@ -331,7 +148,6 @@ func TestGetWeaponByID_NotFound(t *testing.T) {
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)
 	}
-
 }
 
 func TestGetWeaponsByID_InvalidUUID(t *testing.T) {
@@ -353,5 +169,4 @@ func TestGetWeaponsByID_InvalidUUID(t *testing.T) {
 	if res.StatusCode != http.StatusBadRequest {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)
 	}
-
 }
