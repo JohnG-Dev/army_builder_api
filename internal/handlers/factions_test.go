@@ -131,7 +131,34 @@ func TestGetFactionByID_Success(t *testing.T) {
 	}
 
 	body, _ := io.ReadAll(res.Body)
-	if !strings.Contains(string(body), "Test Faction") {
-		t.Errorf("expected 'Test Faction' in response, got %s", string(body))
+	bodyStr := string(body)
+	if !strings.Contains(bodyStr, "Test Faction") {
+		t.Errorf("expected 'Test Faction' in response, got %s", bodyStr)
+	}
+}
+
+func TestGetFactionsByName(t *testing.T) {
+	s := setupTestDB(t)
+
+	gameID := createTestGame(t, s)
+	createTestFaction(t, s, gameID)
+
+	handler := &FactionsHandlers{S: s}
+	req := httptest.NewRequest(http.MethodGet, "/factions?name=Test%20Faction", nil)
+	w := httptest.NewRecorder()
+
+	handler.GetFactions(w, req)
+	res := w.Result()
+	defer res.Body.Close()
+
+	if res.StatusCode != http.StatusOK {
+		t.Errorf("expected status code 200, got %d", res.StatusCode)
+	}
+
+	body, _ := io.ReadAll(res.Body)
+	bodyStr := string(body)
+
+	if !strings.Contains(bodyStr, "Test Faction") {
+		t.Errorf("expected body to contain 'Test Faction' got %s", bodyStr)
 	}
 }
