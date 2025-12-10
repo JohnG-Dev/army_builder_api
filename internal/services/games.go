@@ -49,7 +49,7 @@ func GetGame(s *state.State, ctx context.Context, id uuid.UUID) (models.Game, er
 	dbGame, err := s.DB.GetGame(ctx, id)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return models.Game{}, nil
+			return models.Game{}, appErr.ErrNotFound
 		}
 
 		return models.Game{}, err
@@ -76,7 +76,7 @@ func GetGameByName(s *state.State, ctx context.Context, name string) (models.Gam
 	dbGame, err := s.DB.GetGameByName(ctx, name)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
-			return models.Game{}, nil
+			return models.Game{}, appErr.ErrNotFound
 		}
 
 		return models.Game{}, err
@@ -86,7 +86,7 @@ func GetGameByName(s *state.State, ctx context.Context, name string) (models.Gam
 		ID:        dbGame.ID,
 		Name:      dbGame.Name,
 		Edition:   dbGame.Edition,
-		Version:   dbGame.Source,
+		Version:   dbGame.Version,
 		Source:    dbGame.Source,
 		CreatedAt: dbGame.CreatedAt,
 		UpdatedAt: dbGame.UpdatedAt,

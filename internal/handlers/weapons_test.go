@@ -167,6 +167,6 @@ func TestGetWeaponsByID_InvalidUUID(t *testing.T) {
 	defer res.Body.Close()
 
 	if res.StatusCode != http.StatusBadRequest {
-		t.Errorf("expected status code 404, got %d", res.StatusCode)
+		t.Errorf("expected status code 400, got %d", res.StatusCode)
 	}
 }
