@@ -21,8 +21,8 @@ FROM rules
 WHERE id = $1;
 
 -- name: CreateRule :one
-INSERT INTO rules (game_id, name, description, rule_type, version, source)
-VALUES ($1, $2, $3, $4, $5, $6)
+INSERT INTO rules (game_id, name, description, rule_type, text, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7)
 RETURNING *;
 
 -- name: UpdateRule :one

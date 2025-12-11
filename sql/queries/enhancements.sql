@@ -21,8 +21,8 @@ WHERE enhancement_type = $1
 ORDER BY faction_id, name ASC;
 
 -- name: CreateEnhancement :one
-INSERT INTO enhancements (faction_id, name, enhancement_type, description, points, version, source)
-VALUES ($1, $2, $3, $4, $5, $6, $7)
+INSERT INTO enhancements (faction_id, name, enhancement_type, description, points, is_unique, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
 RETURNING *;
 
 -- name: UpdateEnhancement :one
