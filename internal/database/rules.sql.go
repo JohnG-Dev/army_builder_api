@@ -12,8 +12,8 @@ import (
 )
 
 const createRule = `-- name: CreateRule :one
-INSERT INTO rules (game_id, name, description, rule_type, version, source)
-VALUES ($1, $2, $3, $4, $5, $6)
+INSERT INTO rules (game_id, name, description, rule_type, text, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7)
 RETURNING id, game_id, name, description, text, rule_type, version, source, created_at, updated_at
 `
 
@@ -22,6 +22,7 @@ type CreateRuleParams struct {
 	Name        string
 	Description string
 	RuleType    string
+	Text        string
 	Version     string
 	Source      string
 }
@@ -32,6 +33,7 @@ func (q *Queries) CreateRule(ctx context.Context, arg CreateRuleParams) (Rule, e
 		arg.Name,
 		arg.Description,
 		arg.RuleType,
+		arg.Text,
 		arg.Version,
 		arg.Source,
 	)

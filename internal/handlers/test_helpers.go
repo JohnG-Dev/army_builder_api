@@ -156,3 +156,124 @@ func createTestManifestation(t *testing.T, s *state.State, factionID uuid.UUID) 
 
 	return unitID
 }
+
+func createTestRule(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	rule, err := s.DB.CreateRule(ctx, database.CreateRuleParams{
+		GameID:      gameID,
+		Name:        "Test Rule",
+		RuleType:    "core",
+		Text:        "Rule text content",
+		Description: "Test Description",
+		Version:     "1.0",
+		Source:      "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create rule: %v", err)
+	}
+
+	ruleID := rule.ID
+
+	return ruleID
+}
+
+func createTestBattleFormation(t *testing.T, s *state.State, gameID uuid.UUID, factionID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	battleFormation, err := s.DB.CreateBattleFormation(ctx, database.CreateBattleFormationParams{
+		GameID:      gameID,
+		FactionID:   factionID,
+		Name:        "Test Battleformation",
+		Description: "Formation Description",
+		Version:     "1.0",
+		Source:      "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create battle formation: %v", err)
+	}
+
+	battleFormationID := battleFormation.ID
+	return battleFormationID
+}
+
+func createTestEnhancement(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	enhancement, err := s.DB.CreateEnhancement(ctx, database.CreateEnhancementParams{
+		FactionID:       factionID,
+		Name:            "Test Enhancement",
+		EnhancementType: "artefact",
+		Description:     "Enhancement Description",
+		Points:          20,
+		IsUnique:        true,
+		Version:         "1.0",
+		Source:          "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create enhancement: %v", err)
+	}
+
+	enhancementID := enhancement.ID
+
+	return enhancementID
+}
+
+func createTestKeyword(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	keyword, err := s.DB.CreateKeyword(ctx, database.CreateKeywordParams{
+		GameID:      gameID,
+		Name:        "Test Keyword",
+		Description: "Keyword Description",
+		Version:     "1.0",
+		Source:      "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create keyword: %v", err)
+	}
+
+	keywordID := keyword.ID
+
+	return keywordID
+}
+
+func createTestAbilityUnit(t *testing.T, s *state.State, unitID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	ability, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
+		UnitID:    database.UUIDToNullUUID(unitID),
+		FactionID: uuid.NullUUID{},
+		Name:      "Test Ability",
+		Type:      "Spell",
+		Phase:     "Hero",
+		Version:   "1.0",
+		Source:    "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create unit ability: %v", err)
+	}
+
+	abilityID := ability.ID
+	return abilityID
+}
+
+func createTestAbilityFaction(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	ability, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
+		UnitID:    uuid.NullUUID{},
+		FactionID: database.UUIDToNullUUID(factionID),
+		Name:      "Test Ability",
+		Type:      "Spell",
+		Phase:     "Hero",
+		Version:   "1.0",
+		Source:    "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create faction ability: %v", err)
+	}
+
+	abilityID := ability.ID
+	return abilityID
+}

@@ -12,8 +12,8 @@ import (
 )
 
 const createEnhancement = `-- name: CreateEnhancement :one
-INSERT INTO enhancements (faction_id, name, enhancement_type, description, points, version, source)
-VALUES ($1, $2, $3, $4, $5, $6, $7)
+INSERT INTO enhancements (faction_id, name, enhancement_type, description, points, is_unique, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
 RETURNING id, faction_id, name, enhancement_type, description, points, is_unique, version, source, created_at, updated_at
 `
 
@@ -23,6 +23,7 @@ type CreateEnhancementParams struct {
 	EnhancementType string
 	Description     string
 	Points          int32
+	IsUnique        bool
 	Version         string
 	Source          string
 }
@@ -34,6 +35,7 @@ func (q *Queries) CreateEnhancement(ctx context.Context, arg CreateEnhancementPa
 		arg.EnhancementType,
 		arg.Description,
 		arg.Points,
+		arg.IsUnique,
 		arg.Version,
 		arg.Source,
 	)
