@@ -55,6 +55,26 @@ func createTestGame(t *testing.T, s *state.State) uuid.UUID {
 	return gameID
 }
 
+func createTestGameWithName(t *testing.T, s *state.State, name string) uuid.UUID {
+	ctx := context.Background()
+	if name == "" {
+		t.Fatalf("game name required")
+	}
+
+	game, err := s.DB.CreateGame(ctx, database.CreateGameParams{
+		Name:    name,
+		Edition: "Test Edition",
+		Version: "1.0",
+		Source:  "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create game: %v", err)
+	}
+
+	gameID := game.ID
+	return gameID
+}
+
 func createTestFaction(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID {
 	ctx := context.Background()
 
