@@ -68,7 +68,7 @@ func createTestGameWithName(t *testing.T, s *state.State, name string) uuid.UUID
 		Source:  "Test Source",
 	})
 	if err != nil {
-		t.Fatalf("failed to create game: %v", err)
+		t.Fatalf("failed to create game with name: %v", err)
 	}
 
 	gameID := game.ID
@@ -90,6 +90,23 @@ func createTestFaction(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID
 
 	factionID := faction.ID
 
+	return factionID
+}
+
+func createTestFactionWithName(t *testing.T, s *state.State, gameID uuid.UUID, name string) uuid.UUID {
+	ctx := context.Background()
+
+	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
+		GameID:  gameID,
+		Name:    name,
+		Version: "1.0",
+		Source:  "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create faction with name: %v", err)
+	}
+
+	factionID := faction.ID
 	return factionID
 }
 
@@ -204,7 +221,7 @@ func createTestBattleFormation(t *testing.T, s *state.State, gameID uuid.UUID, f
 	battleFormation, err := s.DB.CreateBattleFormation(ctx, database.CreateBattleFormationParams{
 		GameID:      gameID,
 		FactionID:   factionID,
-		Name:        "Test Battleformation",
+		Name:        "Test BattleFormation",
 		Description: "Formation Description",
 		Version:     "1.0",
 		Source:      "Test Source",
