@@ -17,7 +17,7 @@ type BattleFormationsHandlers struct {
 }
 
 func (h *BattleFormationsHandlers) GetBattleFormations(w http.ResponseWriter, r *http.Request) {
-	gameID := r.URL.Query().Get("game id")
+	gameID := r.URL.Query().Get("game_id")
 	factionID := r.URL.Query().Get("faction_id")
 
 	if gameID != "" {
