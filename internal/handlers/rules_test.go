@@ -203,7 +203,7 @@ func TestGetRuleByID_Success(t *testing.T) {
 
 	handler := &RulesHandlers{S: s}
 
-	req := httptest.NewRequest(http.MethodGet, "/rules"+ruleID.String(), nil)
+	req := httptest.NewRequest(http.MethodGet, "/rules/"+ruleID.String(), nil)
 	req.SetPathValue("id", ruleID.String())
 
 	w := httptest.NewRecorder()
@@ -230,7 +230,7 @@ func TestGetRuleByID_NotFound(t *testing.T) {
 	handler := &RulesHandlers{S: s}
 	randomID := uuid.New()
 
-	req := httptest.NewRequest(http.MethodGet, "/rules"+randomID.String(), nil)
+	req := httptest.NewRequest(http.MethodGet, "/rules/"+randomID.String(), nil)
 	req.SetPathValue("id", randomID.String())
 
 	w := httptest.NewRecorder()
