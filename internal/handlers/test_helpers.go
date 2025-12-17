@@ -140,6 +140,36 @@ func createTestUnit(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID
 	return unitID
 }
 
+func createTestUnitWithName(t *testing.T, s *state.State, factionID uuid.UUID, name string) uuid.UUID {
+	ctx := context.Background()
+	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
+		FactionID:       factionID,
+		Name:            name,
+		Move:            10,
+		Health:          4,
+		Save:            "3+",
+		Ward:            "6+",
+		Control:         1,
+		Points:          100,
+		SummonCost:      "",
+		Banishment:      "",
+		MinUnitSize:     4,
+		MaxUnitSize:     8,
+		MatchedPlay:     true,
+		IsManifestation: false,
+		IsUnique:        false,
+		Version:         "1.0",
+		Source:          "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create unit: %v", err)
+	}
+
+	unitID := unit.ID
+
+	return unitID
+}
+
 func createTestWeapon(t *testing.T, s *state.State, unitID uuid.UUID) uuid.UUID {
 	ctx := context.Background()
 
@@ -262,6 +292,25 @@ func createTestKeyword(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID
 	keyword, err := s.DB.CreateKeyword(ctx, database.CreateKeywordParams{
 		GameID:      gameID,
 		Name:        "Test Keyword",
+		Description: "Keyword Description",
+		Version:     "1.0",
+		Source:      "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create keyword: %v", err)
+	}
+
+	keywordID := keyword.ID
+
+	return keywordID
+}
+
+func createTestKeywordWithName(t *testing.T, s *state.State, gameID uuid.UUID, name string) uuid.UUID {
+	ctx := context.Background()
+
+	keyword, err := s.DB.CreateKeyword(ctx, database.CreateKeywordParams{
+		GameID:      gameID,
+		Name:        name,
 		Description: "Keyword Description",
 		Version:     "1.0",
 		Source:      "Test Source",
