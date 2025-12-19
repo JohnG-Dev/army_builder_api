@@ -13,7 +13,7 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
 )
 
-func TestGetEnahancements_ReturnsEnhancements(t *testing.T) {
+func TestGetEnhancements_ReturnsEnhancements(t *testing.T) {
 	s := setupTestDB(t)
 
 	gameID := createTestGame(t, s)
@@ -100,5 +100,56 @@ func TestGetEnhancements_FilterByFactionID(t *testing.T) {
 
 	if strings.Contains(bodyStr, "Test Skaven Enhancement") {
 		t.Errorf("expected body to NOT contain 'Test Skaven Enhancement', got %s", bodyStr)
+	}
+}
+
+func TestGetEnhancementByID_Success(t *testing.T) {
+	s := setupTestDB(t)
+
+	gameID := createTestGame(t, s)
+	factionID := createTestFaction(t, s, gameID)
+	enhancementID := createTestEnhancement(t, s, factionID)
+
+	handler := &EnhancementsHandlers{S: s}
+
+	req := httptest.NewRequest(http.MethodGet, "/enhancements/"+enhancementID.String(), nil)
+	req.SetPathValue("id", enhancementID.String())
+
+	w := httptest.NewRecorder()
+
+	handler.GetEnhancementByID(w, req)
+	res := w.Result()
+
+	defer res.Body.Close()
+
+	if res.StatusCode != http.StatusOK {
+		t.Errorf("expected status code 200, got %d", res.StatusCode)
+	}
+
+	body, _ := io.ReadAll(res.Body)
+	bodyStr := string(body)
+
+	if !strings.Contains(bodyStr, "Test Enhancement") {
+		t.Errorf("expected body to contain 'Test Enhancement', got %s", bodyStr)
+	}
+}
+
+func GetEnhancementByID_NotFound(t *testing.T) {
+	s := setupTestDB(t)
+
+	handler := &EnhancementsHandlers{S: s}
+	randomID := uuid.New()
+
+	req := httptest.NewRequest(http.MethodGet, "/enhancements/"+randomID.String(), nil)
+	req.SetPathValue("id", randomID.String())
+	w := httptest.NewRecorder()
+
+	handler.GetEnhancementByID(w, req)
+
+	res := w.Result()
+	defer res.Body.Close()
+
+	if res.StatusCode != http.StatusNotFound {
+		t.Errorf("expected status code 404, got %d", res.StatusCode)
 	}
 }
