@@ -4,6 +4,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"net/url"
 	"strings"
 	"testing"
 
@@ -144,7 +145,10 @@ func TestGetFactionsByName(t *testing.T) {
 	createTestFaction(t, s, gameID)
 
 	handler := &FactionsHandlers{S: s}
-	req := httptest.NewRequest(http.MethodGet, "/factions?name=Test%20Faction", nil)
+
+	factionName := "Test Faction"
+	encodedName := url.QueryEscape(factionName)
+	req := httptest.NewRequest(http.MethodGet, "/factions?name="+encodedName, nil)
 	w := httptest.NewRecorder()
 
 	handler.GetFactions(w, req)
