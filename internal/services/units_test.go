@@ -2,9 +2,13 @@ package services
 
 import (
 	"context"
+	"errors"
 	"testing"
 
+	"github.com/google/uuid"
+
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
+	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 )
 
 func TestGetUnitByID_DeepMapping(t *testing.T) {
@@ -76,5 +80,54 @@ func TestGetUnitByID_DeepMapping(t *testing.T) {
 
 	if len(unit2.Keywords) != 0 {
 		t.Errorf("service linked keyword to incorrect unit: expected 0, got %d", len(unit2.Keywords))
+	}
+}
+
+func TestGetUnitByID_NotFound(t *testing.T) {
+	s := setupTestDB(t)
+	ctx := context.Background()
+	randomID := uuid.New()
+
+	_, err := GetUnitByID(s, ctx, randomID)
+	if !errors.Is(err, appErr.ErrNotFound) {
+		t.Fatalf("expected 'resource not found', got %v", err)
+	}
+}
+
+func TestGetUnitByID_EmptyAssociations(t *testing.T) {
+	s := setupTestDB(t)
+	ctx := context.Background()
+
+	gameID := createTestGame(t, s)
+	factionID := createTestFaction(t, s, gameID)
+	unitID := createTestUnit(t, s, factionID)
+
+	unit, err := GetUnitByID(s, ctx, unitID)
+	if err != nil {
+		t.Fatalf("failed to get unit, %v", err)
+	}
+
+	if unit.Abilities == nil {
+		t.Errorf("expected abilities slice to be initalized")
+	}
+
+	if len(unit.Abilities) != 0 {
+		t.Errorf("expected 0 abilities, got %d", len(unit.Abilities))
+	}
+
+	if unit.Weapons == nil {
+		t.Errorf("expected weapons slice to be intialized")
+	}
+
+	if len(unit.Weapons) != 0 {
+		t.Errorf("expected 0 weapons, got %d", len(unit.Weapons))
+	}
+
+	if unit.Keywords == nil {
+		t.Errorf("expected keywords to be initalized")
+	}
+
+	if len(unit.Keywords) != 0 {
+		t.Errorf("expected 0 keywords, got %d", len(unit.Keywords))
 	}
 }
