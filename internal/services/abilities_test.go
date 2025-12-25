@@ -43,3 +43,68 @@ func TestGetAbilitiesForUnit(t *testing.T) {
 		t.Errorf("isolation failure: expected 0 abilities in abilities '2', got %d", len(abilities2))
 	}
 }
+
+func TestGetAbilityByID_WithEffects(t *testing.T) {
+	s := setupTestDB(t)
+	ctx := context.Background()
+
+	gameID := createTestGame(t, s)
+	factionID := createTestFaction(t, s, gameID)
+	unitID := createTestUnit(t, s, factionID)
+	abilityID := createTestAbilityUnit(t, s, unitID)
+
+	_, err := s.DB.CreateAbilityEffect(ctx, database.CreateAbilityEffectParams{
+		AbilityID:   abilityID,
+		Stat:        "Save",
+		Modifier:    1,
+		Condition:   "7+ prayer points",
+		Description: "Bless Chosen Unit to Increase Save Score",
+		Version:     "1.0",
+		Source:      "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create ability effect save: %v", err)
+	}
+
+	_, err = s.DB.CreateAbilityEffect(ctx, database.CreateAbilityEffectParams{
+		AbilityID:   abilityID,
+		Stat:        "Rend",
+		Modifier:    1,
+		Condition:   "7+ prayer points",
+		Description: "Bless Chosen Unit to Increase Rend",
+		Version:     "1.0",
+		Source:      "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create ability effect rend: %v", err)
+	}
+
+	ability, err := GetAbilityByID(s, ctx, abilityID)
+	if err != nil {
+		t.Fatalf("failted to get ability: %v", err)
+	}
+
+	if len(ability.Effects) != 2 {
+		t.Errorf("expected 2 ability effects, got %d", len(ability.Effects))
+	}
+
+	if ability.Effects == nil {
+		t.Errorf("failed to initalize ability effects")
+	}
+
+	if ability.Effects[0].AbilityID != abilityID {
+		t.Errorf("effect not properly linked to parent ability")
+	}
+
+	if ability.UnitID == nil || *ability.UnitID != abilityID {
+		t.Errorf("ability lost its unit id pointer during the fetch")
+	}
+
+	if ability.Effects[0].Stat != "Save" {
+		t.Errorf("expected index 0 to be 'save', got %s", ability.Effects[0].Stat)
+	}
+
+	if ability.Effects[1].Stat != "Rend" {
+		t.Errorf("expected index 1 to be 'rend', got %s", ability.Effects[1].Stat)
+	}
+}
