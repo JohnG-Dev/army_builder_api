@@ -24,7 +24,17 @@ func setupTestDB(t *testing.T) *state.State {
 
 	queries := database.New(dbpool)
 
-	_, _ = dbpool.Exec(ctx, "DELETE FROM games;")
+	tables := []string{
+		"ability_effects", "abilities", "unit_keywords", "weapons", "units", "factions",
+		"keywords", "battle_formations", "enhancements", "rules", "games",
+	}
+
+	for _, table := range tables {
+		_, err := dbpool.Exec(ctx, "DELETE FROM "+table)
+		if err != nil {
+			t.Logf("WARNING: failed to clear table %s: %v", table, err)
+		}
+	}
 
 	cfg := &config.Config{Env: "test", Port: ":8080"}
 	logger, _ := zap.NewDevelopment()
@@ -330,6 +340,26 @@ func createTestAbilityUnit(t *testing.T, s *state.State, unitID uuid.UUID) uuid.
 		UnitID:    database.UUIDToNullUUID(unitID),
 		FactionID: uuid.NullUUID{},
 		Name:      "Test Ability",
+		Type:      "Spell",
+		Phase:     "Hero",
+		Version:   "1.0",
+		Source:    "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create unit ability: %v", err)
+	}
+
+	abilityID := ability.ID
+	return abilityID
+}
+
+func createTestAbilityUnitWithName(t *testing.T, s *state.State, unitID uuid.UUID, name string) uuid.UUID {
+	ctx := context.Background()
+
+	ability, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
+		UnitID:    database.UUIDToNullUUID(unitID),
+		FactionID: uuid.NullUUID{},
+		Name:      name,
 		Type:      "Spell",
 		Phase:     "Hero",
 		Version:   "1.0",

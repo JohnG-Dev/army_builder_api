@@ -38,7 +38,7 @@ func TestGetFactionsByName(t *testing.T) {
 		t.Errorf("missing expected faction: 'Stormcast Vanguard'")
 	}
 
-	if !foundIDs[factionID3] {
+	if foundIDs[factionID3] {
 		t.Errorf("unwanted faction included in results: 'Skaven'")
 	}
 }
