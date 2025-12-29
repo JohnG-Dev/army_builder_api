@@ -39,6 +39,7 @@ func (h *AbilitiesHandlers) GetAbilities(w http.ResponseWriter, r *http.Request)
 
 	if phase != "" {
 		h.getAbilitiesByPhase(w, r)
+		return
 	}
 
 	h.getAllAbilities(w, r)
