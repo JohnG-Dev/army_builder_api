@@ -76,6 +76,7 @@ func main() {
 	kHandlers := &handlers.KeywordsHandlers{S: s}
 	bHandlers := &handlers.BattleFormationsHandlers{S: s}
 	eHandlers := &handlers.EnhancementsHandlers{S: s}
+	vHandlers := &handlers.ValidationHandlers{S: s}
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /games", gHandlers.GetGames)
@@ -100,6 +101,7 @@ func main() {
 	mux.HandleFunc("GET /battle_formations/{id}", bHandlers.GetBattleFormationByID)
 	mux.HandleFunc("GET /enhancements", eHandlers.GetEnhancements)
 	mux.HandleFunc("GET /enhancements/{id}", eHandlers.GetEnhancementByID)
+	mux.HandleFunc("POST /validate", vHandlers.ValidateArmy)
 
 	wrappedMux := middleware.MiddlewareRequestID(mux)
 
