@@ -15,7 +15,7 @@ FROM keywords
 WHERE id = $1;
 
 -- name: GetKeywordsForUnit :many
-SELECT uk.unit_id, uk.keyword_id, uk.value
+SELECT uk.unit_id, uk.keyword_id, uk.value, k.name AS keyword_name
 FROM unit_keywords uk
 JOIN keywords k ON k.id = uk.keyword_id
 WHERE uk.unit_id = $1

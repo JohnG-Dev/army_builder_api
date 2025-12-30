@@ -20,7 +20,8 @@ type Keyword struct {
 
 // UnitKeyword links a keyword and an optional value to a unit (e.g., WARD 5+).
 type UnitKeyword struct {
-	UnitID    uuid.UUID `json:"unit_id"`
-	KeywordID uuid.UUID `json:"keyword_id"`
-	Value     string    `json:"value"`
+	UnitID      uuid.UUID `json:"unit_id"`
+	KeywordID   uuid.UUID `json:"keyword_id"`
+	KeywordName string    `json:"keyword_name"`
+	Value       string    `json:"value"`
 }

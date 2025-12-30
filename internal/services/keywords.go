@@ -61,9 +61,10 @@ func GetKeywordsForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) (
 	keywords := make([]models.UnitKeyword, len(dbUnitKeywords))
 	for i, uk := range dbUnitKeywords {
 		keywords[i] = models.UnitKeyword{
-			UnitID:    uk.UnitID,
-			KeywordID: uk.KeywordID,
-			Value:     uk.Value,
+			UnitID:      uk.UnitID,
+			KeywordID:   uk.KeywordID,
+			KeywordName: uk.KeywordName,
+			Value:       uk.Value,
 		}
 	}
 
