@@ -168,23 +168,35 @@ func (q *Queries) GetKeywordsForGame(ctx context.Context, gameID uuid.UUID) ([]K
 }
 
 const getKeywordsForUnit = `-- name: GetKeywordsForUnit :many
-SELECT uk.unit_id, uk.keyword_id, uk.value
+SELECT uk.unit_id, uk.keyword_id, uk.value, k.name AS keyword_name
 FROM unit_keywords uk
 JOIN keywords k ON k.id = uk.keyword_id
 WHERE uk.unit_id = $1
 ORDER BY k.name ASC
 `
 
-func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]UnitKeyword, error) {
+type GetKeywordsForUnitRow struct {
+	UnitID      uuid.UUID
+	KeywordID   uuid.UUID
+	Value       string
+	KeywordName string
+}
+
+func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]GetKeywordsForUnitRow, error) {
 	rows, err := q.db.Query(ctx, getKeywordsForUnit, unitID)
 	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
-	var items []UnitKeyword
+	var items []GetKeywordsForUnitRow
 	for rows.Next() {
-		var i UnitKeyword
-		if err := rows.Scan(&i.UnitID, &i.KeywordID, &i.Value); err != nil {
+		var i GetKeywordsForUnitRow
+		if err := rows.Scan(
+			&i.UnitID,
+			&i.KeywordID,
+			&i.Value,
+			&i.KeywordName,
+		); err != nil {
 			return nil, err
 		}
 		items = append(items, i)

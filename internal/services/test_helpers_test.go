@@ -179,6 +179,36 @@ func createTestUnitWithName(t *testing.T, s *state.State, factionID uuid.UUID, n
 	return unitID
 }
 
+func createTestUniqueUnit(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
+	ctx := context.Background()
+
+	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
+		FactionID:       factionID,
+		Name:            "Test Unit",
+		Move:            10,
+		Health:          4,
+		Save:            "3+",
+		Ward:            "6+",
+		Control:         1,
+		Points:          100,
+		SummonCost:      "",
+		Banishment:      "",
+		MinUnitSize:     4,
+		MaxUnitSize:     8,
+		MatchedPlay:     true,
+		IsManifestation: false,
+		IsUnique:        true,
+		Version:         "1.0",
+		Source:          "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create unit: %v", err)
+	}
+	unitID := unit.ID
+
+	return unitID
+}
+
 func createTestWeapon(t *testing.T, s *state.State, unitID uuid.UUID) uuid.UUID {
 	ctx := context.Background()
 
