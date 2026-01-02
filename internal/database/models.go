@@ -115,11 +115,11 @@ type Unit struct {
 	Description     string
 	IsManifestation bool
 	IsUnique        bool
-	Move            int32
-	Health          int32
+	Move            string
+	Health          string
 	Save            string
 	Ward            string
-	Control         int32
+	Control         string
 	Points          int32
 	SummonCost      string
 	Banishment      string

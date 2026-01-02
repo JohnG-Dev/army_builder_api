@@ -13,11 +13,11 @@ type Unit struct {
 	IsUnique        bool      `json:"is_unique"`
 	Description     string    `json:"description"`
 	IsManifestation bool      `json:"is_manifestation"`
-	Move            int       `json:"move"`
-	Health          int       `json:"wounds"`
+	Move            string    `json:"move"`
+	Health          string    `json:"wounds"`
 	Save            string    `json:"save"`
 	Ward            string    `json:"ward"`
-	Control         int       `json:"control"`
+	Control         string    `json:"control"`
 	Points          int       `json:"points"`
 	SummonCost      string    `json:"summon_cost"` // Conditional: only when is_manifestation = true
 	Banishment      string    `json:"banishment"`  // Conditional: only when is_manifestation = true
