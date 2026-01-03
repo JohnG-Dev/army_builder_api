@@ -10,10 +10,8 @@ import (
 
 	"github.com/jackc/pgx/v5/pgxpool"
 	"go.uber.org/zap"
-	"gopkg.in/yaml.v3"
 
 	"github.com/JohnG-Dev/army_builder_api/internal/database"
-	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
@@ -40,7 +38,7 @@ func main() {
 	}
 
 	tableNames := []string{
-		"ability_effects", // Delete child-most tables first
+		"ability_effects",
 		"abilities",
 		"weapons",
 		"unit_keywords",
@@ -54,7 +52,6 @@ func main() {
 	}
 
 	allTables := strings.Join(tableNames, ", ")
-
 	query := fmt.Sprintf("TRUNCATE TABLE %s RESTART IDENTITY CASCADE", allTables)
 
 	_, err = dbpool.Exec(ctx, query)
@@ -63,29 +60,22 @@ func main() {
 	}
 	s.Logger.Info("Database cleared successfully")
 
+	sr := NewSeeder(ctx, s)
+
 	files, err := filepath.Glob("data/factions/*.yaml")
 	if err != nil {
 		s.Logger.Fatal("Failed to glob files", zap.Error(err))
 	}
 
 	for _, path := range files {
-		yamlFile, err := os.ReadFile(path)
-		if err != nil {
-			s.Logger.Error("Failed to read file", zap.String("path", path), zap.Error(err))
+		if err := sr.SeedFile(path); err != nil {
+			s.Logger.Error("Failed to seed file",
+				zap.String("path", path),
+				zap.Error(err),
+			)
 			continue
 		}
-
-		var seedData models.SeedData
-		err = yaml.Unmarshal(yamlFile, &seedData)
-		if err != nil {
-			s.Logger.Error("Failed to unmarshal YAML", zap.String("path", path), zap.Error(err))
-			continue
-		}
-
-		s.Logger.Info("Successfully parsed faction file",
-			zap.String("game", seedData.GameName),
-			zap.Int("factions_count", len(seedData.Factions)),
-		)
 	}
+
 	s.Logger.Info("Seeding process completed successfully")
 }
