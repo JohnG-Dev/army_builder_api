@@ -1,5 +1,5 @@
 game_name: "Age of Sigmar"
-faction:
+factions:
   - name: "Stormcast Eternals"
     description: "The hammers of Sigmar, reforged in celestial lightning"
     version: "1.0"
@@ -86,3 +86,12 @@ faction:
                 modifier: 1
                 condition: 'Friendly units with 12"'
                 description: "Add 1 to Control characterisc"
+    battle_formations:
+      - name: "Thunderhead Host"
+        description: "Focuses on heavy infantry and defensive lines"
+    enhancements:
+      - name: "Mirror Shield"
+        enhancement_type: "Artefact of Power"
+        description: "Grants Protection against ranged attacks"
+        points: 0
+        is_unique: true

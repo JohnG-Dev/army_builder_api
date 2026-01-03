@@ -1,0 +1,83 @@
+game_name: "Age of Sigmar"
+factions:
+  - name: "Skaven"
+    description: "The malevolent ratmen of the Under Empire."
+    allegiance: "Chaos"
+    version: "1.0"
+    source: "Faction Pack: Skaven"
+    units:
+      - name: "Clanrats"
+        description: "The endless, scurrying masses of the Skaven Horde"
+        is_manifestation: false
+        is_unique: false
+        move: '6"'
+        health: "1"
+        save: "5+"
+        ward: "-"
+        control: "1"
+        points: 160
+        min_unit_size: 20
+        max_unit_size: 40
+        matched_play: true
+        keywords:
+          - "CHAOS"
+          - "SKAVEN"
+          - "CLANS VERMINUS"
+          - "INFANTRY"
+        weapons:
+          - name: "Rusty Blades and Spears"
+            range: '1"'
+            attacks: "1"
+            to_hit: "4+"
+            to_wound: "4+"
+            rend: "-"
+            damage: "1"
+      - name: "Grey Seer"
+        description: "Prophets of the Great Horned Rat"
+        is_manifestation: false
+        is_unique: false
+        move: '6"'
+        health: "5"
+        save: "6+"
+        ward: "5+"
+        control: "1"
+        points: 120
+        min_unit_size: 1
+        max_unit_size: 1
+        matched_play: true
+        keywords:
+          - "CHAOS"
+          - "SKAVEN"
+          - "MASTERCLAN"
+          - "HERO"
+          - "WIZARD"
+        abilities:
+          - name: "Manifestation Gnawhole"
+            description: "Summon a Gnawhole to the battlefield"
+            type: "Activated"
+            phase: "Hero"
+            effects:
+              - stat: "Summoning"
+                modifier: 0
+                condition: 'Within 9"'
+                description: "Place 1 Gnawhole faction terrian"
+      - name: "Warp-Lightning Vortex"
+        description: "A swirling vortex of entropic energy"
+        is_manifestation: true
+        is_unique: false
+        move: "-"
+        health: "-"
+        save: "-"
+        ward: "-"
+        control: "-"
+        points: 0
+        summon_cost: "8"
+        banishment: "9"
+        min_unit_size: 3
+        max_unit_size: 3
+        matched_play: true
+        keywords:
+          - "CHAOS"
+          - "SKAVEN"
+          - "MANIFESTATION"
+          - "WARP-LIGHTNING VORTEX"
