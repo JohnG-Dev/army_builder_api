@@ -21,6 +21,7 @@ type Seeder struct {
 	ctx        context.Context
 	keywordMap map[string]uuid.UUID
 	gameMap    map[string]uuid.UUID
+	txQueries  *database.Queries
 }
 
 func NewSeeder(ctx context.Context, s *state.State) *Seeder {
@@ -48,6 +49,14 @@ func (sr *Seeder) SeedFile(path string) error {
 		zap.String("game", seed.GameName),
 	)
 
+	tx, err := sr.s.Pool.Begin(sr.ctx)
+	if err != nil {
+		return fmt.Errorf("failed to begin transaction: %w", err)
+	}
+	defer tx.Rollback(sr.ctx)
+
+	sr.txQueries = sr.s.DB.WithTx(tx)
+
 	gameID, err := sr.getOrCreateGame(seed.GameName)
 	if err != nil {
 		return err
@@ -58,6 +67,16 @@ func (sr *Seeder) SeedFile(path string) error {
 		factionID, err := sr.createFaction(gameID, f)
 		if err != nil {
 			return fmt.Errorf("failed to create faction %s: %w", f.Name, err)
+		}
+
+		err = sr.seedFactionBattleFormations(gameID, factionID, f.BattleFormations, f.Version, f.Source)
+		if err != nil {
+			return err
+		}
+
+		err = sr.seedFactionEnhancements(factionID, f.Enhancements, f.Version, f.Source)
+		if err != nil {
+			return err
 		}
 
 		for _, u := range f.Units {
@@ -84,8 +103,19 @@ func (sr *Seeder) SeedFile(path string) error {
 			}
 		}
 	}
-
+	err = tx.Commit(sr.ctx)
+	if err != nil {
+		return fmt.Errorf("failed to commit transaction: %w", err)
+	}
+	sr.txQueries = nil
 	return nil
+}
+
+func (sr *Seeder) getDB() *database.Queries {
+	if sr.txQueries != nil {
+		return sr.txQueries
+	}
+	return sr.s.DB
 }
 
 func (sr *Seeder) getOrCreateGame(name string) (uuid.UUID, error) {
@@ -94,7 +124,7 @@ func (sr *Seeder) getOrCreateGame(name string) (uuid.UUID, error) {
 		return id, nil
 	}
 
-	gameName, err := sr.s.DB.GetGameByName(sr.ctx, name)
+	gameName, err := sr.getDB().GetGameByName(sr.ctx, name)
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
 			newGame, err := sr.s.DB.CreateGame(sr.ctx, database.CreateGameParams{
@@ -116,7 +146,7 @@ func (sr *Seeder) getOrCreateGame(name string) (uuid.UUID, error) {
 }
 
 func (sr *Seeder) createFaction(gameID uuid.UUID, f models.FactionSeed) (uuid.UUID, error) {
-	faction, err := sr.s.DB.CreateFaction(sr.ctx, database.CreateFactionParams{
+	faction, err := sr.getDB().CreateFaction(sr.ctx, database.CreateFactionParams{
 		GameID:     gameID,
 		Name:       f.Name,
 		Allegiance: f.Allegiance,
@@ -131,16 +161,7 @@ func (sr *Seeder) createFaction(gameID uuid.UUID, f models.FactionSeed) (uuid.UU
 }
 
 func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, source string) (uuid.UUID, error) {
-	summonStr := ""
-	if u.SummonCost != nil {
-		summonStr = fmt.Sprintf("%d", *u.SummonCost)
-	}
-	banishmentStr := ""
-	if u.Banishment != nil {
-		banishmentStr = fmt.Sprintf("%d", *u.Banishment)
-	}
-
-	unit, err := sr.s.DB.CreateUnit(sr.ctx, database.CreateUnitParams{
+	unit, err := sr.getDB().CreateUnit(sr.ctx, database.CreateUnitParams{
 		FactionID:       factionID,
 		Name:            u.Name,
 		Description:     u.Description,
@@ -152,8 +173,8 @@ func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, so
 		Ward:            u.Ward,
 		Control:         u.Control,
 		Points:          int32(u.Points),
-		SummonCost:      summonStr,
-		Banishment:      banishmentStr,
+		SummonCost:      u.SummonCost,
+		Banishment:      u.Banishment,
 		MinUnitSize:     int32(u.MinUnitSize),
 		MaxUnitSize:     int32(u.MaxUnitSize),
 		MatchedPlay:     u.MatchedPlay,
@@ -168,8 +189,9 @@ func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, so
 }
 
 func (sr *Seeder) seedUnitWeapons(unitID uuid.UUID, weapons []models.WeaponSeed, version, source string) error {
+	sr.s.Logger.Info("Seeding Weapons", zap.Int("count", len(weapons)))
 	for _, w := range weapons {
-		_, err := sr.s.DB.CreateWeapon(sr.ctx, database.CreateWeaponParams{
+		_, err := sr.getDB().CreateWeapon(sr.ctx, database.CreateWeaponParams{
 			UnitID:  unitID,
 			Name:    w.Name,
 			Range:   w.Range,
@@ -195,7 +217,8 @@ func (sr *Seeder) seedUnitKeywords(unitID uuid.UUID, gameID uuid.UUID, keywordNa
 		keywordID, exists := sr.keywordMap[name]
 
 		if !exists {
-			k, err := sr.s.DB.CreateKeyword(sr.ctx, database.CreateKeywordParams{
+			sr.s.Logger.Info("Creating New Keyword", zap.String("name", name))
+			k, err := sr.getDB().CreateKeyword(sr.ctx, database.CreateKeywordParams{
 				GameID:      gameID,
 				Name:        name,
 				Description: "",
@@ -208,7 +231,7 @@ func (sr *Seeder) seedUnitKeywords(unitID uuid.UUID, gameID uuid.UUID, keywordNa
 			keywordID = k.ID
 			sr.keywordMap[name] = keywordID
 		}
-		err := sr.s.DB.AddKeywordToUnit(sr.ctx, database.AddKeywordToUnitParams{
+		err := sr.getDB().AddKeywordToUnit(sr.ctx, database.AddKeywordToUnitParams{
 			UnitID:    unitID,
 			KeywordID: keywordID,
 			Value:     "",
@@ -222,7 +245,8 @@ func (sr *Seeder) seedUnitKeywords(unitID uuid.UUID, gameID uuid.UUID, keywordNa
 
 func (sr *Seeder) seedUnitAbilities(unitID, factionID uuid.UUID, abilities []models.AbilitySeed, version, source string) error {
 	for _, a := range abilities {
-		ability, err := sr.s.DB.CreateAbility(sr.ctx, database.CreateAbilityParams{
+		sr.s.Logger.Info("Seeding Ability", zap.String("name", a.Name))
+		ability, err := sr.getDB().CreateAbility(sr.ctx, database.CreateAbilityParams{
 			UnitID:      database.UUIDToNullUUID(unitID),
 			FactionID:   uuid.NullUUID{},
 			Name:        a.Name,
@@ -235,8 +259,11 @@ func (sr *Seeder) seedUnitAbilities(unitID, factionID uuid.UUID, abilities []mod
 		if err != nil {
 			return fmt.Errorf("failed to create ability %s: %w", a.Name, err)
 		}
+		if len(a.Effects) > 0 {
+			sr.s.Logger.Info("Seeding Ability Effects", zap.Int("count", len(a.Effects)))
+		}
 		for _, e := range a.Effects {
-			_, err := sr.s.DB.CreateAbilityEffect(sr.ctx, database.CreateAbilityEffectParams{
+			_, err := sr.getDB().CreateAbilityEffect(sr.ctx, database.CreateAbilityEffectParams{
 				AbilityID:   ability.ID,
 				Stat:        e.Stat,
 				Modifier:    int32(e.Modifier),
@@ -248,6 +275,44 @@ func (sr *Seeder) seedUnitAbilities(unitID, factionID uuid.UUID, abilities []mod
 			if err != nil {
 				return fmt.Errorf("failed to create ability effect %s: %w", a.Name, err)
 			}
+		}
+	}
+
+	return nil
+}
+
+func (sr *Seeder) seedFactionBattleFormations(gameID, factionID uuid.UUID, battleFormations []models.BattleFormationSeed, version, source string) error {
+	for _, b := range battleFormations {
+		sr.s.Logger.Info("Seeding BattleFormations", zap.String("name", b.Name))
+		_, err := sr.getDB().CreateBattleFormation(sr.ctx, database.CreateBattleFormationParams{
+			GameID:      gameID,
+			FactionID:   factionID,
+			Name:        b.Name,
+			Description: b.Description,
+			Version:     version,
+			Source:      source,
+		})
+		if err != nil {
+			return fmt.Errorf("failed to create battleformation %s: %w", b.Name, err)
+		}
+	}
+	return nil
+}
+
+func (sr *Seeder) seedFactionEnhancements(factionID uuid.UUID, enhancements []models.EnhancementSeed, version, source string) error {
+	for _, e := range enhancements {
+		sr.s.Logger.Info("Seeding Enhancement", zap.String("name", e.Name))
+		_, err := sr.getDB().CreateEnhancement(sr.ctx, database.CreateEnhancementParams{
+			FactionID:       factionID,
+			Name:            e.Name,
+			EnhancementType: e.EnhancementType,
+			Description:     e.Description,
+			Points:          int32(e.Points),
+			Version:         version,
+			Source:          source,
+		})
+		if err != nil {
+			return fmt.Errorf("failed to create enhancement %s: %w", e.Name, err)
 		}
 	}
 

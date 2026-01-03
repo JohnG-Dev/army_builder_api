@@ -6,12 +6,14 @@ type SeedData struct {
 }
 
 type FactionSeed struct {
-	Name        string     `yaml:"name"`
-	Description string     `yaml:"description"`
-	Allegiance  string     `yaml:"allegiance"`
-	Version     string     `yaml:"version"`
-	Source      string     `yaml:"source"`
-	Units       []UnitSeed `yaml:"units"`
+	Name             string                `yaml:"name"`
+	Description      string                `yaml:"description"`
+	Allegiance       string                `yaml:"allegiance"`
+	Version          string                `yaml:"version"`
+	Source           string                `yaml:"source"`
+	Units            []UnitSeed            `yaml:"units"`
+	BattleFormations []BattleFormationSeed `yaml:"battle_formations"`
+	Enhancements     []EnhancementSeed     `yaml:"enhancements"`
 }
 
 type UnitSeed struct {
@@ -25,8 +27,8 @@ type UnitSeed struct {
 	Ward            string        `yaml:"ward"`
 	Control         string        `yaml:"control"`
 	Points          int           `yaml:"points"`
-	SummonCost      *int          `yaml:"summon_cost"` // Pointer for nullable
-	Banishment      *int          `yaml:"banishment"`  // Pointer for nullable
+	SummonCost      string        `yaml:"summon_cost"`
+	Banishment      string        `yaml:"banishment"`
 	MinUnitSize     int           `yaml:"min_unit_size"`
 	MaxUnitSize     int           `yaml:"max_unit_size"`
 	MatchedPlay     bool          `yaml:"matched_play"`
@@ -61,5 +63,18 @@ type AbilityEffectSeed struct {
 	Stat        string `yaml:"stat"`
 	Modifier    int    `yaml:"modifier"`
 	Condition   string `yaml:"condition"`
-	Description string `yaml:"descriptoin"`
+	Description string `yaml:"description"`
+}
+
+type BattleFormationSeed struct {
+	Name        string `yaml:"name"`
+	Description string `yaml:"description"`
+}
+
+type EnhancementSeed struct {
+	Name            string `yaml:"name"`
+	EnhancementType string `yaml:"enhancement_type"` // "Type of Power", "Hero Trait"
+	Description     string `yaml:"description"`
+	Points          int    `yaml:"points"`
+	IsUnique        bool   `yaml:"is_unique"`
 }

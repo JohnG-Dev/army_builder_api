@@ -35,6 +35,7 @@ func main() {
 	s := &state.State{
 		DB:     queries,
 		Logger: logger,
+		Pool:   dbpool,
 	}
 
 	tableNames := []string{

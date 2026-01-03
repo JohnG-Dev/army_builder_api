@@ -67,6 +67,7 @@ func main() {
 		DB:     queries,
 		Cfg:    cfg,
 		Logger: logger,
+		Pool:   dbpool,
 	}
 
 	fHandlers := &handlers.FactionsHandlers{S: s}
