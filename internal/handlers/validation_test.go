@@ -23,7 +23,7 @@ func TestValidateArmy_Success(t *testing.T) {
 		FactionID:   factionID,
 		PointsLimit: 2000,
 		Units: []models.ArmyUnit{
-			{UnitID: unitID, Quantity: 2},
+			{UnitID: unitID, Quantity: 4},
 		},
 	}
 
@@ -59,7 +59,7 @@ func TestValidateArmy_Success(t *testing.T) {
 		t.Errorf("expected army to be valid, got errors: %v", resp.Errors)
 	}
 
-	expectedPoints := 200
+	expectedPoints := 400
 	if resp.TotalPoints != expectedPoints {
 		t.Errorf("expected %d points, got %d points", expectedPoints, resp.TotalPoints)
 	}
