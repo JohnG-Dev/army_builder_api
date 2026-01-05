@@ -33,8 +33,8 @@ FROM abilities
 ORDER BY unit_id, faction_id, phase ASC, name ASC;
 
 -- name: CreateAbility :one
-INSERT INTO abilities (unit_id, faction_id, name, description, type, phase, version, source)
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+INSERT INTO abilities (unit_id, faction_id, game_id, name, description, type, phase, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
 RETURNING *;
 
 -- name: UpdateAbility :one

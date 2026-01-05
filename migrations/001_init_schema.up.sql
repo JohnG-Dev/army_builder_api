@@ -65,11 +65,15 @@ CREATE TABLE units (
   is_manifestation BOOLEAN NOT NULL DEFAULT false,
   is_unique BOOLEAN NOT NULL DEFAULT false,
   move TEXT NOT NULL DEFAULT '0',
-  health TEXT NOT NULL DEFAULT '0',
-  save TEXT NOT NULL DEFAULT '-',
-  ward TEXT NOT NULL DEFAULT '-',
-  control TEXT NOT NULL DEFAULT '0',
+  health_wounds TEXT NOT NULL DEFAULT '0',
+  save_stats TEXT NOT NULL DEFAULT '-',
+  ward_fnp TEXT NOT NULL DEFAULT '-',
+  invuln_save TEXT NOT NULL DEFAULT '-',
+  control_oc TEXT NOT NULL DEFAULT '0',
+  toughness TEXT NOT NULL DEFAULT '0',
+  leadership_bravery TEXT NOT NULL DEFAULT '0',
   points INT NOT NULL DEFAULT 0,
+  additional_stats JSONB NOT NULL DEFAULT '{}',
   summon_cost TEXT NOT NULL DEFAULT '',
   banishment TEXT NOT NULL DEFAULT '',
   min_unit_size INT NOT NULL DEFAULT 1,
@@ -79,6 +83,7 @@ CREATE TABLE units (
   source TEXT NOT NULL DEFAULT '',
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+
 );
 
 CREATE INDEX units_faction_idx ON units (faction_id, name ASC);
@@ -99,9 +104,9 @@ CREATE TABLE weapons (
   name TEXT NOT NULL,
   range TEXT NOT NULL DEFAULT '',
   attacks TEXT NOT NULL DEFAULT '',
-  to_hit TEXT NOT NULL DEFAULT '',
-  to_wound TEXT NOT NULL DEFAULT '',
-  rend TEXT NOT NULL DEFAULT '',
+  hit_stats TEXT NOT NULL DEFAULT '',
+  wound_strength TEXT NOT NULL DEFAULT '',
+  rend_ap TEXT NOT NULL DEFAULT '',
   damage TEXT NOT NULL DEFAULT '',
   version TEXT NOT NULL DEFAULT '',
   source TEXT NOT NULL DEFAULT '',
@@ -116,8 +121,11 @@ CREATE TABLE abilities (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   unit_id UUID REFERENCES units(id) ON DELETE CASCADE,
   faction_id UUID REFERENCES factions(id) ON DELETE CASCADE,
+  game_id UUID REFERENCES games(id) ON DELETE CASCADE,
   CONSTRAINT chk_unit_xor_faction CHECK (
-    (unit_id IS NOT NULL)::integer + (faction_id IS NOT NULL)::integer = 1
+    (unit_id IS NOT NULL)::integer + 
+    (faction_id IS NOT NULL)::integer +
+    (game_id IS NOT NULL)::integer = 1
   ),
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
@@ -131,6 +139,7 @@ CREATE TABLE abilities (
 
 CREATE INDEX abilities_unit_idx ON abilities (unit_id, name ASC) WHERE unit_id IS NOT NULL;
 CREATE INDEX abilities_faction_idx ON abilities (faction_id, name ASC) WHERE faction_id IS NOT NULL;
+CREATE INDEX abilities_game_idx ON abilities (game_id, name ASC) WHERE game_id IS NOT NULL;
 
 -- ABILITY_EFFECTS TABLE (depends on abilities)
 CREATE TABLE ability_effects (
@@ -157,6 +166,7 @@ CREATE TABLE enhancements (
   description TEXT NOT NULL DEFAULT '',
   points INT NOT NULL DEFAULT 0,
   is_unique BOOLEAN NOT NULL DEFAULT false,
+  restrictions TEXT NOT NULL DEFAULT '',
   version TEXT NOT NULL DEFAULT '',
   source TEXT NOT NULL DEFAULT '',
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
