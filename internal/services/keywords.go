@@ -13,6 +13,28 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
+func mapDBKeywordToModel(k database.Keyword) models.Keyword {
+	return models.Keyword{
+		ID:          k.ID,
+		GameID:      k.GameID,
+		Name:        k.Name,
+		Description: k.Description,
+		Version:     k.Version,
+		Source:      k.Source,
+		CreatedAt:   k.CreatedAt,
+		UpdatedAt:   k.UpdatedAt,
+	}
+}
+
+func mapDBUnitKeywordToModel(uk database.GetKeywordsForUnitRow) models.UnitKeyword {
+	return models.UnitKeyword{
+		UnitID:      uk.UnitID,
+		KeywordID:   uk.KeywordID,
+		KeywordName: uk.KeywordName,
+		Value:       uk.Value,
+	}
+}
+
 func GetAllKeywords(s *state.State, ctx context.Context) ([]models.Keyword, error) {
 	dbKeywords, err := s.DB.GetAllKeywords(ctx)
 	if err != nil {
@@ -25,16 +47,7 @@ func GetAllKeywords(s *state.State, ctx context.Context) ([]models.Keyword, erro
 
 	keywords := make([]models.Keyword, len(dbKeywords))
 	for i, k := range dbKeywords {
-		keywords[i] = models.Keyword{
-			ID:          k.ID,
-			GameID:      k.GameID,
-			Name:        k.Name,
-			Description: k.Description,
-			Version:     k.Version,
-			Source:      k.Source,
-			CreatedAt:   k.CreatedAt,
-			UpdatedAt:   k.UpdatedAt,
-		}
+		keywords[i] = mapDBKeywordToModel(k)
 	}
 
 	return keywords, nil
@@ -60,12 +73,7 @@ func GetKeywordsForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) (
 
 	keywords := make([]models.UnitKeyword, len(dbUnitKeywords))
 	for i, uk := range dbUnitKeywords {
-		keywords[i] = models.UnitKeyword{
-			UnitID:      uk.UnitID,
-			KeywordID:   uk.KeywordID,
-			KeywordName: uk.KeywordName,
-			Value:       uk.Value,
-		}
+		keywords[i] = mapDBUnitKeywordToModel(uk)
 	}
 
 	return keywords, nil
@@ -91,28 +99,7 @@ func GetUnitsWithKeyword(s *state.State, ctx context.Context, name string) ([]mo
 
 	units := make([]models.Unit, len(dbUnits))
 	for i, u := range dbUnits {
-		units[i] = models.Unit{
-			ID:              u.ID,
-			FactionID:       u.FactionID,
-			Name:            u.Name,
-			Description:     u.Description,
-			IsManifestation: u.IsManifestation,
-			Move:            u.Move,
-			Health:          u.Health,
-			Save:            u.Save,
-			Ward:            u.Ward,
-			Control:         u.Control,
-			Points:          int(u.Points),
-			SummonCost:      u.SummonCost,
-			Banishment:      u.Banishment,
-			MinUnitSize:     int(u.MinUnitSize),
-			MaxUnitSize:     int(u.MaxUnitSize),
-			MatchedPlay:     u.MatchedPlay,
-			Version:         u.Version,
-			Source:          u.Source,
-			CreatedAt:       u.CreatedAt,
-			UpdatedAt:       u.UpdatedAt,
-		}
+		units[i] = mapDBUnitToModel(u)
 	}
 
 	return units, nil
@@ -140,28 +127,7 @@ func GetUnitsWithKeywordAndValue(s *state.State, ctx context.Context, name strin
 
 	units := make([]models.Unit, len(dbUnits))
 	for i, u := range dbUnits {
-		units[i] = models.Unit{
-			ID:              u.ID,
-			FactionID:       u.FactionID,
-			Name:            u.Name,
-			Description:     u.Description,
-			IsManifestation: u.IsManifestation,
-			Move:            u.Move,
-			Health:          u.Health,
-			Save:            u.Save,
-			Ward:            u.Ward,
-			Control:         u.Control,
-			Points:          int(u.Points),
-			SummonCost:      u.SummonCost,
-			Banishment:      u.Banishment,
-			MinUnitSize:     int(u.MinUnitSize),
-			MaxUnitSize:     int(u.MaxUnitSize),
-			MatchedPlay:     u.MatchedPlay,
-			Version:         u.Version,
-			Source:          u.Source,
-			CreatedAt:       u.CreatedAt,
-			UpdatedAt:       u.UpdatedAt,
-		}
+		units[i] = mapDBUnitToModel(u)
 	}
 
 	return units, nil
@@ -187,16 +153,7 @@ func GetKeywordsForGame(s *state.State, ctx context.Context, gameID uuid.UUID) (
 
 	keywords := make([]models.Keyword, len(dbKeywords))
 	for i, k := range dbKeywords {
-		keywords[i] = models.Keyword{
-			ID:          k.ID,
-			GameID:      k.GameID,
-			Name:        k.Name,
-			Description: k.Description,
-			Version:     k.Version,
-			Source:      k.Source,
-			CreatedAt:   k.CreatedAt,
-			UpdatedAt:   k.UpdatedAt,
-		}
+		keywords[i] = mapDBKeywordToModel(k)
 	}
 
 	return keywords, nil
@@ -216,16 +173,7 @@ func GetKeywordByID(s *state.State, ctx context.Context, id uuid.UUID) (models.K
 		return models.Keyword{}, err
 	}
 
-	keyword := models.Keyword{
-		ID:          dbKeyword.ID,
-		GameID:      dbKeyword.GameID,
-		Name:        dbKeyword.Name,
-		Description: dbKeyword.Description,
-		Version:     dbKeyword.Version,
-		Source:      dbKeyword.Source,
-		CreatedAt:   dbKeyword.CreatedAt,
-		UpdatedAt:   dbKeyword.UpdatedAt,
-	}
+	keyword := mapDBKeywordToModel(dbKeyword)
 
 	return keyword, nil
 }

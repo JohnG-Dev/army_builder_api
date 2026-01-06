@@ -7,10 +7,25 @@ import (
 
 	"github.com/google/uuid"
 
+	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
+
+func mapDBBattleFormationToModel(f database.BattleFormation) models.BattleFormation {
+	return models.BattleFormation{
+		ID:          f.ID,
+		GameID:      f.GameID,
+		FactionID:   f.FactionID,
+		Name:        f.Name,
+		Description: f.Description,
+		Version:     f.Version,
+		Source:      f.Source,
+		CreatedAt:   f.CreatedAt,
+		UpdatedAt:   f.UpdatedAt,
+	}
+}
 
 func GetAllBattleFormations(s *state.State, ctx context.Context) ([]models.BattleFormation, error) {
 	dbBattleFormation, err := s.DB.GetAllBattleFormations(ctx)
@@ -28,17 +43,7 @@ func GetAllBattleFormations(s *state.State, ctx context.Context) ([]models.Battl
 
 	battleFormation := make([]models.BattleFormation, len(dbBattleFormation))
 	for i, f := range dbBattleFormation {
-		battleFormation[i] = models.BattleFormation{
-			ID:          f.ID,
-			GameID:      f.GameID,
-			FactionID:   f.FactionID,
-			Name:        f.Name,
-			Description: f.Description,
-			Version:     f.Version,
-			Source:      f.Source,
-			CreatedAt:   f.CreatedAt,
-			UpdatedAt:   f.UpdatedAt,
-		}
+		battleFormation[i] = mapDBBattleFormationToModel(f)
 	}
 
 	return battleFormation, nil
@@ -64,17 +69,7 @@ func GetBattleFormationsForGame(s *state.State, ctx context.Context, gameID uuid
 
 	battleFormations := make([]models.BattleFormation, len(dbBattleFormation))
 	for i, f := range dbBattleFormation {
-		battleFormations[i] = models.BattleFormation{
-			ID:          f.ID,
-			GameID:      f.GameID,
-			FactionID:   f.FactionID,
-			Name:        f.Name,
-			Description: f.Description,
-			Version:     f.Version,
-			Source:      f.Source,
-			CreatedAt:   f.CreatedAt,
-			UpdatedAt:   f.UpdatedAt,
-		}
+		battleFormations[i] = mapDBBattleFormationToModel(f)
 	}
 
 	return battleFormations, nil
@@ -100,17 +95,7 @@ func GetBattleFormationsForFaction(s *state.State, ctx context.Context, factionI
 
 	battleFormation := make([]models.BattleFormation, len(dbBattleFormation))
 	for i, f := range dbBattleFormation {
-		battleFormation[i] = models.BattleFormation{
-			ID:          f.ID,
-			GameID:      f.GameID,
-			FactionID:   f.FactionID,
-			Name:        f.Name,
-			Description: f.Description,
-			Version:     f.Version,
-			Source:      f.Source,
-			CreatedAt:   f.CreatedAt,
-			UpdatedAt:   f.UpdatedAt,
-		}
+		battleFormation[i] = mapDBBattleFormationToModel(f)
 	}
 
 	return battleFormation, nil
@@ -130,17 +115,7 @@ func GetBattleFormationByID(s *state.State, ctx context.Context, id uuid.UUID) (
 		return models.BattleFormation{}, err
 	}
 
-	battleFormation := models.BattleFormation{
-		ID:          dbBattleFormation.ID,
-		GameID:      dbBattleFormation.GameID,
-		FactionID:   dbBattleFormation.FactionID,
-		Name:        dbBattleFormation.Name,
-		Description: dbBattleFormation.Description,
-		Version:     dbBattleFormation.Version,
-		Source:      dbBattleFormation.Source,
-		CreatedAt:   dbBattleFormation.CreatedAt,
-		UpdatedAt:   dbBattleFormation.UpdatedAt,
-	}
+	battleFormation := mapDBBattleFormationToModel(dbBattleFormation)
 
 	return battleFormation, nil
 }

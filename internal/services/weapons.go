@@ -7,13 +7,31 @@ import (
 
 	"github.com/google/uuid"
 
+	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
-func GetAllWeapons(s *state.State, ctx context.Context) ([]models.Weapon, error) {
+func mapDBWeaponToModel(w database.Weapon) models.Weapon {
+	return models.Weapon{
+		ID:            w.ID,
+		UnitID:        w.UnitID,
+		Name:          w.Name,
+		Range:         w.Range,
+		Attacks:       w.Attacks,
+		HitStats:      w.HitStats,
+		WoundStrength: w.WoundStrength,
+		RendAP:        w.RendAp,
+		Damage:        w.Damage,
+		Version:       w.Version,
+		Source:        w.Source,
+		CreatedAt:     w.CreatedAt,
+		UpdatedAt:     w.UpdatedAt,
+	}
+}
 
+func GetAllWeapons(s *state.State, ctx context.Context) ([]models.Weapon, error) {
 	dbWeapons, err := s.DB.GetAllWeapons(ctx)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -29,28 +47,13 @@ func GetAllWeapons(s *state.State, ctx context.Context) ([]models.Weapon, error)
 
 	weapons := make([]models.Weapon, len(dbWeapons))
 	for i, w := range dbWeapons {
-		weapons[i] = models.Weapon{
-			ID:        w.ID,
-			UnitID:    w.UnitID,
-			Name:      w.Name,
-			Range:     w.Range,
-			Attacks:   w.Attacks,
-			ToHit:     w.ToHit,
-			ToWound:   w.ToWound,
-			Rend:      w.Rend,
-			Damage:    w.Damage,
-			Version:   w.Version,
-			Source:    w.Source,
-			CreatedAt: w.CreatedAt,
-			UpdatedAt: w.UpdatedAt,
-		}
+		weapons[i] = mapDBWeaponToModel(w)
 	}
 
 	return weapons, nil
 }
 
 func GetWeaponsForUnit(s *state.State, ctx context.Context, unitID *uuid.UUID) ([]models.Weapon, error) {
-
 	if unitID == nil {
 		return nil, appErr.ErrMissingUnitID
 	}
@@ -65,29 +68,13 @@ func GetWeaponsForUnit(s *state.State, ctx context.Context, unitID *uuid.UUID) (
 
 	weapons := make([]models.Weapon, len(dbWeapons))
 	for i, w := range dbWeapons {
-		weapons[i] = models.Weapon{
-			ID:        w.ID,
-			UnitID:    w.UnitID,
-			Name:      w.Name,
-			Range:     w.Range,
-			Attacks:   w.Attacks,
-			ToHit:     w.ToHit,
-			ToWound:   w.ToWound,
-			Rend:      w.Rend,
-			Damage:    w.Damage,
-			Version:   w.Version,
-			Source:    w.Source,
-			CreatedAt: w.CreatedAt,
-			UpdatedAt: w.UpdatedAt,
-		}
+		weapons[i] = mapDBWeaponToModel(w)
 	}
 
 	return weapons, nil
-
 }
 
 func GetWeaponByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Weapon, error) {
-
 	if id == uuid.Nil {
 		return models.Weapon{}, appErr.ErrMissingID
 	}
@@ -100,21 +87,7 @@ func GetWeaponByID(s *state.State, ctx context.Context, id uuid.UUID) (models.We
 		return models.Weapon{}, err
 	}
 
-	weapon := models.Weapon{
-		ID:        dbWeapon.ID,
-		UnitID:    dbWeapon.UnitID,
-		Name:      dbWeapon.Name,
-		Range:     dbWeapon.Range,
-		Attacks:   dbWeapon.Attacks,
-		ToHit:     dbWeapon.ToHit,
-		ToWound:   dbWeapon.ToWound,
-		Rend:      dbWeapon.Rend,
-		Damage:    dbWeapon.Damage,
-		Version:   dbWeapon.Version,
-		Source:    dbWeapon.Source,
-		CreatedAt: dbWeapon.CreatedAt,
-		UpdatedAt: dbWeapon.UpdatedAt,
-	}
+	weapon := mapDBWeaponToModel(dbWeapon)
 
 	return weapon, nil
 }

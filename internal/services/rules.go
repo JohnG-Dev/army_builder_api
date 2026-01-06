@@ -13,8 +13,21 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
-func GetAllRules(s *state.State, ctx context.Context) ([]models.Rule, error) {
+func mapDBRuleToModel(r database.Rule) models.Rule {
+	return models.Rule{
+		ID:        r.ID,
+		GameID:    r.GameID,
+		Name:      r.Name,
+		RuleType:  r.RuleType,
+		Text:      r.Text,
+		Version:   r.Version,
+		Source:    r.Source,
+		CreatedAt: r.CreatedAt,
+		UpdatedAt: r.UpdatedAt,
+	}
+}
 
+func GetAllRules(s *state.State, ctx context.Context) ([]models.Rule, error) {
 	dbRules, err := s.DB.GetAllRules(ctx)
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
@@ -30,24 +43,13 @@ func GetAllRules(s *state.State, ctx context.Context) ([]models.Rule, error) {
 
 	rules := make([]models.Rule, len(dbRules))
 	for i, r := range dbRules {
-		rules[i] = models.Rule{
-			ID:        r.ID,
-			GameID:    r.GameID,
-			Name:      r.Name,
-			RuleType:  r.RuleType,
-			Text:      r.Text,
-			Version:   r.Version,
-			Source:    r.Source,
-			CreatedAt: r.CreatedAt,
-			UpdatedAt: r.UpdatedAt,
-		}
+		rules[i] = mapDBRuleToModel(r)
 	}
 
 	return rules, nil
 }
 
 func GetRulesForGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]models.Rule, error) {
-
 	if gameID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
@@ -67,24 +69,13 @@ func GetRulesForGame(s *state.State, ctx context.Context, gameID uuid.UUID) ([]m
 
 	rules := make([]models.Rule, len(dbRules))
 	for i, r := range dbRules {
-		rules[i] = models.Rule{
-			ID:        r.ID,
-			GameID:    r.GameID,
-			Name:      r.Name,
-			RuleType:  r.RuleType,
-			Text:      r.Text,
-			Version:   r.Version,
-			Source:    r.Source,
-			CreatedAt: r.CreatedAt,
-			UpdatedAt: r.UpdatedAt,
-		}
+		rules[i] = mapDBRuleToModel(r)
 	}
 
 	return rules, nil
 }
 
 func GetRulesByType(s *state.State, ctx context.Context, gameID uuid.UUID, ruleType string) ([]models.Rule, error) {
-
 	if gameID == uuid.Nil {
 		return nil, appErr.ErrMissingID
 	}
@@ -111,17 +102,7 @@ func GetRulesByType(s *state.State, ctx context.Context, gameID uuid.UUID, ruleT
 
 	rules := make([]models.Rule, len(dbRules))
 	for i, r := range dbRules {
-		rules[i] = models.Rule{
-			ID:        r.ID,
-			GameID:    r.GameID,
-			Name:      r.Name,
-			RuleType:  r.RuleType,
-			Text:      r.Text,
-			Version:   r.Version,
-			Source:    r.Source,
-			CreatedAt: r.CreatedAt,
-			UpdatedAt: r.UpdatedAt,
-		}
+		rules[i] = mapDBRuleToModel(r)
 	}
 
 	return rules, nil
@@ -141,17 +122,7 @@ func GetRuleByID(s *state.State, ctx context.Context, id uuid.UUID) (models.Rule
 		return models.Rule{}, err
 	}
 
-	rule := models.Rule{
-		ID:        dbRule.ID,
-		GameID:    dbRule.GameID,
-		Name:      dbRule.Name,
-		RuleType:  dbRule.RuleType,
-		Text:      dbRule.Text,
-		Version:   dbRule.Version,
-		Source:    dbRule.Source,
-		CreatedAt: dbRule.CreatedAt,
-		UpdatedAt: dbRule.UpdatedAt,
-	}
+	rule := mapDBRuleToModel(dbRule)
 
 	return rule, nil
 }

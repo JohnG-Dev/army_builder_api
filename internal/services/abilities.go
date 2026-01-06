@@ -13,6 +13,39 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
+func mapDBAbilityEffectToModel(e database.AbilityEffect) models.AbilityEffect {
+	return models.AbilityEffect{
+		ID:          e.ID,
+		AbilityID:   e.AbilityID,
+		Stat:        e.Stat,
+		Modifier:    int(e.Modifier),
+		Condition:   e.Condition,
+		Description: e.Description,
+		Version:     e.Version,
+		Source:      e.Source,
+		CreatedAt:   e.CreatedAt,
+		UpdatedAt:   e.UpdatedAt,
+	}
+}
+
+func mapDBAbilityToModel(a database.Ability, effects []models.AbilityEffect) models.Ability {
+	return models.Ability{
+		ID:          a.ID,
+		UnitID:      database.NullUUIDToPtr(a.UnitID),
+		FactionID:   database.NullUUIDToPtr(a.FactionID),
+		GameID:      database.NullUUIDToPtr(a.GameID),
+		Name:        a.Name,
+		Type:        a.Type,
+		Phase:       a.Phase,
+		Description: a.Description,
+		Version:     a.Version,
+		Source:      a.Source,
+		CreatedAt:   a.CreatedAt,
+		UpdatedAt:   a.UpdatedAt,
+		Effects:     effects,
+	}
+}
+
 func GetAbilityEffectsForAbility(s *state.State, ctx context.Context, abilityID uuid.UUID) ([]models.AbilityEffect, error) {
 	if abilityID == uuid.Nil {
 		return nil, appErr.ErrMissingID
@@ -33,18 +66,7 @@ func GetAbilityEffectsForAbility(s *state.State, ctx context.Context, abilityID 
 
 	effects := make([]models.AbilityEffect, len(dbEffects))
 	for i, e := range dbEffects {
-		effects[i] = models.AbilityEffect{
-			ID:          e.ID,
-			AbilityID:   e.AbilityID,
-			Stat:        e.Stat,
-			Modifier:    int(e.Modifier),
-			Condition:   e.Condition,
-			Description: e.Description,
-			Version:     e.Version,
-			Source:      e.Source,
-			CreatedAt:   e.CreatedAt,
-			UpdatedAt:   e.UpdatedAt,
-		}
+		effects[i] = mapDBAbilityEffectToModel(e)
 	}
 
 	return effects, nil
@@ -67,21 +89,7 @@ func GetAllAbilities(s *state.State, ctx context.Context) ([]models.Ability, err
 	abilities := make([]models.Ability, len(dbAbilities))
 	for i, a := range dbAbilities {
 		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
-
-		abilities[i] = models.Ability{
-			ID:          a.ID,
-			UnitID:      database.NullUUIDToPtr(a.UnitID),
-			FactionID:   database.NullUUIDToPtr(a.FactionID),
-			Name:        a.Name,
-			Type:        a.Type,
-			Phase:       a.Phase,
-			Description: a.Description,
-			Version:     a.Version,
-			Source:      a.Source,
-			CreatedAt:   a.CreatedAt,
-			UpdatedAt:   a.UpdatedAt,
-			Effects:     effects,
-		}
+		abilities[i] = mapDBAbilityToModel(a, effects)
 	}
 
 	return abilities, nil
@@ -108,20 +116,7 @@ func GetAbilitiesForUnit(s *state.State, ctx context.Context, unitID uuid.UUID) 
 	for i, a := range dbAbilities {
 		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
 
-		abilities[i] = models.Ability{
-			ID:          a.ID,
-			UnitID:      database.NullUUIDToPtr(a.UnitID),
-			FactionID:   database.NullUUIDToPtr(a.FactionID),
-			Name:        a.Name,
-			Type:        a.Type,
-			Phase:       a.Phase,
-			Description: a.Description,
-			Version:     a.Version,
-			Source:      a.Source,
-			CreatedAt:   a.CreatedAt,
-			UpdatedAt:   a.UpdatedAt,
-			Effects:     effects,
-		}
+		abilities[i] = mapDBAbilityToModel(a, effects)
 	}
 
 	return abilities, nil
@@ -149,20 +144,7 @@ func GetAbilitiesForFaction(s *state.State, ctx context.Context, factionID uuid.
 	for i, a := range dbAbilities {
 		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
 
-		abilities[i] = models.Ability{
-			ID:          a.ID,
-			UnitID:      database.NullUUIDToPtr(a.UnitID),
-			FactionID:   database.NullUUIDToPtr(a.FactionID),
-			Name:        a.Name,
-			Type:        a.Type,
-			Phase:       a.Phase,
-			Description: a.Description,
-			Version:     a.Version,
-			Source:      a.Source,
-			CreatedAt:   a.CreatedAt,
-			UpdatedAt:   a.UpdatedAt,
-			Effects:     effects,
-		}
+		abilities[i] = mapDBAbilityToModel(a, effects)
 	}
 
 	return abilities, nil
@@ -183,20 +165,7 @@ func GetAbilityByID(s *state.State, ctx context.Context, id uuid.UUID) (models.A
 
 	effects, _ := GetAbilityEffectsForAbility(s, ctx, dbAbility.ID)
 
-	ability := models.Ability{
-		ID:          dbAbility.ID,
-		UnitID:      database.NullUUIDToPtr(dbAbility.UnitID),
-		FactionID:   database.NullUUIDToPtr(dbAbility.FactionID),
-		Name:        dbAbility.Name,
-		Type:        dbAbility.Type,
-		Phase:       dbAbility.Phase,
-		Description: dbAbility.Description,
-		Version:     dbAbility.Version,
-		Source:      dbAbility.Source,
-		CreatedAt:   dbAbility.CreatedAt,
-		UpdatedAt:   dbAbility.UpdatedAt,
-		Effects:     effects,
-	}
+	ability := mapDBAbilityToModel(dbAbility, effects)
 
 	return ability, nil
 }
@@ -223,20 +192,7 @@ func GetAbilitiesByType(s *state.State, ctx context.Context, abilityType string)
 	for i, a := range dbAbilities {
 		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
 
-		abilities[i] = models.Ability{
-			ID:          a.ID,
-			UnitID:      database.NullUUIDToPtr(a.UnitID),
-			FactionID:   database.NullUUIDToPtr(a.FactionID),
-			Name:        a.Name,
-			Type:        a.Type,
-			Phase:       a.Phase,
-			Description: a.Description,
-			Version:     a.Version,
-			Source:      a.Source,
-			CreatedAt:   a.CreatedAt,
-			UpdatedAt:   a.UpdatedAt,
-			Effects:     effects,
-		}
+		abilities[i] = mapDBAbilityToModel(a, effects)
 	}
 
 	return abilities, nil
@@ -263,21 +219,7 @@ func GetAbilitiesByPhase(s *state.State, ctx context.Context, phase string) ([]m
 	abilities := make([]models.Ability, len(dbAbilities))
 	for i, a := range dbAbilities {
 		effects, _ := GetAbilityEffectsForAbility(s, ctx, a.ID)
-		abilities[i] = models.Ability{
-			ID:          a.ID,
-			UnitID:      database.NullUUIDToPtr(a.UnitID),
-			FactionID:   database.NullUUIDToPtr(a.FactionID),
-			Name:        a.Name,
-			Type:        a.Type,
-			Phase:       a.Phase,
-			Description: a.Description,
-			Version:     a.Version,
-			Source:      a.Source,
-			CreatedAt:   a.CreatedAt,
-			UpdatedAt:   a.UpdatedAt,
-			Effects:     effects,
-		}
+		abilities[i] = mapDBAbilityToModel(a, effects)
 	}
-
 	return abilities, nil
 }

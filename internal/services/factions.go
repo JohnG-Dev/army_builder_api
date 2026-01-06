@@ -13,6 +13,19 @@ import (
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
 
+func mapDBFactionToModel(f database.Faction) models.Faction {
+	return models.Faction{
+		ID:         f.ID,
+		GameID:     f.GameID,
+		Name:       f.Name,
+		Allegiance: f.Allegiance,
+		Version:    f.Version,
+		Source:     f.Source,
+		CreatedAt:  f.CreatedAt,
+		UpdatedAt:  f.UpdatedAt,
+	}
+}
+
 func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]models.Faction, error) {
 	var dbFactions []database.Faction
 	var err error
@@ -36,16 +49,7 @@ func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]mode
 
 	factions := make([]models.Faction, len(dbFactions))
 	for i, f := range dbFactions {
-		factions[i] = models.Faction{
-			ID:         f.ID,
-			GameID:     f.GameID,
-			Name:       f.Name,
-			Allegiance: f.Allegiance,
-			Version:    f.Version,
-			Source:     f.Source,
-			CreatedAt:  f.CreatedAt,
-			UpdatedAt:  f.UpdatedAt,
-		}
+		factions[i] = mapDBFactionToModel(f)
 	}
 
 	return factions, nil
@@ -67,16 +71,7 @@ func GetFactionsByName(s *state.State, ctx context.Context, name string) ([]mode
 
 	factions := make([]models.Faction, len(dbFactions))
 	for i, f := range dbFactions {
-		factions[i] = models.Faction{
-			ID:         f.ID,
-			GameID:     f.GameID,
-			Name:       f.Name,
-			Allegiance: f.Allegiance,
-			Version:    f.Version,
-			Source:     f.Source,
-			CreatedAt:  f.CreatedAt,
-			UpdatedAt:  f.UpdatedAt,
-		}
+		factions[i] = mapDBFactionToModel(f)
 	}
 
 	return factions, nil
@@ -95,16 +90,7 @@ func GetFactionByID(s *state.State, ctx context.Context, id uuid.UUID) (models.F
 		return models.Faction{}, err
 	}
 
-	faction := models.Faction{
-		ID:         dbFaction.ID,
-		GameID:     dbFaction.GameID,
-		Name:       dbFaction.Name,
-		Allegiance: dbFaction.Allegiance,
-		Version:    dbFaction.Version,
-		Source:     dbFaction.Source,
-		CreatedAt:  dbFaction.CreatedAt,
-		UpdatedAt:  dbFaction.UpdatedAt,
-	}
+	faction := mapDBFactionToModel(dbFaction)
 
 	return faction, nil
 }

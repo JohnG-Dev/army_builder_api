@@ -7,10 +7,28 @@ import (
 
 	"github.com/google/uuid"
 
+	"github.com/JohnG-Dev/army_builder_api/internal/database"
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
 	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
+
+func mapDBEnhancementToModel(e database.Enhancement) models.Enhancement {
+	return models.Enhancement{
+		ID:              e.ID,
+		FactionID:       e.FactionID,
+		Name:            e.Name,
+		EnhancementType: e.EnhancementType,
+		Description:     e.Description,
+		Points:          int(e.Points),
+		IsUnique:        e.IsUnique,
+		Restrictions:    e.Restrictions,
+		Version:         e.Version,
+		Source:          e.Source,
+		CreatedAt:       e.CreatedAt,
+		UpdatedAt:       e.UpdatedAt,
+	}
+}
 
 func GetEnhancements(s *state.State, ctx context.Context) ([]models.Enhancement, error) {
 	dbEnhancements, err := s.DB.GetEnhancements(ctx)
@@ -26,18 +44,7 @@ func GetEnhancements(s *state.State, ctx context.Context) ([]models.Enhancement,
 
 	enhancements := make([]models.Enhancement, len(dbEnhancements))
 	for i, e := range dbEnhancements {
-		enhancements[i] = models.Enhancement{
-			ID:              e.ID,
-			FactionID:       e.FactionID,
-			Name:            e.Name,
-			EnhancementType: e.EnhancementType,
-			Description:     e.Description,
-			Points:          int(e.Points),
-			Version:         e.Version,
-			Source:          e.Source,
-			CreatedAt:       e.CreatedAt,
-			UpdatedAt:       e.UpdatedAt,
-		}
+		enhancements[i] = mapDBEnhancementToModel(e)
 	}
 
 	return enhancements, nil
@@ -59,18 +66,7 @@ func GetEnhancementsByFaction(s *state.State, ctx context.Context, factionID *uu
 
 	enhancements := make([]models.Enhancement, len(dbEnhancements))
 	for i, e := range dbEnhancements {
-		enhancements[i] = models.Enhancement{
-			ID:              e.ID,
-			FactionID:       e.FactionID,
-			Name:            e.Name,
-			EnhancementType: e.EnhancementType,
-			Description:     e.Description,
-			Points:          int(e.Points),
-			Version:         e.Version,
-			Source:          e.Source,
-			CreatedAt:       e.CreatedAt,
-			UpdatedAt:       e.UpdatedAt,
-		}
+		enhancements[i] = mapDBEnhancementToModel(e)
 	}
 
 	return enhancements, nil
@@ -89,18 +85,7 @@ func GetEnhancementByID(s *state.State, ctx context.Context, id uuid.UUID) (mode
 		return models.Enhancement{}, err
 	}
 
-	enhancement := models.Enhancement{
-		ID:              dbEnhancement.ID,
-		FactionID:       dbEnhancement.FactionID,
-		Name:            dbEnhancement.Name,
-		EnhancementType: dbEnhancement.EnhancementType,
-		Description:     dbEnhancement.Description,
-		Points:          int(dbEnhancement.Points),
-		Version:         dbEnhancement.Version,
-		Source:          dbEnhancement.Source,
-		CreatedAt:       dbEnhancement.CreatedAt,
-		UpdatedAt:       dbEnhancement.UpdatedAt,
-	}
+	enhancement := mapDBEnhancementToModel(dbEnhancement)
 
 	return enhancement, nil
 }
@@ -125,18 +110,7 @@ func GetEnhancementsByType(s *state.State, ctx context.Context, enhancementType 
 
 	enhancements := make([]models.Enhancement, len(dbEnhancements))
 	for i, e := range dbEnhancements {
-		enhancements[i] = models.Enhancement{
-			ID:              e.ID,
-			FactionID:       e.FactionID,
-			Name:            e.Name,
-			EnhancementType: e.EnhancementType,
-			Description:     e.Description,
-			Points:          int(e.Points),
-			Version:         e.Version,
-			Source:          e.Source,
-			CreatedAt:       e.CreatedAt,
-			UpdatedAt:       e.UpdatedAt,
-		}
+		enhancements[i] = mapDBEnhancementToModel(e)
 	}
 
 	return enhancements, nil
