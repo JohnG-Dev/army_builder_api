@@ -17,26 +17,30 @@ type FactionSeed struct {
 }
 
 type UnitSeed struct {
-	Name            string        `yaml:"name"`
-	Description     string        `yaml:"description"`
-	IsManifestation bool          `yaml:"is_manifestation"`
-	IsUnique        bool          `yaml:"is_unique"`
-	Move            string        `yaml:"move"`
-	Health          string        `yaml:"health"`
-	Save            string        `yaml:"save"`
-	Ward            string        `yaml:"ward"`
-	Control         string        `yaml:"control"`
-	Points          int           `yaml:"points"`
-	SummonCost      string        `yaml:"summon_cost"`
-	Banishment      string        `yaml:"banishment"`
-	MinUnitSize     int           `yaml:"min_unit_size"`
-	MaxUnitSize     int           `yaml:"max_unit_size"`
-	MatchedPlay     bool          `yaml:"matched_play"`
-	Version         string        `yaml:"version"`
-	Source          string        `yaml:"source"`
-	Keywords        []string      `yaml:"keywords"`
-	Weapons         []WeaponSeed  `yaml:"weapons"`
-	Abilities       []AbilitySeed `yaml:"abilities"`
+	Name            string            `yaml:"name"`
+	Description     string            `yaml:"description"`
+	IsManifestation bool              `yaml:"is_manifestation"`
+	IsUnique        bool              `yaml:"is_unique"`
+	Move            string            `yaml:"move"`
+	Health          string            `yaml:"health"`
+	Save            string            `yaml:"save"`
+	Ward            string            `yaml:"ward"`
+	Invuln          string            `yaml:"invuln"`
+	Control         string            `yaml:"control"`
+	Toughness       string            `yaml:"toughness"`
+	Leadership      string            `yaml:"leadership"`
+	AdditionalStats map[string]string `yaml:"additional_stats"`
+	Points          int               `yaml:"points"`
+	SummonCost      string            `yaml:"summon_cost"`
+	Banishment      string            `yaml:"banishment"`
+	MinUnitSize     int               `yaml:"min_unit_size"`
+	MaxUnitSize     int               `yaml:"max_unit_size"`
+	MatchedPlay     bool              `yaml:"matched_play"`
+	Version         string            `yaml:"version"`
+	Source          string            `yaml:"source"`
+	Keywords        []string          `yaml:"keywords"`
+	Weapons         []WeaponSeed      `yaml:"weapons"`
+	Abilities       []AbilitySeed     `yaml:"abilities"`
 }
 
 type WeaponSeed struct {
@@ -75,6 +79,7 @@ type EnhancementSeed struct {
 	Name            string `yaml:"name"`
 	EnhancementType string `yaml:"enhancement_type"` // "Type of Power", "Hero Trait"
 	Description     string `yaml:"description"`
+	Restrictions    string `yaml:"restrictions"`
 	Points          int    `yaml:"points"`
 	IsUnique        bool   `yaml:"is_unique"`
 }

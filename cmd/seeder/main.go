@@ -61,14 +61,13 @@ func main() {
 	}
 	s.Logger.Info("Database cleared successfully")
 
-	sr := NewSeeder(ctx, s)
-
 	files, err := filepath.Glob("data/factions/*.yaml")
 	if err != nil {
 		s.Logger.Fatal("Failed to glob files", zap.Error(err))
 	}
 
 	for _, path := range files {
+		sr := NewSeeder(ctx, s)
 		if err := sr.SeedFile(path); err != nil {
 			s.Logger.Error("Failed to seed file",
 				zap.String("path", path),

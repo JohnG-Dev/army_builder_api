@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"os"
@@ -97,7 +98,7 @@ func (sr *Seeder) SeedFile(path string) error {
 				return err
 			}
 
-			err = sr.seedUnitAbilities(unitID, factionID, u.Abilities, f.Version, f.Source)
+			err = sr.seedUnitAbilities(unitID, factionID, gameID, u.Abilities, f.Version, f.Source)
 			if err != nil {
 				return err
 			}
@@ -161,25 +162,30 @@ func (sr *Seeder) createFaction(gameID uuid.UUID, f models.FactionSeed) (uuid.UU
 }
 
 func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, source string) (uuid.UUID, error) {
+	statsJSON, err := json.Marshal(u.AdditionalStats)
+	if err != nil {
+		statsJSON = []byte("{}")
+	}
 	unit, err := sr.getDB().CreateUnit(sr.ctx, database.CreateUnitParams{
-		FactionID:       factionID,
-		Name:            u.Name,
-		Description:     u.Description,
-		IsManifestation: u.IsManifestation,
-		IsUnique:        u.IsUnique,
-		Move:            u.Move,
-		Health:          u.Health,
-		Save:            u.Save,
-		Ward:            u.Ward,
-		Control:         u.Control,
-		Points:          int32(u.Points),
-		SummonCost:      u.SummonCost,
-		Banishment:      u.Banishment,
-		MinUnitSize:     int32(u.MinUnitSize),
-		MaxUnitSize:     int32(u.MaxUnitSize),
-		MatchedPlay:     u.MatchedPlay,
-		Version:         version,
-		Source:          source,
+		FactionID:         factionID,
+		Name:              u.Name,
+		Move:              cleanStat(u.Move),
+		HealthWounds:      cleanStat(u.Health),
+		SaveStats:         cleanStat(u.Save),
+		WardFnp:           cleanStat(u.Ward),
+		InvulnSave:        cleanStat(u.Invuln),
+		ControlOc:         cleanStat(u.Control),
+		Toughness:         cleanStat(u.Toughness),
+		LeadershipBravery: cleanStat(u.Leadership),
+		Points:            int32(u.Points),
+		AdditionalStats:   statsJSON,
+		SummonCost:        u.SummonCost,
+		Banishment:        u.Banishment,
+		MinUnitSize:       int32(u.MinUnitSize),
+		MaxUnitSize:       int32(u.MaxUnitSize),
+		MatchedPlay:       u.MatchedPlay,
+		Version:           version,
+		Source:            source,
 	})
 	if err != nil {
 		return uuid.Nil, err
@@ -192,16 +198,16 @@ func (sr *Seeder) seedUnitWeapons(unitID uuid.UUID, weapons []models.WeaponSeed,
 	sr.s.Logger.Info("Seeding Weapons", zap.Int("count", len(weapons)))
 	for _, w := range weapons {
 		_, err := sr.getDB().CreateWeapon(sr.ctx, database.CreateWeaponParams{
-			UnitID:  unitID,
-			Name:    w.Name,
-			Range:   w.Range,
-			Attacks: w.Attacks,
-			ToHit:   w.ToHit,
-			ToWound: w.ToWound,
-			Rend:    w.Rend,
-			Damage:  w.Damage,
-			Version: version,
-			Source:  source,
+			UnitID:        unitID,
+			Name:          w.Name,
+			Range:         w.Range,
+			Attacks:       w.Attacks,
+			HitStats:      w.ToHit,
+			WoundStrength: w.ToWound,
+			RendAp:        w.Rend,
+			Damage:        w.Damage,
+			Version:       version,
+			Source:        source,
 		})
 		if err != nil {
 			return fmt.Errorf("failed to create weapon %s: %w", w.Name, err)
@@ -243,12 +249,13 @@ func (sr *Seeder) seedUnitKeywords(unitID uuid.UUID, gameID uuid.UUID, keywordNa
 	return nil
 }
 
-func (sr *Seeder) seedUnitAbilities(unitID, factionID uuid.UUID, abilities []models.AbilitySeed, version, source string) error {
+func (sr *Seeder) seedUnitAbilities(unitID, factionID, gameID uuid.UUID, abilities []models.AbilitySeed, version, source string) error {
 	for _, a := range abilities {
 		sr.s.Logger.Info("Seeding Ability", zap.String("name", a.Name))
 		ability, err := sr.getDB().CreateAbility(sr.ctx, database.CreateAbilityParams{
 			UnitID:      database.UUIDToNullUUID(unitID),
 			FactionID:   uuid.NullUUID{},
+			GameID:      uuid.NullUUID{},
 			Name:        a.Name,
 			Description: a.Description,
 			Type:        a.Type,
@@ -307,6 +314,7 @@ func (sr *Seeder) seedFactionEnhancements(factionID uuid.UUID, enhancements []mo
 			Name:            e.Name,
 			EnhancementType: e.EnhancementType,
 			Description:     e.Description,
+			Restrictions:    e.Restrictions,
 			Points:          int32(e.Points),
 			Version:         version,
 			Source:          source,
@@ -317,4 +325,11 @@ func (sr *Seeder) seedFactionEnhancements(factionID uuid.UUID, enhancements []mo
 	}
 
 	return nil
+}
+
+func cleanStat(s string) string {
+	if s == "" {
+		return "-"
+	}
+	return s
 }
