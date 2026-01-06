@@ -10,6 +10,7 @@ type Ability struct {
 	ID          uuid.UUID  `json:"id"`
 	FactionID   *uuid.UUID `json:"faction_id,omitempty"`
 	UnitID      *uuid.UUID `json:"unit_id,omitempty"`
+	GameID      *uuid.UUID `json:"game_id,omitempty"`
 	Name        string     `json:"name"`
 	Type        string     `json:"type"`
 	Phase       string     `json:"phase"`
