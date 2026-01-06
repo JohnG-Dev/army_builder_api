@@ -56,6 +56,7 @@ func TestGetAbilities_FilterByUnitID(t *testing.T) {
 	_, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    database.UUIDToNullUUID(unitID1),
 		FactionID: uuid.NullUUID{},
+		GameID:    uuid.NullUUID{},
 		Name:      "Test Wizard Ability",
 		Type:      "Spell",
 		Phase:     "Hero",
@@ -68,6 +69,7 @@ func TestGetAbilities_FilterByUnitID(t *testing.T) {
 	_, err = s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    database.UUIDToNullUUID(unitID2),
 		FactionID: uuid.NullUUID{},
+		GameID:    uuid.NullUUID{},
 		Name:      "Test Melee Ability",
 		Type:      "Combat",
 		Phase:     "Charge",
@@ -115,6 +117,7 @@ func TestGetAbilities_FilterByFactionID(t *testing.T) {
 	_, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    uuid.NullUUID{},
 		FactionID: database.UUIDToNullUUID(factionID1),
+		GameID:    uuid.NullUUID{},
 		Name:      "Test Stormcast Ability",
 		Type:      "Spell",
 		Phase:     "Hero",
@@ -128,6 +131,7 @@ func TestGetAbilities_FilterByFactionID(t *testing.T) {
 	_, err = s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    uuid.NullUUID{},
 		FactionID: database.UUIDToNullUUID(factionID2),
+		GameID:    uuid.NullUUID{},
 		Name:      "Test Skaven Ability",
 		Type:      "Spell",
 		Phase:     "Hero",
@@ -175,6 +179,7 @@ func TestGetAbilites_FilterByType(t *testing.T) {
 	_, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    database.UUIDToNullUUID(unitID),
 		FactionID: uuid.NullUUID{},
+		GameID:    uuid.NullUUID{},
 		Name:      "Test Stormcast Prayer",
 		Type:      "Prayer",
 		Phase:     "Hero",
@@ -188,6 +193,7 @@ func TestGetAbilites_FilterByType(t *testing.T) {
 	_, err = s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    database.UUIDToNullUUID(unitID),
 		FactionID: uuid.NullUUID{},
+		GameID:    uuid.NullUUID{},
 		Name:      "Test Stormcast Passive",
 		Type:      "Passive",
 		Phase:     "End Of Turn",
@@ -235,6 +241,7 @@ func TestGetAbilities_FilterByPhase(t *testing.T) {
 	_, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    database.UUIDToNullUUID(unitID),
 		FactionID: uuid.NullUUID{},
+		GameID:    uuid.NullUUID{},
 		Name:      "Test Stormcast ability",
 		Type:      "Spell",
 		Phase:     "Hero",
@@ -248,6 +255,7 @@ func TestGetAbilities_FilterByPhase(t *testing.T) {
 	_, err = s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    database.UUIDToNullUUID(unitID),
 		FactionID: uuid.NullUUID{},
+		GameID:    uuid.NullUUID{},
 		Name:      "Test StormCast Ability",
 		Type:      "Passive",
 		Phase:     "Shooting",

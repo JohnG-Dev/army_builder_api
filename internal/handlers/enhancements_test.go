@@ -56,6 +56,7 @@ func TestGetEnhancements_FilterByFactionID(t *testing.T) {
 		Name:            "Test StormCast Enhancement",
 		EnhancementType: "artefact",
 		Description:     "Test Description",
+		Restrictions:    "Test Restrictions",
 		Points:          10,
 		IsUnique:        true,
 		Version:         "1.0",
@@ -70,6 +71,7 @@ func TestGetEnhancements_FilterByFactionID(t *testing.T) {
 		Name:            "Test Skaven Enhancement",
 		EnhancementType: "artefact",
 		Description:     "Test Description",
+		Restrictions:    "Test Restrictions",
 		Points:          10,
 		IsUnique:        true,
 		Version:         "1.0",
@@ -134,7 +136,7 @@ func TestGetEnhancementByID_Success(t *testing.T) {
 	}
 }
 
-func GetEnhancementByID_NotFound(t *testing.T) {
+func TestGetEnhancementByID_NotFound(t *testing.T) {
 	s := setupTestDB(t)
 
 	handler := &EnhancementsHandlers{S: s}
