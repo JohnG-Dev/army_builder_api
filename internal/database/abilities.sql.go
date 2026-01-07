@@ -12,14 +12,15 @@ import (
 )
 
 const createAbility = `-- name: CreateAbility :one
-INSERT INTO abilities (unit_id, faction_id, name, description, type, phase, version, source)
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-RETURNING id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+INSERT INTO abilities (unit_id, faction_id, game_id, name, description, type, phase, version, source)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+RETURNING id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 `
 
 type CreateAbilityParams struct {
 	UnitID      uuid.NullUUID
 	FactionID   uuid.NullUUID
+	GameID      uuid.NullUUID
 	Name        string
 	Description string
 	Type        string
@@ -32,6 +33,7 @@ func (q *Queries) CreateAbility(ctx context.Context, arg CreateAbilityParams) (A
 	row := q.db.QueryRow(ctx, createAbility,
 		arg.UnitID,
 		arg.FactionID,
+		arg.GameID,
 		arg.Name,
 		arg.Description,
 		arg.Type,
@@ -44,6 +46,7 @@ func (q *Queries) CreateAbility(ctx context.Context, arg CreateAbilityParams) (A
 		&i.ID,
 		&i.UnitID,
 		&i.FactionID,
+		&i.GameID,
 		&i.Name,
 		&i.Description,
 		&i.Type,
@@ -67,7 +70,7 @@ func (q *Queries) DeleteAbility(ctx context.Context, id uuid.UUID) error {
 }
 
 const getAbilitiesByPhase = `-- name: GetAbilitiesByPhase :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+SELECT id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 FROM abilities
 WHERE phase = $1
 ORDER BY name ASC
@@ -86,6 +89,7 @@ func (q *Queries) GetAbilitiesByPhase(ctx context.Context, phase string) ([]Abil
 			&i.ID,
 			&i.UnitID,
 			&i.FactionID,
+			&i.GameID,
 			&i.Name,
 			&i.Description,
 			&i.Type,
@@ -106,7 +110,7 @@ func (q *Queries) GetAbilitiesByPhase(ctx context.Context, phase string) ([]Abil
 }
 
 const getAbilitiesByType = `-- name: GetAbilitiesByType :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+SELECT id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 FROM abilities
 WHERE type = $1
 ORDER BY name ASC
@@ -125,6 +129,7 @@ func (q *Queries) GetAbilitiesByType(ctx context.Context, type_ string) ([]Abili
 			&i.ID,
 			&i.UnitID,
 			&i.FactionID,
+			&i.GameID,
 			&i.Name,
 			&i.Description,
 			&i.Type,
@@ -145,7 +150,7 @@ func (q *Queries) GetAbilitiesByType(ctx context.Context, type_ string) ([]Abili
 }
 
 const getAbilitiesForFaction = `-- name: GetAbilitiesForFaction :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+SELECT id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 FROM abilities
 WHERE faction_id = $1
 ORDER BY phase ASC, name ASC
@@ -164,6 +169,7 @@ func (q *Queries) GetAbilitiesForFaction(ctx context.Context, factionID uuid.Nul
 			&i.ID,
 			&i.UnitID,
 			&i.FactionID,
+			&i.GameID,
 			&i.Name,
 			&i.Description,
 			&i.Type,
@@ -184,7 +190,7 @@ func (q *Queries) GetAbilitiesForFaction(ctx context.Context, factionID uuid.Nul
 }
 
 const getAbilitiesForUnit = `-- name: GetAbilitiesForUnit :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+SELECT id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 FROM abilities
 WHERE unit_id = $1
 ORDER BY phase ASC, name ASC
@@ -203,6 +209,7 @@ func (q *Queries) GetAbilitiesForUnit(ctx context.Context, unitID uuid.NullUUID)
 			&i.ID,
 			&i.UnitID,
 			&i.FactionID,
+			&i.GameID,
 			&i.Name,
 			&i.Description,
 			&i.Type,
@@ -223,7 +230,7 @@ func (q *Queries) GetAbilitiesForUnit(ctx context.Context, unitID uuid.NullUUID)
 }
 
 const getAbilityByID = `-- name: GetAbilityByID :one
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+SELECT id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 FROM abilities
 WHERE id = $1
 `
@@ -235,6 +242,7 @@ func (q *Queries) GetAbilityByID(ctx context.Context, id uuid.UUID) (Ability, er
 		&i.ID,
 		&i.UnitID,
 		&i.FactionID,
+		&i.GameID,
 		&i.Name,
 		&i.Description,
 		&i.Type,
@@ -248,7 +256,7 @@ func (q *Queries) GetAbilityByID(ctx context.Context, id uuid.UUID) (Ability, er
 }
 
 const getAllAbilities = `-- name: GetAllAbilities :many
-SELECT id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+SELECT id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 FROM abilities
 ORDER BY unit_id, faction_id, phase ASC, name ASC
 `
@@ -266,6 +274,7 @@ func (q *Queries) GetAllAbilities(ctx context.Context) ([]Ability, error) {
 			&i.ID,
 			&i.UnitID,
 			&i.FactionID,
+			&i.GameID,
 			&i.Name,
 			&i.Description,
 			&i.Type,
@@ -289,7 +298,7 @@ const updateAbility = `-- name: UpdateAbility :one
 UPDATE abilities
 SET name = $2, description = $3, type = $4, phase = $5, version = $6, source = $7, updated_at = now()
 WHERE id = $1
-RETURNING id, unit_id, faction_id, name, description, type, phase, version, source, created_at, updated_at
+RETURNING id, unit_id, faction_id, game_id, name, description, type, phase, version, source, created_at, updated_at
 `
 
 type UpdateAbilityParams struct {
@@ -317,6 +326,7 @@ func (q *Queries) UpdateAbility(ctx context.Context, arg UpdateAbilityParams) (A
 		&i.ID,
 		&i.UnitID,
 		&i.FactionID,
+		&i.GameID,
 		&i.Name,
 		&i.Description,
 		&i.Type,

@@ -208,7 +208,7 @@ func (q *Queries) GetKeywordsForUnit(ctx context.Context, unitID uuid.UUID) ([]G
 }
 
 const getUnitsWithKeyword = `-- name: GetUnitsWithKeyword :many
-SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.is_unique, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_unit_size, u.max_unit_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.is_unique, u.move, u.health_wounds, u.save_stats, u.ward_fnp, u.invuln_save, u.control_oc, u.toughness, u.leadership_bravery, u.points, u.additional_stats, u.summon_cost, u.banishment, u.min_unit_size, u.max_unit_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON u.id = uk.unit_id
 JOIN keywords k ON uk.keyword_id = k.id
@@ -233,11 +233,15 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 			&i.IsManifestation,
 			&i.IsUnique,
 			&i.Move,
-			&i.Health,
-			&i.Save,
-			&i.Ward,
-			&i.Control,
+			&i.HealthWounds,
+			&i.SaveStats,
+			&i.WardFnp,
+			&i.InvulnSave,
+			&i.ControlOc,
+			&i.Toughness,
+			&i.LeadershipBravery,
 			&i.Points,
+			&i.AdditionalStats,
 			&i.SummonCost,
 			&i.Banishment,
 			&i.MinUnitSize,
@@ -259,7 +263,7 @@ func (q *Queries) GetUnitsWithKeyword(ctx context.Context, name string) ([]Unit,
 }
 
 const getUnitsWithKeywordAndValue = `-- name: GetUnitsWithKeywordAndValue :many
-SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.is_unique, u.move, u.health, u.save, u.ward, u.control, u.points, u.summon_cost, u.banishment, u.min_unit_size, u.max_unit_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
+SELECT DISTINCT u.id, u.faction_id, u.name, u.description, u.is_manifestation, u.is_unique, u.move, u.health_wounds, u.save_stats, u.ward_fnp, u.invuln_save, u.control_oc, u.toughness, u.leadership_bravery, u.points, u.additional_stats, u.summon_cost, u.banishment, u.min_unit_size, u.max_unit_size, u.matched_play, u.version, u.source, u.created_at, u.updated_at
 FROM units u
 JOIN unit_keywords uk ON u.id = uk.unit_id
 JOIN keywords k ON uk.keyword_id = k.id
@@ -289,11 +293,15 @@ func (q *Queries) GetUnitsWithKeywordAndValue(ctx context.Context, arg GetUnitsW
 			&i.IsManifestation,
 			&i.IsUnique,
 			&i.Move,
-			&i.Health,
-			&i.Save,
-			&i.Ward,
-			&i.Control,
+			&i.HealthWounds,
+			&i.SaveStats,
+			&i.WardFnp,
+			&i.InvulnSave,
+			&i.ControlOc,
+			&i.Toughness,
+			&i.LeadershipBravery,
 			&i.Points,
+			&i.AdditionalStats,
 			&i.SummonCost,
 			&i.Banishment,
 			&i.MinUnitSize,

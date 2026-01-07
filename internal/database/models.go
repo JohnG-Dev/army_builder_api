@@ -5,6 +5,7 @@
 package database
 
 import (
+	"encoding/json"
 	"time"
 
 	"github.com/google/uuid"
@@ -14,6 +15,7 @@ type Ability struct {
 	ID          uuid.UUID
 	UnitID      uuid.NullUUID
 	FactionID   uuid.NullUUID
+	GameID      uuid.NullUUID
 	Name        string
 	Description string
 	Type        string
@@ -57,6 +59,7 @@ type Enhancement struct {
 	Description     string
 	Points          int32
 	IsUnique        bool
+	Restrictions    string
 	Version         string
 	Source          string
 	CreatedAt       time.Time
@@ -109,27 +112,31 @@ type Rule struct {
 }
 
 type Unit struct {
-	ID              uuid.UUID
-	FactionID       uuid.UUID
-	Name            string
-	Description     string
-	IsManifestation bool
-	IsUnique        bool
-	Move            string
-	Health          string
-	Save            string
-	Ward            string
-	Control         string
-	Points          int32
-	SummonCost      string
-	Banishment      string
-	MinUnitSize     int32
-	MaxUnitSize     int32
-	MatchedPlay     bool
-	Version         string
-	Source          string
-	CreatedAt       time.Time
-	UpdatedAt       time.Time
+	ID                uuid.UUID
+	FactionID         uuid.UUID
+	Name              string
+	Description       string
+	IsManifestation   bool
+	IsUnique          bool
+	Move              string
+	HealthWounds      string
+	SaveStats         string
+	WardFnp           string
+	InvulnSave        string
+	ControlOc         string
+	Toughness         string
+	LeadershipBravery string
+	Points            int32
+	AdditionalStats   json.RawMessage
+	SummonCost        string
+	Banishment        string
+	MinUnitSize       int32
+	MaxUnitSize       int32
+	MatchedPlay       bool
+	Version           string
+	Source            string
+	CreatedAt         time.Time
+	UpdatedAt         time.Time
 }
 
 type UnitKeyword struct {
@@ -139,17 +146,17 @@ type UnitKeyword struct {
 }
 
 type Weapon struct {
-	ID        uuid.UUID
-	UnitID    uuid.UUID
-	Name      string
-	Range     string
-	Attacks   string
-	ToHit     string
-	ToWound   string
-	Rend      string
-	Damage    string
-	Version   string
-	Source    string
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	ID            uuid.UUID
+	UnitID        uuid.UUID
+	Name          string
+	Range         string
+	Attacks       string
+	HitStats      string
+	WoundStrength string
+	RendAp        string
+	Damage        string
+	Version       string
+	Source        string
+	CreatedAt     time.Time
+	UpdatedAt     time.Time
 }
