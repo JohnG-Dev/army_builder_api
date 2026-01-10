@@ -22,3 +22,5 @@ sql:
             go_type:
               import: "time"
               type: "Time"
+          - db_type: "jsonb"
+            go_type: "encoding/json.RawMessage"
