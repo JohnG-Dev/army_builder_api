@@ -6,7 +6,6 @@ type Catalogue struct {
 	XMLName          xml.Name         `xml:"catalogue"`
 	Name             string           `xml:"name,attr"`
 	SelectionEntries []SelectionEntry `xml:"selectionEntries>selectionEntry"`
-	SharedEntries    []SelectionEntry `xml:"sharedSelectionEntries>selectionEntry"`
 }
 
 type SelectionEntry struct {
@@ -15,7 +14,6 @@ type SelectionEntry struct {
 	Profiles   []Profile   `xml:"profiles>profile"`
 	Rules      []RuleEntry `xml:"rules>rule"`
 	Categories []Category  `xml:"categoryLinks>categoryLink"`
-	InfoLinks  []InfoLink  `xml:"infoLinks>infoLink"`
 }
 
 type Profile struct {
@@ -37,9 +35,3 @@ type RuleEntry struct {
 type Category struct {
 	Name string `xml:"name,attr"`
 }
-
-type InfoLink struct {
-	TargetID string `xml:"targetId,attr"`
-	Type     string `xml:"type,attr"`
-}
-
