@@ -12,13 +12,14 @@ type Catalogue struct {
 }
 
 type SelectionEntry struct {
-	Name         string           `xml:"name,attr"`
-	Type         string           `xml:"type,attr"`
-	Profiles     []Profile        `xml:"profiles>profile"`
-	Categories   []Category       `xml:"categoryLinks>categoryLink"`
-	ChildEntries []SelectionEntry `xml:"selectionEntries>selectionEntry"`
-	LinkEntries  []SelectionEntry `xml:"entryLinks>entryLink"`
-	GroupEntries []SelectionEntry `xml:"selectionEntryGroups>selectionEntryGroup>selectionEntries>selectionEntry"`
+	Name                 string           `xml:"name,attr"`
+	Type                 string           `xml:"type,attr"`
+	Profiles             []Profile        `xml:"profiles>profile"`
+	Costs                []Cost           `xml:"costs>cost"`
+	CategoryLinks        []CategoryLink   `xml:"categoryLinks>categoryLink"`
+	ChildEntries         []SelectionEntry `xml:"selectionEntries>selectionEntry"`
+	LinkEntries          []SelectionEntry `xml:"entryLinks>entryLink"`
+	SelectionEntryGroups []SelectionEntry `xml:"selectionEntryGroups>selectionEntryGroup"`
 }
 
 type Profile struct {
@@ -39,4 +40,14 @@ type RuleEntry struct {
 
 type Category struct {
 	Name string `xml:"name,attr"`
+}
+
+type Cost struct {
+	Name  string `xml:"name,attr"`
+	Value string `xml:"value,attr"`
+}
+
+type CategoryLink struct {
+	Name    string `xml:"name,attr"`
+	Primary bool   `xml:"primary,attr"`
 }
