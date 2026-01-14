@@ -96,6 +96,16 @@ func (c *Converter) transformUnit(entry SelectionEntry) models.UnitSeed {
 		AdditionalStats: make(map[string]string),
 	}
 
+	for _, cost := range entry.Costs {
+		if cost.Name == "pts" {
+			fmt.Sscanf(cost.Value, "%d", &unit.Points)
+		}
+	}
+
+	for _, cat := range entry.CategoryLinks {
+		unit.Keywords = append(unit.Keywords, strings.ToUpper(cat.Name))
+	}
+
 	allProfiles := entry.Profiles
 	allProfiles = append(allProfiles, c.collectProfiles(entry)...)
 
@@ -107,7 +117,7 @@ func (c *Converter) transformUnit(entry SelectionEntry) models.UnitSeed {
 		}
 	}
 
-	for _, cat := range entry.Categories {
+	for _, cat := range entry.CategoryLinks {
 		unit.Keywords = append(unit.Keywords, strings.ToUpper(cat.Name))
 	}
 	return unit
@@ -160,14 +170,22 @@ func (c *Converter) mapWeapon(p Profile) models.WeaponSeed {
 }
 
 func (c *Converter) isUnit(entry SelectionEntry) bool {
+	for _, cost := range entry.Costs {
+		if cost.Name == "pts" && cost.Value != "0" && cost.Value != "" {
+			return true
+		}
+	}
 	for _, p := range entry.Profiles {
 		if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Models") {
 			return true
 		}
 	}
 
-	if len(entry.Categories) > 1 {
-		return true
+	for _, cat := range entry.CategoryLinks {
+		upperCat := strings.ToUpper(cat.Name)
+		if strings.Contains(upperCat, "IFANTRY") || strings.Contains(upperCat, "HERO") {
+			return true
+		}
 	}
 
 	return false
@@ -181,7 +199,7 @@ func (c *Converter) findUnits(entries []SelectionEntry, found []SelectionEntry) 
 
 		found = c.findUnits(entry.ChildEntries, found)
 		found = c.findUnits(entry.LinkEntries, found)
-		found = c.findUnits(entry.GroupEntries, found)
+		found = c.findUnits(entry.SelectionEntryGroups, found)
 	}
 	return found
 }
@@ -189,7 +207,11 @@ func (c *Converter) findUnits(entries []SelectionEntry, found []SelectionEntry) 
 func (c *Converter) collectProfiles(entry SelectionEntry) []Profile {
 	var found []Profile
 
-	containers := [][]SelectionEntry{entry.ChildEntries, entry.LinkEntries, entry.GroupEntries}
+	containers := [][]SelectionEntry{
+		entry.ChildEntries,
+		entry.LinkEntries,
+		entry.SelectionEntryGroups,
+	}
 	for _, container := range containers {
 		for _, child := range container {
 			found = append(found, child.Profiles...)

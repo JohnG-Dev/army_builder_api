@@ -9,11 +9,15 @@ type Catalogue struct {
 	EntryLinks       []SelectionEntry `xml:"entryLinks>entryLink"`
 	SharedEntries    []SelectionEntry `xml:"sharedSelectionEntries>selectionEntry"`
 	SharedGroups     []SelectionEntry `xml:"sharedSelectionEntryGroups>selectionEntryGroup"`
+	SharedProfils    []Profile        `xml:"sharedProfiles>profile"`
+	CatalogueLinks   []CatalogueLink  `xml:"catalogueLinks>cataloguelink"`
 }
 
 type SelectionEntry struct {
 	Name                 string           `xml:"name,attr"`
 	Type                 string           `xml:"type,attr"`
+	ID                   string           `xml:"id,attr"`
+	TargetID             string           `xml:"targetId,attr"`
 	Profiles             []Profile        `xml:"profiles>profile"`
 	Costs                []Cost           `xml:"costs>cost"`
 	CategoryLinks        []CategoryLink   `xml:"categoryLinks>categoryLink"`
@@ -24,6 +28,7 @@ type SelectionEntry struct {
 
 type Profile struct {
 	Name            string           `xml:"name,attr"`
+	ID              string           `xml:"id,attr"`
 	TypeName        string           `xml:"typeName,attr"`
 	Characteristics []Characteristic `xml:"characteristics>characteristic"`
 }
@@ -50,4 +55,9 @@ type Cost struct {
 type CategoryLink struct {
 	Name    string `xml:"name,attr"`
 	Primary bool   `xml:"primary,attr"`
+}
+
+type CatalogueLink struct {
+	TargetID string `xml:"targetId,attr"`
+	Name     string `xml:"name,attr"`
 }
