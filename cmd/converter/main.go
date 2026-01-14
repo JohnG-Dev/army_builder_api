@@ -22,40 +22,76 @@ var StatMapping = map[string]string{
 	"Bravery": "leadership", "Ward": "ward",
 }
 
-type Converter struct{}
+type Converter struct {
+	MasterEntries map[string]SelectionEntry
+}
 
 func main() {
 	rawDir := "./data/raw"
 	outDir := "./data/factions"
-	files, err := os.ReadDir(rawDir)
+
+	allFiles, err := os.ReadDir(rawDir)
 	if err != nil {
-		log.Fatalf("failed to read: %v", err)
+		log.Fatalf("failed to read directory: %v", err)
 	}
-	cv := &Converter{}
-	for _, file := range files {
-		if !strings.HasSuffix(file.Name(), ".cat") {
+
+	cv := &Converter{
+		MasterEntries: make(map[string]SelectionEntry),
+	}
+
+	for _, file := range allFiles {
+		name := file.Name()
+		if !strings.HasSuffix(name, ".cat") && !strings.HasSuffix(name, ".gst") {
 			continue
 		}
-		filePath := filepath.Join(rawDir, file.Name())
+
+		filePath := filepath.Join(rawDir, name)
 		xmlData, err := os.ReadFile(filePath)
 		if err != nil {
-			fmt.Printf("Error reading %s: %v\n", file.Name(), err)
+			fmt.Printf("Error reading %s for indexing: %v\n", name, err)
 			continue
 		}
+
 		var catalogue Catalogue
 		err = xml.Unmarshal(xmlData, &catalogue)
 		if err != nil {
-			fmt.Printf("Unmarshal error in %s: %v\n", file.Name(), err)
+			fmt.Printf("Unmarshal error in %s during indexing: %v\n", name, err)
 			continue
 		}
 
-		fmt.Printf("File: %s\n", catalogue.Name)
-		fmt.Printf(" - Selection: %d, Links: %d, Shared: %d\n",
-			len(catalogue.SelectionEntries),
-			len(catalogue.EntryLinks),
-			len(catalogue.SharedEntries))
+		cv.indexCatalogue(catalogue)
+	}
+
+	fmt.Printf("Indexing Complete. Master Map contains %d entries\n", len(cv.MasterEntries))
+
+	for _, file := range allFiles {
+		name := file.Name()
+		isLibrary := strings.Contains(name, "Library")
+		isGst := strings.HasSuffix(name, ".gst")
+		isNotCat := !strings.HasSuffix(name, ".cat")
+
+		if isLibrary || isGst || isNotCat {
+			continue
+		}
+
+		filePath := filepath.Join(rawDir, name)
+		xmlData, err := os.ReadFile(filePath)
+		if err != nil {
+			fmt.Printf("Error reading %s for conversion: %v\n", name, err)
+			continue
+		}
+
+		var catalogue Catalogue
+		err = xml.Unmarshal(xmlData, &catalogue)
+		if err != nil {
+			fmt.Printf("Unmarshal error in %s during conversion: %v\n", name, err)
+			continue
+		}
+
+		fmt.Printf("Converting File: %s\n", catalogue.Name)
 
 		var allUnits []SelectionEntry
+
 		allUnits = cv.findUnits(catalogue.SelectionEntries, allUnits)
 		allUnits = cv.findUnits(catalogue.EntryLinks, allUnits)
 		allUnits = cv.findUnits(catalogue.SharedEntries, allUnits)
@@ -81,12 +117,13 @@ func main() {
 			fmt.Printf("Error marshaling YAML for %s: %v\n", catalogue.Name, err)
 			continue
 		}
+
 		err = os.WriteFile(outPath, yamlData, 0o644)
 		if err != nil {
 			fmt.Printf("Failed to write YAML for %s: %v\n", catalogue.Name, err)
 			continue
 		}
-		fmt.Printf("Converted %s (%d units)\n", catalogue.Name, len(seed.Factions[0].Units))
+		fmt.Printf("Successfully converted %s (%d units)\n", catalogue.Name, len(seed.Factions[0].Units))
 	}
 }
 
@@ -98,7 +135,13 @@ func (c *Converter) transformUnit(entry SelectionEntry) models.UnitSeed {
 
 	for _, cost := range entry.Costs {
 		if cost.Name == "pts" {
-			fmt.Sscanf(cost.Value, "%d", &unit.Points)
+			var p float64
+			_, err := fmt.Sscanf(cost.Value, "%d", &unit.Points)
+			if err != nil {
+				fmt.Printf("Warning: could not parse points '%s' for %s: %v\n", cost.Value, entry.Name, err)
+				continue
+			}
+			unit.Points = int(p)
 		}
 	}
 
@@ -106,20 +149,16 @@ func (c *Converter) transformUnit(entry SelectionEntry) models.UnitSeed {
 		unit.Keywords = append(unit.Keywords, strings.ToUpper(cat.Name))
 	}
 
-	allProfiles := entry.Profiles
-	allProfiles = append(allProfiles, c.collectProfiles(entry)...)
+	allProfiles := c.collectProfiles(entry)
 
 	for _, p := range allProfiles {
-		if strings.Contains(p.TypeName, "Unit") {
+		if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Model") {
 			c.mapStats(p.Characteristics, &unit)
 		} else if strings.Contains(p.TypeName, "Weapon") {
 			unit.Weapons = append(unit.Weapons, c.mapWeapon(p))
 		}
 	}
 
-	for _, cat := range entry.CategoryLinks {
-		unit.Keywords = append(unit.Keywords, strings.ToUpper(cat.Name))
-	}
 	return unit
 }
 
@@ -175,6 +214,7 @@ func (c *Converter) isUnit(entry SelectionEntry) bool {
 			return true
 		}
 	}
+
 	for _, p := range entry.Profiles {
 		if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Models") {
 			return true
@@ -183,7 +223,7 @@ func (c *Converter) isUnit(entry SelectionEntry) bool {
 
 	for _, cat := range entry.CategoryLinks {
 		upperCat := strings.ToUpper(cat.Name)
-		if strings.Contains(upperCat, "IFANTRY") || strings.Contains(upperCat, "HERO") {
+		if strings.Contains(upperCat, "INFANTRY") || strings.Contains(upperCat, "HERO") {
 			return true
 		}
 	}
@@ -207,6 +247,15 @@ func (c *Converter) findUnits(entries []SelectionEntry, found []SelectionEntry) 
 func (c *Converter) collectProfiles(entry SelectionEntry) []Profile {
 	var found []Profile
 
+	found = append(found, entry.Profiles...)
+
+	if entry.TargetID != "" {
+		if target, ok := c.MasterEntries[entry.TargetID]; ok {
+			targetProfiles := c.collectProfiles(target)
+			found = append(found, targetProfiles...)
+		}
+	}
+
 	containers := [][]SelectionEntry{
 		entry.ChildEntries,
 		entry.LinkEntries,
@@ -214,9 +263,40 @@ func (c *Converter) collectProfiles(entry SelectionEntry) []Profile {
 	}
 	for _, container := range containers {
 		for _, child := range container {
-			found = append(found, child.Profiles...)
-			found = append(found, c.collectProfiles(child)...)
+			childProfiles := c.collectProfiles(child)
+			found = append(found, childProfiles...)
 		}
 	}
 	return found
+}
+
+func (c *Converter) indexEntry(entry SelectionEntry) {
+	if entry.ID != "" {
+		c.MasterEntries[entry.ID] = entry
+	}
+
+	for _, child := range entry.ChildEntries {
+		c.indexEntry(child)
+	}
+	for _, link := range entry.LinkEntries {
+		c.indexEntry(link)
+	}
+	for _, group := range entry.SelectionEntryGroups {
+		c.indexEntry(group)
+	}
+}
+
+func (c *Converter) indexCatalogue(cat Catalogue) {
+	for _, entry := range cat.SelectionEntries {
+		c.indexEntry(entry)
+	}
+	for _, link := range cat.EntryLinks {
+		c.indexEntry(link)
+	}
+	for _, shared := range cat.SharedEntries {
+		c.indexEntry(shared)
+	}
+	for _, group := range cat.SharedGroups {
+		c.indexEntry(group)
+	}
 }
