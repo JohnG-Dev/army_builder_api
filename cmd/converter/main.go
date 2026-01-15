@@ -146,7 +146,12 @@ func (c *Converter) transformUnit(entry SelectionEntry) models.UnitSeed {
 	}
 
 	for _, cat := range entry.CategoryLinks {
-		unit.Keywords = append(unit.Keywords, strings.ToUpper(cat.Name))
+		keyword := strings.ToUpper(cat.Name)
+		unit.Keywords = append(unit.Keywords, keyword)
+
+		if strings.Contains(keyword, "MANIFESTATION") || strings.Contains(keyword, "ENDLESS SPELL") {
+			unit.IsManifestation = true
+		}
 	}
 
 	allProfiles := c.collectProfiles(entry)
@@ -224,6 +229,9 @@ func (c *Converter) isUnit(entry SelectionEntry) bool {
 	for _, cat := range entry.CategoryLinks {
 		upperCat := strings.ToUpper(cat.Name)
 		if strings.Contains(upperCat, "INFANTRY") || strings.Contains(upperCat, "HERO") {
+			return true
+		}
+		if strings.Contains(upperCat, "MANIFESTATION") || strings.Contains(upperCat, "ENDLESS SPELL") {
 			return true
 		}
 	}
