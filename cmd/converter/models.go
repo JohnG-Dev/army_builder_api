@@ -9,8 +9,9 @@ type Catalogue struct {
 	EntryLinks       []SelectionEntry `xml:"entryLinks>entryLink"`
 	SharedEntries    []SelectionEntry `xml:"sharedSelectionEntries>selectionEntry"`
 	SharedGroups     []SelectionEntry `xml:"sharedSelectionEntryGroups>selectionEntryGroup"`
-	SharedProfils    []Profile        `xml:"sharedProfiles>profile"`
-	CatalogueLinks   []CatalogueLink  `xml:"catalogueLinks>cataloguelink"`
+	SharedProfiles   []Profile        `xml:"sharedProfiles>profile"`
+	CatalogueLinks   []CatalogueLink  `xml:"catalogueLinks>catalogueLink"`
+	CataegoryEntries []Category       `xml:"categoryEntries>categoryEntry"`
 }
 
 type SelectionEntry struct {
@@ -24,6 +25,7 @@ type SelectionEntry struct {
 	ChildEntries         []SelectionEntry `xml:"selectionEntries>selectionEntry"`
 	LinkEntries          []SelectionEntry `xml:"entryLinks>entryLink"`
 	SelectionEntryGroups []SelectionEntry `xml:"selectionEntryGroups>selectionEntryGroup"`
+	Constraints          []Constraint     `xml:"constraints>constraint"`
 }
 
 type Profile struct {
@@ -60,4 +62,10 @@ type CategoryLink struct {
 type CatalogueLink struct {
 	TargetID string `xml:"targetId,attr"`
 	Name     string `xml:"name,attr"`
+}
+
+type Constraint struct {
+	Type  string `xml:"type,attr"`
+	Value string `xml:"value,attr"`
+	Field string `xml:"field,attr"`
 }
