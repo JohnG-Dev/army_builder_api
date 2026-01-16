@@ -1,0 +1,586 @@
+game_name: Unknown Game
+factions:
+    - name: Bonesplitterz [LEGENDS]
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Wurrgog Prophet
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "6"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Wurrgog Staff
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Deadly Green Bolts
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Maniak Weirdnob
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "6"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Bonebeast Staff
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: War Boar’s Tusks and Hooves
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Big Boss
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "6"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: -1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Boss Chompa
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Wardokk
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Bonebeast Stikk
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Big Stabbas
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "4"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Gorktoof
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Boarboy Maniaks
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Chompas
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: War Boar’s Tusks and Hooves
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Boarboys
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Boarboy Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: War Boar’s Tusks and Hooves
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Orruk Morboys
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Paired Savage Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Orruk Arrowboys
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Stinga Bow
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Paired Savage Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Orruks
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Savage Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hedkrakka's Madmob
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Madmob Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Madmob Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Madmob Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Madmob Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kragnos, the End of Empires
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "18"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "15"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 580
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: The Dread Mace
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Tuskbreaker
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Hooves of Wrack and Ruin
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

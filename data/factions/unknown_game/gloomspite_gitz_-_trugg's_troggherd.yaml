@@ -1,0 +1,226 @@
+game_name: Unknown Game
+factions:
+    - name: Gloomspite Gitz - Trugg's Troggherd
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Dankhold Troggboss
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: -1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - RESTRICT GENERAL
+            - TRUGG'S TROGGHERD
+          weapons:
+            - name: Boulder Club
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dankhold Troggoth
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - TRUGG'S TROGGHERD
+          weapons:
+            - name: Colossal Boulder Club
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Fellwater Troggoths
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - TRUGG'S TROGGHERD
+          weapons:
+            - name: Noxious Vomit
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Spiked Club
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Trugg, the Troggoth King
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 360
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - TRUGG'S TROGGHERD
+          weapons:
+            - name: Ironshell Club
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Mighty Antlers
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Rockgut Troggoths
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - TRUGG'S TROGGHERD
+          weapons:
+            - name: Throwin’ Boulders
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Stone Maul or Craggy Hands
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

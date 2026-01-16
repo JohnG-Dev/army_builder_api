@@ -1,0 +1,575 @@
+game_name: Unknown Game
+factions:
+    - name: Ironjawz - Zoggrok's Ironmongerz
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Ardboy Big Boss
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - RESTRICT GENERAL
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Boss-hacka and Choppa
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ardboyz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Choppa or Stikka
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brute Ragerz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Rager Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brutes
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Brute Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Gore-choppa
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ironskull's Boyz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Ardboy Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Ardboy Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Ardboy Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Ardboy Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Megaboss
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - RESTRICT GENERAL
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Boss-choppa
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Morgok's Krushas
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Krusha Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Krusha Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Krusha Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Warchanter
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - RESTRICT GENERAL
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Gorkstikk and Morkstikk
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdbrute Wrekkaz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Chain-smasha
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdnob Shaman
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "6"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - RESTRICT GENERAL
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Green Puke
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Waaagh! Staff
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Zoggrok Anvilsmasha
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Skull-crushing Basha
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Ward-smashing Choppa
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Grunta-tongs
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdbrute Wrekkaz (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ZOGGROK'S IRONMONGERS
+          weapons:
+            - name: Chain-smasha
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

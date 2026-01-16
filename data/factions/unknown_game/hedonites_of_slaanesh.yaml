@@ -1,0 +1,1612 @@
+game_name: Unknown Game
+factions:
+    - name: Hedonites of Slaanesh
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: The Masque
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Razor-edged Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bladebringer, Herald on Exalted Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Contorted Epitome
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Piercing Claws and Coiled Tentacles
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dexcessa, the Talon of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "10"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Impaling Talons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Glutos Orscollion, Lord of Gluttony
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "18"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 440
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Greatblade and Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Leerstave of Loth’shar
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Scourge and Dagger
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Infernal Enrapturess, Herald of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Heartstring Lyre
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Piercing Claw
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Keeper of Secrets
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 420
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Impaling Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Elegant Greatblade
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord of Hubris
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Exquisite Scimitar
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord of Pain
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Soulpiercer Mace
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Shalaxi Helbane
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Impaling Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Soulpiercer
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Shardspeaker of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Haze Staff
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Shadow-cloaked Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Sigvald, Prince of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Shardslash
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Syll'Esske, the Vengeful Allegiance
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "4"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Axe of Dominion
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Scourging Whip
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Synessa, the Voice of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "10"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Unraveller’s Talons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Staff of Slaanesh
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Blissbarb Archers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Blissbarb Bow
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Sybarite Blade
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Blissbarb Seekers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Seeker Bow
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Exalted Steed’s Poisoned Tongue
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Sybarite Blade
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Daemonettes
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Piercing Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hellstriders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Claw-spear or Hellscourge
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Steed’s Poisoned Tongue
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Fiends
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Deadly Pincers and Barbed Stinger
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hellflayer
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Axle Blades
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Myrmidesh Painbringers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Wicked Scimitar
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Seeker Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Seekers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Agonising Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Steed’s Poisoned Tongue
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Symbaresh Twinsouls
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "2"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Merciless Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slaangor Fiendbloods
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Razor-sharp Claws and Gilded Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slickblade Seekers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Slickblade Glaive
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Exalted Steed’s Poisoned Tongue
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bladebringer, Herald on Hellflayer
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Axle Blades
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bladebringer, Herald on Seeker Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: -1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Viceleader, Herald of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: -1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Ravaging Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Exalted Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Thricefold Discord
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Carnal Blades and Wicked Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Carnal Blades and Wicked Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Carnal Blades and Wicked Claws
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Dread Pageant
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Weapons of Excess
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Weapons of Excess
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Weapons of Excess
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Weapons of Excess
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Syll'Esske, the Vengeful Allegiance (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "4"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Axe of Dominion
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Scourging Whip
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slaangor Fiendbloods (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons:
+            - name: Razor-sharp Claws and Gilded Weapons
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Pendant of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 10
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons: []
+          abilities: []
+        - name: Invaders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 10
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons: []
+          abilities: []
+      battle_formations: []
+      enhancements: []

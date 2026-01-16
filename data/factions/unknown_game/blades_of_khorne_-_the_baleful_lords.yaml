@@ -1,0 +1,227 @@
+game_name: Unknown Game
+factions:
+    - name: Blades of Khorne - The Baleful Lords
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Bloodthirster of Insensate Rage
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 410
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - BALEFUL LORDS
+          weapons:
+            - name: Great Axe of Khorne
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bloodthirster of Unfettered Fury
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 390
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - BALEFUL LORDS
+          weapons:
+            - name: Mighty Axe of Khorne
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Lash of Khorne
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Wrath of Khorne Bloodthirster
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 400
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - BALEFUL LORDS
+          weapons:
+            - name: Mighty Axe of Khorne and Bloodflail
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Hellfire Breath
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skarbrand
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 410
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - BALEFUL LORDS
+          weapons:
+            - name: Slaughter
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+            - name: Carnage
+              range: ""
+              attacks: ""
+              to_hit: ""
+              to_wound: ""
+              rend: ""
+              damage: ""
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

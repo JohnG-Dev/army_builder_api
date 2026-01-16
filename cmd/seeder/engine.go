@@ -54,7 +54,7 @@ func (sr *Seeder) SeedFile(path string) error {
 	if err != nil {
 		return fmt.Errorf("failed to begin transaction: %w", err)
 	}
-	defer tx.Rollback(sr.ctx)
+	defer func() { _ = tx.Rollback(sr.ctx) }()
 
 	sr.txQueries = sr.s.DB.WithTx(tx)
 
@@ -169,6 +169,7 @@ func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, so
 	unit, err := sr.getDB().CreateUnit(sr.ctx, database.CreateUnitParams{
 		FactionID:         factionID,
 		Name:              u.Name,
+		IsUnique:          u.IsUnique,
 		Move:              cleanStat(u.Move),
 		HealthWounds:      cleanStat(u.Health),
 		SaveStats:         cleanStat(u.Save),

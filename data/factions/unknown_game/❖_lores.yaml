@@ -1,0 +1,106 @@
+game_name: Unknown Game
+factions:
+    - name: ❖ Lores
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Forbidden Power
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons: []
+          abilities: []
+        - name: Krondspine Incarnate
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons: []
+          abilities: []
+        - name: Morbid Conjuration
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 30
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons: []
+          abilities: []
+        - name: Primal Energy
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords: []
+          weapons: []
+          abilities: []
+      battle_formations: []
+      enhancements: []

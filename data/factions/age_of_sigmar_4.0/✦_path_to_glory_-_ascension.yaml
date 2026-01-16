@@ -1,0 +1,10 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: ✦ Path to Glory - Ascension
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

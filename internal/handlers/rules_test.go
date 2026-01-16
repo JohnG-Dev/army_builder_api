@@ -25,7 +25,7 @@ func TestGetRules_ReturnsRules(t *testing.T) {
 
 	handler.GetRules(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -49,7 +49,7 @@ func TestGetRules_EmptyDB(t *testing.T) {
 
 	handler.GetRules(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -101,7 +101,7 @@ func TestGetRules_FilterByGameID(t *testing.T) {
 
 	handler.GetRules(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -173,7 +173,7 @@ func TestGetRules_FilterByType(t *testing.T) {
 	handler.GetRules(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -210,7 +210,7 @@ func TestGetRuleByID_Success(t *testing.T) {
 
 	handler.GetRuleByID(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -236,7 +236,7 @@ func TestGetRuleByID_NotFound(t *testing.T) {
 	w := httptest.NewRecorder()
 	handler.GetRuleByID(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)

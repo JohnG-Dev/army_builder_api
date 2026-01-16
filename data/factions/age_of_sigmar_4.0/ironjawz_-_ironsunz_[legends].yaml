@@ -1,0 +1,918 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Ironjawz - Ironsunz [LEGENDS]
+      description: ""
+      allegiance: DESTRUCTION
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Dakkbad Grotkicker
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "18"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 400
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - LEGENDS
+            - MONSTER
+            - UNIQUE
+            - FLY
+            - DESTRUCTION
+            - IRONJAWZ
+            - IRONSUNZ
+            - WARMASTER
+            - DESTRUCTION
+          weapons:
+            - name: Bossbiter's Roar
+              range: 8"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bossbiter's Fists and Tail
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Overboss-choppa
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Megaboss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - INFANTRY
+            - IRONJAWZ
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Boss-choppa
+              range: ""
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Warchanter
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - INFANTRY
+            - IRONJAWZ
+            - PRIEST (1)
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Gorkstikk and Morkstikk
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdnob Shaman
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "6"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - INFANTRY
+            - IRONJAWZ
+            - WIZARD (1)
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Green Puke
+              range: 10"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Waaagh! Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ardboyz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - DESTRUCTION
+            - IRONJAWZ
+            - STANDARD BEARER (1/10)
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Choppa or Stikka
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdbrute Wrekkaz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DESTRUCTION
+            - IRONJAWZ
+            - BRUTE
+            - WARD (5+)
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Chain-smasha
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brute Ragerz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DESTRUCTION
+            - IRONJAWZ
+            - BRUTE
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Rager Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ogor Gluttons
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - MUSICIAN (1/6)
+            - STANDARD BEARER (1/6)
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - GUTBUSTERS
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Glutton Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ardboy Big Boss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - IRONJAWZ
+            - INFANTRY
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Boss-hacka and Choppa
+              range: ""
+              attacks: "7"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Maw-grunta Gougers
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - MONSTER
+            - DESTRUCTION
+            - IRONJAWZ
+            - MAW-GRUNTA
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Choppas
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Maw-grunta’s Tusks
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Maw-grunta’s Trotters
+              range: ""
+              attacks: "4"
+              to_hit: 5+
+              to_wound: 2+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Maw-grunta with Hakkin' Krew
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "12"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - MONSTER
+            - DESTRUCTION
+            - IRONJAWZ
+            - MAW-GRUNTA
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Choppas
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Maw-grunta’s Tusks
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Maw-grunta’s Trotters
+              range: ""
+              attacks: "4"
+              to_hit: 5+
+              to_wound: 2+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Kill-choppas
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gore-gruntas
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - DESTRUCTION
+            - IRONJAWZ
+            - CAVALRY
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Choppa or Hacka
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Grunta’s Tusks
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Tyrant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - GUTBUSTERS
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Thundermace
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Beastskewer Glaive
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ogor Pistols
+              range: 10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brutes
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - DESTRUCTION
+            - IRONJAWZ
+            - BRUTE
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Brute Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Gore-choppa
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gore-gruntas (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - DESTRUCTION
+            - IRONJAWZ
+            - CAVALRY
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Choppa or Hacka
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Grunta’s Tusks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdbrute Wrekkaz (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DESTRUCTION
+            - IRONJAWZ
+            - BRUTE
+            - WARD (5+)
+            - IRONSUNZ
+            - DESTRUCTION
+          weapons:
+            - name: Chain-smasha
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dakkbad Grotkicker
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "18"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - LEGENDS
+            - MONSTER
+            - UNIQUE
+            - FLY
+            - DESTRUCTION
+            - IRONJAWZ
+            - IRONSUNZ
+            - WARMASTER
+            - DESTRUCTION
+          weapons:
+            - name: Bossbiter's Roar
+              range: 8"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bossbiter's Fists and Tail
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Overboss-choppa
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

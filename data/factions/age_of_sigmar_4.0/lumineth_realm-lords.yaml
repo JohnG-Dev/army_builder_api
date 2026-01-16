@@ -1,0 +1,1698 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Lumineth Realm-lords
+      description: ""
+      allegiance: ORDER
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Alarith Stonemage
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - WIZARD (1)
+            - ALARITH
+            - ORDER
+          weapons:
+            - name: Staff of the High Peaks
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Archmage Teclis and Celennar, Spirit of Hysh
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "16"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 560
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - FLY
+            - WARMASTER
+            - ORDER
+            - WARD (5+)
+            - WIZARD (4)
+            - AELF
+            - LUMINETH REALM-LORDS
+            - ORDER
+          weapons:
+            - name: Celennar’s Moonbright Talons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Sword of Teclis
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Lunar Staff
+              range: 12"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+          abilities: []
+        - name: Avalenor, the Stoneheart King
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "16"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 410
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARMASTER
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - WARD (6+)
+            - ALARITH
+            - ORDER
+          weapons:
+            - name: Firestealer Hammers
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Cloven Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Geomantic Blast
+              range: 12"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ellania and Ellathor, Eclipsian Warsages
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "4"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 300
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - ORDER
+            - WARD (5+)
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - WIZARD (1)
+            - SCINARI
+            - VANARI
+            - ORDER
+          weapons:
+            - name: Altairi
+              range: ""
+              attacks: "5"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Dianaer
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Blazing Sunbolt
+              range: 12"
+              attacks: "3"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hurakan Windmage
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - WIZARD (1)
+            - HURAKAN
+            - FLY
+            - ORDER
+          weapons:
+            - name: Windblast Vortex
+              range: 10"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Aspiragillum
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lyrior Uthralle, Warden of Ymetrica
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - WIZARD (1)
+            - CAVALRY
+            - VANARI
+            - ORDER
+          weapons:
+            - name: Lyrior’s Sword
+              range: ""
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Farael’s Horns and Claws
+              range: ""
+              attacks: "4"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Daemonbane
+              range: 12"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Daemonbane
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Scinari Calligrave
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - SCINARI
+            - WIZARD (1)
+            - ORDER
+          weapons:
+            - name: Calligrave Blade
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Scinari Cathallar
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - WIZARD (1)
+            - SCINARI
+            - ORDER
+          weapons:
+            - name: Despairing Touch
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Scinari Enlightener
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - SCINARI
+            - WIZARD (2)
+            - ORDER
+          weapons:
+            - name: Crescent Staff
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Enlightener Blade
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Scinari Loreseeker
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - SCINARI
+            - WIZARD (1)
+            - ORDER
+          weapons:
+            - name: Eclipsian Staff
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Loreseeker Blade
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Sevireth, Lord of the Seventh Wind
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 18"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 340
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - WARMASTER
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - MONSTER
+            - FLY
+            - WARD (5+)
+            - HURAKAN
+            - ORDER
+          weapons:
+            - name: Swirling Shards
+              range: ""
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Enathrai, the Howling Death
+              range: 12"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "3"
+              damage: D3+1
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Light of Eltharion
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - ORDER
+            - WARD (5+)
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Celennari Blade
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Fangsword of Eltharion
+              range: ""
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "3"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Searing Darts of Light
+              range: 12"
+              attacks: "3"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Bannerblade
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - VANARI
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Bannerblade’s Sword
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Lord Regent
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - WIZARD (1)
+            - CAVALRY
+            - VANARI
+            - ORDER
+          weapons:
+            - name: Regent’s Sword
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Lightcourser’s Horns and Claws
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Alarith Spirit of the Mountain
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 280
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - MONSTER
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - WARD (6+)
+            - ALARITH
+            - ORDER
+          weapons:
+            - name: Stoneheart Worldhammer
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Cloven Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Geomantic Blast
+              range: 12"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ydrilan Riverblades
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 7"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - AELF
+            - CHAMPION (1/10)
+            - YDRILAN
+            - ORDER
+          weapons:
+            - name: Ythara Darts
+              range: 10"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ydrilan Blades
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Alarith Stoneguard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "2"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - AELF
+            - ALARITH
+            - STANDARD BEARER (1/5)
+            - ORDER
+          weapons:
+            - name: Stoneguard Hammers
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hurakan Windchargers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "3"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - AELF
+            - STANDARD BEARER (1/5)
+            - CAVALRY
+            - HURAKAN
+            - ORDER
+          weapons:
+            - name: Treerunner’s Claws
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Windcharger Bow
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Windcharger Bow
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hurakan Spirit of the Wind
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 18"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - MONSTER
+            - FLY
+            - WARD (5+)
+            - HURAKAN
+            - ORDER
+          weapons:
+            - name: Swirling Shards
+              range: ""
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bow of the Wind’s Vengeance
+              range: 12"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Bladelords
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "2"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - AELF
+            - VANARI
+            - ORDER
+          weapons:
+            - name: 'Sunmetal Blade: Perfect Strike'
+              range: ""
+              attacks: "1"
+              to_hit: ⟝See 'Swordmasters' ability⟞
+              to_wound: ⟝See 'Swordmasters' ability⟞
+              rend: ⟝See 'Swordmasters' ability⟞
+              damage: ⟝See 'Swordmasters' ability⟞
+              version: ""
+              source: ""
+            - name: 'Sunmetal Blade: Flurry of Blows'
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Dawnriders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - AELF
+            - VANARI
+            - STANDARD BEARER (1/5)
+            - CAVALRY
+            - ORDER
+          weapons:
+            - name: Dawnrider Lances and Blades
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stallions’ Dashing Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Auralan Sentinels
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - AELF
+            - VANARI
+            - ORDER
+          weapons:
+            - name: Auralan Bow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sentinel Blades
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Auralan Wardens
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - AELF
+            - VANARI
+            - ORDER
+          weapons:
+            - name: Warden Pikes and Blades
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Starshard Ballista
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - WAR MACHINE
+            - VANARI
+            - ORDER
+          weapons:
+            - name: Starshard Bolts
+              range: 24"
+              attacks: "3"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Crew’s Arming Swords
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Shrine Luminor
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: '-'
+          health: "12"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: '-'
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - FACTION TERRAIN
+            - FLY
+            - ORDER
+            - LUMINETH REALM-LORDS
+            - ORDER
+          weapons: []
+          abilities: []
+        - name: Myari's Purifiers
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - INFANTRY
+            - UNIQUE
+            - CHAMPION
+            - LEGENDS
+            - AELF
+            - LUMINETH REALM-LORDS
+            - VANARI
+            - SCINARI
+            - ALARITH
+            - ORDER
+          weapons:
+            - name: Auralan Bow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Purifier Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Purifier Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Purifier Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Purifier Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Light of Eltharion (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 280
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - INFANTRY
+            - WARD (4+)
+            - ORDER
+          weapons:
+            - name: Celennari Blade
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Fangsword of Eltharion
+              range: ""
+              attacks: "5"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "3"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Searing Darts of Light
+              range: 12"
+              attacks: "3"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanari Bannerblade (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - AELF
+            - LUMINETH REALM-LORDS
+            - VANARI
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Bannerblade’s Sword
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Silver Wand
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+          weapons: []
+          abilities: []
+        - name: Vanari Battlehost
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 10
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+          weapons: []
+          abilities: []
+        - name: Scinari Council
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 10
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+          weapons: []
+          abilities: []
+        - name: Lore of Prismatic Resonance
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 10
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+          weapons: []
+          abilities: []
+      battle_formations: []
+      enhancements: []

@@ -1,0 +1,481 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Nighthaunt - The Clattering Procession
+      description: ""
+      allegiance: DEATH
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Black Coach
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WAR MACHINE
+            - WARD (5+)
+            - HERO
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Soulreach Grasp
+              range: 10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wraith's Spectral Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Relic Bearers’ Claws and Ethereal Steeds’ Hooves
+              range: ""
+              attacks: "14"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Black Coach
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WAR MACHINE
+            - WARD (5+)
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Soulreach Grasp
+              range: 10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wraith's Spectral Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Relic Bearers’ Claws and Ethereal Steeds’ Hooves
+              range: ""
+              attacks: "14"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dreadblade Harrows
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - CAVALRY
+            - WARD (5+)
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Dreadblade
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ethereal Steed’s Ghostly Hooves and Teeth
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hexwraiths
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - CHAMPION
+            - FLY
+            - NIGHTHAUNT
+            - CAVALRY
+            - WARD (5+)
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Ethereal Steed’s Ghostly Hooves and Teeth
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Spectral Scythe
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight of Shrouds on Ethereal Steed
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - CAVALRY
+            - WARD (5+)
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Ethereal Steed’s Ghostly Hooves and Teeth
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sword of Stolen Hours
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Reikenor the Grimhailer
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DEATH
+            - UNIQUE
+            - FLY
+            - NIGHTHAUNT
+            - CAVALRY
+            - WIZARD (1)
+            - WARD (5+)
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Fellreaper
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Kyllaron’s Ghostly Hooves and Teeth
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Black Coach (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 310
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WAR MACHINE
+            - WARD (5+)
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Wraiths' Spectral Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Black Coach's Iron-shod Wheels
+              range: ""
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Black Coach (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 300
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WAR MACHINE
+            - WARD (5+)
+            - HERO
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Wraiths' Spectral Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Black Coach's Iron-shod Wheels
+              range: ""
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

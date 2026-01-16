@@ -25,7 +25,7 @@ func TestGetUnits_ReturnsUnits(t *testing.T) {
 	handler.GetNonManifestationUnits(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -48,7 +48,7 @@ func TestGetUnits_EmptyDB(t *testing.T) {
 	handler.GetNonManifestationUnits(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -75,7 +75,7 @@ func TestGetUnits_FilterByFactionID(t *testing.T) {
 	handler.GetUnits(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -104,7 +104,7 @@ func TestGetManifestations_ReturnsManifestations(t *testing.T) {
 	handler.GetManifestations(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -132,7 +132,7 @@ func TestGetUnitByID_Success(t *testing.T) {
 	handler.GetUnitByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -157,7 +157,7 @@ func TestGetUnitByID_NotFound(t *testing.T) {
 	handler.GetUnitByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status 404, got %d", res.StatusCode)
@@ -179,7 +179,7 @@ func TestGetUnitsByMatchedPlay(t *testing.T) {
 	handler.GetUnits(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expectd status code 200, got %d", res.StatusCode)
@@ -209,7 +209,7 @@ func TestGetManifestationByID_Success(t *testing.T) {
 	handler.GetManifestationByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -235,7 +235,7 @@ func TestGetManifestationByID_NotFound(t *testing.T) {
 
 	handler.GetManifestationByID(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)

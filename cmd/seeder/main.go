@@ -29,7 +29,7 @@ func main() {
 	defer dbpool.Close()
 
 	logger, _ := zap.NewDevelopment()
-	defer logger.Sync()
+	defer func() { _ = logger.Sync() }()
 
 	queries := database.New(dbpool)
 	s := &state.State{
@@ -61,7 +61,7 @@ func main() {
 	}
 	s.Logger.Info("Database cleared successfully")
 
-	files, err := filepath.Glob("data/factions/*.yaml")
+	files, err := filepath.Glob("data/factions/**/*.yaml")
 	if err != nil {
 		s.Logger.Fatal("Failed to glob files", zap.Error(err))
 	}

@@ -1,0 +1,1893 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Ogor Mawtribes
+      description: ""
+      allegiance: DESTRUCTION
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Tyrant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - GUTBUSTERS
+            - DESTRUCTION
+          weapons:
+            - name: Thundermace
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Beastskewer Glaive
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ogor Pistols
+              range: 10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bloodpelt Hunter
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - GUTBUSTERS
+            - DESTRUCTION
+          weapons:
+            - name: Skullshatter Crossbow
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Hacker-axe and Meatblade
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Impaling Spear
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Butcher
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - GUTBUSTERS
+            - WIZARD (1)
+            - DESTRUCTION
+          weapons:
+            - name: Butcher’s Tools
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Firebelly
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - WIZARD (1)
+            - DESTRUCTION
+          weapons:
+            - name: Basalt Hammer
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Fire Breath
+              range: 8"
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Frostlord on Stonehorn
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "15"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 330
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - MONSTER
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Stonehorn’s Hooves
+              range: ""
+              attacks: D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Frost Spear
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Stonehorn’s Rock-hard Horns
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Frostlord on Thundertusk
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "15"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 260
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - MONSTER
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Ice Blast
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3+2
+              version: ""
+              source: ""
+            - name: Frost Spear
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Thundertusk’s Colossal Tusks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Huskard on Stonehorn
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 300
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - MONSTER
+            - BEASTCLAW RAIDERS
+            - PRIEST (1)
+            - DESTRUCTION
+          weapons:
+            - name: Stonehorn’s Hooves
+              range: ""
+              attacks: D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Punches and Kicks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stonehorn’s Rock-hard Horns
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Harpoon Launcher
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chaintrap
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Blood Vulture
+              range: 24"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Huskard on Thundertusk
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - MONSTER
+            - BEASTCLAW RAIDERS
+            - PRIEST (1)
+            - DESTRUCTION
+          weapons:
+            - name: Ice Blast
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3+2
+              version: ""
+              source: ""
+            - name: Thundertusk’s Colossal Tusks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Punches and Kicks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Harpoon Launcher
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chaintrap
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Blood Vulture
+              range: 24"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Icebrow Hunter
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Culling Club
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Hunter’s Crossbow
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Great Throwing Spear
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kragnos, the End of Empires
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "18"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "15"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 580
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - MONSTER
+            - WARMASTER
+            - WARD (5+)
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+          weapons:
+            - name: The Dread Mace
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "3"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Tuskbreaker
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Hooves of Wrack and Ruin
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slaughtermaster
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - GUTBUSTERS
+            - WIZARD (1)
+            - DESTRUCTION
+          weapons:
+            - name: Gnoblars’ Implements
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stump Blades
+              range: ""
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Frost Sabres
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 70
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - BEAST
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Tusks and Claws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gnoblar Scraplauncher
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - RHINOX
+            - WAR MACHINE
+            - DESTRUCTION
+          weapons:
+            - name: Rhinox’s Sharp Horns
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Scrappers’ Stabbers
+              range: ""
+              attacks: "7"
+              to_hit: 5+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Piles of Old Scrap
+              range: 24"
+              attacks: 3D6
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gorger Mawpack
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - CHAMPION (1/5)
+            - MUSICIAN (1/5)
+            - DESTRUCTION
+          weapons:
+            - name: Clubs, Claws and Jaws
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Icefall Yhetees
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - BEASTCLAW RAIDERS
+            - INFANTRY
+            - WARD (6+)
+            - DESTRUCTION
+          weapons:
+            - name: Claws and Ice‑encrusted Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ironblaster
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - GUTBUSTERS
+            - RHINOX
+            - WAR MACHINE
+            - DESTRUCTION
+          weapons:
+            - name: Rhinox’s Sharp Horns
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Clubber
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: 'Ironblaster Cannon: Big Shot'
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+            - name: 'Ironblaster Cannon: Hail Shot'
+              range: 12"
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Leadbelchers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 4
+          max_unit_size: 8
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - GUTBUSTERS
+            - DESTRUCTION
+          weapons:
+            - name: Leadbelcher Gun
+              range: 15"
+              attacks: D3
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bludgeoning Blows
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Maneaters
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - DESTRUCTION
+          weapons:
+            - name: Pistols or Throwing Weapons
+              range: 10"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Maneater Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mournfang Pack
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - MUSICIAN (1/4)
+            - STANDARD BEARER (1/4)
+            - CAVALRY
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Mournfang Rider Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Mournfang’s Tusks
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ironlock Pistol
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ogor Gluttons
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - MUSICIAN (1/6)
+            - STANDARD BEARER (1/6)
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - GUTBUSTERS
+            - DESTRUCTION
+          weapons:
+            - name: Glutton Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stonehorn Beastriders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 270
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - MONSTER
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Stonehorn’s Hooves
+              range: ""
+              attacks: D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Punches and Kicks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stonehorn’s Rock-hard Horns
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Harpoon Launcher
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chaintrap
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Blood Vulture
+              range: 24"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Thundertusk Beastriders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - MONSTER
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Ice Blast
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3+2
+              version: ""
+              source: ""
+            - name: Thundertusk’s Colossal Tusks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Punches and Kicks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Harpoon Launcher
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chaintrap
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Blood Vulture
+              range: 24"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gnoblars
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 20
+          max_unit_size: 40
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - CHAMPION
+            - DESTRUCTION
+          weapons:
+            - name: Sharp Stuff
+              range: 8"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Motley Assortment of Weapons
+              range: ""
+              attacks: "1"
+              to_hit: 5+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ironguts
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 4
+          max_unit_size: 8
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - GUTBUSTERS
+            - MUSICIAN (1/4)
+            - STANDARD BEARER (1/4)
+            - DESTRUCTION
+          weapons:
+            - name: Irongut Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gorlok Blackpowder
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - LEGENDS
+            - INFANTRY
+            - DESTRUCTION
+            - OGOR
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+          weapons:
+            - name: Grunderbuss
+              range: 12"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Great Cutlass
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hrothgorn Mantrapper
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - LEGENDS
+            - INFANTRY
+            - DESTRUCTION
+            - OGOR
+            - OGOR MAWTRIBES
+            - BEASTCLAW RAIDERS
+            - REGIMENTAL LEADER
+            - DESTRUCTION
+          weapons:
+            - name: Trap Launcher
+              range: 12"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Hunting Knife
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ironblaster (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - GUTBUSTERS
+            - RHINOX
+            - WAR MACHINE
+            - DESTRUCTION
+          weapons:
+            - name: Rhinox’s Sharp Horns
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Clubber
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ironblaster Cannon
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "5"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gnoblar Scraplauncher (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - RHINOX
+            - WAR MACHINE
+            - DESTRUCTION
+          weapons:
+            - name: Rhinox’s Sharp Horns and Crew's Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Scrap Lobber
+              range: 18"
+              attacks: "12"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mantrapper
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "3"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - INFANTRY
+            - DESTRUCTION
+            - OGOR
+            - OGOR MAWTRIBES
+            - BEASTCLAW RAIDERS
+            - DESTRUCTION
+          weapons:
+            - name: Mantrap Launcher
+              range: 15"
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Mantrapper’s Hunting Knife
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mawpath Menaces
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 10
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+          weapons: []
+          abilities: []
+        - name: Greedy Eaters
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 10
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+          weapons: []
+          abilities: []
+        - name: Touched by the Everwinter
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: ""
+          health: ""
+          save: ""
+          ward: ""
+          invuln: ""
+          control: ""
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+          weapons: []
+          abilities: []
+      battle_formations: []
+      enhancements: []

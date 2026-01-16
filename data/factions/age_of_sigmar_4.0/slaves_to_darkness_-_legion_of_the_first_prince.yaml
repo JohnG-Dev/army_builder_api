@@ -1,0 +1,1155 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Slaves to Darkness - Legion of the First Prince
+      description: ""
+      allegiance: CHAOS
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Be'lakor, the Dark Master
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - FLY
+            - WARMASTER
+            - WIZARD (2)
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - WARD (6+)
+            - CHAOS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Blade of Shadows
+              range: ""
+              attacks: "8"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Fell Claw and Spearing Tail
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Daemon Prince
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "10"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - INFANTRY
+            - WARD (6+)
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Hellforged Weapons
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Eternus, Blade of the First Prince
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 9"
+          health: "9"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - SLAVES TO DARKNESS
+            - CAVALRY
+            - CHAOS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Death Glaive and Skull Flail
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Drakocephalus’s Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Varanguard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 320
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - WARRIORS OF CHAOS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Daemonforged Blades
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Steed’s Tearing Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Sorcerer Lord
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - WIZARD (1)
+            - INFANTRY
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Sorcerer Staff and Runeblade
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Legionnaires
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 8
+          max_unit_size: 16
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - CHAMPION (1/8)
+            - UNDIVIDED
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Darkiron Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Furies
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - FLY
+            - WARD (6+)
+            - INFANTRY
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Razor-sharp Dagger and Claws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Centaurion Marshal
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - CAVALRY
+            - CHAOS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Mauling Spear, Skull Bludgeon and Varanspire Gladius
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Bloodcrushers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - CHAOS
+            - DAEMON
+            - CHAMPION
+            - MUSICIAN (1/3)
+            - STANDARD BEARER (1/3)
+            - CAVALRY
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Bloodcrusher Hellblade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Juggernaut’s Brazen Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Beasts of Nurgle
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 7"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (5+)
+            - CHAOS
+            - DAEMON
+            - BEAST
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Filthy Claws and Slobbering Maw
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Bloodletters
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - CHAOS
+            - DAEMON
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Hellblade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Flamers of Tzeentch
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAOS
+            - DAEMON
+            - WARD (6+)
+            - FLY
+            - CHAMPION
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Flaming Maws
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Warping Flames
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Fiends
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DAEMON
+            - WARD (6+)
+            - BEAST
+            - CHAOS
+            - CHAMPION
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Deadly Pincers and Barbed Stinger
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Hellflayer
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - DAEMON
+            - WARD (6+)
+            - WAR MACHINE
+            - LEGION OF THE FIRST PRINCE
+            - SLAVES TO DARKNESS
+            - CHAOS
+          weapons:
+            - name: Axle Blades
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Plaguebearers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (5+)
+            - CHAOS
+            - DAEMON
+            - CHAMPION
+            - INFANTRY
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Plaguesword
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Screamers of Tzeentch
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - DAEMON
+            - WARD (6+)
+            - BEAST
+            - FLY
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Lamprey Bite
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Beasts of Nurgle
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 7"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (5+)
+            - CHAOS
+            - DAEMON
+            - BEAST
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Filthy Claws and Slobbering Maw
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Bloodcrushers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - CHAOS
+            - DAEMON
+            - CHAMPION
+            - MUSICIAN (1/3)
+            - STANDARD BEARER (1/3)
+            - CAVALRY
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Bloodcrusher Hellblade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Juggernaut’s Brazen Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Bloodletters
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - CHAOS
+            - DAEMON
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Hellblade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Fiends
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DAEMON
+            - WARD (6+)
+            - BEAST
+            - CHAOS
+            - CHAMPION
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Deadly Pincers and Barbed Stinger
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Flamers of Tzeentch
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAOS
+            - DAEMON
+            - WARD (6+)
+            - FLY
+            - CHAMPION
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Flaming Maws
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Warping Flames
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Hellflayer
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - DAEMON
+            - WARD (6+)
+            - WAR MACHINE
+            - LEGION OF THE FIRST PRINCE
+            - SLAVES TO DARKNESS
+            - CHAOS
+          weapons:
+            - name: Axle Blades
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Plaguebearers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (5+)
+            - CHAOS
+            - DAEMON
+            - CHAMPION
+            - INFANTRY
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Plaguesword
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Legion of the First Prince Screamers of Tzeentch
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - DAEMON
+            - WARD (6+)
+            - BEAST
+            - FLY
+            - SLAVES TO DARKNESS
+            - LEGION OF THE FIRST PRINCE
+            - CHAOS
+          weapons:
+            - name: Lamprey Bite
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

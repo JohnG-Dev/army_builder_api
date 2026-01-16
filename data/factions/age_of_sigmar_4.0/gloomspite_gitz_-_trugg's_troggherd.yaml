@@ -1,0 +1,256 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Gloomspite Gitz - Trugg's Troggherd
+      description: ""
+      allegiance: DESTRUCTION
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Dankhold Troggboss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - MONSTER
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - TROGGOTH
+            - RESTRICT GENERAL
+            - TRUGG'S TROGGHERD
+            - DESTRUCTION
+          weapons:
+            - name: Boulder Club
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dankhold Troggoth
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - MONSTER
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - TROGGOTH
+            - TRUGG'S TROGGHERD
+            - DESTRUCTION
+          weapons:
+            - name: Colossal Boulder Club
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Fellwater Troggoths
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - TROGGOTH
+            - TRUGG'S TROGGHERD
+            - DESTRUCTION
+          weapons:
+            - name: Noxious Vomit
+              range: 6"
+              attacks: D3
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Spiked Club
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Trugg, the Troggoth King
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 360
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - MONSTER
+            - WARMASTER
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - TROGGOTH
+            - TRUGG'S TROGGHERD
+            - DESTRUCTION
+          weapons:
+            - name: Ironshell Club
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "3"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Mighty Antlers
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Rockgut Troggoths
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - TROGGOTH
+            - WARD (5+)
+            - TRUGG'S TROGGHERD
+            - DESTRUCTION
+          weapons:
+            - name: Throwin’ Boulders
+              range: 10"
+              attacks: "1"
+              to_hit: 5+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Stone Maul or Craggy Hands
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

@@ -56,12 +56,7 @@ func main() {
 		logger, _ = zap.NewProduction()
 	}
 
-	defer func() {
-		err := logger.Sync()
-		if err != nil {
-			log.Printf("Failed to sync logger: %v", err)
-		}
-	}()
+	defer func() { _ = logger.Sync() }()
 
 	s := &state.State{
 		DB:     queries,

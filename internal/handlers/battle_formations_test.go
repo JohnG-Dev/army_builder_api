@@ -28,7 +28,7 @@ func TestGetBattleFormations_ReturnsBattleFormations(t *testing.T) {
 	handler.GetBattleFormations(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -83,7 +83,7 @@ func TestGetBattleFormations_FilterByGameID(t *testing.T) {
 	handler.GetBattleFormations(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -141,7 +141,7 @@ func TestBattleFormations_FilterByFactionID(t *testing.T) {
 	handler.GetBattleFormations(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -174,7 +174,7 @@ func TestGetBattleFormationByID_Success(t *testing.T) {
 
 	handler.GetBattleFormationByID(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -201,7 +201,7 @@ func TestGetBattleFormationByID_NotFound(t *testing.T) {
 
 	handler.GetBattleFormationByID(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)

@@ -1,0 +1,10 @@
+game_name: Unknown Game
+factions:
+    - name: ✦ Path to Glory - Ascension
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

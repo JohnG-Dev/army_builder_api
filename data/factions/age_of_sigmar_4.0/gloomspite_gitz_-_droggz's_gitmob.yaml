@@ -1,0 +1,653 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Gloomspite Gitz - Droggz's Gitmob
+      description: ""
+      allegiance: DESTRUCTION
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Wolfgit Retinue
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 70
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - GITMOB
+            - DROGGZ'S GITMOB
+            - DESTRUCTION
+          weapons:
+            - name: Grot Bow
+              range: 15"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Snarlfang’s Slavering Jaws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Snarlfang’s Slavering Jaws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Stabbin’ Stikka
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Sunsteala Wheelas
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - GITMOB
+            - WAR MACHINE
+            - CHAMPION
+            - DROGGZ'S GITMOB
+            - DESTRUCTION
+          weapons:
+            - name: Grot Bow
+              range: 15"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Wheela Slicers and Stabbin’ Stikka
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Snarlfangs' Frothing Jaws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Snarlpack Cavalry
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - GITMOB
+            - MUSICIAN (1/3)
+            - STANDARD BEARER (1/3)
+            - DROGGZ'S GITMOB
+            - DESTRUCTION
+          weapons:
+            - name: Giant Snarlfang’s Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Pointy Skewas
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Snarlfang Riders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - MUSICIAN (1/5)
+            - STANDARD BEARER (1/5)
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - GITMOB
+            - DROGGZ'S GITMOB
+            - DESTRUCTION
+          weapons:
+            - name: Grot Bow
+              range: 15"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Snarlfang’s Slavering Jaws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Stabbin’ Stikka
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Snarlboss on War-Wheela
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - HERO
+            - WAR MACHINE
+            - GITMOB
+            - DROGGZ'S GITMOB
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Snarlfangs' Frothing Jaws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Chain Basha
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wheela Slicers
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Snarlboss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - HERO
+            - GITMOB
+            - CAVALRY
+            - DROGGZ'S GITMOB
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Snarlfang's Slavering Jaws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Boss Loppa
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Rippa's Snarlfangs
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - GITMOB
+            - CAVALRY
+            - DROGGZ'S GITMOB
+            - DESTRUCTION
+          weapons:
+            - name: Snarlfang’s Slavering Jaws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wolfgit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Snarlfang’s Slavering Jaws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wolfgit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Snarlfang’s Slavering Jaws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wolfgit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Frazzlegit Shaman on War-Wheela
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - HERO
+            - WIZARD (1)
+            - WAR MACHINE
+            - GITMOB
+            - DROGGZ'S GITMOB
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Snarlfangs' Frothing Jaws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wheela Slicers
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Droggz da Sunchompa
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - UNIQUE
+            - HERO
+            - CAVALRY
+            - GITMOB
+            - DROGGZ'S GITMOB
+            - DESTRUCTION
+          weapons:
+            - name: Jaggedsnarl's Jaws
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Da Metal Toof
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Doom Diver Catapult
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - WAR MACHINE
+            - GITMOB
+            - DROGGZ'S GITMOB
+            - DESTRUCTION
+          weapons:
+            - name: Slicers and Krag-smasha's Paws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Doom Diver
+              range: 24"
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "3"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Catapult Crew Tools
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 6+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

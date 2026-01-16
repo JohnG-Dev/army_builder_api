@@ -27,7 +27,7 @@ func TestGetGames_ReturnsGame(t *testing.T) {
 	handler.GetGames(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -52,7 +52,7 @@ func TestGetGames_EmptyDB(t *testing.T) {
 	handler.GetGames(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -88,7 +88,7 @@ func TestGetGames_MultipleGames(t *testing.T) {
 	handler.GetGames(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -118,7 +118,7 @@ func TestGetGameByName(t *testing.T) {
 	handler.GetGames(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -146,7 +146,7 @@ func TestGamesByID_Success(t *testing.T) {
 	handler.GetGameByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -174,7 +174,7 @@ func TestGameByID_NotFound(t *testing.T) {
 	handler.GetGameByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)
@@ -195,7 +195,7 @@ func TestGameByID_InvalidUUID(t *testing.T) {
 	handler.GetGameByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusBadRequest {
 		t.Errorf("expected status code 400, got %d", res.StatusCode)

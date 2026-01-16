@@ -28,7 +28,7 @@ func TestGetWeapons_ReturnsWeapons(t *testing.T) {
 	handler.GetWeapons(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -54,7 +54,7 @@ func TestGetWeapons_EmptyDB(t *testing.T) {
 	handler.GetWeapons(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -84,7 +84,7 @@ func TestGetWeapons_FilterByUnitID(t *testing.T) {
 	handler.GetWeapons(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -116,7 +116,7 @@ func TestGetWeaponByID_Success(t *testing.T) {
 	handler.GetWeaponByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -143,7 +143,7 @@ func TestGetWeaponByID_NotFound(t *testing.T) {
 	handler.GetWeaponByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)
@@ -164,7 +164,7 @@ func TestGetWeaponsByID_InvalidUUID(t *testing.T) {
 	handler.GetWeaponByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusBadRequest {
 		t.Errorf("expected status code 400, got %d", res.StatusCode)

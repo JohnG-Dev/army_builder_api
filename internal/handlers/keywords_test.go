@@ -28,7 +28,7 @@ func TestGetKeywords_ReturnsKeywords(t *testing.T) {
 	handler.GetKeywords(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -79,7 +79,7 @@ func TestGetKeywords_FilterByGameID(t *testing.T) {
 	handler.GetKeywords(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -128,7 +128,7 @@ func TestGetKeywords_FilterByUnitID(t *testing.T) {
 	handler.GetKeywords(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -171,7 +171,7 @@ func TestGetUnitsWithKeyword_Success(t *testing.T) {
 	handler.GetUnitsWithKeyword(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -222,7 +222,7 @@ func TestGetUnitsWithKeywordAndValue(t *testing.T) {
 	handler.GetUnitsWithKeywordAndValue(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -256,7 +256,7 @@ func TestGetKeywordByID_Success(t *testing.T) {
 	handler.GetKeywordByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -285,7 +285,7 @@ func TestGetKeywordByID_NotFound(t *testing.T) {
 	handler.GetKeywordByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)

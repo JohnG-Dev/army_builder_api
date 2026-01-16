@@ -31,7 +31,7 @@ func TestGetAbilities_ReturnsAbilities(t *testing.T) {
 	handler.GetAbilities(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -88,7 +88,7 @@ func TestGetAbilities_FilterByUnitID(t *testing.T) {
 	handler.GetAbilities(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -150,7 +150,7 @@ func TestGetAbilities_FilterByFactionID(t *testing.T) {
 	handler.GetAbilities(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -212,7 +212,7 @@ func TestGetAbilites_FilterByType(t *testing.T) {
 	handler.GetAbilities(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -273,7 +273,7 @@ func TestGetAbilities_FilterByPhase(t *testing.T) {
 	handler.GetAbilities(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -308,7 +308,7 @@ func TestGetAbilityByID_Success(t *testing.T) {
 	handler.GetAbilityByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status cde 200, got %d", res.StatusCode)
@@ -335,7 +335,7 @@ func TestGetAbilityByID_NotFound(t *testing.T) {
 	handler.GetAbilityByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)

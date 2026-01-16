@@ -42,7 +42,7 @@ func TestValidateArmy_Success(t *testing.T) {
 	handler.ValidateArmy(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -99,7 +99,7 @@ func TestValidateArmy_OverPoints(t *testing.T) {
 
 	handler.ValidateArmy(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -154,7 +154,7 @@ func TestValidateArmy_WrongFaction(t *testing.T) {
 
 	handler.ValidateArmy(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)

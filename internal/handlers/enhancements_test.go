@@ -27,7 +27,7 @@ func TestGetEnhancements_ReturnsEnhancements(t *testing.T) {
 
 	handler.GetEnhancements(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -87,7 +87,7 @@ func TestGetEnhancements_FilterByFactionID(t *testing.T) {
 	handler.GetEnhancements(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -122,7 +122,7 @@ func TestGetEnhancementByID_Success(t *testing.T) {
 	handler.GetEnhancementByID(w, req)
 	res := w.Result()
 
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)
@@ -149,7 +149,7 @@ func TestGetEnhancementByID_NotFound(t *testing.T) {
 	handler.GetEnhancementByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status code 404, got %d", res.StatusCode)

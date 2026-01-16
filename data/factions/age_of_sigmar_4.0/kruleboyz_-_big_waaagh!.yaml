@@ -1,0 +1,10 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Kruleboyz - Big Waaagh!
+      description: ""
+      allegiance: DESTRUCTION
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

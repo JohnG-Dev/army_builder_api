@@ -1,0 +1,10 @@
+game_name: Unknown Game
+factions:
+    - name: Fyreslayers - The Duardin Ascendant [LEGENDS]
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

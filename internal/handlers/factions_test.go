@@ -26,7 +26,7 @@ func TestListFactions_ReturnsFaction(t *testing.T) {
 	handler.GetFactions(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -49,7 +49,7 @@ func TestListFactions_Empty(t *testing.T) {
 	handler.GetFactions(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -75,7 +75,7 @@ func TestListFactions_FilterByGameID(t *testing.T) {
 	handler.GetFactions(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -102,7 +102,7 @@ func TestGetFactionByID_NotFound(t *testing.T) {
 	handler.GetFactionByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusNotFound {
 		t.Errorf("expected status 404, got %d", res.StatusCode)
@@ -125,7 +125,7 @@ func TestGetFactionByID_Success(t *testing.T) {
 	handler.GetFactionByID(w, req)
 
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status 200, got %d", res.StatusCode)
@@ -153,7 +153,7 @@ func TestGetFactionsByName(t *testing.T) {
 
 	handler.GetFactions(w, req)
 	res := w.Result()
-	defer res.Body.Close()
+	defer func() { _ = res.Body.Close() }() 
 
 	if res.StatusCode != http.StatusOK {
 		t.Errorf("expected status code 200, got %d", res.StatusCode)

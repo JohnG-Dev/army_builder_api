@@ -1,0 +1,10 @@
+game_name: Unknown Game
+factions:
+    - name: Kruleboyz - Big Waaagh!
+      description: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []
