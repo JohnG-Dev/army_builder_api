@@ -6,14 +6,17 @@ type SeedData struct {
 }
 
 type FactionSeed struct {
-	Name             string                `yaml:"name"`
-	Description      string                `yaml:"description"`
-	Allegiance       string                `yaml:"allegiance"`
-	Version          string                `yaml:"version"`
-	Source           string                `yaml:"source"`
-	Units            []UnitSeed            `yaml:"units"`
-	BattleFormations []BattleFormationSeed `yaml:"battle_formations"`
-	Enhancements     []EnhancementSeed     `yaml:"enhancements"`
+	Name               string                `yaml:"name"`
+	Description        string                `yaml:"description"`
+	IsArmyOfRenown     bool                  `yaml:"is_army_of_renown"`
+	IsRegimentOfRenown bool                  `yaml:"is_regiment_of_renown"`
+	ParentFactionName  string                `yaml:"parent_faction_name"`
+	Allegiance         string                `yaml:"allegiance"`
+	Version            string                `yaml:"version"`
+	Source             string                `yaml:"source"`
+	Units              []UnitSeed            `yaml:"units"`
+	BattleFormations   []BattleFormationSeed `yaml:"battle_formations"`
+	Enhancements       []EnhancementSeed     `yaml:"enhancements"`
 }
 
 type UnitSeed struct {
