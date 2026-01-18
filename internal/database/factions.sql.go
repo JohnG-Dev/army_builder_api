@@ -12,17 +12,20 @@ import (
 )
 
 const createFaction = `-- name: CreateFaction :one
-INSERT INTO factions (game_id, name, allegiance, version, source)
-VALUES ($1, $2, $3, $4, $5)
-RETURNING id, game_id, name, allegiance, version, source, created_at, updated_at
+INSERT INTO factions (game_id, name, allegiance, version, source, is_army_of_renown, is_regiment_of_renown, parent_faction_id)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+RETURNING id, game_id, name, is_army_of_renown, is_regiment_of_renown, parent_faction_id, description, allegiance, version, source, created_at, updated_at
 `
 
 type CreateFactionParams struct {
-	GameID     uuid.UUID
-	Name       string
-	Allegiance string
-	Version    string
-	Source     string
+	GameID             uuid.UUID
+	Name               string
+	Allegiance         string
+	Version            string
+	Source             string
+	IsArmyOfRenown     bool
+	IsRegimentOfRenown bool
+	ParentFactionID    uuid.NullUUID
 }
 
 func (q *Queries) CreateFaction(ctx context.Context, arg CreateFactionParams) (Faction, error) {
@@ -32,12 +35,19 @@ func (q *Queries) CreateFaction(ctx context.Context, arg CreateFactionParams) (F
 		arg.Allegiance,
 		arg.Version,
 		arg.Source,
+		arg.IsArmyOfRenown,
+		arg.IsRegimentOfRenown,
+		arg.ParentFactionID,
 	)
 	var i Faction
 	err := row.Scan(
 		&i.ID,
 		&i.GameID,
 		&i.Name,
+		&i.IsArmyOfRenown,
+		&i.IsRegimentOfRenown,
+		&i.ParentFactionID,
+		&i.Description,
 		&i.Allegiance,
 		&i.Version,
 		&i.Source,
@@ -58,7 +68,7 @@ func (q *Queries) DeleteFaction(ctx context.Context, id uuid.UUID) error {
 }
 
 const getAllFactions = `-- name: GetAllFactions :many
-SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+SELECT id, game_id, name, is_army_of_renown, is_regiment_of_renown, parent_faction_id, description, allegiance, version, source, created_at, updated_at
 FROM factions
 ORDER BY game_id, name ASC
 `
@@ -76,6 +86,10 @@ func (q *Queries) GetAllFactions(ctx context.Context) ([]Faction, error) {
 			&i.ID,
 			&i.GameID,
 			&i.Name,
+			&i.IsArmyOfRenown,
+			&i.IsRegimentOfRenown,
+			&i.ParentFactionID,
+			&i.Description,
 			&i.Allegiance,
 			&i.Version,
 			&i.Source,
@@ -93,7 +107,7 @@ func (q *Queries) GetAllFactions(ctx context.Context) ([]Faction, error) {
 }
 
 const getFaction = `-- name: GetFaction :one
-SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+SELECT id, game_id, name, is_army_of_renown, is_regiment_of_renown, parent_faction_id, description, allegiance, version, source, created_at, updated_at
 FROM factions
 WHERE id = $1
 `
@@ -105,6 +119,10 @@ func (q *Queries) GetFaction(ctx context.Context, id uuid.UUID) (Faction, error)
 		&i.ID,
 		&i.GameID,
 		&i.Name,
+		&i.IsArmyOfRenown,
+		&i.IsRegimentOfRenown,
+		&i.ParentFactionID,
+		&i.Description,
 		&i.Allegiance,
 		&i.Version,
 		&i.Source,
@@ -115,7 +133,7 @@ func (q *Queries) GetFaction(ctx context.Context, id uuid.UUID) (Faction, error)
 }
 
 const getFactionsByID = `-- name: GetFactionsByID :many
-SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+SELECT id, game_id, name, is_army_of_renown, is_regiment_of_renown, parent_faction_id, description, allegiance, version, source, created_at, updated_at
 FROM factions
 WHERE game_id = $1
 ORDER BY name ASC
@@ -134,6 +152,10 @@ func (q *Queries) GetFactionsByID(ctx context.Context, gameID uuid.UUID) ([]Fact
 			&i.ID,
 			&i.GameID,
 			&i.Name,
+			&i.IsArmyOfRenown,
+			&i.IsRegimentOfRenown,
+			&i.ParentFactionID,
+			&i.Description,
 			&i.Allegiance,
 			&i.Version,
 			&i.Source,
@@ -151,7 +173,7 @@ func (q *Queries) GetFactionsByID(ctx context.Context, gameID uuid.UUID) ([]Fact
 }
 
 const getFactionsByName = `-- name: GetFactionsByName :many
-SELECT id, game_id, name, allegiance, version, source, created_at, updated_at
+SELECT id, game_id, name, is_army_of_renown, is_regiment_of_renown, parent_faction_id, description, allegiance, version, source, created_at, updated_at
 FROM factions
 WHERE name ILIKE $1
 ORDER BY game_id, name ASC
@@ -170,6 +192,10 @@ func (q *Queries) GetFactionsByName(ctx context.Context, name string) ([]Faction
 			&i.ID,
 			&i.GameID,
 			&i.Name,
+			&i.IsArmyOfRenown,
+			&i.IsRegimentOfRenown,
+			&i.ParentFactionID,
+			&i.Description,
 			&i.Allegiance,
 			&i.Version,
 			&i.Source,
@@ -188,17 +214,20 @@ func (q *Queries) GetFactionsByName(ctx context.Context, name string) ([]Faction
 
 const updateFaction = `-- name: UpdateFaction :one
 UPDATE factions
-SET name = $2, allegiance = $3, version = $4, source = $5, updated_at = now()
+SET name = $2, allegiance = $3, version = $4, source = $5, is_army_of_renown = $6, is_regiment_of_renown = $7, parent_faction_id = $8, updated_at = now()
 WHERE id = $1
-RETURNING id, game_id, name, allegiance, version, source, created_at, updated_at
+RETURNING id, game_id, name, is_army_of_renown, is_regiment_of_renown, parent_faction_id, description, allegiance, version, source, created_at, updated_at
 `
 
 type UpdateFactionParams struct {
-	ID         uuid.UUID
-	Name       string
-	Allegiance string
-	Version    string
-	Source     string
+	ID                 uuid.UUID
+	Name               string
+	Allegiance         string
+	Version            string
+	Source             string
+	IsArmyOfRenown     bool
+	IsRegimentOfRenown bool
+	ParentFactionID    uuid.NullUUID
 }
 
 func (q *Queries) UpdateFaction(ctx context.Context, arg UpdateFactionParams) (Faction, error) {
@@ -208,12 +237,19 @@ func (q *Queries) UpdateFaction(ctx context.Context, arg UpdateFactionParams) (F
 		arg.Allegiance,
 		arg.Version,
 		arg.Source,
+		arg.IsArmyOfRenown,
+		arg.IsRegimentOfRenown,
+		arg.ParentFactionID,
 	)
 	var i Faction
 	err := row.Scan(
 		&i.ID,
 		&i.GameID,
 		&i.Name,
+		&i.IsArmyOfRenown,
+		&i.IsRegimentOfRenown,
+		&i.ParentFactionID,
+		&i.Description,
 		&i.Allegiance,
 		&i.Version,
 		&i.Source,
@@ -221,4 +257,21 @@ func (q *Queries) UpdateFaction(ctx context.Context, arg UpdateFactionParams) (F
 		&i.UpdatedAt,
 	)
 	return i, err
+}
+
+const updateFactionParent = `-- name: UpdateFactionParent :exec
+UPDATE factions
+SET parent_faction_id = $2, is_army_of_renown = $3, updated_at = now()
+WHERE id = $1
+`
+
+type UpdateFactionParentParams struct {
+	ID              uuid.UUID
+	ParentFactionID uuid.NullUUID
+	IsArmyOfRenown  bool
+}
+
+func (q *Queries) UpdateFactionParent(ctx context.Context, arg UpdateFactionParentParams) error {
+	_, err := q.db.Exec(ctx, updateFactionParent, arg.ID, arg.ParentFactionID, arg.IsArmyOfRenown)
+	return err
 }

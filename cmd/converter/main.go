@@ -56,9 +56,10 @@ func main() {
 			continue
 		}
 
-		filePath := filepath.Join(rawDir, name)
+		filePath := filepath.Join(filepath.Clean(rawDir), filepath.Clean(name))
 		xmlData, err := os.ReadFile(filePath)
 		if err != nil {
+			fmt.Printf("Error reading %s for indexing: %v\n", name, err)
 			continue
 		}
 
@@ -85,14 +86,16 @@ func main() {
 			continue
 		}
 
-		filePath := filepath.Join(rawDir, name)
+		filePath := filepath.Join(filepath.Clean(rawDir), filepath.Clean(name))
 		xmlData, err := os.ReadFile(filePath)
 		if err != nil {
+			fmt.Printf("Error reading %s for conversion: %v\n", name, err)
 			continue
 		}
 
 		var catalogue Catalogue
 		if err := xml.Unmarshal(xmlData, &catalogue); err != nil {
+			fmt.Printf("Unmarshal error in %s during conversion: %v\n", name, err)
 			continue
 		}
 
@@ -102,18 +105,19 @@ func main() {
 		}
 		gameSlug := strings.ToLower(strings.ReplaceAll(gameName, " ", "_"))
 
+		// Detect Regiments of Renown file
+		if strings.Contains(strings.ToLower(name), "renown") || strings.Contains(strings.ToLower(catalogue.Name), "renown") {
+			cv.processRoRFile(catalogue, gameName, outDir)
+			continue
+		}
+
 		subFolder := "standard"
 		isAoR := false
 		isRoR := false
 		parentName := ""
 
 		cleanName := strings.TrimSuffix(name, ".cat")
-
-		// If it's the RoR file, treat the whole thing as a mercenary faction
-		if strings.Contains(strings.ToLower(cleanName), "renown") {
-			isRoR = true
-			subFolder = "regiments_of_renown"
-		} else if strings.Contains(cleanName, " - ") {
+		if strings.Contains(cleanName, " - ") {
 			parts := strings.Split(cleanName, " - ")
 			parentName = parts[0]
 			isAoR = true
@@ -164,12 +168,22 @@ func main() {
 		factionSlug := strings.ToLower(strings.ReplaceAll(catalogue.Name, " ", "_"))
 		factionSlug = strings.ReplaceAll(factionSlug, "۞_", "")
 
-		finalOutDir := filepath.Join(outDir, gameSlug, subFolder)
-		_ = os.MkdirAll(finalOutDir, 0o755)
+		finalOutDir := filepath.Join(filepath.Clean(outDir), filepath.Clean(gameSlug), filepath.Clean(subFolder))
+		if err := os.MkdirAll(finalOutDir, 0o750); err != nil {
+			fmt.Printf("Failed to create directory %s: %v\n", finalOutDir, err)
+			continue
+		}
 
 		outPath := filepath.Join(finalOutDir, factionSlug+".yaml")
-		yamlData, _ := yaml.Marshal(seed)
-		os.WriteFile(outPath, yamlData, 0o644)
+		yamlData, err := yaml.Marshal(seed)
+		if err != nil {
+			fmt.Printf("Error marshaling YAML for %s: %v\n", catalogue.Name, err)
+			continue
+		}
+		if err := os.WriteFile(outPath, yamlData, 0o600); err != nil {
+			fmt.Printf("Failed to write YAML for %s: %v\n", catalogue.Name, err)
+			continue
+		}
 		fmt.Printf(" -> Saved to %s (%d units)\n", outPath, len(seed.Factions[0].Units))
 	}
 }
@@ -217,7 +231,9 @@ func (c *Converter) transformUnit(entry SelectionEntry, fileName string) models.
 func (c *Converter) processConstraints(constraints []Constraint, unit *models.UnitSeed) {
 	for _, cons := range constraints {
 		var val int
-		fmt.Sscanf(cons.Value, "%d", &val)
+		if _, err := fmt.Sscanf(cons.Value, "%d", &val); err != nil {
+			continue
+		}
 
 		if cons.Type == "max" && val == 1 && cons.Scope == "roster" {
 			unit.IsUnique = true
@@ -317,20 +333,6 @@ func (c *Converter) mapWeapon(p Profile) models.WeaponSeed {
 }
 
 func (c *Converter) isUnit(entry SelectionEntry) bool {
-	// Skip entries that are just roster upgrades (have points but no unit stats)
-	if entry.Type == "upgrade" {
-		hasUnitProfile := false
-		for _, p := range entry.Profiles {
-			if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Models") || strings.Contains(p.TypeName, "Stats") {
-				hasUnitProfile = true
-				break
-			}
-		}
-		if !hasUnitProfile {
-			return false
-		}
-	}
-
 	for _, cost := range entry.Costs {
 		if cost.Name == "pts" && cost.Value != "0" && cost.Value != "" {
 			return true
@@ -429,8 +431,7 @@ func (c *Converter) parsePoints(costs []Cost) int {
 	for _, cost := range costs {
 		if cost.Name == "pts" {
 			var p float64
-			_, err := fmt.Sscanf(cost.Value, "%f", &p)
-			if err == nil {
+			if _, err := fmt.Sscanf(cost.Value, "%f", &p); err == nil {
 				return int(p)
 			}
 		}
@@ -472,4 +473,76 @@ func (c *Converter) canBeReinforced(entry SelectionEntry) bool {
 	}
 
 	return false
+}
+
+func (c *Converter) processRoRFile(cat Catalogue, gameName, outDir string) {
+	gameSlug := strings.ToLower(strings.ReplaceAll(gameName, " ", "_"))
+	finalOutDir := filepath.Join(filepath.Clean(outDir), filepath.Clean(gameSlug), "regiments_of_renown")
+	if err := os.MkdirAll(finalOutDir, 0o750); err != nil {
+		fmt.Printf("Failed to create directory %s: %v\n", finalOutDir, err)
+		return
+	}
+
+	allRoREntries := append(cat.SelectionEntries, cat.EntryLinks...)
+
+	for _, entry := range allRoREntries {
+		if !strings.Contains(entry.Name, "Regiment of Renown") {
+			continue
+		}
+
+		actualEntry := entry
+		if entry.TargetID != "" {
+			if target, ok := c.MasterEntries[entry.TargetID]; ok {
+				actualEntry = target
+			}
+		}
+
+		regimentName := strings.TrimPrefix(entry.Name, "Regiment of Renown: ")
+		fmt.Printf(" -> Extracting Regiment: %s\n", regimentName)
+
+		seed := models.SeedData{
+			GameName: gameName,
+			Factions: []models.FactionSeed{{
+				Name:               regimentName,
+				Source:             "Battlescribe Data",
+				IsRegimentOfRenown: true,
+				Units:              []models.UnitSeed{},
+			}},
+		}
+
+		for _, catLink := range entry.CategoryLinks {
+			upper := strings.ToUpper(catLink.Name)
+			if upper == "ORDER" || upper == "CHAOS" || upper == "DEATH" || upper == "DESTRUCTION" {
+				seed.Factions[0].Allegiance = upper
+			}
+		}
+
+		var rorUnits []SelectionEntry
+		rorUnits = c.findUnits(actualEntry.ChildEntries, rorUnits)
+		rorUnits = c.findUnits(actualEntry.LinkEntries, rorUnits)
+		rorUnits = c.findUnits(actualEntry.SelectionEntryGroups, rorUnits)
+
+		for _, uEntry := range rorUnits {
+			unit := c.transformUnit(uEntry, "Regiments of Renown")
+			if seed.Factions[0].Allegiance != "" {
+				unit.Keywords = append(unit.Keywords, seed.Factions[0].Allegiance)
+			}
+			seed.Factions[0].Units = append(seed.Factions[0].Units, unit)
+		}
+
+		factionSlug := strings.ToLower(strings.ReplaceAll(regimentName, " ", "_"))
+		factionSlug = strings.ReplaceAll(factionSlug, ":", "")
+		factionSlug = strings.ReplaceAll(factionSlug, " ", "_")
+
+		outPath := filepath.Join(finalOutDir, factionSlug+".yaml")
+		yamlData, err := yaml.Marshal(seed)
+		if err != nil {
+			fmt.Printf("Error marshaling YAML for %s: %v\n", regimentName, err)
+			continue
+		}
+		if err := os.WriteFile(outPath, yamlData, 0o600); err != nil {
+			fmt.Printf("Failed to write YAML for %s: %v\n", regimentName, err)
+			continue
+		}
+	}
 }

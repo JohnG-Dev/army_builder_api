@@ -34,3 +34,8 @@ RETURNING *;
 -- name: DeleteFaction :exec
 DELETE FROM factions
 WHERE id = $1;
+
+-- name: UpdateFactionParent :exec
+UPDATE factions
+SET parent_faction_id = $2, is_army_of_renown = $3, updated_at = now()
+WHERE id = $1;

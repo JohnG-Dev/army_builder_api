@@ -67,14 +67,18 @@ type Enhancement struct {
 }
 
 type Faction struct {
-	ID         uuid.UUID
-	GameID     uuid.UUID
-	Name       string
-	Allegiance string
-	Version    string
-	Source     string
-	CreatedAt  time.Time
-	UpdatedAt  time.Time
+	ID                 uuid.UUID
+	GameID             uuid.UUID
+	Name               string
+	IsArmyOfRenown     bool
+	IsRegimentOfRenown bool
+	ParentFactionID    uuid.NullUUID
+	Description        string
+	Allegiance         string
+	Version            string
+	Source             string
+	CreatedAt          time.Time
+	UpdatedAt          time.Time
 }
 
 type Game struct {
