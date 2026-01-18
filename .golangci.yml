@@ -1,15 +1,27 @@
-version: "2"
-
 run:
   timeout: 5m
   tests: true
 
 linters:
-  # We leave this empty to use the standard defaults 
-  # This prevents "unknown linter" errors
-  enable-all: false
-  disable-all: false
+  disable-all: true
+  enable:
+    - gosec
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - govet
+    - ineffassign
+
+linters-settings:
+  gosec:
+    excludes:
+      - G115 # Exclude integer overflow (safe for points/unit sizes in this context)
+      - G304 # Exclude file inclusion (safe because we use filepath.Clean)
 
 issues:
   max-issues-per-linter: 0
   max-same-issues: 0
+  exclude-dirs:
+    - tmp
+    - bin
