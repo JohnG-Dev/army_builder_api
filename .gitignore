@@ -38,4 +38,4 @@ go.work.sum
 # Agent/Session files
 AGENTS.md
 session-*.md
-seeder
+/seeder

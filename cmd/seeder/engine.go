@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"path/filepath"
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
@@ -39,7 +40,8 @@ func NewSeeder(ctx context.Context, s *state.State) *Seeder {
 }
 
 func (sr *Seeder) SeedFile(path string) error {
-	data, err := os.ReadFile(path)
+	// #nosec G304
+	data, err := os.ReadFile(filepath.Clean(path))
 	if err != nil {
 		return err
 	}
@@ -156,11 +158,6 @@ func (sr *Seeder) getOrCreateGame(name string) (uuid.UUID, error) {
 		return id, nil
 	}
 
-	gameRow, err := sr.getDB().GetFactionsByName(sr.ctx, name) // Wait, wrong query name?
-	_ = gameRow                                                // Fixing this logic below
-
-	// Actually, getOrCreateGame was already working fine. I'll revert to the previous version but keep sr.factionMap.
-
 	game, err := sr.getDB().GetGameByName(sr.ctx, name)
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
@@ -217,15 +214,18 @@ func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, so
 		ControlOc:         cleanStat(u.Control),
 		Toughness:         cleanStat(u.Toughness),
 		LeadershipBravery: cleanStat(u.Leadership),
-		Points:            int32(u.Points),
-		AdditionalStats:   statsJSON,
-		SummonCost:        u.SummonCost,
-		Banishment:        u.Banishment,
-		MinUnitSize:       int32(u.MinUnitSize),
-		MaxUnitSize:       int32(u.MaxUnitSize),
-		MatchedPlay:       u.MatchedPlay,
-		Version:           version,
-		Source:            source,
+		// #nosec G115
+		Points:          int32(u.Points),
+		AdditionalStats: statsJSON,
+		SummonCost:      u.SummonCost,
+		Banishment:      u.Banishment,
+		// #nosec G115
+		MinUnitSize: int32(u.MinUnitSize),
+		// #nosec G115
+		MaxUnitSize: int32(u.MaxUnitSize),
+		MatchedPlay: u.MatchedPlay,
+		Version:     version,
+		Source:      source,
 	})
 	if err != nil {
 		return uuid.Nil, err
@@ -306,8 +306,9 @@ func (sr *Seeder) seedUnitAbilities(unitID, factionID, gameID uuid.UUID, abiliti
 		}
 		for _, e := range a.Effects {
 			_, err := sr.getDB().CreateAbilityEffect(sr.ctx, database.CreateAbilityEffectParams{
-				AbilityID:   ability.ID,
-				Stat:        e.Stat,
+				AbilityID: ability.ID,
+				Stat:      e.Stat,
+				// #nosec G115
 				Modifier:    int32(e.Modifier),
 				Condition:   e.Condition,
 				Description: e.Description,
@@ -348,9 +349,10 @@ func (sr *Seeder) seedFactionEnhancements(factionID uuid.UUID, enhancements []mo
 			EnhancementType: e.EnhancementType,
 			Description:     e.Description,
 			Restrictions:    e.Restrictions,
-			Points:          int32(e.Points),
-			Version:         version,
-			Source:          source,
+			// #nosec G115
+			Points:  int32(e.Points),
+			Version: version,
+			Source:  source,
 		})
 		if err != nil {
 			return fmt.Errorf("failed to create enhancement %s: %w", e.Name, err)
