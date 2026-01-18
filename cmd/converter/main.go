@@ -57,7 +57,6 @@ func main() {
 		}
 
 		filePath := filepath.Join(filepath.Clean(rawDir), filepath.Clean(name))
-		// #nosec G304
 		xmlData, err := os.ReadFile(filePath)
 		if err != nil {
 			fmt.Printf("Error reading %s for indexing: %v\n", name, err)
@@ -88,7 +87,6 @@ func main() {
 		}
 
 		filePath := filepath.Join(filepath.Clean(rawDir), filepath.Clean(name))
-		// #nosec G304
 		xmlData, err := os.ReadFile(filePath)
 		if err != nil {
 			fmt.Printf("Error reading %s for conversion: %v\n", name, err)

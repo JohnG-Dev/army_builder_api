@@ -40,7 +40,6 @@ func NewSeeder(ctx context.Context, s *state.State) *Seeder {
 }
 
 func (sr *Seeder) SeedFile(path string) error {
-	// #nosec G304
 	data, err := os.ReadFile(filepath.Clean(path))
 	if err != nil {
 		return err
@@ -214,18 +213,15 @@ func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, so
 		ControlOc:         cleanStat(u.Control),
 		Toughness:         cleanStat(u.Toughness),
 		LeadershipBravery: cleanStat(u.Leadership),
-		// #nosec G115
-		Points:          int32(u.Points),
-		AdditionalStats: statsJSON,
-		SummonCost:      u.SummonCost,
-		Banishment:      u.Banishment,
-		// #nosec G115
-		MinUnitSize: int32(u.MinUnitSize),
-		// #nosec G115
-		MaxUnitSize: int32(u.MaxUnitSize),
-		MatchedPlay: u.MatchedPlay,
-		Version:     version,
-		Source:      source,
+		Points:            int32(u.Points),
+		AdditionalStats:   statsJSON,
+		SummonCost:        u.SummonCost,
+		Banishment:        u.Banishment,
+		MinUnitSize:       int32(u.MinUnitSize),
+		MaxUnitSize:       int32(u.MaxUnitSize),
+		MatchedPlay:       u.MatchedPlay,
+		Version:           version,
+		Source:            source,
 	})
 	if err != nil {
 		return uuid.Nil, err
@@ -306,9 +302,8 @@ func (sr *Seeder) seedUnitAbilities(unitID, factionID, gameID uuid.UUID, abiliti
 		}
 		for _, e := range a.Effects {
 			_, err := sr.getDB().CreateAbilityEffect(sr.ctx, database.CreateAbilityEffectParams{
-				AbilityID: ability.ID,
-				Stat:      e.Stat,
-				// #nosec G115
+				AbilityID:   ability.ID,
+				Stat:        e.Stat,
 				Modifier:    int32(e.Modifier),
 				Condition:   e.Condition,
 				Description: e.Description,
@@ -349,10 +344,9 @@ func (sr *Seeder) seedFactionEnhancements(factionID uuid.UUID, enhancements []mo
 			EnhancementType: e.EnhancementType,
 			Description:     e.Description,
 			Restrictions:    e.Restrictions,
-			// #nosec G115
-			Points:  int32(e.Points),
-			Version: version,
-			Source:  source,
+			Points:          int32(e.Points),
+			Version:         version,
+			Source:          source,
 		})
 		if err != nil {
 			return fmt.Errorf("failed to create enhancement %s: %w", e.Name, err)
