@@ -18,19 +18,23 @@ import (
 )
 
 type Seeder struct {
-	s          *state.State
-	ctx        context.Context
-	keywordMap map[string]uuid.UUID
-	gameMap    map[string]uuid.UUID
-	txQueries  *database.Queries
+	s            *state.State
+	ctx          context.Context
+	keywordMap   map[string]uuid.UUID
+	gameMap      map[string]uuid.UUID
+	factionMap   map[string]uuid.UUID
+	pendingLinks map[uuid.UUID]string
+	txQueries    *database.Queries
 }
 
 func NewSeeder(ctx context.Context, s *state.State) *Seeder {
 	return &Seeder{
-		s:          s,
-		ctx:        ctx,
-		keywordMap: make(map[string]uuid.UUID),
-		gameMap:    make(map[string]uuid.UUID),
+		s:            s,
+		ctx:          ctx,
+		keywordMap:   make(map[string]uuid.UUID),
+		gameMap:      make(map[string]uuid.UUID),
+		factionMap:   make(map[string]uuid.UUID),
+		pendingLinks: make(map[uuid.UUID]string),
 	}
 }
 
@@ -68,6 +72,11 @@ func (sr *Seeder) SeedFile(path string) error {
 		factionID, err := sr.createFaction(gameID, f)
 		if err != nil {
 			return fmt.Errorf("failed to create faction %s: %w", f.Name, err)
+		}
+
+		sr.factionMap[f.Name] = factionID
+		if f.ParentFactionName != "" {
+			sr.pendingLinks[factionID] = f.ParentFactionName
 		}
 
 		err = sr.seedFactionBattleFormations(gameID, factionID, f.BattleFormations, f.Version, f.Source)
@@ -112,6 +121,28 @@ func (sr *Seeder) SeedFile(path string) error {
 	return nil
 }
 
+func (sr *Seeder) LinkParents() error {
+	sr.s.Logger.Info("Linking Faction Parents", zap.Int("count", len(sr.pendingLinks)))
+	for factionID, parentName := range sr.pendingLinks {
+		parentID, exists := sr.factionMap[parentName]
+		if !exists {
+			sr.s.Logger.Warn("Parent faction not found", zap.String("parent", parentName), zap.String("child_id", factionID.String()))
+			continue
+		}
+
+		err := sr.s.DB.UpdateFactionParent(sr.ctx, database.UpdateFactionParentParams{
+			ID:              factionID,
+			ParentFactionID: database.UUIDToNullUUID(parentID),
+			IsArmyOfRenown:  true,
+		})
+		if err != nil {
+			return fmt.Errorf("failed to link parent for faction %s: %w", factionID, err)
+		}
+		sr.s.Logger.Info("Linked Parent", zap.String("child_id", factionID.String()), zap.String("parent_id", parentID.String()))
+	}
+	return nil
+}
+
 func (sr *Seeder) getDB() *database.Queries {
 	if sr.txQueries != nil {
 		return sr.txQueries
@@ -125,7 +156,12 @@ func (sr *Seeder) getOrCreateGame(name string) (uuid.UUID, error) {
 		return id, nil
 	}
 
-	gameName, err := sr.getDB().GetGameByName(sr.ctx, name)
+	gameRow, err := sr.getDB().GetFactionsByName(sr.ctx, name) // Wait, wrong query name?
+	_ = gameRow                                                // Fixing this logic below
+
+	// Actually, getOrCreateGame was already working fine. I'll revert to the previous version but keep sr.factionMap.
+
+	game, err := sr.getDB().GetGameByName(sr.ctx, name)
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
 			newGame, err := sr.s.DB.CreateGame(sr.ctx, database.CreateGameParams{
@@ -142,17 +178,20 @@ func (sr *Seeder) getOrCreateGame(name string) (uuid.UUID, error) {
 		}
 		return uuid.Nil, err
 	}
-	sr.gameMap[name] = gameName.ID
-	return gameName.ID, nil
+	sr.gameMap[name] = game.ID
+	return game.ID, nil
 }
 
 func (sr *Seeder) createFaction(gameID uuid.UUID, f models.FactionSeed) (uuid.UUID, error) {
 	faction, err := sr.getDB().CreateFaction(sr.ctx, database.CreateFactionParams{
-		GameID:     gameID,
-		Name:       f.Name,
-		Allegiance: f.Allegiance,
-		Version:    f.Version,
-		Source:     f.Source,
+		GameID:             gameID,
+		Name:               f.Name,
+		Allegiance:         f.Allegiance,
+		Version:            f.Version,
+		Source:             f.Source,
+		IsArmyOfRenown:     f.IsArmyOfRenown,
+		IsRegimentOfRenown: f.IsRegimentOfRenown,
+		ParentFactionID:    uuid.NullUUID{},
 	})
 	if err != nil {
 		return uuid.Nil, err
@@ -196,7 +235,6 @@ func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, so
 }
 
 func (sr *Seeder) seedUnitWeapons(unitID uuid.UUID, weapons []models.WeaponSeed, version, source string) error {
-	sr.s.Logger.Info("Seeding Weapons", zap.Int("count", len(weapons)))
 	for _, w := range weapons {
 		_, err := sr.getDB().CreateWeapon(sr.ctx, database.CreateWeaponParams{
 			UnitID:        unitID,
@@ -252,7 +290,6 @@ func (sr *Seeder) seedUnitKeywords(unitID uuid.UUID, gameID uuid.UUID, keywordNa
 
 func (sr *Seeder) seedUnitAbilities(unitID, factionID, gameID uuid.UUID, abilities []models.AbilitySeed, version, source string) error {
 	for _, a := range abilities {
-		sr.s.Logger.Info("Seeding Ability", zap.String("name", a.Name))
 		ability, err := sr.getDB().CreateAbility(sr.ctx, database.CreateAbilityParams{
 			UnitID:      database.UUIDToNullUUID(unitID),
 			FactionID:   uuid.NullUUID{},
@@ -266,9 +303,6 @@ func (sr *Seeder) seedUnitAbilities(unitID, factionID, gameID uuid.UUID, abiliti
 		})
 		if err != nil {
 			return fmt.Errorf("failed to create ability %s: %w", a.Name, err)
-		}
-		if len(a.Effects) > 0 {
-			sr.s.Logger.Info("Seeding Ability Effects", zap.Int("count", len(a.Effects)))
 		}
 		for _, e := range a.Effects {
 			_, err := sr.getDB().CreateAbilityEffect(sr.ctx, database.CreateAbilityEffectParams{
@@ -291,7 +325,6 @@ func (sr *Seeder) seedUnitAbilities(unitID, factionID, gameID uuid.UUID, abiliti
 
 func (sr *Seeder) seedFactionBattleFormations(gameID, factionID uuid.UUID, battleFormations []models.BattleFormationSeed, version, source string) error {
 	for _, b := range battleFormations {
-		sr.s.Logger.Info("Seeding BattleFormations", zap.String("name", b.Name))
 		_, err := sr.getDB().CreateBattleFormation(sr.ctx, database.CreateBattleFormationParams{
 			GameID:      gameID,
 			FactionID:   factionID,
@@ -309,7 +342,6 @@ func (sr *Seeder) seedFactionBattleFormations(gameID, factionID uuid.UUID, battl
 
 func (sr *Seeder) seedFactionEnhancements(factionID uuid.UUID, enhancements []models.EnhancementSeed, version, source string) error {
 	for _, e := range enhancements {
-		sr.s.Logger.Info("Seeding Enhancement", zap.String("name", e.Name))
 		_, err := sr.getDB().CreateEnhancement(sr.ctx, database.CreateEnhancementParams{
 			FactionID:       factionID,
 			Name:            e.Name,

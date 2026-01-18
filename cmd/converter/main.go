@@ -49,6 +49,7 @@ func main() {
 		GameSystems:   make(map[string]string),
 	}
 
+	// --- PASS 1: INDEXING ---
 	for _, file := range allFiles {
 		name := file.Name()
 		if !strings.HasSuffix(name, ".cat") && !strings.HasSuffix(name, ".gst") {
@@ -77,6 +78,7 @@ func main() {
 
 	fmt.Printf("Indexing Complete. Master Map contains %d entries\n", len(cv.MasterEntries))
 
+	// --- PASS 2: CONVERSION ---
 	for _, file := range allFiles {
 		name := file.Name()
 		if strings.Contains(name, "Library") || !strings.HasSuffix(name, ".cat") {
@@ -98,15 +100,37 @@ func main() {
 		if gameName == "" {
 			gameName = "Unknown Game"
 		}
+		gameSlug := strings.ToLower(strings.ReplaceAll(gameName, " ", "_"))
+
+		subFolder := "standard"
+		isAoR := false
+		isRoR := false
+		parentName := ""
+
+		cleanName := strings.TrimSuffix(name, ".cat")
+
+		// If it's the RoR file, treat the whole thing as a mercenary faction
+		if strings.Contains(strings.ToLower(cleanName), "renown") {
+			isRoR = true
+			subFolder = "regiments_of_renown"
+		} else if strings.Contains(cleanName, " - ") {
+			parts := strings.Split(cleanName, " - ")
+			parentName = parts[0]
+			isAoR = true
+			subFolder = "armies_of_renown"
+		}
 
 		fmt.Printf("Converting File: %s (%s)\n", catalogue.Name, gameName)
 
 		seed := models.SeedData{
 			GameName: gameName,
 			Factions: []models.FactionSeed{{
-				Name:   catalogue.Name,
-				Source: "Battlescribe Data",
-				Units:  []models.UnitSeed{},
+				Name:               catalogue.Name,
+				Source:             "Battlescribe Data",
+				IsArmyOfRenown:     isAoR,
+				IsRegimentOfRenown: isRoR,
+				ParentFactionName:  parentName,
+				Units:              []models.UnitSeed{},
 			}},
 		}
 
@@ -124,7 +148,12 @@ func main() {
 		allUnits = cv.findUnits(catalogue.SharedEntries, allUnits)
 		allUnits = cv.findUnits(catalogue.SharedGroups, allUnits)
 
-		for _, entry := range allUnits {
+		uniqueUnits := make(map[string]SelectionEntry)
+		for _, u := range allUnits {
+			uniqueUnits[u.Name] = u
+		}
+
+		for _, entry := range uniqueUnits {
 			unit := cv.transformUnit(entry, name)
 			if seed.Factions[0].Allegiance != "" {
 				unit.Keywords = append(unit.Keywords, seed.Factions[0].Allegiance)
@@ -132,11 +161,11 @@ func main() {
 			seed.Factions[0].Units = append(seed.Factions[0].Units, unit)
 		}
 
-		gameSlug := strings.ToLower(strings.ReplaceAll(gameName, " ", "_"))
 		factionSlug := strings.ToLower(strings.ReplaceAll(catalogue.Name, " ", "_"))
+		factionSlug = strings.ReplaceAll(factionSlug, "۞_", "")
 
-		finalOutDir := filepath.Join(outDir, gameSlug)
-		os.MkdirAll(finalOutDir, 0o755)
+		finalOutDir := filepath.Join(outDir, gameSlug, subFolder)
+		_ = os.MkdirAll(finalOutDir, 0o755)
 
 		outPath := filepath.Join(finalOutDir, factionSlug+".yaml")
 		yamlData, _ := yaml.Marshal(seed)
@@ -167,7 +196,6 @@ func (c *Converter) transformUnit(entry SelectionEntry, fileName string) models.
 	allConstraints := c.collectConstraints(entry)
 	c.processConstraints(allConstraints, &unit)
 
-	// Reinforcement Check (AoS 4.0 specific)
 	if c.canBeReinforced(entry) {
 		unit.MaxUnitSize = unit.MinUnitSize * 2
 	}
@@ -195,7 +223,6 @@ func (c *Converter) processConstraints(constraints []Constraint, unit *models.Un
 			unit.IsUnique = true
 		}
 
-		// 2. UNIT SIZE DETECTION
 		if cons.Field == "selections" && (cons.Scope == "parent" || cons.Scope == "self") {
 			if cons.Type == "min" && val > 0 {
 				if val > unit.MinUnitSize {
@@ -290,13 +317,27 @@ func (c *Converter) mapWeapon(p Profile) models.WeaponSeed {
 }
 
 func (c *Converter) isUnit(entry SelectionEntry) bool {
+	// Skip entries that are just roster upgrades (have points but no unit stats)
+	if entry.Type == "upgrade" {
+		hasUnitProfile := false
+		for _, p := range entry.Profiles {
+			if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Models") || strings.Contains(p.TypeName, "Stats") {
+				hasUnitProfile = true
+				break
+			}
+		}
+		if !hasUnitProfile {
+			return false
+		}
+	}
+
 	for _, cost := range entry.Costs {
 		if cost.Name == "pts" && cost.Value != "0" && cost.Value != "" {
 			return true
 		}
 	}
 	for _, p := range entry.Profiles {
-		if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Models") {
+		if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Models") || strings.Contains(p.TypeName, "Stats") {
 			return true
 		}
 	}

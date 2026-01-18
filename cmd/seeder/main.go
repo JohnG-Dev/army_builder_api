@@ -61,20 +61,29 @@ func main() {
 	}
 	s.Logger.Info("Database cleared successfully")
 
-	files, err := filepath.Glob("data/factions/**/*.yaml")
+	sr := NewSeeder(ctx, s)
+
+	err = filepath.Walk("data/factions", func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() && strings.HasSuffix(path, ".yaml") {
+			if err := sr.SeedFile(path); err != nil {
+				s.Logger.Error("Failed to seed file",
+					zap.String("path", path),
+					zap.Error(err),
+				)
+			}
+		}
+		return nil
+	})
+
 	if err != nil {
-		s.Logger.Fatal("Failed to glob files", zap.Error(err))
+		s.Logger.Fatal("Failed to walk files", zap.Error(err))
 	}
 
-	for _, path := range files {
-		sr := NewSeeder(ctx, s)
-		if err := sr.SeedFile(path); err != nil {
-			s.Logger.Error("Failed to seed file",
-				zap.String("path", path),
-				zap.Error(err),
-			)
-			continue
-		}
+	if err := sr.LinkParents(); err != nil {
+		s.Logger.Fatal("Failed to link parents", zap.Error(err))
 	}
 
 	s.Logger.Info("Seeding process completed successfully")
