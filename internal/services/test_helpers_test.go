@@ -2,6 +2,7 @@ package services
 
 import (
 	"context"
+	"encoding/json"
 	"testing"
 
 	"github.com/google/uuid"
@@ -43,6 +44,7 @@ func setupTestDB(t *testing.T) *state.State {
 		DB:     queries,
 		Cfg:    cfg,
 		Logger: logger,
+		Pool:   dbpool,
 	}
 }
 
@@ -68,10 +70,14 @@ func createTestFaction(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID
 	ctx := context.Background()
 
 	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
-		GameID:  gameID,
-		Name:    "Test Faction",
-		Version: "1.0",
-		Source:  "Test Source",
+		GameID:             gameID,
+		Name:               "Test Faction",
+		Allegiance:         "Test Allegiance",
+		Version:            "1.0",
+		Source:             "Test Source",
+		IsArmyOfRenown:     false,
+		IsRegimentOfRenown: false,
+		ParentFactionID:    uuid.NullUUID{},
 	})
 	if err != nil {
 		t.Fatalf("failed to create faction: %v", err)
@@ -86,10 +92,14 @@ func createTestFactionWithName(t *testing.T, s *state.State, gameID uuid.UUID, n
 	ctx := context.Background()
 
 	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
-		GameID:  gameID,
-		Name:    name,
-		Version: "1.0",
-		Source:  "Test Source",
+		GameID:             gameID,
+		Name:               name,
+		Allegiance:         "Test Allegiance",
+		Version:            "1.0",
+		Source:             "Test Source",
+		IsArmyOfRenown:     false,
+		IsRegimentOfRenown: false,
+		ParentFactionID:    uuid.NullUUID{},
 	})
 	if err != nil {
 		t.Fatalf("failed to create faction with name: %v", err)
@@ -105,6 +115,7 @@ func createTestUnit(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID
 	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
 		FactionID:       factionID,
 		Name:            "Test Unit",
+		Description:     "",
 		Move:            "10\"",
 		HealthWounds:    "4",
 		SaveStats:       "3+",
@@ -118,6 +129,7 @@ func createTestUnit(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID
 		MatchedPlay:     true,
 		IsManifestation: false,
 		IsUnique:        false,
+		AdditionalStats: json.RawMessage("{}"),
 		Version:         "1.0",
 		Source:          "Test Source",
 	})
@@ -134,6 +146,7 @@ func createTestUnitWithName(t *testing.T, s *state.State, factionID uuid.UUID, n
 	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
 		FactionID:       factionID,
 		Name:            name,
+		Description:     "",
 		Move:            "10\"",
 		HealthWounds:    "4",
 		SaveStats:       "3+",
@@ -147,6 +160,7 @@ func createTestUnitWithName(t *testing.T, s *state.State, factionID uuid.UUID, n
 		MatchedPlay:     true,
 		IsManifestation: false,
 		IsUnique:        false,
+		AdditionalStats: json.RawMessage("{}"),
 		Version:         "1.0",
 		Source:          "Test Source",
 	})
@@ -164,7 +178,8 @@ func createTestUniqueUnit(t *testing.T, s *state.State, factionID uuid.UUID) uui
 
 	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
 		FactionID:       factionID,
-		Name:            "Test Unit",
+		Name:            "Test Unique Unit",
+		Description:     "",
 		Move:            "10\"",
 		HealthWounds:    "4",
 		SaveStats:       "3+",
@@ -178,11 +193,12 @@ func createTestUniqueUnit(t *testing.T, s *state.State, factionID uuid.UUID) uui
 		MatchedPlay:     true,
 		IsManifestation: false,
 		IsUnique:        true,
+		AdditionalStats: json.RawMessage("{}"),
 		Version:         "1.0",
 		Source:          "Test Source",
 	})
 	if err != nil {
-		t.Fatalf("failed to create unit: %v", err)
+		t.Fatalf("failed to create unique unit: %v", err)
 	}
 	unitID := unit.ID
 
@@ -237,7 +253,6 @@ func createTestAbilityUnit(t *testing.T, s *state.State, unitID uuid.UUID) uuid.
 	ability, err := s.DB.CreateAbility(ctx, database.CreateAbilityParams{
 		UnitID:    database.UUIDToNullUUID(unitID),
 		FactionID: uuid.NullUUID{},
-		GameID:    uuid.NullUUID{},
 		Name:      "Test Ability",
 		Type:      "Spell",
 		Phase:     "Hero",
