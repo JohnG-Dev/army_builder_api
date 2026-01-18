@@ -1,0 +1,417 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Ossiarch Bonereapers - Petrifex Elite [LEGENDS]
+      description: ""
+      is_army_of_renown: true
+      is_regiment_of_renown: false
+      parent_faction_name: Ossiarch Bonereapers
+      allegiance: DEATH
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Mortisan Ossifector
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - WIZARD (1)
+            - INFANTRY
+            - WARD (6+)
+            - OSSIARCH BONEREAPERS
+            - MORTISAN
+            - DEATH
+            - PETRIFEX ELITE
+            - DEATH
+          weapons:
+            - name: Ossified Talons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mortisan Soulmason
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - INFANTRY
+            - WARD (6+)
+            - OSSIARCH BONEREAPERS
+            - MORTISAN
+            - DEATH
+            - WIZARD (2)
+            - PETRIFEX ELITE
+            - DEATH
+          weapons:
+            - name: Soulmason's Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Mortek Throne's Ossified Claws
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Grand Necromystic
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "12"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - LEGENDS
+            - DEATH
+            - OSSIARCH BONEREAPERS
+            - MONSTER
+            - WIZARD (1)
+            - WARD (6+)
+            - PETRIFEX ELITE
+            - UNIQUE
+            - DEATH
+          weapons:
+            - name: Bludgeoning Strikes
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Petrified Spinesaw
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "6"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Immortis Guard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "4"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - OSSIARCH BONEREAPERS
+            - WARD (6+)
+            - DEATH
+            - PETRIFEX ELITE
+            - DEATH
+          weapons:
+            - name: Dread Halberd
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Morghast Harbingers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - OSSIARCH BONEREAPERS
+            - WARD (6+)
+            - DEATH
+            - FLY
+            - PETRIFEX ELITE
+            - DEATH
+          weapons:
+            - name: Spirit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mortek Crawler
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - OSSIARCH BONEREAPERS
+            - WARD (6+)
+            - DEATH
+            - WAR MACHINE
+            - PETRIFEX ELITE
+            - DEATH
+          weapons:
+            - name: Attendants' Crawler Tools
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Dread Catapult
+              range: 24"
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3+2
+              version: ""
+              source: ""
+          abilities: []
+        - name: Necropolis Stalkers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - OSSIARCH BONEREAPERS
+            - WARD (6+)
+            - DEATH
+            - PETRIFEX ELITE
+            - DEATH
+          weapons:
+            - name: Stalker Blades
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gothizzar Harvester
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - OSSIARCH BONEREAPERS
+            - WARD (6+)
+            - DEATH
+            - MONSTER
+            - PETRIFEX ELITE
+            - DEATH
+          weapons:
+            - name: Ossified Hooves and Tail
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Soulcrusher Weapons
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Death's Head Maw
+              range: 12"
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

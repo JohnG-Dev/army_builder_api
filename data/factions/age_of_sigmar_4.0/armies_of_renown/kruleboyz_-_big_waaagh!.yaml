@@ -1,0 +1,13 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Kruleboyz - Big Waaagh!
+      description: ""
+      is_army_of_renown: true
+      is_regiment_of_renown: false
+      parent_faction_name: Kruleboyz
+      allegiance: DESTRUCTION
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

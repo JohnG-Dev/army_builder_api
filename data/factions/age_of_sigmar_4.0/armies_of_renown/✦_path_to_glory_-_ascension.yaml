@@ -1,0 +1,13 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: ✦ Path to Glory - Ascension
+      description: ""
+      is_army_of_renown: true
+      is_regiment_of_renown: false
+      parent_faction_name: Path to Glory
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

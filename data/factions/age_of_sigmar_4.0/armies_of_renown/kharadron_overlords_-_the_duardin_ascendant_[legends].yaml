@@ -1,0 +1,13 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Kharadron Overlords - The Duardin Ascendant [LEGENDS]
+      description: ""
+      is_army_of_renown: true
+      is_regiment_of_renown: false
+      parent_faction_name: Kharadron Overlords
+      allegiance: ORDER
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

@@ -1,26 +1,15 @@
+version: "2"
+
 run:
   timeout: 5m
-  skip-dirs:
-    - vendor
-    - bin
+  tests: true
 
 linters:
-  enable:
-    - gofmt
-    - golint
-    - govet
-    - errcheck
-    - unused
-    - gosimple
-  disable:
-    - typecheck
+  # We leave this empty to use the standard defaults 
+  # This prevents "unknown linter" errors
+  enable-all: false
+  disable-all: false
 
 issues:
-  exclude-rules:
-    - path: _test\.go
-      linters:
-        - lll
-    
-    - text: "should be"
-      linters:
-        - golint
+  max-issues-per-linter: 0
+  max-same-issues: 0

@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:15-alpine # Or your current version
+    image: postgres:17-alpine # Or your current version
     container_name: army_builder_db
     environment:
       POSTGRES_USER: postgres

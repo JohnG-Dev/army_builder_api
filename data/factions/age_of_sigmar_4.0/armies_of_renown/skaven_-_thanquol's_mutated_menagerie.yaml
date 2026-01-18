@@ -1,0 +1,456 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Skaven - Thanquol's Mutated Menagerie
+      description: ""
+      is_army_of_renown: true
+      is_regiment_of_renown: false
+      parent_faction_name: Skaven
+      allegiance: CHAOS
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Thanquol on Boneripper
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 340
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARMASTER
+            - SKAVEN
+            - MASTERCLAN
+            - WIZARD (2)
+            - WARD (5+)
+            - CHAOS
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Warpfire Braziers
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Staff of the Horned Rat
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Custom Warpfire Projectors
+              range: 10"
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Master Moulder
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - MOULDER
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Warpsyringe Pistol
+              range: 10"
+              attacks: D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arsenal of Mutation
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Rat Ogors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - MOULDER
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Claws, Blades and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Warpfire Gun
+              range: 10"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hell Pit Abomination
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: D6+5"
+          health: "14"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - MOULDER
+            - MONSTER
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Gnashing Teeth and Flailing Fists
+              range: ""
+              attacks: "13"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brood Terror
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - MOULDER
+            - MONSTER
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Warpflame Scourger
+              range: 15"
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chain-flail
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Bladed Limbs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stormfiends
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - MOULDER
+            - SKRYRE
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Ratling Cannons
+              range: 15"
+              attacks: 3D6
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Clubbing Blows
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Grinderfists
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Warpfire Projectors
+              range: 10"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Clubbing Blows
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Windlaunchers
+              range: 15"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Clubbing Blows
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Doomflayer Gauntlets
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Shock Gauntlets
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brood Terror (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - MOULDER
+            - MONSTER
+            - WARD (5+)
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Warpflame Scourger
+              range: 15"
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chain-flail
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Loosely Attached Bladed Limbs
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

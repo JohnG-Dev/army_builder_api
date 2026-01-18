@@ -1,0 +1,368 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Stormcast Eternals - Draconith Skywing
+      description: ""
+      is_army_of_renown: true
+      is_regiment_of_renown: false
+      parent_faction_name: Stormcast Eternals
+      allegiance: ORDER
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Stormdrake Guard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "9"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - FLY
+            - MONSTER
+            - EXTREMIS CHAMBER
+            - UNDERSIZE UNIT
+            - ORDER
+          weapons:
+            - name: Draconith’s Fangs and Talons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Draconic Flamestream
+              range: 10"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Drakerider’s Lance
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Drakerider’s Warblade
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stormreach Portal
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: '-'
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: '-'
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 0
+          max_unit_size: 0
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - FACTION TERRAIN
+            - ORDER
+            - STORMCAST ETERNALS
+            - ORDER
+          weapons: []
+          abilities: []
+        - name: Ionus Cryptborn, Warden of Lost Souls
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "16"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 380
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - FLY
+            - WARMASTER
+            - UNIQUE
+            - ORDER
+            - STORMCAST ETERNALS
+            - MONSTER
+            - PRIEST (2)
+            - RUINATION CHAMBER
+            - DRACONITH SKYWING
+            - ORDER
+          weapons:
+            - name: Spirit-scouring Flames
+              range: 10"
+              attacks: "9"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulbreaker
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Cthorak’s Ancient Claws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Krondys, Son of Dracothion
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "20"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 520
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARMASTER
+            - MONSTER
+            - FLY
+            - WIZARD (2)
+            - DRACONITH SKYWING
+            - ORDER
+          weapons:
+            - name: Blazing Tempest
+              range: 12"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+            - name: Apex Maw
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Drake-lord’s Talons
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Karazai the Scarred
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "20"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 460
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARMASTER
+            - MONSTER
+            - FLY
+            - DRACONITH SKYWING
+            - ORDER
+          weapons:
+            - name: Blazing Tempest
+              range: 12"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+            - name: Annihilating Jaws
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Drake-lord’s Talons
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Draconis
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "11"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - MONSTER
+            - FLY
+            - EXTREMIS CHAMBER
+            - DRACONITH SKYWING
+            - ORDER
+          weapons:
+            - name: Draconic Flamestream
+              range: 10"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Aeonfire Blade
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Draconith’s Fangs and Talons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []

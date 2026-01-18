@@ -1,0 +1,227 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: Slaves to Darkness - The Swords of Chaos
+      description: ""
+      is_army_of_renown: true
+      is_regiment_of_renown: false
+      parent_faction_name: Slaves to Darkness
+      allegiance: CHAOS
+      version: ""
+      source: Battlescribe Data
+      units:
+        - name: Abraxia, Spear of the Everchosen
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 260
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - WARRIORS OF CHAOS
+            - WARD (5+)
+            - SWORDS OF CHAOS
+            - CHAOS
+          weapons:
+            - name: Gorbolga
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: The Thanatorg’s Claws and Fangs
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Varanguard
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 320
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - WARRIORS OF CHAOS
+            - SWORDS OF CHAOS
+            - CHAOS
+          weapons:
+            - name: Daemonforged Blades
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Steed’s Tearing Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abraxia, Spear of the Everchosen (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 330
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - WARRIORS OF CHAOS
+            - WARD (5+)
+            - SWORDS OF CHAOS
+            - CHAOS
+          weapons:
+            - name: Gorbolga the Accurs'd
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: The Thanatorg’s Vicious Claws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Archaon, the Everchosen
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "25"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 810
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARD (5+)
+            - FLY
+            - WARMASTER
+            - WIZARD (2)
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - SWORDS OF CHAOS
+            - CHAOS
+          weapons:
+            - name: The Slayer of Kings
+              range: ""
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Dorghar’s Heads
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Dorghar’s Claws and Tails
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+      battle_formations: []
+      enhancements: []
