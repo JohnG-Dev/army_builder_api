@@ -69,230 +69,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Weirdbrute Wrekkaz
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - DESTRUCTION
-            - IRONJAWZ
-            - BRUTE
-            - WARD (5+)
-            - ZOGGROK'S IRONMONGERS
-            - DESTRUCTION
-          weapons:
-            - name: Chain-smasha
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Zoggrok Anvilsmasha
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "7"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - DESTRUCTION
-            - IRONJAWZ
-            - INFANTRY
-            - ZOGGROK'S IRONMONGERS
-            - DESTRUCTION
-          weapons:
-            - name: Skull-crushing Basha
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ward-smashing Choppa
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Grunta-tongs
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ardboy Big Boss
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "7"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - IRONJAWZ
-            - INFANTRY
-            - RESTRICT GENERAL
-            - ZOGGROK'S IRONMONGERS
-            - DESTRUCTION
-          weapons:
-            - name: Boss-hacka and Choppa
-              range: ""
-              attacks: "7"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ironskull's Boyz
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - DESTRUCTION
-            - INFANTRY
-            - IRONJAWZ
-            - ZOGGROK'S IRONMONGERS
-            - DESTRUCTION
-          weapons:
-            - name: Ardboy Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ardboy Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ardboy Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ardboy Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Warchanter
           description: ""
           is_manifestation: false
@@ -420,43 +196,119 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Weirdbrute Wrekkaz (Scourge of Ghyran)
+        - name: Zoggrok Anvilsmasha
           description: ""
           is_manifestation: false
-          is_unique: false
+          is_unique: true
           move: 4"
-          health: "3"
-          save: 5+
+          health: "7"
+          save: 3+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 100
+          points: 160
           summon_cost: ""
           banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
+          min_unit_size: 1
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
+            - HERO
+            - UNIQUE
             - DESTRUCTION
             - IRONJAWZ
-            - BRUTE
-            - WARD (5+)
+            - INFANTRY
             - ZOGGROK'S IRONMONGERS
             - DESTRUCTION
           weapons:
-            - name: Chain-smasha
+            - name: Skull-crushing Basha
               range: ""
-              attacks: "6"
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ward-smashing Choppa
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Grunta-tongs
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ardboy Big Boss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - IRONJAWZ
+            - INFANTRY
+            - RESTRICT GENERAL
+            - ZOGGROK'S IRONMONGERS
+            - DESTRUCTION
+          weapons:
+            - name: Boss-hacka and Choppa
+              range: ""
+              attacks: "7"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -497,45 +349,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Brute Ragerz
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - DESTRUCTION
-            - IRONJAWZ
-            - BRUTE
-            - ZOGGROK'S IRONMONGERS
-            - DESTRUCTION
-          weapons:
-            - name: Rager Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -585,6 +398,193 @@ factions:
               to_wound: 3+
               rend: "2"
               damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdbrute Wrekkaz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DESTRUCTION
+            - IRONJAWZ
+            - BRUTE
+            - WARD (5+)
+            - ZOGGROK'S IRONMONGERS
+            - DESTRUCTION
+          weapons:
+            - name: Chain-smasha
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Weirdbrute Wrekkaz (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DESTRUCTION
+            - IRONJAWZ
+            - BRUTE
+            - WARD (5+)
+            - ZOGGROK'S IRONMONGERS
+            - DESTRUCTION
+          weapons:
+            - name: Chain-smasha
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brute Ragerz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DESTRUCTION
+            - IRONJAWZ
+            - BRUTE
+            - ZOGGROK'S IRONMONGERS
+            - DESTRUCTION
+          weapons:
+            - name: Rager Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ironskull's Boyz
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - DESTRUCTION
+            - INFANTRY
+            - IRONJAWZ
+            - ZOGGROK'S IRONMONGERS
+            - DESTRUCTION
+          weapons:
+            - name: Ardboy Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ardboy Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ardboy Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ardboy Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
           abilities: []

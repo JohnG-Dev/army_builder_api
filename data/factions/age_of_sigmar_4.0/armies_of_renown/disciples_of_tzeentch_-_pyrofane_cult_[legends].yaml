@@ -9,20 +9,20 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Magister
+        - name: Ogroid Thaumaturge (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
           move: 6"
-          health: "5"
-          save: 4+
+          health: "8"
+          save: 5+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 110
+          points: 130
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -37,25 +37,26 @@ factions:
             - WIZARD (1)
             - ARCANITE
             - INFANTRY
+            - WARD (6+)
             - PYROFANE
             - CHAOS
           weapons:
-            - name: Tzeentchian Runestaff
-              range: 18"
-              attacks: "1"
+            - name: Thaumaturge Staff
+              range: 12"
+              attacks: "3"
               to_hit: 3+
               to_wound: 4+
               rend: '-'
               damage: D3
               version: ""
               source: ""
-            - name: Warpsteel Sword
+            - name: Great Horns and Cloven Hooves
               range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: D3
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -77,7 +78,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Kairic Acolytes (Scourge of Ghyran)
+        - name: Kairic Acolytes
           description: ""
           is_manifestation: false
           is_unique: false
@@ -90,7 +91,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 100
+          points: 90
           summon_cost: ""
           banishment: ""
           min_unit_size: 10
@@ -107,12 +108,153 @@ factions:
             - PYROFANE
             - CHAOS
           weapons:
-            - name: Cursed Blades and Glaives
-              range: ""
-              attacks: "2"
+            - name: Sorcerous Bolt
+              range: 18"
+              attacks: "1"
               to_hit: 4+
               to_wound: 3+
               rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Cursed Glaive
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Cursed Blade
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Eyes of the Nine
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - DISCIPLES OF TZEENTCH
+            - ARCANITE
+            - CHAOS
+            - PYROFANE
+            - CHAOS
+          weapons:
+            - name: Arcanite Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Mighty Sorcerous Bolt
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arcanite Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Mighty Sorcerous Bolt
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arcanite Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Mighty Sorcerous Bolt
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arcanite Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Mighty Sorcerous Bolt
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arcanite Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Mighty Sorcerous Bolt
+              range: 18"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
@@ -255,72 +397,54 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Ogroid Thaumaturge (Scourge of Ghyran)
+        - name: Pyrofane Fusil-Major on Ogor Warhulk
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 6"
+          move: 5"
           health: "8"
-          save: 5+
+          save: 3+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 0
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
           max_unit_size: 1
-          matched_play: true
+          matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
             - HERO
+            - HUMAN
+            - INFANTRY
             - CHAOS
             - DISCIPLES OF TZEENTCH
-            - WIZARD (1)
             - ARCANITE
-            - INFANTRY
-            - WARD (6+)
             - PYROFANE
+            - LEGENDS
             - CHAOS
           weapons:
-            - name: Thaumaturge Staff
-              range: 12"
+            - name: Long Fusil
+              range: 24"
               attacks: "3"
               to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Great Horns and Cloven Hooves
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
+              to_wound: 3+
               rend: "1"
               damage: "2"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
+            - name: Warhulk’s Mace
               range: ""
-              attacks: D6+1
+              attacks: "4"
               to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -400,126 +524,132 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Eyes of the Nine
+        - name: Pyrofane Fusiliers
           description: ""
           is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "2"
-          save: 5+
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 4+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 100
+          points: 0
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
+          min_unit_size: 10
+          max_unit_size: 20
           matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
             - INFANTRY
-            - UNIQUE
-            - LEGENDS
             - CHAMPION
+            - HUMAN
+            - STANDARD BEARER (1/10)
             - DISCIPLES OF TZEENTCH
             - ARCANITE
+            - PYROFANE
             - CHAOS
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: 'Fusil-cannon: Fortified Position'
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: 'Fusil-cannon: Mobile'
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bayonet
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Magister
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - DISCIPLES OF TZEENTCH
+            - WIZARD (1)
+            - ARCANITE
+            - INFANTRY
             - PYROFANE
             - CHAOS
           weapons:
-            - name: Arcanite Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Mighty Sorcerous Bolt
+            - name: Tzeentchian Runestaff
               range: 18"
               attacks: "1"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Warpsteel Sword
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
+              damage: D3+0
               version: ""
               source: ""
-            - name: Arcanite Weapons
+            - name: Emberstone-enhanced Melee Weapon
               range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Mighty Sorcerous Bolt
-              range: 18"
-              attacks: "1"
+              attacks: D6+1
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arcanite Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Mighty Sorcerous Bolt
-              range: 18"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arcanite Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Mighty Sorcerous Bolt
-              range: 18"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arcanite Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Mighty Sorcerous Bolt
-              range: 18"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -669,7 +799,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Kairic Acolytes
+        - name: Kairic Acolytes (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: false
@@ -682,7 +812,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 90
+          points: 100
           summon_cost: ""
           banishment: ""
           min_unit_size: 10
@@ -699,29 +829,11 @@ factions:
             - PYROFANE
             - CHAOS
           weapons:
-            - name: Sorcerous Bolt
-              range: 18"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Cursed Glaive
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Cursed Blade
+            - name: Cursed Blades and Glaives
               range: ""
               attacks: "2"
               to_hit: 4+
-              to_wound: 4+
+              to_wound: 3+
               rend: '-'
               damage: "1"
               version: ""
@@ -768,188 +880,6 @@ factions:
               to_wound: 4+
               rend: '-'
               damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Pyrofane Fusiliers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 0
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - HUMAN
-            - STANDARD BEARER (1/10)
-            - DISCIPLES OF TZEENTCH
-            - ARCANITE
-            - PYROFANE
-            - CHAOS
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: 'Fusil-cannon: Fortified Position'
-              range: 18"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: 'Fusil-cannon: Mobile'
-              range: 12"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Bayonet
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Fatemaster
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - CHAOS
-            - LEGENDS
-            - CAVALRY
-            - FLY
-            - DISCIPLES OF TZEENTCH
-            - ARCANITE
-            - PYROFANE
-            - CHAOS
-          weapons:
-            - name: Fireglaive of Tzeentch
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Disc’s Teeth and Horns
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Pyrofane Fusil-Major on Ogor Warhulk
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 0
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - HUMAN
-            - INFANTRY
-            - CHAOS
-            - DISCIPLES OF TZEENTCH
-            - ARCANITE
-            - PYROFANE
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Long Fusil
-              range: 24"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warhulk’s Mace
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -1072,6 +1002,76 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+            - name: Disc’s Teeth and Horns
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Fatemaster
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - CHAOS
+            - LEGENDS
+            - CAVALRY
+            - FLY
+            - DISCIPLES OF TZEENTCH
+            - ARCANITE
+            - PYROFANE
+            - CHAOS
+          weapons:
+            - name: Fireglaive of Tzeentch
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
               version: ""
               source: ""
             - name: Disc’s Teeth and Horns

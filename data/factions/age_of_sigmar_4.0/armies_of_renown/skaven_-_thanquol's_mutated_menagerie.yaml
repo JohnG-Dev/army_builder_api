@@ -9,68 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Thanquol on Boneripper
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 340
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - WARMASTER
-            - SKAVEN
-            - MASTERCLAN
-            - WIZARD (2)
-            - WARD (5+)
-            - CHAOS
-            - MUTATED MENAGERIE
-            - CHAOS
-          weapons:
-            - name: Warpfire Braziers
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Staff of the Horned Rat
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Custom Warpfire Projectors
-              range: 10"
-              attacks: "6"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Master Moulder
           description: ""
           is_manifestation: false
@@ -449,6 +387,68 @@ factions:
               to_wound: 4+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Thanquol on Boneripper
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 340
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARMASTER
+            - SKAVEN
+            - MASTERCLAN
+            - WIZARD (2)
+            - WARD (5+)
+            - CHAOS
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Warpfire Braziers
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Staff of the Horned Rat
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Custom Warpfire Projectors
+              range: 10"
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
               version: ""
               source: ""
           abilities: []

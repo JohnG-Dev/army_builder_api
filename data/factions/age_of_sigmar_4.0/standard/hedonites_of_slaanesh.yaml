@@ -9,6 +9,189 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Shalaxi Helbane
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - WARMASTER
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (5+)
+            - WIZARD (2)
+            - HEDONITES OF SLAANESH
+            - CHAOS
+          weapons:
+            - name: Impaling Claws
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Soulpiercer
+              range: ""
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slaangor Fiendbloods
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HEDONITES OF SLAANESH
+            - CHAOS
+            - CHAMPION
+            - INFANTRY
+            - SYBARITE
+            - CHAOS
+          weapons:
+            - name: Razor-sharp Claws and Gilded Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slaangor Fiendbloods (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HEDONITES OF SLAANESH
+            - CHAOS
+            - CHAMPION
+            - INFANTRY
+            - SYBARITE
+            - CHAOS
+          weapons:
+            - name: Razor-sharp Claws and Gilded Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Synessa, the Voice of Slaanesh
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "10"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - WARMASTER
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (5+)
+            - HEDONITES OF SLAANESH
+            - WIZARD (1)
+            - FLY
+            - CHAOS
+          weapons:
+            - name: Unraveller’s Talons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Staff of Slaanesh
+              range: 18"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
         - name: Glutos Orscollion, Lord of Gluttony
           description: ""
           is_manifestation: false
@@ -138,422 +321,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Shalaxi Helbane
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "16"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 450
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - WARMASTER
-            - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (5+)
-            - WIZARD (2)
-            - HEDONITES OF SLAANESH
-            - CHAOS
-          weapons:
-            - name: Impaling Claws
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Soulpiercer
-              range: ""
-              attacks: "6"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Sigvald, Prince of Slaanesh
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "7"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - WARMASTER
-            - CHAOS
-            - HEDONITES OF SLAANESH
-            - SYBARITE
-            - WARD (4+)
-            - INFANTRY
-            - CHAOS
-          weapons:
-            - name: Shardslash
-              range: ""
-              attacks: "5"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Synessa, the Voice of Slaanesh
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "10"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - WARMASTER
-            - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (5+)
-            - HEDONITES OF SLAANESH
-            - WIZARD (1)
-            - FLY
-            - CHAOS
-          weapons:
-            - name: Unraveller’s Talons
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Staff of Slaanesh
-              range: 18"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Blissbarb Archers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - CHAOS
-            - HEDONITES OF SLAANESH
-            - SYBARITE
-            - CHAOS
-          weapons:
-            - name: Blissbarb Bow
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Sybarite Blade
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Seekers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - CHAOS
-            - DAEMON
-            - WARD (6+)
-            - HEDONITES OF SLAANESH
-            - CAVALRY
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - CHAOS
-          weapons:
-            - name: Agonising Claws
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Steed’s Poisoned Tongue
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Syll'Esske, the Vengeful Allegiance (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "9"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "4"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - CHAOS
-            - DAEMON
-            - HEDONITES OF SLAANESH
-            - WIZARD (1)
-            - SYBARITE
-            - INFANTRY
-            - WARD (5+)
-            - CHAOS
-          weapons:
-            - name: Axe of Dominion
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Scourging Whip
-              range: ""
-              attacks: "6"
-              to_hit: 2+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Bladebringer, Herald on Exalted Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "12"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - DAEMON
-            - HEDONITES OF SLAANESH
-            - WARD (6+)
-            - WAR MACHINE
-            - HERO
-            - WIZARD (1)
-            - CHAOS
-          weapons:
-            - name: Steeds’ Poisoned Tongues
-              range: ""
-              attacks: "8"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Flensing Whips and Piercing Claws
-              range: ""
-              attacks: "12"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Hellstriders
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HEDONITES OF SLAANESH
-            - CHAOS
-            - CHAMPION
-            - SYBARITE
-            - MUSICIAN (1/5)
-            - STANDARD BEARER (1/5)
-            - CAVALRY
-            - CHAOS
-          weapons:
-            - name: Claw-spear or Hellscourge
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Steed’s Poisoned Tongue
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Lord of Hubris
           description: ""
           is_manifestation: false
@@ -591,210 +358,6 @@ factions:
               to_wound: 4+
               rend: "1"
               damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Seeker Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - DAEMON
-            - HEDONITES OF SLAANESH
-            - WARD (6+)
-            - WAR MACHINE
-            - CHAOS
-          weapons:
-            - name: Flensing Whips and Piercing Claws
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Steeds’ Poisoned Tongues
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Slaangor Fiendbloods
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HEDONITES OF SLAANESH
-            - CHAOS
-            - CHAMPION
-            - INFANTRY
-            - SYBARITE
-            - CHAOS
-          weapons:
-            - name: Razor-sharp Claws and Gilded Weapons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Slickblade Seekers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HEDONITES OF SLAANESH
-            - CHAOS
-            - CHAMPION
-            - SYBARITE
-            - CAVALRY
-            - CHAOS
-          weapons:
-            - name: Slickblade Glaive
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Exalted Steed’s Poisoned Tongue
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Bladebringer, Herald on Seeker Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "8"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - LEGENDS
-            - DAEMON
-            - HEDONITES OF SLAANESH
-            - WAR MACHINE
-            - WARD (6+)
-            - WIZARD (1)
-            - CHAOS
-          weapons:
-            - name: Flensing Whips and Piercing Claws
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Steeds’ Poisoned Tongues
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -985,43 +548,97 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Fiends
+        - name: Daemonettes
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 10"
-          health: "4"
-          save: 5+
+          move: 6"
+          health: "1"
+          save: 6+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 100
           summon_cost: ""
           banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
+          min_unit_size: 10
+          max_unit_size: 20
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - CHAOS
             - DAEMON
             - WARD (6+)
             - HEDONITES OF SLAANESH
-            - BEAST
-            - CHAOS
-            - CHAMPION
             - CHAOS
           weapons:
-            - name: Deadly Pincers and Barbed Stinger
+            - name: Piercing Claws
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Syll'Esske, the Vengeful Allegiance (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "4"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - CHAOS
+            - DAEMON
+            - HEDONITES OF SLAANESH
+            - WIZARD (1)
+            - SYBARITE
+            - INFANTRY
+            - WARD (5+)
+            - CHAOS
+          weapons:
+            - name: Axe of Dominion
               range: ""
               attacks: "4"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Scourging Whip
+              range: ""
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 4+
               rend: "1"
-              damage: D3
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -1093,168 +710,44 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Blissbarb Seekers
+        - name: Sigvald, Prince of Slaanesh
           description: ""
           is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HEDONITES OF SLAANESH
-            - CHAOS
-            - CHAMPION
-            - SYBARITE
-            - CAVALRY
-            - CHAOS
-          weapons:
-            - name: Seeker Bow
-              range: 12"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Exalted Steed’s Poisoned Tongue
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Sybarite Blade
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Exalted Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "9"
-          save: 4+
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 3+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 190
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
+          max_unit_size: 1
+          matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - CHAOS
-            - LEGENDS
-            - DAEMON
-            - HEDONITES OF SLAANESH
-            - WAR MACHINE
-            - WARD (6+)
-            - CHAOS
-          weapons:
-            - name: Flensing Whips and Piercing Claws
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Steeds’ Poisoned Tongues
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Thricefold Discord
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
+            - HERO
             - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - HEDONITES OF SLAANESH
-            - DAEMON
-            - WARD (6+)
+            - WARMASTER
             - CHAOS
+            - HEDONITES OF SLAANESH
+            - SYBARITE
+            - WARD (4+)
+            - INFANTRY
             - CHAOS
           weapons:
-            - name: Carnal Blades and Wicked Claws
+            - name: Shardslash
               range: ""
-              attacks: "3"
-              to_hit: 3+
+              attacks: "5"
+              to_hit: 2+
               to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Carnal Blades and Wicked Claws
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Carnal Blades and Wicked Claws
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
+              rend: "2"
               damage: "2"
               version: ""
               source: ""
@@ -1311,91 +804,121 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Myrmidesh Painbringers
+        - name: Seeker Chariot
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 6"
-          health: "2"
-          save: 3+
+          move: 12"
+          health: "6"
+          save: 4+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 110
+          points: 80
           summon_cost: ""
           banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
+          min_unit_size: 1
+          max_unit_size: 2
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - HEDONITES OF SLAANESH
             - CHAOS
-            - CHAMPION
-            - INFANTRY
-            - SYBARITE
+            - DAEMON
+            - HEDONITES OF SLAANESH
+            - WARD (6+)
+            - WAR MACHINE
             - CHAOS
           weapons:
-            - name: Wicked Scimitar
+            - name: Flensing Whips and Piercing Claws
               range: ""
-              attacks: "3"
+              attacks: "4"
               to_hit: 3+
-              to_wound: 3+
+              to_wound: 4+
               rend: "1"
               damage: "1"
               version: ""
               source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
           abilities: []
-        - name: Slaangor Fiendbloods (Scourge of Ghyran)
+        - name: Viceleader, Herald of Slaanesh
           description: ""
           is_manifestation: false
-          is_unique: false
+          is_unique: true
           move: 6"
-          health: "3"
+          health: "5"
           save: 5+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 140
           summon_cost: ""
           banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
-            - HEDONITES OF SLAANESH
+            - HERO
             - CHAOS
-            - CHAMPION
+            - LEGENDS
+            - DAEMON
+            - HEDONITES OF SLAANESH
+            - WARD (6+)
+            - WIZARD (1)
             - INFANTRY
-            - SYBARITE
             - CHAOS
           weapons:
-            - name: Razor-sharp Claws and Gilded Weapons
+            - name: Ravaging Claws
               range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 4+
               rend: "1"
               damage: "2"
               version: ""
               source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
           abilities: []
-        - name: The Masque
+        - name: Bladebringer, Herald on Exalted Chariot
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 8"
-          health: "5"
-          save: 5+
+          move: 10"
+          health: "12"
+          save: 4+
           ward: ""
           invuln: ""
           control: "2"
@@ -1411,18 +934,170 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
-            - UNIQUE
             - CHAOS
             - DAEMON
             - HEDONITES OF SLAANESH
-            - INFANTRY
-            - WARD (4+)
+            - WARD (6+)
+            - WAR MACHINE
+            - HERO
+            - WIZARD (1)
             - CHAOS
           weapons:
-            - name: Razor-edged Claws
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: "8"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: "12"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hellflayer
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - DAEMON
+            - HEDONITES OF SLAANESH
+            - WARD (6+)
+            - WAR MACHINE
+            - CHAOS
+          weapons:
+            - name: Axle Blades
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Flensing Whips and Piercing Claws
               range: ""
               attacks: "6"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Dread Pageant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - HEDONITES OF SLAANESH
+            - SYBARITE
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Weapons of Excess
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Weapons of Excess
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Weapons of Excess
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Weapons of Excess
+              range: ""
+              attacks: "3"
               to_hit: 3+
               to_wound: 4+
               rend: "1"
@@ -1488,101 +1163,52 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Daemonettes
+        - name: Hellstriders
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 6"
-          health: "1"
-          save: 6+
+          move: 12"
+          health: "3"
+          save: 5+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 100
+          points: 150
           summon_cost: ""
           banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
+          min_unit_size: 5
+          max_unit_size: 10
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
+            - HEDONITES OF SLAANESH
+            - CHAOS
             - CHAMPION
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - CHAOS
-            - DAEMON
-            - WARD (6+)
-            - HEDONITES OF SLAANESH
+            - SYBARITE
+            - MUSICIAN (1/5)
+            - STANDARD BEARER (1/5)
+            - CAVALRY
             - CHAOS
           weapons:
-            - name: Piercing Claws
+            - name: Claw-spear or Hellscourge
               range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Hellflayer
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - DAEMON
-            - HEDONITES OF SLAANESH
-            - WARD (6+)
-            - WAR MACHINE
-            - CHAOS
-          weapons:
-            - name: Axle Blades
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Steeds’ Poisoned Tongues
-              range: ""
-              attacks: "4"
+              attacks: "3"
               to_hit: 3+
               to_wound: 4+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Flensing Whips and Piercing Claws
+            - name: Steed’s Poisoned Tongue
               range: ""
-              attacks: "6"
+              attacks: "2"
               to_hit: 3+
               to_wound: 4+
-              rend: "1"
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
@@ -1623,6 +1249,337 @@ factions:
               to_wound: 4+
               rend: "1"
               damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slickblade Seekers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HEDONITES OF SLAANESH
+            - CHAOS
+            - CHAMPION
+            - SYBARITE
+            - CAVALRY
+            - CHAOS
+          weapons:
+            - name: Slickblade Glaive
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Exalted Steed’s Poisoned Tongue
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Exalted Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - LEGENDS
+            - DAEMON
+            - HEDONITES OF SLAANESH
+            - WAR MACHINE
+            - WARD (6+)
+            - CHAOS
+          weapons:
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Blissbarb Archers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - CHAOS
+            - HEDONITES OF SLAANESH
+            - SYBARITE
+            - CHAOS
+          weapons:
+            - name: Blissbarb Bow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sybarite Blade
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Blissbarb Seekers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HEDONITES OF SLAANESH
+            - CHAOS
+            - CHAMPION
+            - SYBARITE
+            - CAVALRY
+            - CHAOS
+          weapons:
+            - name: Seeker Bow
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Exalted Steed’s Poisoned Tongue
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sybarite Blade
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bladebringer, Herald on Seeker Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - LEGENDS
+            - DAEMON
+            - HEDONITES OF SLAANESH
+            - WAR MACHINE
+            - WARD (6+)
+            - WIZARD (1)
+            - CHAOS
+          weapons:
+            - name: Flensing Whips and Piercing Claws
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Steeds’ Poisoned Tongues
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Thricefold Discord
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - HEDONITES OF SLAANESH
+            - DAEMON
+            - WARD (6+)
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Carnal Blades and Wicked Claws
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Carnal Blades and Wicked Claws
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Carnal Blades and Wicked Claws
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -1704,11 +1661,11 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Viceleader, Herald of Slaanesh
+        - name: The Masque
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 6"
+          move: 8"
           health: "5"
           save: 5+
           ward: ""
@@ -1717,26 +1674,25 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 140
+          points: 130
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
           max_unit_size: 1
-          matched_play: false
+          matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
             - HERO
+            - UNIQUE
             - CHAOS
-            - LEGENDS
             - DAEMON
             - HEDONITES OF SLAANESH
-            - WARD (6+)
-            - WIZARD (1)
             - INFANTRY
+            - WARD (4+)
             - CHAOS
           weapons:
-            - name: Ravaging Claws
+            - name: Razor-edged Claws
               range: ""
               attacks: "6"
               to_hit: 3+
@@ -1745,32 +1701,54 @@ factions:
               damage: "2"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
+          abilities: []
+        - name: Fiends
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DAEMON
+            - WARD (6+)
+            - HEDONITES OF SLAANESH
+            - BEAST
+            - CHAOS
+            - CHAMPION
+            - CHAOS
+          weapons:
+            - name: Deadly Pincers and Barbed Stinger
               range: ""
-              attacks: D6+1
+              attacks: "4"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: D3+0
+              damage: D3
               version: ""
               source: ""
           abilities: []
-        - name: The Dread Pageant
+        - name: Myrmidesh Painbringers
           description: ""
           is_manifestation: false
-          is_unique: true
+          is_unique: false
           move: 6"
-          health: "3"
-          save: 5+
+          health: "2"
+          save: 3+
           ward: ""
           invuln: ""
           control: "1"
@@ -1780,55 +1758,77 @@ factions:
           points: 110
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
             - HEDONITES OF SLAANESH
+            - CHAOS
+            - CHAMPION
+            - INFANTRY
             - SYBARITE
             - CHAOS
+          weapons:
+            - name: Wicked Scimitar
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Seekers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - CHAOS
+            - DAEMON
+            - WARD (6+)
+            - HEDONITES OF SLAANESH
+            - CAVALRY
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
             - CHAOS
           weapons:
-            - name: Weapons of Excess
+            - name: Agonising Claws
               range: ""
               attacks: "3"
               to_hit: 3+
               to_wound: 4+
               rend: "1"
-              damage: "2"
+              damage: "1"
               version: ""
               source: ""
-            - name: Weapons of Excess
+            - name: Steed’s Poisoned Tongue
               range: ""
-              attacks: "3"
+              attacks: "2"
               to_hit: 3+
               to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Weapons of Excess
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Weapons of Excess
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []

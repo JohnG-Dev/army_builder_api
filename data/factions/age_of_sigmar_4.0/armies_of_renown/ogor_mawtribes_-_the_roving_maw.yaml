@@ -9,6 +9,176 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Ironblaster
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - GUTBUSTERS
+            - RHINOX
+            - WAR MACHINE
+            - ROVING MAW
+            - DESTRUCTION
+          weapons:
+            - name: Rhinox’s Sharp Horns
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Clubber
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: 'Ironblaster Cannon: Big Shot'
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+            - name: 'Ironblaster Cannon: Hail Shot'
+              range: 12"
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ogor Gluttons
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - MUSICIAN (1/6)
+            - STANDARD BEARER (1/6)
+            - OGOR MAWTRIBES
+            - DESTRUCTION
+            - OGOR
+            - GUTBUSTERS
+            - ROVING MAW
+            - DESTRUCTION
+          weapons:
+            - name: Glutton Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ironblaster (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "9"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - OGOR
+            - GUTBUSTERS
+            - RHINOX
+            - WAR MACHINE
+            - ROVING MAW
+            - DESTRUCTION
+          weapons:
+            - name: Rhinox’s Sharp Horns
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Clubber
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ironblaster Cannon
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "5"
+              version: ""
+              source: ""
+          abilities: []
         - name: Bloodpelt Hunter
           description: ""
           is_manifestation: false
@@ -65,66 +235,6 @@ factions:
               to_wound: 2+
               rend: "1"
               damage: D6
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Butcher
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "7"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - OGOR MAWTRIBES
-            - INFANTRY
-            - OGOR
-            - GUTBUSTERS
-            - WIZARD (1)
-            - ROVING MAW
-            - DESTRUCTION
-          weapons:
-            - name: Butcher’s Tools
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -265,159 +375,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Ironguts
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 4
-          max_unit_size: 8
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - OGOR MAWTRIBES
-            - DESTRUCTION
-            - OGOR
-            - GUTBUSTERS
-            - MUSICIAN (1/4)
-            - STANDARD BEARER (1/4)
-            - DESTRUCTION
-          weapons:
-            - name: Irongut Weapon
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ironblaster
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 9"
-          health: "9"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DESTRUCTION
-            - OGOR MAWTRIBES
-            - OGOR
-            - GUTBUSTERS
-            - RHINOX
-            - WAR MACHINE
-            - ROVING MAW
-            - DESTRUCTION
-          weapons:
-            - name: Rhinox’s Sharp Horns
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Clubber
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: 'Ironblaster Cannon: Big Shot'
-              range: 18"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D3+3
-              version: ""
-              source: ""
-            - name: 'Ironblaster Cannon: Hail Shot'
-              range: 12"
-              attacks: "8"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ogor Gluttons
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 220
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 6
-          max_unit_size: 12
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - MUSICIAN (1/6)
-            - STANDARD BEARER (1/6)
-            - OGOR MAWTRIBES
-            - DESTRUCTION
-            - OGOR
-            - GUTBUSTERS
-            - ROVING MAW
-            - DESTRUCTION
-          weapons:
-            - name: Glutton Weapons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
         - name: Tyrant
           description: ""
           is_manifestation: false
@@ -535,62 +492,105 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Ironblaster (Scourge of Ghyran)
+        - name: Ironguts
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 9"
-          health: "9"
-          save: 4+
+          move: 6"
+          health: "4"
+          save: 5+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 180
+          points: 230
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
+          min_unit_size: 4
+          max_unit_size: 8
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - DESTRUCTION
+            - INFANTRY
+            - CHAMPION
             - OGOR MAWTRIBES
+            - DESTRUCTION
             - OGOR
             - GUTBUSTERS
-            - RHINOX
-            - WAR MACHINE
+            - MUSICIAN (1/4)
+            - STANDARD BEARER (1/4)
+            - DESTRUCTION
+          weapons:
+            - name: Irongut Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Butcher
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - OGOR MAWTRIBES
+            - INFANTRY
+            - OGOR
+            - GUTBUSTERS
+            - WIZARD (1)
             - ROVING MAW
             - DESTRUCTION
           weapons:
-            - name: Rhinox’s Sharp Horns
+            - name: Butcher’s Tools
               range: ""
               attacks: "3"
               to_hit: 4+
               to_wound: 2+
               rend: "1"
-              damage: D3
+              damage: "3"
               version: ""
               source: ""
-            - name: Clubber
-              range: ""
-              attacks: "2"
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
               to_hit: 4+
-              to_wound: 2+
+              to_wound: 3+
               rend: "1"
-              damage: "2"
+              damage: D3+0
               version: ""
               source: ""
-            - name: Ironblaster Cannon
-              range: 18"
-              attacks: "2"
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
               to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "5"
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

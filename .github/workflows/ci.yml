@@ -75,7 +75,7 @@ jobs:
           PGPASSWORD: postgres
       
       - name: Run tests
-        run: go test ./internal/handlers -v -count=1
+        run: go test ./internal/handlers ./internal/services -v -count=1 -p 1
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/army_builder_api?sslmode=disable
 

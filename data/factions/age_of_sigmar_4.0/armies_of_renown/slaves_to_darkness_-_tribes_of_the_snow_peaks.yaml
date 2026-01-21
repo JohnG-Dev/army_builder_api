@@ -9,12 +9,12 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Darkoath Chieftain
+        - name: Gunnar Brand
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "5"
+          health: "6"
           save: 5+
           ward: ""
           invuln: ""
@@ -22,7 +22,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 80
+          points: 200
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -31,98 +31,23 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
+            - UNIQUE
             - HERO
             - SLAVES TO DARKNESS
-            - INFANTRY
             - CHAOS
+            - INFANTRY
             - DARKOATH
+            - GUNNAR'S OATHSWORN
             - SNOW PEAKS
             - CHAOS
           weapons:
-            - name: Cursed Broadsword
+            - name: Dual Axes
               range: ""
-              attacks: "5"
+              attacks: "10"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Warqueen
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - CHAOS
-            - DARKOATH
-            - WARD (5+)
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Rune-etched Axe
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -195,6 +120,88 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Darkoath Marauders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - DARKOATH
+            - CHAMPION
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Raider Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Savagers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - DARKOATH
+            - CHAMPION (1/10)
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Darkoath Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
         - name: Darkoath Wilderfiend
           description: ""
           is_manifestation: false
@@ -241,6 +248,133 @@ factions:
               to_wound: 3+
               rend: "2"
               damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Chieftain
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - CHAOS
+            - DARKOATH
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Cursed Broadsword
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Gnarlspirit Pack
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - UNDIVIDED
+            - DARKOATH
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Gnarlspirit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Gnarlspirit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Gnarlspirit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Gnarlspirit Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -406,12 +540,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Gunnar Brand
+        - name: Darkoath Warqueen
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "6"
+          health: "5"
           save: 5+
           ward: ""
           invuln: ""
@@ -419,7 +553,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 200
+          points: 100
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -428,174 +562,40 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - UNIQUE
             - HERO
             - SLAVES TO DARKNESS
-            - CHAOS
             - INFANTRY
+            - CHAOS
             - DARKOATH
-            - GUNNAR'S OATHSWORN
+            - WARD (5+)
             - SNOW PEAKS
             - CHAOS
           weapons:
-            - name: Dual Axes
+            - name: Rune-etched Axe
               range: ""
-              attacks: "10"
+              attacks: "5"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
+              damage: "2"
               version: ""
               source: ""
-          abilities: []
-        - name: Darkoath Marauders
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - DARKOATH
-            - CHAMPION
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Raider Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Savagers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - DARKOATH
-            - CHAMPION (1/10)
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Darkoath Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Gnarlspirit Pack
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - UNDIVIDED
-            - DARKOATH
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Gnarlspirit Weapons
-              range: ""
-              attacks: "3"
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
+              damage: D3+0
               version: ""
               source: ""
-            - name: Gnarlspirit Weapons
+            - name: Emberstone-enhanced Melee Weapon
               range: ""
-              attacks: "3"
+              attacks: D6+1
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Gnarlspirit Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Gnarlspirit Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

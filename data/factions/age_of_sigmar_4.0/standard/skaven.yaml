@@ -9,13 +9,13 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Plaguepack
+        - name: Warplock Jezzails
           description: ""
           is_manifestation: false
           is_unique: false
           move: 6"
           health: "2"
-          save: 6+
+          save: 4+
           ward: ""
           invuln: ""
           control: "1"
@@ -25,30 +25,459 @@ factions:
           points: 130
           summon_cost: ""
           banishment: ""
-          min_unit_size: 4
-          max_unit_size: 8
+          min_unit_size: 3
+          max_unit_size: 6
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
+            - SKAVEN
+            - CHAOS
             - INFANTRY
+            - SKRYRE
+            - CHAOS
+          weapons:
+            - name: Rusty Knives
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Warplock Jezzail
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Plague Monks
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 20
+          max_unit_size: 40
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - CHAMPION
+            - PESTILENS
+            - MUSICIAN (1/20)
+            - STANDARD BEARER (1/20)
+            - CHAOS
+          weapons:
+            - name: Foetid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Brood Terror
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - MOULDER
+            - MONSTER
+            - CHAOS
+          weapons:
+            - name: Warpflame Scourger
+              range: 15"
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chain-flail
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Bladed Limbs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Verminlord Corruptor
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "13"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 300
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - MONSTER
+            - SKAVEN
+            - WARD (5+)
+            - CHAOS
+            - DAEMON
+            - PESTILENS
+            - PRIEST (1)
+            - CHAOS
+          weapons:
+            - name: Plaguereapers
+              range: ""
+              attacks: "8"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Verminlord Warbringer
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "13"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 300
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - MONSTER
+            - SKAVEN
+            - WARD (5+)
+            - CHAOS
+            - WIZARD (1)
+            - DAEMON
+            - VERMINUS
+            - CHAOS
+          weapons:
+            - name: Doom Glaive and Spike-fist
+              range: ""
+              attacks: "7"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Clanrats
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 20
+          max_unit_size: 40
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - CHAMPION
+            - VERMINUS
+            - MUSICIAN (1/20)
+            - STANDARD BEARER (1/20)
+            - CHAOS
+          weapons:
+            - name: Rusty Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Doomwheel
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 2D6+7"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - WAR MACHINE
+            - SKRYRE
+            - CHAOS
+          weapons:
+            - name: Warp Bolts
+              range: 13"
+              attacks: D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Grinding Wheels
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gutter Runners
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 7"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - ESHIN
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Poisoned Stars
+              range: 10"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Punch Dagger and Blade
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 5+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skabbik's Plaguepack
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
             - CHAOS
             - SKAVEN
             - PRIEST (1)
             - PESTILENS
-            - CHAMPION (1/5)
+            - CHAMPION
             - CHAOS
           weapons:
             - name: Plague Censer
               range: ""
               attacks: "4"
               to_hit: 4+
-              to_wound: 3+
+              to_wound: 5+
               rend: "1"
               damage: "2"
               version: ""
               source: ""
-            - name: Weapons of Corruption
+            - name: Plaguepack Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Plaguepack Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Plaguepack Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Plaguepack Weapons
               range: ""
               attacks: "2"
               to_hit: 4+
@@ -143,20 +572,77 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Grey Seer on Screaming Bell (Scourge of Ghyran)
+        - name: Brood Terror (Scourge of Ghyran)
           description: ""
           is_manifestation: false
-          is_unique: true
+          is_unique: false
           move: 6"
-          health: "15"
-          save: 4+
+          health: "12"
+          save: 5+
           ward: ""
           invuln: ""
           control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 330
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - MOULDER
+            - MONSTER
+            - WARD (5+)
+            - CHAOS
+          weapons:
+            - name: Warpflame Scourger
+              range: 15"
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Chain-flail
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Loosely Attached Bladed Limbs
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Clawlord
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 70
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -168,37 +654,17 @@ factions:
             - HERO
             - SKAVEN
             - CHAOS
-            - WARD (5+)
-            - WAR MACHINE
-            - MASTERCLAN
-            - WIZARD (2)
+            - INFANTRY
+            - VERMINUS
             - CHAOS
           weapons:
-            - name: Rat Ogor’s Tearing Claws
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Crushing Bulk
+            - name: Warpforged Blade
               range: ""
               attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warpstone Staff
-              range: ""
-              attacks: "3"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 4+
               rend: "1"
-              damage: D3
+              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -220,20 +686,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Deathmaster
+        - name: Lord Skreech Verminking
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 7"
-          health: "5"
-          save: 5+
+          move: 10"
+          health: "13"
+          save: 4+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 380
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -242,47 +708,30 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
+            - UNIQUE
             - HERO
+            - MONSTER
+            - WARMASTER
             - SKAVEN
+            - MASTERCLAN
+            - WARD (5+)
             - CHAOS
-            - INFANTRY
+            - DAEMON
+            - VERMINUS
+            - PESTILENS
             - ESHIN
+            - SKRYRE
+            - MOULDER
+            - WIZARD (2)
             - CHAOS
           weapons:
-            - name: Eshin Throwing Stars
-              range: 10"
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Weeping Blade
+            - name: Glaive of the Rat King
               range: ""
-              attacks: "5"
+              attacks: "7"
               to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
           abilities: []
@@ -372,16 +821,16 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Doomwheel
+        - name: Plagueclaw
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 2D6+7"
+          move: 3"
           health: "8"
           save: 4+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
@@ -397,25 +846,566 @@ factions:
             - SKAVEN
             - CHAOS
             - WAR MACHINE
-            - SKRYRE
+            - PESTILENS
             - CHAOS
           weapons:
-            - name: Warp Bolts
-              range: 13"
+            - name: Plagueclaw Catapult
+              range: 24"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Crew’s Teeth and Knives
+              range: ""
               attacks: D6
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stormvermin
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - CHAMPION
+            - MUSICIAN (1/10)
+            - STANDARD BEARER (1/10)
+            - VERMINUS
+            - CHAOS
+          weapons:
+            - name: Stormvermin Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Plague Priest
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - PRIEST (1)
+            - PESTILENS
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Warpstone-tipped Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Plaguepack
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 4
+          max_unit_size: 8
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAOS
+            - SKAVEN
+            - PRIEST (1)
+            - PESTILENS
+            - CHAMPION (1/5)
+            - CHAOS
+          weapons:
+            - name: Plague Censer
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Weapons of Corruption
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Warpvolt Scourgers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - SKRYRE
+            - WEAPON TEAM
+            - CHAOS
+          weapons:
+            - name: Rusty Knives
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Warpvolt Scourger
+              range: 15"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Acolyte Globadiers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - SKRYRE
+            - WEAPON TEAM
+            - CHAOS
+          weapons:
+            - name: Rusty Knife
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Poisoned Wind Globe
+              range: 10"
+              attacks: "1"
               to_hit: 3+
               to_wound: 3+
               rend: "1"
               damage: D3
               version: ""
               source: ""
-            - name: Grinding Wheels
+          abilities: []
+        - name: Warpfire Throwers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - SKRYRE
+            - WEAPON TEAM
+            - CHAOS
+          weapons:
+            - name: Rusty Knives
               range: ""
-              attacks: "6"
+              attacks: "2"
               to_hit: 4+
-              to_wound: 3+
+              to_wound: 5+
               rend: '-'
               damage: "1"
+              version: ""
+              source: ""
+            - name: Warpfire Thrower
+              range: 10"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Warlock Engineer
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - SKRYRE
+            - CHAOS
+          weapons:
+            - name: Warplock Musket
+              range: 24"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Warpforged Dagger
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Clawlord on Gnaw-beast
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 9"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SKAVEN
+            - CHAOS
+            - VERMINUS
+            - CAVALRY
+            - CHAOS
+          weapons:
+            - name: Warpforged Halberd
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ratling Pistol
+              range: 10"
+              attacks: D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Gnaw-beast’s Chisel Fangs
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Verminlord Deceiver
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "13"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 390
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - MONSTER
+            - SKAVEN
+            - WARD (5+)
+            - CHAOS
+            - WIZARD (1)
+            - DAEMON
+            - ESHIN
+            - CHAOS
+          weapons:
+            - name: Doomstar
+              range: 13"
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Warpstiletto
+              range: ""
+              attacks: "8"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "3"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hell Pit Abomination
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: D6+5"
+          health: "14"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - MOULDER
+            - MONSTER
+            - CHAOS
+          weapons:
+            - name: Gnashing Teeth and Flailing Fists
+              range: ""
+              attacks: "13"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -455,6 +1445,431 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ratling Guns
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - SKRYRE
+            - WEAPON TEAM
+            - CHAOS
+          weapons:
+            - name: Rusty Knives
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ratling Gun
+              range: 15"
+              attacks: 3D6
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ratling Warpblaster
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - WAR MACHINE
+            - SKRYRE
+            - CHAOS
+          weapons:
+            - name: Hail of Warpstone Bullets
+              range: 20"
+              attacks: 3D6+3
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Thrall-rats’ Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stormfiends
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - MOULDER
+            - SKRYRE
+            - CHAOS
+          weapons:
+            - name: Ratling Cannons
+              range: 15"
+              attacks: 3D6
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Clubbing Blows
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Grinderfists
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Warpfire Projectors
+              range: 10"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Clubbing Blows
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Windlaunchers
+              range: 15"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Clubbing Blows
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Doomflayer Gauntlets
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Shock Gauntlets
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Grey Seer on Screaming Bell
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "15"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 310
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SKAVEN
+            - CHAOS
+            - WARD (5+)
+            - WAR MACHINE
+            - MASTERCLAN
+            - WIZARD (2)
+            - CHAOS
+          weapons:
+            - name: Rat Ogor’s Tearing Claws
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Crushing Bulk
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Warpstone Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Master Moulder
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - MOULDER
+            - CHAOS
+          weapons:
+            - name: Warpsyringe Pistol
+              range: 10"
+              attacks: D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arsenal of Mutation
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Spiteclaw's Swarm
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAOS
+            - SKAVEN
+            - VERMINUS
+            - CHAOS
+          weapons:
+            - name: Rusty Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Wicked Halberd
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Rusty Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Rusty Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Rusty Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -579,178 +1994,10 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Verminlord Warbringer
+        - name: Krittok Foulblade
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 10"
-          health: "13"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 300
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - MONSTER
-            - SKAVEN
-            - WARD (5+)
-            - CHAOS
-            - WIZARD (1)
-            - DAEMON
-            - VERMINUS
-            - CHAOS
-          weapons:
-            - name: Doom Glaive and Spike-fist
-              range: ""
-              attacks: "7"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Verminlord Warpseer
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "13"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 320
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - MONSTER
-            - SKAVEN
-            - WARD (5+)
-            - CHAOS
-            - DAEMON
-            - MASTERCLAN
-            - WIZARD (2)
-            - CHAOS
-          weapons:
-            - name: Doom Glaive
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ratling Guns
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "3"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - SKRYRE
-            - WEAPON TEAM
-            - CHAOS
-          weapons:
-            - name: Rusty Knives
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ratling Gun
-              range: 15"
-              attacks: 3D6
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Stormfiends
-          description: ""
-          is_manifestation: false
-          is_unique: false
           move: 6"
           health: "6"
           save: 4+
@@ -760,110 +2007,49 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 240
+          points: 150
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
+            - UNIQUE
+            - HERO
+            - WARMASTER
             - SKAVEN
             - CHAOS
+            - VERMINUS
             - INFANTRY
-            - MOULDER
-            - SKRYRE
             - CHAOS
           weapons:
-            - name: Ratling Cannons
-              range: 15"
-              attacks: 3D6
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Clubbing Blows
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Grinderfists
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warpfire Projectors
+            - name: Warplock Pistol
               range: 10"
-              attacks: 2D6
-              to_hit: 2+
-              to_wound: 4+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Clubbing Blows
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Windlaunchers
-              range: 15"
-              attacks: "3"
-              to_hit: 4+
+              attacks: "2"
+              to_hit: 3+
               to_wound: 3+
               rend: "2"
               damage: D3
               version: ""
               source: ""
-            - name: Clubbing Blows
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Doomflayer Gauntlets
+            - name: Doomfang
               range: ""
               attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
+              to_hit: 3+
+              to_wound: 3+
               rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Shock Gauntlets
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
               damage: "2"
               version: ""
               source: ""
           abilities: []
-        - name: Brood Terror
+        - name: Vizzik Skour, Prophet of the Horned Rat
           description: ""
           is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "12"
+          is_unique: true
+          move: 10"
+          health: "15"
           save: 5+
           ward: ""
           invuln: ""
@@ -871,46 +2057,43 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 230
+          points: 360
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - SKAVEN
-            - CHAOS
-            - MOULDER
+            - UNIQUE
+            - HERO
             - MONSTER
+            - WARMASTER
+            - SKAVEN
+            - MASTERCLAN
+            - WARD (5+)
+            - CHAOS
+            - DAEMON
+            - PRIEST (2)
             - CHAOS
           weapons:
-            - name: Warpflame Scourger
-              range: 15"
-              attacks: 2D6
+            - name: Host of Vermin
+              range: ""
+              attacks: "10"
+              to_hit: 5+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Unholy Gnawstaff
+              range: ""
+              attacks: "6"
               to_hit: 4+
               to_wound: 2+
               rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Chain-flail
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Bladed Limbs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
+              damage: D6
               version: ""
               source: ""
           abilities: []
@@ -969,725 +2152,6 @@ factions:
               to_wound: 2+
               rend: "2"
               damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Hell Pit Abomination
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: D6+5"
-          health: "14"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - MOULDER
-            - MONSTER
-            - CHAOS
-          weapons:
-            - name: Gnashing Teeth and Flailing Fists
-              range: ""
-              attacks: "13"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Stormvermin
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - CHAMPION
-            - MUSICIAN (1/10)
-            - STANDARD BEARER (1/10)
-            - VERMINUS
-            - CHAOS
-          weapons:
-            - name: Stormvermin Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Gutter Runners
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 7"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - ESHIN
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Poisoned Stars
-              range: 10"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Punch Dagger and Blade
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 5+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Spiteclaw's Swarm
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAOS
-            - SKAVEN
-            - VERMINUS
-            - CHAOS
-          weapons:
-            - name: Rusty Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Wicked Halberd
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Rusty Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Rusty Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Rusty Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vizzik Skour, Prophet of the Horned Rat
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "15"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 360
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - WARMASTER
-            - SKAVEN
-            - MASTERCLAN
-            - WARD (5+)
-            - CHAOS
-            - DAEMON
-            - PRIEST (2)
-            - CHAOS
-          weapons:
-            - name: Host of Vermin
-              range: ""
-              attacks: "10"
-              to_hit: 5+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Unholy Gnawstaff
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: D6
-              version: ""
-              source: ""
-          abilities: []
-        - name: Brood Terror (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "12"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 240
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - MOULDER
-            - MONSTER
-            - WARD (5+)
-            - CHAOS
-          weapons:
-            - name: Warpflame Scourger
-              range: 15"
-              attacks: 2D6
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Chain-flail
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Loosely Attached Bladed Limbs
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Clawlord on Gnaw-beast
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 9"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SKAVEN
-            - CHAOS
-            - VERMINUS
-            - CAVALRY
-            - CHAOS
-          weapons:
-            - name: Warpforged Halberd
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ratling Pistol
-              range: 10"
-              attacks: D6
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Gnaw-beast’s Chisel Fangs
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Verminlord Corruptor
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "13"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 300
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - MONSTER
-            - SKAVEN
-            - WARD (5+)
-            - CHAOS
-            - DAEMON
-            - PESTILENS
-            - PRIEST (1)
-            - CHAOS
-          weapons:
-            - name: Plaguereapers
-              range: ""
-              attacks: "8"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Clanrats
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 20
-          max_unit_size: 40
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - CHAMPION
-            - VERMINUS
-            - MUSICIAN (1/20)
-            - STANDARD BEARER (1/20)
-            - CHAOS
-          weapons:
-            - name: Rusty Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ratling Warpblaster
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - WAR MACHINE
-            - SKRYRE
-            - CHAOS
-          weapons:
-            - name: Hail of Warpstone Bullets
-              range: 20"
-              attacks: 3D6+3
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Thrall-rats’ Claws
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Plague Priest
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - PRIEST (1)
-            - PESTILENS
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Warpstone-tipped Staff
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Grey Seer
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SKAVEN
-            - CHAOS
-            - WIZARD (1)
-            - MASTERCLAN
-            - INFANTRY
-            - CHAOS
-          weapons:
-            - name: Warpstone Staff
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Master Moulder
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - MOULDER
-            - CHAOS
-          weapons:
-            - name: Warpsyringe Pistol
-              range: 10"
-              attacks: D6
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arsenal of Mutation
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -1770,7 +2234,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Verminlord Deceiver
+        - name: Verminlord Warpseer
           description: ""
           is_manifestation: false
           is_unique: true
@@ -1783,7 +2247,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 390
+          points: 320
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1797,93 +2261,18 @@ factions:
             - SKAVEN
             - WARD (5+)
             - CHAOS
-            - WIZARD (1)
             - DAEMON
-            - ESHIN
+            - MASTERCLAN
+            - WIZARD (2)
             - CHAOS
           weapons:
-            - name: Doomstar
-              range: 13"
+            - name: Doom Glaive
+              range: ""
               attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warpstiletto
-              range: ""
-              attacks: "8"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 2+
-              rend: "3"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Warlock Bombardier
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - SKRYRE
-            - CHAOS
-          weapons:
-            - name: Doomrocket
-              range: 18"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Firing Pole
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -1939,188 +2328,6 @@ factions:
               to_hit: 3+
               to_wound: 3+
               rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Warp Lightning Cannon
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 3"
-          health: "8"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - WAR MACHINE
-            - SKRYRE
-            - CHAOS
-          weapons:
-            - name: Warp Lightning Blast
-              range: 20"
-              attacks: 2D6
-              to_hit: 4+
-              to_wound: ⟝See Warp Lightning Blast ability⟞
-              rend: ⟝See Warp Lightning Blast ability⟞
-              damage: ⟝See Warp Lightning Blast ability⟞
-              version: ""
-              source: ""
-            - name: Crew’s Teeth and Knives
-              range: ""
-              attacks: D6
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Plagueclaw
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 3"
-          health: "8"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - WAR MACHINE
-            - PESTILENS
-            - CHAOS
-          weapons:
-            - name: Plagueclaw Catapult
-              range: 24"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Crew’s Teeth and Knives
-              range: ""
-              attacks: D6
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Warplock Jezzails
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "2"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - SKRYRE
-            - CHAOS
-          weapons:
-            - name: Rusty Knives
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Warplock Jezzail
-              range: 18"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Plague Monks
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 20
-          max_unit_size: 40
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - CHAMPION
-            - PESTILENS
-            - MUSICIAN (1/20)
-            - STANDARD BEARER (1/20)
-            - CHAOS
-          weapons:
-            - name: Foetid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
               damage: "1"
               version: ""
               source: ""
@@ -2238,20 +2445,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Clawlord
+        - name: Deathmaster
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 6"
+          move: 7"
           health: "5"
-          save: 4+
+          save: 5+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 70
+          points: 130
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2264,16 +2471,25 @@ factions:
             - SKAVEN
             - CHAOS
             - INFANTRY
-            - VERMINUS
+            - ESHIN
             - CHAOS
           weapons:
-            - name: Warpforged Blade
+            - name: Eshin Throwing Stars
+              range: 10"
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Weeping Blade
               range: ""
-              attacks: "6"
+              attacks: "5"
               to_hit: 3+
               to_wound: 4+
               rend: "1"
-              damage: "2"
+              damage: D3
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -2295,20 +2511,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Lord Skreech Verminking
+        - name: Warlock Bombardier
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 10"
-          health: "13"
-          save: 4+
+          move: 6"
+          health: "5"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "5"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 380
+          points: 90
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2317,78 +2533,47 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - UNIQUE
             - HERO
-            - MONSTER
-            - WARMASTER
-            - SKAVEN
-            - MASTERCLAN
-            - WARD (5+)
-            - CHAOS
-            - DAEMON
-            - VERMINUS
-            - PESTILENS
-            - ESHIN
-            - SKRYRE
-            - MOULDER
-            - WIZARD (2)
-            - CHAOS
-          weapons:
-            - name: Glaive of the Rat King
-              range: ""
-              attacks: "7"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Acolyte Globadiers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
             - SKAVEN
             - CHAOS
             - INFANTRY
             - SKRYRE
-            - WEAPON TEAM
             - CHAOS
           weapons:
-            - name: Rusty Knife
-              range: ""
-              attacks: "1"
+            - name: Doomrocket
+              range: 18"
+              attacks: "2"
               to_hit: 4+
-              to_wound: 5+
+              to_wound: 3+
+              rend: "1"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Firing Pole
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Poisoned Wind Globe
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: D3
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -2440,98 +2625,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Skabbik's Plaguepack
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAOS
-            - SKAVEN
-            - PRIEST (1)
-            - PESTILENS
-            - CHAMPION
-            - CHAOS
-          weapons:
-            - name: Plague Censer
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 5+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Plaguepack Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Plaguepack Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Plaguepack Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Plaguepack Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Warpvolt Scourgers
+        - name: Rat Ogors
           description: ""
           is_manifestation: false
           is_unique: false
           move: 6"
-          health: "3"
-          save: 6+
+          health: "4"
+          save: 5+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 180
+          points: 140
           summon_cost: ""
           banishment: ""
           min_unit_size: 3
@@ -2543,96 +2650,76 @@ factions:
             - SKAVEN
             - CHAOS
             - INFANTRY
-            - SKRYRE
-            - WEAPON TEAM
+            - MOULDER
             - CHAOS
           weapons:
-            - name: Rusty Knives
+            - name: Claws, Blades and Fangs
               range: ""
-              attacks: "2"
+              attacks: "5"
               to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
-            - name: Warpvolt Scourger
-              range: 15"
+            - name: Warpfire Gun
+              range: 10"
               attacks: 2D6
               to_hit: 2+
               to_wound: 4+
-              rend: "1"
+              rend: "2"
               damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Warlock Engineer
+        - name: Warp Lightning Cannon
           description: ""
           is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
+          is_unique: false
+          move: 3"
+          health: "8"
+          save: 4+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 110
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 1
+          max_unit_size: 2
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
             - SKAVEN
             - CHAOS
-            - INFANTRY
+            - WAR MACHINE
             - SKRYRE
             - CHAOS
           weapons:
-            - name: Warplock Musket
-              range: 24"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
+            - name: Warp Lightning Blast
+              range: 20"
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: ⟝See Warp Lightning Blast ability⟞
+              rend: ⟝See Warp Lightning Blast ability⟞
+              damage: ⟝See Warp Lightning Blast ability⟞
               version: ""
               source: ""
-            - name: Warpforged Dagger
+            - name: Crew’s Teeth and Knives
               range: ""
-              attacks: "3"
+              attacks: D6
               to_hit: 4+
-              to_wound: 4+
+              to_wound: 5+
               rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Grey Seer on Screaming Bell
+        - name: Grey Seer on Screaming Bell (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
@@ -2645,7 +2732,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 310
+          points: 330
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2709,115 +2796,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Rat Ogors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - MOULDER
-            - CHAOS
-          weapons:
-            - name: Claws, Blades and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warpfire Gun
-              range: 10"
-              attacks: 2D6
-              to_hit: 2+
-              to_wound: 4+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Warpfire Throwers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "3"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - SKRYRE
-            - WEAPON TEAM
-            - CHAOS
-          weapons:
-            - name: Rusty Knives
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Warpfire Thrower
-              range: 10"
-              attacks: 2D6
-              to_hit: 2+
-              to_wound: 4+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Krittok Foulblade
+        - name: Grey Seer
           description: ""
           is_manifestation: false
           is_unique: true
           move: 6"
-          health: "6"
-          save: 4+
+          health: "5"
+          save: 6+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2826,31 +2818,39 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - UNIQUE
             - HERO
-            - WARMASTER
             - SKAVEN
             - CHAOS
-            - VERMINUS
+            - WIZARD (1)
+            - MASTERCLAN
             - INFANTRY
             - CHAOS
           weapons:
-            - name: Warplock Pistol
-              range: 10"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
+            - name: Warpstone Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
               damage: D3
               version: ""
               source: ""
-            - name: Doomfang
-              range: ""
-              attacks: "5"
-              to_hit: 3+
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
               to_wound: 3+
-              rend: "2"
-              damage: "2"
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

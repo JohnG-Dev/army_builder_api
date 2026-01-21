@@ -9,6 +9,70 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Archaon, the Everchosen
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "25"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 810
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARD (5+)
+            - FLY
+            - WARMASTER
+            - WIZARD (2)
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - SWORDS OF CHAOS
+            - CHAOS
+          weapons:
+            - name: The Slayer of Kings
+              range: ""
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Dorghar’s Heads
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Dorghar’s Claws and Tails
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
         - name: Abraxia, Spear of the Everchosen
           description: ""
           is_manifestation: false
@@ -156,70 +220,6 @@ factions:
               to_wound: 2+
               rend: "2"
               damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Archaon, the Everchosen
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "25"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "10"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 810
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - WARD (5+)
-            - FLY
-            - WARMASTER
-            - WIZARD (2)
-            - SLAVES TO DARKNESS
-            - DAEMON
-            - WARRIORS OF CHAOS
-            - CHAOS
-            - SWORDS OF CHAOS
-            - CHAOS
-          weapons:
-            - name: The Slayer of Kings
-              range: ""
-              attacks: "4"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Dorghar’s Heads
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "5"
-              version: ""
-              source: ""
-            - name: Dorghar’s Claws and Tails
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
               version: ""
               source: ""
           abilities: []

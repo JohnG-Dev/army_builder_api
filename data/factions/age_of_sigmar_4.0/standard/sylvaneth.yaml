@@ -9,6 +9,493 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Revenant Seekers (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - STANDARD BEARER (1/3)
+            - MUSICIAN (1/3)
+            - FLY
+            - ORDER
+            - SYLVANETH
+            - ORDER
+          weapons:
+            - name: Scourge Sickles
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Sharpened Mandibles
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kurnoth's Heralds
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - KURNOTHI
+            - CAVALRY
+            - ORDER
+          weapons:
+            - name: Hunter Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Kurnothi Bow
+              range: 18"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Hunter Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Hunter Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Belthanos, First Thorn of Kurnoth
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 350
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - ORDER
+            - SYLVANETH
+            - FLY
+            - KURNOTHI
+            - ORDER
+          weapons:
+            - name: Kurnoth Glaive
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Carnelian Greatspite’s Razor-like Mandibles
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Spirit of Durthu
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 320
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SYLVANETH
+            - MONSTER
+            - ORDER
+          weapons:
+            - name: Verdant Blast
+              range: 12"
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Guardian Sword
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Massive Impaling Talons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kurnoth Hunters with Kurnoth Greatswords
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - INFANTRY
+            - SYLVANETH
+            - KURNOTHI
+            - ORDER
+          weapons:
+            - name: Kurnoth Greatsword
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kurnoth Hunters with Kurnoth Scythes
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - INFANTRY
+            - SYLVANETH
+            - KURNOTHI
+            - ORDER
+          weapons:
+            - name: Kurnoth Scythe
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Alarielle the Everqueen
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "16"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 680
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - FLY
+            - WARMASTER
+            - WARD (6+)
+            - ORDER
+            - SYLVANETH
+            - WIZARD (3)
+            - ORDER
+          weapons:
+            - name: Spear of Kurnoth
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Spear of Kurnoth
+              range: 12"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Wardroth’s Great Antlers
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Arch-Revenant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SYLVANETH
+            - FLY
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Revenant’s Glaive and Tail Pincers
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Lady of Vines
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARMASTER
+            - ORDER
+            - SYLVANETH
+            - WIZARD (2)
+            - ORDER
+          weapons:
+            - name: Kurnotheal’s Wrath
+              range: 12"
+              attacks: "1"
+              to_hit: 2+
+              to_wound: 2+
+              rend: "1"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Kurnotheal’s Wrath and Lashing Vines
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
         - name: Treelord
           description: ""
           is_manifestation: false
@@ -217,7 +704,45 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Revenant Seekers
+        - name: Dryads
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - INFANTRY
+            - SYLVANETH
+            - ORDER
+          weapons:
+            - name: Wracking Talons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Spiterider Lancers
           description: ""
           is_manifestation: false
           is_unique: false
@@ -230,7 +755,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 180
+          points: 190
           summon_cost: ""
           banishment: ""
           min_unit_size: 3
@@ -248,7 +773,7 @@ factions:
             - SYLVANETH
             - ORDER
           weapons:
-            - name: Seeker’s Sickle
+            - name: Spiterider Lance
               range: ""
               attacks: "3"
               to_hit: 3+
@@ -362,204 +887,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Alarielle the Everqueen
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "16"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 680
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - FLY
-            - WARMASTER
-            - WARD (6+)
-            - ORDER
-            - SYLVANETH
-            - WIZARD (3)
-            - ORDER
-          weapons:
-            - name: Spear of Kurnoth
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Spear of Kurnoth
-              range: 12"
-              attacks: "1"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Wardroth’s Great Antlers
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Gossamid Archers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - FLY
-            - SYLVANETH
-            - ORDER
-          weapons:
-            - name: Gossamid Bow
-              range: 12"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Cruel Talons
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kurnoth Hunters with Kurnoth Greatswords
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - SYLVANETH
-            - KURNOTHI
-            - ORDER
-          weapons:
-            - name: Kurnoth Greatsword
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Belthanos, First Thorn of Kurnoth
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "14"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 350
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - ORDER
-            - SYLVANETH
-            - FLY
-            - KURNOTHI
-            - ORDER
-          weapons:
-            - name: Kurnoth Glaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Carnelian Greatspite’s Razor-like Mandibles
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
         - name: Branchwych
           description: ""
           is_manifestation: false
@@ -626,12 +953,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Spirit of Durthu
+        - name: Drycha Hamadreth
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 5"
-          health: "14"
+          move: 9"
+          health: "10"
           save: 3+
           ward: ""
           invuln: ""
@@ -639,7 +966,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 320
+          points: 220
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -648,55 +975,175 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
+            - UNIQUE
             - HERO
-            - ORDER
-            - SYLVANETH
             - MONSTER
             - ORDER
+            - SYLVANETH
+            - WIZARD (1)
+            - ORDER
           weapons:
-            - name: Verdant Blast
+            - name: Flitterfuries
               range: 12"
-              attacks: "5"
+              attacks: "10"
               to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Slashing Talons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Swarm of Squirmlings
+              range: ""
+              attacks: "10"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kurnoth Hunters with Kurnoth Greatbows
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - INFANTRY
+            - SYLVANETH
+            - KURNOTHI
+            - ORDER
+          weapons:
+            - name: Kurnoth Greatbow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
               damage: "2"
               version: ""
               source: ""
-            - name: Guardian Sword
+            - name: Vicious Claws
               range: ""
-              attacks: "4"
+              attacks: "3"
               to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "5"
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
-            - name: Massive Impaling Talons
+          abilities: []
+        - name: Revenant Seekers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - STANDARD BEARER (1/3)
+            - MUSICIAN (1/3)
+            - FLY
+            - ORDER
+            - SYLVANETH
+            - ORDER
+          weapons:
+            - name: Seeker’s Sickle
               range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
+            - name: Sharp Mandibles
+              range: ""
+              attacks: "3"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: D3+0
+              damage: "1"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Melee Weapon
+          abilities: []
+        - name: Spite-Revenants
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - SYLVANETH
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Cruel Talons and Fangs
               range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -733,6 +1180,82 @@ factions:
             - name: Protector Glaive and Blade
               range: ""
               attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ylthari's Guardians
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - MUSICIAN (1/5)
+            - ORDER
+          weapons:
+            - name: Enchanted Glade Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Revenant Bow
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Revenant Bow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Enchanted Glade Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Enchanted Glade Weapons
+              range: ""
+              attacks: "3"
               to_hit: 3+
               to_wound: 4+
               rend: "1"
@@ -780,107 +1303,11 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Arch-Revenant
+        - name: Gossamid Archers
           description: ""
           is_manifestation: false
-          is_unique: true
+          is_unique: false
           move: 12"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - SYLVANETH
-            - FLY
-            - INFANTRY
-            - ORDER
-          weapons:
-            - name: Revenant’s Glaive and Tail Pincers
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kurnoth Hunters with Kurnoth Scythes
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - SYLVANETH
-            - KURNOTHI
-            - ORDER
-          weapons:
-            - name: Kurnoth Scythe
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Spite-Revenants
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
           health: "2"
           save: 5+
           ward: ""
@@ -889,7 +1316,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 80
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 5
@@ -900,66 +1327,26 @@ factions:
           keywords:
             - CHAMPION
             - ORDER
-            - SYLVANETH
             - INFANTRY
+            - FLY
+            - SYLVANETH
             - ORDER
           weapons:
-            - name: Cruel Talons and Fangs
+            - name: Gossamid Bow
+              range: 12"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Cruel Talons
               range: ""
-              attacks: "3"
+              attacks: "1"
               to_hit: 3+
               to_wound: 4+
               rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Spiterider Lancers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
-            - CHAMPION
-            - STANDARD BEARER (1/3)
-            - MUSICIAN (1/3)
-            - FLY
-            - ORDER
-            - SYLVANETH
-            - ORDER
-          weapons:
-            - name: Spiterider Lance
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Sharp Mandibles
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
               damage: "1"
               version: ""
               source: ""
@@ -1044,393 +1431,6 @@ factions:
               to_wound: 4+
               rend: '-'
               damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ylthari's Guardians
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - MUSICIAN (1/5)
-            - ORDER
-          weapons:
-            - name: Enchanted Glade Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Revenant Bow
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Revenant Bow
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Enchanted Glade Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Enchanted Glade Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Revenant Seekers (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
-            - CHAMPION
-            - STANDARD BEARER (1/3)
-            - MUSICIAN (1/3)
-            - FLY
-            - ORDER
-            - SYLVANETH
-            - ORDER
-          weapons:
-            - name: Scourge Sickles
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Sharpened Mandibles
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kurnoth's Heralds
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - KURNOTHI
-            - CAVALRY
-            - ORDER
-          weapons:
-            - name: Hunter Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Kurnothi Bow
-              range: 18"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Hunter Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Hunter Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Dryads
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - SYLVANETH
-            - ORDER
-          weapons:
-            - name: Wracking Talons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kurnoth Hunters with Kurnoth Greatbows
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - SYLVANETH
-            - KURNOTHI
-            - ORDER
-          weapons:
-            - name: Kurnoth Greatbow
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Vicious Claws
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Drycha Hamadreth
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 9"
-          health: "10"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 220
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - ORDER
-            - SYLVANETH
-            - WIZARD (1)
-            - ORDER
-          weapons:
-            - name: Flitterfuries
-              range: 12"
-              attacks: "10"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Slashing Talons
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Swarm of Squirmlings
-              range: ""
-              attacks: "10"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Lady of Vines
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - WARMASTER
-            - ORDER
-            - SYLVANETH
-            - WIZARD (2)
-            - ORDER
-          weapons:
-            - name: Kurnotheal’s Wrath
-              range: 12"
-              attacks: "1"
-              to_hit: 2+
-              to_wound: 2+
-              rend: "1"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Kurnotheal’s Wrath and Lashing Vines
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
               version: ""
               source: ""
           abilities: []

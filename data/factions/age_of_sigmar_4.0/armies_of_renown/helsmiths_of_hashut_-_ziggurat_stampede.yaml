@@ -9,54 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Dominator Engine with Immolation Cannons
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "10"
-          save: 2+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - WAR MACHINE
-            - AUTOMATON
-            - ZIGGURAT STAMPEDE
-            - CHAOS
-          weapons:
-            - name: Immolation Cannons
-              range: 8"
-              attacks: "5"
-              to_hit: 2+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Horns and Pummelling Strikes
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
         - name: Anointed Sentinels
           description: ""
           is_manifestation: false
@@ -252,6 +204,54 @@ factions:
               to_wound: 2+
               rend: "1"
               damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dominator Engine with Immolation Cannons
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "10"
+          save: 2+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - WAR MACHINE
+            - AUTOMATON
+            - ZIGGURAT STAMPEDE
+            - CHAOS
+          weapons:
+            - name: Immolation Cannons
+              range: 8"
+              attacks: "5"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Horns and Pummelling Strikes
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
               version: ""
               source: ""
           abilities: []

@@ -9,6 +9,65 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Akhelian Thrallmaster (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - IDONETH DEEPKIN
+            - AELF
+            - ORDER
+            - INFANTRY
+            - AKHELIAN
+            - RESTRICT GENERAL
+            - ORDER
+          weapons:
+            - name: Esoteric Weapons
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Cyreni's Razors
           description: ""
           is_manifestation: false
@@ -79,114 +138,91 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Volturnos, High King of the Deep
+        - name: Elathain's Soulraid
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 12"
-          health: "8"
-          save: 3+
+          move: 6"
+          health: "2"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 230
+          points: 80
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
+          max_unit_size: 2
+          matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
-            - FLY
-            - IDONETH DEEPKIN
-            - AELF
-            - WARMASTER
-            - CAVALRY
-            - UNIQUE
-            - AKHELIAN
-            - ORDER
-            - ORDER
-          weapons:
-            - name: The Astra Solus
-              range: ""
-              attacks: "6"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Uasall’s Fangs, Talons and Lashing Tails
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ikon of the Storm
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 7"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - IDONETH DEEPKIN
-            - AELF
             - ORDER
             - INFANTRY
+            - UNIQUE
+            - CHAMPION
+            - LEGENDS
+            - AELF
             - AKHELIAN
-            - RESTRICT GENERAL
+            - NAMARTI
+            - IDONETH DEEPKIN
             - ORDER
           weapons:
-            - name: Maelstrom Blades
-              range: ""
-              attacks: "7"
+            - name: Riptide Harpoon
+              range: 8"
+              attacks: "1"
               to_hit: 3+
               to_wound: 4+
               rend: "1"
-              damage: "2"
+              damage: D3
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
+            - name: Soulraid Weapons
               range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
               rend: "1"
-              damage: D3+0
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -226,6 +262,75 @@ factions:
               attacks: "5"
               to_hit: 3+
               to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Akhelian King
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - FLY
+            - IDONETH DEEPKIN
+            - AELF
+            - CAVALRY
+            - AKHELIAN
+            - ORDER
+            - RESTRICT GENERAL
+            - ORDER
+          weapons:
+            - name: Deepmare’s Fangs, Talons and Lashing Tails
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Akhelian Royal Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 4+
               rend: "1"
               damage: "2"
               version: ""
@@ -360,20 +465,72 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Akhelian Thrallmaster
+        - name: Volturnos, High King of the Deep
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
+          move: 12"
+          health: "8"
+          save: 3+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 90
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - FLY
+            - IDONETH DEEPKIN
+            - AELF
+            - WARMASTER
+            - CAVALRY
+            - UNIQUE
+            - AKHELIAN
+            - ORDER
+            - ORDER
+          weapons:
+            - name: The Astra Solus
+              range: ""
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Uasall’s Fangs, Talons and Lashing Tails
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ikon of the Storm
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 7"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -391,9 +548,9 @@ factions:
             - RESTRICT GENERAL
             - ORDER
           weapons:
-            - name: Esoteric Weapons
+            - name: Maelstrom Blades
               range: ""
-              attacks: "6"
+              attacks: "7"
               to_hit: 3+
               to_wound: 4+
               rend: "1"
@@ -416,94 +573,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Elathain's Soulraid
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - INFANTRY
-            - UNIQUE
-            - CHAMPION
-            - LEGENDS
-            - AELF
-            - AKHELIAN
-            - NAMARTI
-            - IDONETH DEEPKIN
-            - ORDER
-          weapons:
-            - name: Riptide Harpoon
-              range: 8"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -626,76 +695,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Akhelian King
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "7"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - FLY
-            - IDONETH DEEPKIN
-            - AELF
-            - CAVALRY
-            - AKHELIAN
-            - ORDER
-            - RESTRICT GENERAL
-            - ORDER
-          weapons:
-            - name: Deepmare’s Fangs, Talons and Lashing Tails
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Akhelian Royal Weapons
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Akhelian Thrallmaster (Scourge of Ghyran)
+        - name: Akhelian Thrallmaster
           description: ""
           is_manifestation: false
           is_unique: true

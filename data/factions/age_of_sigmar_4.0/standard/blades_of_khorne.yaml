@@ -9,20 +9,555 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Bloodsecrator
+        - name: Bloodthirster of Unfettered Fury
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
+          move: 12"
+          health: "16"
+          save: 4+
           ward: ""
           invuln: ""
           control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
+          points: 390
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (5+)
+            - FLY
+            - BLADES OF KHORNE
+            - BLOODTHIRSTER
+            - CHAOS
+          weapons:
+            - name: Mighty Axe of Khorne
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Lash of Khorne
+              range: 8"
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Khorgorath
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
           points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - BLADES OF KHORNE
+            - MONSTER
+            - BLOODBOUND
+            - CHAOS
+          weapons:
+            - name: Claws and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skullreapers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "3"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - CHAMPION
+            - BLOODBOUND
+            - INFANTRY
+            - STANDARD BEARER (1/5)
+            - BLADES OF KHORNE
+            - CHAOS
+          weapons:
+            - name: Daemonforged Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Valkia the Bloody
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - CHAOS
+            - BLADES OF KHORNE
+            - BLOODBOUND
+            - LEGENDS
+            - INFANTRY
+            - FLY
+            - CHAOS
+          weapons:
+            - name: Slaupnir
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Scyla Anfingrimm
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - CHAOS
+            - BLADES OF KHORNE
+            - BEAST
+            - BLOODBOUND
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Brutal Fists
+              range: ""
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Khorgos Khul
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - BLADES OF KHORNE
+            - INFANTRY
+            - BLOODBOUND
+            - WARMASTER
+            - UNIQUE
+            - WARD (6+)
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Axe of Khorne
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Grizzlemaw’s Blood-dark Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord of Khorne on Juggernaut
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "8"
+          save: 2+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - BLADES OF KHORNE
+            - BLOODBOUND
+            - CAVALRY
+            - CHAOS
+          weapons:
+            - name: Wrathforged Axe
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Juggernaut’s Brazen Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Blood Warriors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - CHAOS
+            - BLADES OF KHORNE
+            - BLOODBOUND
+            - STANDARD BEARER (1/10)
+            - CHAOS
+          weapons:
+            - name: Goreweapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Claws of Karanak
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 8
+          max_unit_size: 16
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - INFANTRY
+            - CHAMPION (1/8)
+            - BLOODBOUND
+            - BLADES OF KHORNE
+            - CHAOS
+          weapons:
+            - name: Weapons of the Hunt
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skarr Bloodwrath
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - CHAOS
+            - BLADES OF KHORNE
+            - INFANTRY
+            - WARD (5+)
+            - BLOODBOUND
+            - CHAOS
+          weapons:
+            - name: The Bloodstorm Blades
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skullmaster, Herald of Khorne
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - DAEMON
+            - BLADES OF KHORNE
+            - WARD (6+)
+            - CAVALRY
+            - CHAOS
+          weapons:
+            - name: Blade of Blood
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Juggernaut’s Brazen Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slaughterpriest
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -36,9 +571,10 @@ factions:
             - BLADES OF KHORNE
             - INFANTRY
             - BLOODBOUND
+            - PRIEST (1)
             - CHAOS
           weapons:
-            - name: Ensorcelled Axe
+            - name: Bloodbathed Weapon
               range: ""
               attacks: "4"
               to_hit: 3+
@@ -63,6 +599,334 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skull Cannon
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - DAEMON
+            - BLADES OF KHORNE
+            - WARD (6+)
+            - WAR MACHINE
+            - CHAOS
+          weapons:
+            - name: Burning Skulls
+              range: 15"
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Gnashing Maw
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Hellblades
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Magore's Fiends
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - BLADES OF KHORNE
+            - BLOODBOUND
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Goreaxe
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Goreaxe
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Goreaxe
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Blood-dark Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Khul Ascended
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "10"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 310
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - BLADES OF KHORNE
+            - WARMASTER
+            - UNIQUE
+            - INFANTRY
+            - DAEMON
+            - WARD (5+)
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Axe of Khorne
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bloodthirster of Insensate Rage
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 410
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (5+)
+            - FLY
+            - BLADES OF KHORNE
+            - BLOODTHIRSTER
+            - CHAOS
+          weapons:
+            - name: Great Axe of Khorne
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Herald of Khorne on Blood Throne
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - DAEMON
+            - BLADES OF KHORNE
+            - PRIEST (1)
+            - WAR MACHINE
+            - WARD (6+)
+            - CHAOS
+          weapons:
+            - name: Blade of Blood and Hellblades
+              range: ""
+              attacks: "7"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Karanak
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - CHAOS
+            - DAEMON
+            - BLADES OF KHORNE
+            - BEAST
+            - WARD (6+)
+            - CHAOS
+          weapons:
+            - name: Savage Maws and Goreslick Claws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -110,6 +974,133 @@ factions:
               to_hit: 4+
               to_wound: 3+
               rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Realmgore Ritualist
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - BLADES OF KHORNE
+            - PRIEST (1)
+            - INFANTRY
+            - BLOODBOUND
+            - CHAOS
+          weapons:
+            - name: Ritual Athame
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Wrath of Khorne Bloodthirster
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 400
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (5+)
+            - FLY
+            - BLADES OF KHORNE
+            - BLOODTHIRSTER
+            - CHAOS
+          weapons:
+            - name: Mighty Axe of Khorne and Bloodflail
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Hellfire Breath
+              range: 8"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
@@ -234,395 +1225,84 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Bloodmaster, Herald of Khorne
+        - name: Wrathmongers
           description: ""
           is_manifestation: false
-          is_unique: true
+          is_unique: false
           move: 5"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - DAEMON
-            - BLADES OF KHORNE
-            - INFANTRY
-            - WARD (6+)
-            - PRIEST (1)
-            - CHAOS
-          weapons:
-            - name: Blade of Blood
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Realmgore Ritualist
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
+          health: "3"
           save: 5+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 130
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
+          min_unit_size: 5
+          max_unit_size: 10
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
             - CHAOS
-            - BLADES OF KHORNE
-            - PRIEST (1)
-            - INFANTRY
+            - CHAMPION
             - BLOODBOUND
+            - INFANTRY
+            - BLADES OF KHORNE
             - CHAOS
           weapons:
-            - name: Ritual Athame
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skarr Bloodwrath
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - CHAOS
-            - BLADES OF KHORNE
-            - INFANTRY
-            - WARD (5+)
-            - BLOODBOUND
-            - CHAOS
-          weapons:
-            - name: The Bloodstorm Blades
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skullgrinder
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - BLADES OF KHORNE
-            - INFANTRY
-            - BLOODBOUND
-            - CHAOS
-          weapons:
-            - name: Brazen Anvil
+            - name: Wrath-flails
               range: ""
               attacks: "4"
               to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Wrath of Khorne Bloodthirster
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "16"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 400
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (5+)
-            - FLY
-            - BLADES OF KHORNE
-            - BLOODTHIRSTER
-            - CHAOS
-          weapons:
-            - name: Mighty Axe of Khorne and Bloodflail
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Hellfire Breath
-              range: 8"
-              attacks: 2D6
-              to_hit: 2+
               to_wound: 3+
               rend: "1"
               damage: "1"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
           abilities: []
-        - name: Skullmaster, Herald of Khorne
+        - name: Bloodletters
           description: ""
           is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "7"
-          save: 4+
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 160
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
+          min_unit_size: 10
+          max_unit_size: 20
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
+            - WARD (6+)
             - CHAOS
             - DAEMON
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
             - BLADES OF KHORNE
-            - WARD (6+)
-            - CAVALRY
             - CHAOS
           weapons:
-            - name: Blade of Blood
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Juggernaut’s Brazen Hooves
+            - name: Hellblade
               range: ""
               attacks: "2"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Scyla Anfingrimm
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "8"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - CHAOS
-            - BLADES OF KHORNE
-            - BEAST
-            - BLOODBOUND
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Brutal Fists
-              range: ""
-              attacks: "8"
-              to_hit: 4+
-              to_wound: 2+
-              rend: '-'
-              damage: "2"
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -678,12 +1358,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Deathbringer
+        - name: Mighty Lord of Khorne (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "6"
+          health: "7"
           save: 3+
           ward: ""
           invuln: ""
@@ -691,7 +1371,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 170
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -707,13 +1387,22 @@ factions:
             - BLOODBOUND
             - CHAOS
           weapons:
-            - name: Kingslayer Axe
+            - name: Axe of Khorne
               range: ""
               attacks: "4"
               to_hit: 3+
               to_wound: 3+
-              rend: "1"
+              rend: "2"
               damage: "3"
+              version: ""
+              source: ""
+            - name: Flesh Hound’s Blood-dark Claws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -792,11 +1481,11 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Bloodthirster of Insensate Rage
+        - name: Skarbrand
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 12"
+          move: 8"
           health: "16"
           save: 4+
           ward: ""
@@ -815,207 +1504,31 @@ factions:
           source: Battlescribe Data
           keywords:
             - HERO
+            - UNIQUE
             - CHAOS
             - DAEMON
             - MONSTER
             - WARD (5+)
-            - FLY
             - BLADES OF KHORNE
             - BLOODTHIRSTER
             - CHAOS
           weapons:
-            - name: Great Axe of Khorne
+            - name: Slaughter
               range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "5"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Bloodthirster of Unfettered Fury
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "16"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 390
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (5+)
-            - FLY
-            - BLADES OF KHORNE
-            - BLOODTHIRSTER
-            - CHAOS
-          weapons:
-            - name: Mighty Axe of Khorne
-              range: ""
-              attacks: "6"
+              attacks: "4"
               to_hit: 3+
               to_wound: 2+
               rend: "2"
               damage: "4"
               version: ""
               source: ""
-            - name: Lash of Khorne
-              range: 8"
-              attacks: "4"
+            - name: Carnage
+              range: ""
+              attacks: "2"
               to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Slaughterpriest
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - BLADES OF KHORNE
-            - INFANTRY
-            - BLOODBOUND
-            - PRIEST (1)
-            - CHAOS
-          weapons:
-            - name: Bloodbathed Weapon
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Blood Warriors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - INFANTRY
-            - CHAOS
-            - BLADES OF KHORNE
-            - BLOODBOUND
-            - STANDARD BEARER (1/10)
-            - CHAOS
-          weapons:
-            - name: Goreweapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
+              to_wound: 2+
+              rend: "2"
+              damage: "8"
               version: ""
               source: ""
           abilities: []
@@ -1096,349 +1609,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Herald of Khorne on Blood Throne
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "10"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - DAEMON
-            - BLADES OF KHORNE
-            - PRIEST (1)
-            - WAR MACHINE
-            - WARD (6+)
-            - CHAOS
-          weapons:
-            - name: Blade of Blood and Hellblades
-              range: ""
-              attacks: "7"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kamandora's Blades
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - BLADES OF KHORNE
-            - BLOODBOUND
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Bloodied Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Bloodied Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Bloodied Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Bloodied Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skullreapers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "3"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - CHAMPION
-            - BLOODBOUND
-            - INFANTRY
-            - STANDARD BEARER (1/5)
-            - BLADES OF KHORNE
-            - CHAOS
-          weapons:
-            - name: Daemonforged Weapons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Karanak
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "7"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - CHAOS
-            - DAEMON
-            - BLADES OF KHORNE
-            - BEAST
-            - WARD (6+)
-            - CHAOS
-          weapons:
-            - name: Savage Maws and Goreslick Claws
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Flesh Hounds
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - BEAST
-            - CHAMPION (1/5)
-            - CHAOS
-            - DAEMON
-            - BLADES OF KHORNE
-            - CHAOS
-          weapons:
-            - name: Blood-dark Claws
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Khorgorath
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "8"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - BLADES OF KHORNE
-            - MONSTER
-            - BLOODBOUND
-            - CHAOS
-          weapons:
-            - name: Claws and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skull Cannon
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "8"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - DAEMON
-            - BLADES OF KHORNE
-            - WARD (6+)
-            - WAR MACHINE
-            - CHAOS
-          weapons:
-            - name: Burning Skulls
-              range: 15"
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Gnashing Maw
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Hellblades
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Gorechosen of Dromm
           description: ""
           is_manifestation: false
@@ -1498,59 +1668,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Wrathmongers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - CHAMPION
-            - BLOODBOUND
-            - INFANTRY
-            - BLADES OF KHORNE
-            - CHAOS
-          weapons:
-            - name: Wrath-flails
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord of Khorne on Juggernaut
+        - name: Deathbringer
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 8"
-          health: "8"
-          save: 2+
+          move: 5"
+          health: "6"
+          save: 3+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 200
+          points: 130
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1562,26 +1693,17 @@ factions:
             - HERO
             - CHAOS
             - BLADES OF KHORNE
+            - INFANTRY
             - BLOODBOUND
-            - CAVALRY
             - CHAOS
           weapons:
-            - name: Wrathforged Axe
+            - name: Kingslayer Axe
               range: ""
-              attacks: "6"
+              attacks: "4"
               to_hit: 3+
               to_wound: 3+
               rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Juggernaut’s Brazen Hooves
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
+              damage: "3"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -1603,20 +1725,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Skarbrand
+        - name: Skullgrinder
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 8"
-          health: "16"
-          save: 4+
+          move: 5"
+          health: "6"
+          save: 3+
           ward: ""
           invuln: ""
           control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 410
+          points: 110
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1626,31 +1748,37 @@ factions:
           source: Battlescribe Data
           keywords:
             - HERO
-            - UNIQUE
             - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (5+)
             - BLADES OF KHORNE
-            - BLOODTHIRSTER
+            - INFANTRY
+            - BLOODBOUND
             - CHAOS
           weapons:
-            - name: Slaughter
+            - name: Brazen Anvil
               range: ""
               attacks: "4"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 2+
-              rend: "2"
-              damage: "4"
+              rend: "1"
+              damage: "3"
               version: ""
               source: ""
-            - name: Carnage
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
               range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "8"
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -1736,13 +1864,13 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Claws of Karanak
+        - name: Flesh Hounds
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 6"
-          health: "1"
-          save: 5+
+          move: 8"
+          health: "2"
+          save: 6+
           ward: ""
           invuln: ""
           control: "1"
@@ -1752,22 +1880,23 @@ factions:
           points: 100
           summon_cost: ""
           banishment: ""
-          min_unit_size: 8
-          max_unit_size: 16
+          min_unit_size: 5
+          max_unit_size: 10
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
+            - WARD (6+)
+            - BEAST
+            - CHAMPION (1/5)
             - CHAOS
-            - INFANTRY
-            - CHAMPION (1/8)
-            - BLOODBOUND
+            - DAEMON
             - BLADES OF KHORNE
             - CHAOS
           weapons:
-            - name: Weapons of the Hunt
+            - name: Blood-dark Claws
               range: ""
-              attacks: "3"
+              attacks: "4"
               to_hit: 4+
               to_wound: 3+
               rend: '-'
@@ -1775,62 +1904,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Valkia the Bloody
+        - name: Kamandora's Blades
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 12"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - CHAOS
-            - BLADES OF KHORNE
-            - BLOODBOUND
-            - LEGENDS
-            - INFANTRY
-            - FLY
-            - CHAOS
-          weapons:
-            - name: Slaupnir
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Magore's Fiends
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "3"
-          save: 3+
+          move: 6"
+          health: "2"
+          save: 6+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 90
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1848,36 +1935,36 @@ factions:
             - CHAOS
             - CHAOS
           weapons:
-            - name: Goreaxe
+            - name: Bloodied Weapons
               range: ""
-              attacks: "3"
+              attacks: "2"
               to_hit: 4+
               to_wound: 3+
-              rend: "1"
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Goreaxe
+            - name: Bloodied Weapons
               range: ""
-              attacks: "3"
+              attacks: "2"
               to_hit: 4+
               to_wound: 3+
-              rend: "1"
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Goreaxe
+            - name: Bloodied Weapons
               range: ""
-              attacks: "3"
+              attacks: "2"
               to_hit: 4+
               to_wound: 3+
-              rend: "1"
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Blood-dark Claws
+            - name: Bloodied Weapons
               range: ""
-              attacks: "4"
+              attacks: "2"
               to_hit: 4+
               to_wound: 3+
               rend: '-'
@@ -1885,105 +1972,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Khul Ascended
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "10"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 310
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - BLADES OF KHORNE
-            - WARMASTER
-            - UNIQUE
-            - INFANTRY
-            - DAEMON
-            - WARD (5+)
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Axe of Khorne
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Bloodletters
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - CHAOS
-            - DAEMON
-            - INFANTRY
-            - CHAMPION
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - BLADES OF KHORNE
-            - CHAOS
-          weapons:
-            - name: Hellblade
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Mighty Lord of Khorne (Scourge of Ghyran)
+        - name: Bloodmaster, Herald of Khorne
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "7"
-          save: 3+
+          health: "6"
+          save: 4+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 170
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1994,27 +1996,20 @@ factions:
           keywords:
             - HERO
             - CHAOS
+            - DAEMON
             - BLADES OF KHORNE
             - INFANTRY
-            - BLOODBOUND
+            - WARD (6+)
+            - PRIEST (1)
             - CHAOS
           weapons:
-            - name: Axe of Khorne
+            - name: Blade of Blood
               range: ""
-              attacks: "4"
+              attacks: "5"
               to_hit: 3+
               to_wound: 3+
               rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Flesh Hound’s Blood-dark Claws
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
+              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -2036,25 +2031,25 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Khorgos Khul
+        - name: Bloodsecrator
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "8"
+          health: "6"
           save: 3+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 220
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
           max_unit_size: 1
-          matched_play: false
+          matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
@@ -2063,28 +2058,33 @@ factions:
             - BLADES OF KHORNE
             - INFANTRY
             - BLOODBOUND
-            - WARMASTER
-            - UNIQUE
-            - WARD (6+)
-            - LEGENDS
             - CHAOS
           weapons:
-            - name: Axe of Khorne
+            - name: Ensorcelled Axe
               range: ""
-              attacks: "6"
+              attacks: "4"
               to_hit: 3+
               to_wound: 3+
-              rend: "2"
+              rend: "1"
               damage: "2"
               version: ""
               source: ""
-            - name: Grizzlemaw’s Blood-dark Claws
-              range: ""
-              attacks: "4"
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
               to_hit: 4+
               to_wound: 3+
-              rend: '-'
-              damage: "1"
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

@@ -346,13 +346,13 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Ghyranite Beasts
+        - name: Ghyranite Guardians
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 7"
-          health: "1"
-          save: 5+
+          move: 5"
+          health: "2"
+          save: 4+
           ward: ""
           invuln: ""
           control: "1"
@@ -363,20 +363,108 @@ factions:
           summon_cost: ""
           banishment: ""
           min_unit_size: 3
-          max_unit_size: 6
+          max_unit_size: 10
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - BEAST
+            - INFANTRY
           weapons:
-            - name: Savage Jaws and Claws
+            - name: Ghyranite Weapons
               range: ""
-              attacks: "3"
+              attacks: "2"
               to_hit: 4+
               to_wound: 4+
               rend: '-'
               damage: "1"
+              version: ""
+              source: ""
+            - name: Ghyranite Fiend's Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ghyranite Colossus's Maw
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Ghyranite Long-range Weapon
+              range: 24"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ghyranite Mount's Teeth, Hooves or Claws
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ghyranite Colossus's Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ghyranite Close-range Weapon
+              range: 12"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ghyranite Elite Warriors
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+          weapons:
+            - name: Brutal Ghyranite Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
             - name: Ghyranite Fiend's Jaws
@@ -619,6 +707,103 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Ghyranite Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 3
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WAR MACHINE
+          weapons:
+            - name: Charioteer's Ghyranite Weapons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Monstrous Ghyranite Club
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ghyranite Fiend's Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ghyranite Colossus's Maw
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Ghyranite Long-range Weapon
+              range: 24"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ghyranite Mount's Teeth, Hooves or Claws
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ghyranite Colossus's Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ghyranite Close-range Weapon
+              range: 12"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
         - name: Ghyranite Bombard
           description: ""
           is_manifestation: false
@@ -716,13 +901,13 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Ghyranite Guardians
+        - name: Ghyranite Beasts
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 5"
-          health: "2"
-          save: 4+
+          move: 7"
+          health: "1"
+          save: 5+
           ward: ""
           invuln: ""
           control: "1"
@@ -733,205 +918,20 @@ factions:
           summon_cost: ""
           banishment: ""
           min_unit_size: 3
-          max_unit_size: 10
+          max_unit_size: 6
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
+            - BEAST
           weapons:
-            - name: Ghyranite Weapons
+            - name: Savage Jaws and Claws
               range: ""
-              attacks: "2"
+              attacks: "3"
               to_hit: 4+
               to_wound: 4+
               rend: '-'
               damage: "1"
-              version: ""
-              source: ""
-            - name: Ghyranite Fiend's Jaws
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ghyranite Colossus's Maw
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Ghyranite Long-range Weapon
-              range: 24"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ghyranite Mount's Teeth, Hooves or Claws
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ghyranite Colossus's Claws
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ghyranite Close-range Weapon
-              range: 12"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ghyranite Elite Warriors
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 0
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-          weapons:
-            - name: Brutal Ghyranite Weapons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ghyranite Fiend's Jaws
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ghyranite Colossus's Maw
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Ghyranite Long-range Weapon
-              range: 24"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ghyranite Mount's Teeth, Hooves or Claws
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ghyranite Colossus's Claws
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ghyranite Close-range Weapon
-              range: 12"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ghyranite Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "8"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 0
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 3
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WAR MACHINE
-          weapons:
-            - name: Charioteer's Ghyranite Weapons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Monstrous Ghyranite Club
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
               version: ""
               source: ""
             - name: Ghyranite Fiend's Jaws

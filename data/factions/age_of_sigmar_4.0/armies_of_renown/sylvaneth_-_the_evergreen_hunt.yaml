@@ -9,135 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Kurnoth Hunters with Kurnoth Scythes
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - SYLVANETH
-            - KURNOTHI
-            - EVERGREEN HUNT
-            - ORDER
-          weapons:
-            - name: Kurnoth Scythe
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kurnoth Hunters with Kurnoth Greatswords
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - SYLVANETH
-            - KURNOTHI
-            - EVERGREEN HUNT
-            - ORDER
-          weapons:
-            - name: Kurnoth Greatsword
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kurnoth Hunters with Kurnoth Greatbows
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - INFANTRY
-            - SYLVANETH
-            - KURNOTHI
-            - EVERGREEN HUNT
-            - ORDER
-          weapons:
-            - name: Kurnoth Greatbow
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Vicious Claws
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Revenant Seekers (Scourge of Ghyran)
           description: ""
           is_manifestation: false
@@ -397,6 +268,135 @@ factions:
               to_hit: 4+
               to_wound: 3+
               rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kurnoth Hunters with Kurnoth Scythes
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - INFANTRY
+            - SYLVANETH
+            - KURNOTHI
+            - EVERGREEN HUNT
+            - ORDER
+          weapons:
+            - name: Kurnoth Scythe
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kurnoth Hunters with Kurnoth Greatswords
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - INFANTRY
+            - SYLVANETH
+            - KURNOTHI
+            - EVERGREEN HUNT
+            - ORDER
+          weapons:
+            - name: Kurnoth Greatsword
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kurnoth Hunters with Kurnoth Greatbows
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - INFANTRY
+            - SYLVANETH
+            - KURNOTHI
+            - EVERGREEN HUNT
+            - ORDER
+          weapons:
+            - name: Kurnoth Greatbow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Vicious Claws
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
               damage: "1"
               version: ""
               source: ""

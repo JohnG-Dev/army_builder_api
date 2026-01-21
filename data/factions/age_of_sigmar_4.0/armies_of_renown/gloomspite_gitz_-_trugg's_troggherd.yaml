@@ -9,65 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Dankhold Troggboss
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "12"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 220
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - MONSTER
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - TROGGOTH
-            - RESTRICT GENERAL
-            - TRUGG'S TROGGHERD
-            - DESTRUCTION
-          weapons:
-            - name: Boulder Club
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
         - name: Dankhold Troggoth
           description: ""
           is_manifestation: false
@@ -252,6 +193,65 @@ factions:
               to_wound: 2+
               rend: "2"
               damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dankhold Troggboss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - MONSTER
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - TROGGOTH
+            - RESTRICT GENERAL
+            - TRUGG'S TROGGHERD
+            - DESTRUCTION
+          weapons:
+            - name: Boulder Club
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

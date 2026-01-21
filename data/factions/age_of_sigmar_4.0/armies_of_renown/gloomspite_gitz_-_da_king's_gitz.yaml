@@ -9,6 +9,618 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Loonboss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - MOONCLAN
+            - WARD (6+)
+            - KING'S GITZ
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Moon-slicer
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Squig Hoppers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: D6+8"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - SQUIG
+            - MOONCLAN
+            - FLY
+            - KING'S GITZ
+            - DESTRUCTION
+          weapons:
+            - name: Fang-filled Gob
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Slitta
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Squigboss with Gnasha-squig
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "4"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - MOONCLAN
+            - SQUIG
+            - KING'S GITZ
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Fang-filled Gob
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Squig-krook
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Rockgut Troggoths
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - TROGGOTH
+            - WARD (5+)
+            - KING'S GITZ
+            - DESTRUCTION
+          weapons:
+            - name: Throwin’ Boulders
+              range: 10"
+              attacks: "1"
+              to_hit: 5+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Stone Maul or Craggy Hands
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Loonsmasha Fanatics
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 2D6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - MOONCLAN
+            - KING'S GITZ
+            - MOONCLAN INFANTRY
+            - DESTRUCTION
+          weapons:
+            - name: Ball and Chain
+              range: ""
+              attacks: D6
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Madcap Shaman
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "4"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - LEGENDS
+            - INFANTRY
+            - GLOOMSPITE GITZ
+            - MOONCLAN
+            - DESTRUCTION
+            - WIZARD (1)
+            - KING'S GITZ
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Moon Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mangler Squigs
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: D6+8"
+          health: "14"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - MOONCLAN
+            - MONSTER
+            - FLY
+            - SQUIG
+            - KING'S GITZ
+            - DESTRUCTION
+          weapons:
+            - name: Balls and Chains
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Huge Fang-filled Gobs
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Bashin’ Stikks
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Moonclan Shootas
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 20
+          max_unit_size: 40
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - MOONCLAN
+            - MUSICIAN (1/20)
+            - STANDARD BEARER (1/20)
+            - KING'S GITZ
+            - MOONCLAN INFANTRY
+            - DESTRUCTION
+          weapons:
+            - name: Moonclan Bow
+              range: 18"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Moonclan Bow
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Sporesplatta Fanatics (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 2D6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - MOONCLAN
+            - KING'S GITZ
+            - MOONCLAN INFANTRY
+            - DESTRUCTION
+          weapons:
+            - name: Spore-ball and Chain
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Boingrot Bounderz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: D6+6"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - SQUIG
+            - MOONCLAN
+            - FLY
+            - KING'S GITZ
+            - DESTRUCTION
+          weapons:
+            - name: Fang-filled Gob
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Pokin’ Lance
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dankhold Troggoth
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - MONSTER
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - TROGGOTH
+            - KING'S GITZ
+            - DESTRUCTION
+          weapons:
+            - name: Colossal Boulder Club
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gobbapalooza
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - MOONCLAN
+            - WIZARD (1)
+            - KING'S GITZ
+            - MOONCLAN INFANTRY
+            - DESTRUCTION
+          weapons:
+            - name: Staff, Stikka or Jaggedy Blade
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
         - name: Loonboss on Giant Cave Squig
           description: ""
           is_manifestation: false
@@ -121,124 +733,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Rabble-Rowza
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - MOONCLAN
-            - KING'S GITZ
-            - RESTRICT GENERAL
-            - DESTRUCTION
-          weapons:
-            - name: Bat Squigs
-              range: 12"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Moon-sickle and Basha
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Sneaky Snufflers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 6
-          max_unit_size: 12
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - MOONCLAN
-            - WARD (5+)
-            - KING'S GITZ
-            - MOONCLAN INFANTRY
-            - DESTRUCTION
-          weapons:
-            - name: Loonfungus Sickle
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Snufflesquig’s Gnashers
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Sporesplatta Fanatics
           description: ""
           is_manifestation: false
@@ -276,258 +770,6 @@ factions:
               to_wound: 4+
               rend: "1"
               damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Loonsmasha Fanatics (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 2D6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - MOONCLAN
-            - KING'S GITZ
-            - MOONCLAN INFANTRY
-            - DESTRUCTION
-          weapons:
-            - name: Ball and Chain
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Boingrot Bounderz
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: D6+6"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
-            - CHAMPION
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - SQUIG
-            - MOONCLAN
-            - FLY
-            - KING'S GITZ
-            - DESTRUCTION
-          weapons:
-            - name: Fang-filled Gob
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Pokin’ Lance
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Fellwater Troggoths
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - TROGGOTH
-            - KING'S GITZ
-            - DESTRUCTION
-          weapons:
-            - name: Noxious Vomit
-              range: 6"
-              attacks: D3
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Spiked Club
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skragrott, the Loonking
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - WARMASTER
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - WIZARD (2)
-            - WARD (4+)
-            - MOONCLAN
-            - KING'S GITZ
-            - DESTRUCTION
-          weapons:
-            - name: Da Moon Onna Stikk
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Squigboss with Gnasha-squig
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "4"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - MOONCLAN
-            - SQUIG
-            - KING'S GITZ
-            - RESTRICT GENERAL
-            - DESTRUCTION
-          weapons:
-            - name: Fang-filled Gob
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Squig-krook
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -673,7 +915,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Sporesplatta Fanatics (Scourge of Ghyran)
+        - name: Loonsmasha Fanatics (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: false
@@ -686,7 +928,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 80
+          points: 110
           summon_cost: ""
           banishment: ""
           min_unit_size: 5
@@ -703,103 +945,34 @@ factions:
             - MOONCLAN INFANTRY
             - DESTRUCTION
           weapons:
-            - name: Spore-ball and Chain
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Fungoid Cave-Shaman
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - MOONCLAN
-            - WIZARD (1)
-            - KING'S GITZ
-            - RESTRICT GENERAL
-            - DESTRUCTION
-          weapons:
-            - name: Spore Squig’s Vicious Teeth
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Moon-sickle
+            - name: Ball and Chain
               range: ""
               attacks: "3"
               to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
               to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              rend: "2"
+              damage: D3
               version: ""
               source: ""
           abilities: []
-        - name: Gobbapalooza
+        - name: Fellwater Troggoths
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 5"
-          health: "3"
-          save: 6+
+          move: 6"
+          health: "5"
+          save: 5+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 170
           summon_cost: ""
           banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
+          min_unit_size: 3
+          max_unit_size: 6
           matched_play: true
           version: ""
           source: Battlescribe Data
@@ -807,19 +980,26 @@ factions:
             - DESTRUCTION
             - GLOOMSPITE GITZ
             - INFANTRY
-            - MOONCLAN
-            - WIZARD (1)
+            - TROGGOTH
             - KING'S GITZ
-            - MOONCLAN INFANTRY
             - DESTRUCTION
           weapons:
-            - name: Staff, Stikka or Jaggedy Blade
+            - name: Noxious Vomit
+              range: 6"
+              attacks: D3
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Spiked Club
               range: ""
-              attacks: "1"
+              attacks: "4"
               to_hit: 4+
-              to_wound: 4+
+              to_wound: 3+
               rend: "1"
-              damage: D3
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -1087,52 +1267,124 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Loonsmasha Fanatics
+        - name: Rabble-Rowza
           description: ""
           is_manifestation: false
-          is_unique: false
-          move: 2D6"
-          health: "1"
-          save: 6+
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
           points: 110
           summon_cost: ""
           banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
+          min_unit_size: 1
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
+            - HERO
             - DESTRUCTION
             - GLOOMSPITE GITZ
             - INFANTRY
             - MOONCLAN
             - KING'S GITZ
-            - MOONCLAN INFANTRY
+            - RESTRICT GENERAL
             - DESTRUCTION
           weapons:
-            - name: Ball and Chain
+            - name: Bat Squigs
+              range: 12"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Moon-sickle and Basha
               range: ""
-              attacks: D6
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
               to_hit: 4+
               to_wound: 3+
-              rend: "2"
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skragrott, the Loonking
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - WARMASTER
+            - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - WIZARD (2)
+            - WARD (4+)
+            - MOONCLAN
+            - KING'S GITZ
+            - DESTRUCTION
+          weapons:
+            - name: Da Moon Onna Stikk
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
               damage: D3
               version: ""
               source: ""
           abilities: []
-        - name: Moonclan Shootas
+        - name: Sneaky Snufflers
           description: ""
           is_manifestation: false
           is_unique: false
           move: 5"
-          health: "1"
+          health: "2"
           save: 6+
           ward: ""
           invuln: ""
@@ -1140,40 +1392,38 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 100
           summon_cost: ""
           banishment: ""
-          min_unit_size: 20
-          max_unit_size: 40
+          min_unit_size: 6
+          max_unit_size: 12
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - CHAMPION
             - DESTRUCTION
             - GLOOMSPITE GITZ
             - INFANTRY
             - MOONCLAN
-            - MUSICIAN (1/20)
-            - STANDARD BEARER (1/20)
+            - WARD (5+)
             - KING'S GITZ
             - MOONCLAN INFANTRY
             - DESTRUCTION
           weapons:
-            - name: Moonclan Bow
-              range: 18"
-              attacks: "2"
+            - name: Loonfungus Sickle
+              range: ""
+              attacks: "3"
               to_hit: 4+
-              to_wound: 5+
+              to_wound: 4+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Moonclan Bow
+            - name: Snufflesquig’s Gnashers
               range: ""
-              attacks: "1"
+              attacks: "2"
               to_hit: 4+
-              to_wound: 5+
+              to_wound: 4+
               rend: '-'
               damage: "1"
               version: ""
@@ -1228,12 +1478,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Madcap Shaman
+        - name: Fungoid Cave-Shaman
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "4"
+          health: "5"
           save: 6+
           ward: ""
           invuln: ""
@@ -1241,291 +1491,41 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 80
+          points: 100
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
           max_unit_size: 1
-          matched_play: false
+          matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
             - HERO
-            - LEGENDS
-            - INFANTRY
-            - GLOOMSPITE GITZ
-            - MOONCLAN
             - DESTRUCTION
+            - GLOOMSPITE GITZ
+            - INFANTRY
+            - MOONCLAN
             - WIZARD (1)
             - KING'S GITZ
             - RESTRICT GENERAL
             - DESTRUCTION
           weapons:
-            - name: Moon Staff
+            - name: Spore Squig’s Vicious Teeth
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Moon-sickle
               range: ""
               attacks: "3"
               to_hit: 4+
               to_wound: 4+
               rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Mangler Squigs
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: D6+8"
-          health: "14"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - MOONCLAN
-            - MONSTER
-            - FLY
-            - SQUIG
-            - KING'S GITZ
-            - DESTRUCTION
-          weapons:
-            - name: Balls and Chains
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Huge Fang-filled Gobs
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Bashin’ Stikks
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Squig Hoppers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: D6+8"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
-            - CHAMPION
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - SQUIG
-            - MOONCLAN
-            - FLY
-            - KING'S GITZ
-            - DESTRUCTION
-          weapons:
-            - name: Fang-filled Gob
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Slitta
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Rockgut Troggoths
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - TROGGOTH
-            - WARD (5+)
-            - KING'S GITZ
-            - DESTRUCTION
-          weapons:
-            - name: Throwin’ Boulders
-              range: 10"
-              attacks: "1"
-              to_hit: 5+
-              to_wound: 2+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Stone Maul or Craggy Hands
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Dankhold Troggoth
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "10"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - MONSTER
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - TROGGOTH
-            - KING'S GITZ
-            - DESTRUCTION
-          weapons:
-            - name: Colossal Boulder Club
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D3+3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Loonboss
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - GLOOMSPITE GITZ
-            - INFANTRY
-            - MOONCLAN
-            - WARD (6+)
-            - KING'S GITZ
-            - RESTRICT GENERAL
-            - DESTRUCTION
-          weapons:
-            - name: Moon-slicer
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
+              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
