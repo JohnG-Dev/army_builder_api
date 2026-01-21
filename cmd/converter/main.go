@@ -56,7 +56,9 @@ func main() {
 			continue
 		}
 
-		filePath := filepath.Join(filepath.Clean(rawDir), filepath.Clean(name))
+		cleanRawDir := filepath.Clean(rawDir)
+		cleanName := filepath.Clean(name)
+		filePath := filepath.Join(cleanRawDir, cleanName)
 		xmlData, err := os.ReadFile(filePath)
 		if err != nil {
 			fmt.Printf("Error reading %s for indexing: %v\n", name, err)
@@ -65,13 +67,15 @@ func main() {
 
 		if strings.HasSuffix(name, ".gst") {
 			var gs GameSystem
-			if err := xml.Unmarshal(xmlData, &gs); err == nil {
+			err = xml.Unmarshal(xmlData, &gs)
+			if err == nil {
 				cv.GameSystems[gs.ID] = gs.Name
 				cv.indexGameSystem(gs)
 			}
 		} else {
 			var catalogue Catalogue
-			if err := xml.Unmarshal(xmlData, &catalogue); err == nil {
+			err = xml.Unmarshal(xmlData, &catalogue)
+			if err == nil {
 				cv.indexCatalogue(catalogue)
 			}
 		}
@@ -86,7 +90,9 @@ func main() {
 			continue
 		}
 
-		filePath := filepath.Join(filepath.Clean(rawDir), filepath.Clean(name))
+		cleanRawDir := filepath.Clean(rawDir)
+		cleanFileName := filepath.Clean(name)
+		filePath := filepath.Join(cleanRawDir, cleanFileName)
 		xmlData, err := os.ReadFile(filePath)
 		if err != nil {
 			fmt.Printf("Error reading %s for conversion: %v\n", name, err)
@@ -94,7 +100,8 @@ func main() {
 		}
 
 		var catalogue Catalogue
-		if err := xml.Unmarshal(xmlData, &catalogue); err != nil {
+		err = xml.Unmarshal(xmlData, &catalogue)
+		if err != nil {
 			fmt.Printf("Unmarshal error in %s during conversion: %v\n", name, err)
 			continue
 		}
@@ -105,20 +112,19 @@ func main() {
 		}
 		gameSlug := strings.ToLower(strings.ReplaceAll(gameName, " ", "_"))
 
-		// Detect Regiments of Renown file
-		if strings.Contains(strings.ToLower(name), "renown") || strings.Contains(strings.ToLower(catalogue.Name), "renown") {
-			cv.processRoRFile(catalogue, gameName, outDir)
-			continue
-		}
-
 		subFolder := "standard"
 		isAoR := false
 		isRoR := false
 		parentName := ""
 
-		cleanName := strings.TrimSuffix(name, ".cat")
-		if strings.Contains(cleanName, " - ") {
-			parts := strings.Split(cleanName, " - ")
+		cleanBaseName := strings.TrimSuffix(name, ".cat")
+
+		// If it's the RoR file, treat the whole thing as a mercenary faction
+		if strings.Contains(strings.ToLower(cleanBaseName), "renown") {
+			isRoR = true
+			subFolder = "regiments_of_renown"
+		} else if strings.Contains(cleanBaseName, " - ") {
+			parts := strings.Split(cleanBaseName, " - ")
 			parentName = parts[0]
 			isAoR = true
 			subFolder = "armies_of_renown"
@@ -168,8 +174,12 @@ func main() {
 		factionSlug := strings.ToLower(strings.ReplaceAll(catalogue.Name, " ", "_"))
 		factionSlug = strings.ReplaceAll(factionSlug, "۞_", "")
 
-		finalOutDir := filepath.Join(filepath.Clean(outDir), filepath.Clean(gameSlug), filepath.Clean(subFolder))
-		if err := os.MkdirAll(finalOutDir, 0o750); err != nil {
+		cleanOutDir := filepath.Clean(outDir)
+		cleanGameSlug := filepath.Clean(gameSlug)
+		cleanSubFolder := filepath.Clean(subFolder)
+		finalOutDir := filepath.Join(cleanOutDir, cleanGameSlug, cleanSubFolder)
+		err = os.MkdirAll(finalOutDir, 0o750)
+		if err != nil {
 			fmt.Printf("Failed to create directory %s: %v\n", finalOutDir, err)
 			continue
 		}
@@ -180,7 +190,8 @@ func main() {
 			fmt.Printf("Error marshaling YAML for %s: %v\n", catalogue.Name, err)
 			continue
 		}
-		if err := os.WriteFile(outPath, yamlData, 0o600); err != nil {
+		err = os.WriteFile(outPath, yamlData, 0o600)
+		if err != nil {
 			fmt.Printf("Failed to write YAML for %s: %v\n", catalogue.Name, err)
 			continue
 		}
@@ -202,7 +213,8 @@ func (c *Converter) transformUnit(entry SelectionEntry, fileName string) models.
 
 	unit.Points = c.parsePoints(entry.Costs)
 	if unit.Points == 0 && entry.TargetID != "" {
-		if target, ok := c.MasterEntries[entry.TargetID]; ok {
+		target, ok := c.MasterEntries[entry.TargetID]
+		if ok {
 			unit.Points = c.parsePoints(target.Costs)
 		}
 	}
@@ -231,7 +243,8 @@ func (c *Converter) transformUnit(entry SelectionEntry, fileName string) models.
 func (c *Converter) processConstraints(constraints []Constraint, unit *models.UnitSeed) {
 	for _, cons := range constraints {
 		var val int
-		if _, err := fmt.Sscanf(cons.Value, "%d", &val); err != nil {
+		_, err := fmt.Sscanf(cons.Value, "%d", &val)
+		if err != nil {
 			continue
 		}
 
@@ -256,7 +269,8 @@ func (c *Converter) processConstraints(constraints []Constraint, unit *models.Un
 
 func (c *Converter) collectKeywords(entry SelectionEntry, unit *models.UnitSeed) {
 	if entry.TargetID != "" {
-		if target, ok := c.MasterEntries[entry.TargetID]; ok {
+		target, ok := c.MasterEntries[entry.TargetID]
+		if ok {
 			c.collectKeywords(target, unit)
 		}
 	}
@@ -288,7 +302,8 @@ func (c *Converter) collectKeywords(entry SelectionEntry, unit *models.UnitSeed)
 
 func (c *Converter) mapStats(chars []Characteristic, unit *models.UnitSeed) {
 	for _, char := range chars {
-		if target, ok := StatMapping[char.Name]; ok {
+		target, ok := StatMapping[char.Name]
+		if ok {
 			switch target {
 			case "move":
 				unit.Move = char.Value
@@ -333,6 +348,20 @@ func (c *Converter) mapWeapon(p Profile) models.WeaponSeed {
 }
 
 func (c *Converter) isUnit(entry SelectionEntry) bool {
+	// Skip entries that are just roster upgrades (have points but no unit stats)
+	if entry.Type == "upgrade" {
+		hasUnitProfile := false
+		for _, p := range entry.Profiles {
+			if strings.Contains(p.TypeName, "Unit") || strings.Contains(p.TypeName, "Models") || strings.Contains(p.TypeName, "Stats") {
+				hasUnitProfile = true
+				break
+			}
+		}
+		if !hasUnitProfile {
+			return false
+		}
+	}
+
 	for _, cost := range entry.Costs {
 		if cost.Name == "pts" && cost.Value != "0" && cost.Value != "" {
 			return true
@@ -362,7 +391,8 @@ func (c *Converter) collectProfiles(entry SelectionEntry) []Profile {
 	var found []Profile
 	found = append(found, entry.Profiles...)
 	if entry.TargetID != "" {
-		if target, ok := c.MasterEntries[entry.TargetID]; ok {
+		target, ok := c.MasterEntries[entry.TargetID]
+		if ok {
 			found = append(found, c.collectProfiles(target)...)
 		}
 	}
@@ -380,7 +410,8 @@ func (c *Converter) collectConstraints(entry SelectionEntry) []Constraint {
 	found = append(found, entry.Constraints...)
 
 	if entry.TargetID != "" {
-		if target, ok := c.MasterEntries[entry.TargetID]; ok {
+		target, ok := c.MasterEntries[entry.TargetID]
+		if ok {
 			found = append(found, c.collectConstraints(target)...)
 		}
 	}
@@ -431,7 +462,8 @@ func (c *Converter) parsePoints(costs []Cost) int {
 	for _, cost := range costs {
 		if cost.Name == "pts" {
 			var p float64
-			if _, err := fmt.Sscanf(cost.Value, "%f", &p); err == nil {
+			_, err := fmt.Sscanf(cost.Value, "%f", &p)
+			if err == nil {
 				return int(p)
 			}
 		}
@@ -456,7 +488,8 @@ func (c *Converter) canBeReinforced(entry SelectionEntry) bool {
 	}
 
 	if entry.TargetID != "" {
-		if target, ok := c.MasterEntries[entry.TargetID]; ok {
+		target, ok := c.MasterEntries[entry.TargetID]
+		if ok {
 			if c.canBeReinforced(target) {
 				return true
 			}
@@ -477,8 +510,11 @@ func (c *Converter) canBeReinforced(entry SelectionEntry) bool {
 
 func (c *Converter) processRoRFile(cat Catalogue, gameName, outDir string) {
 	gameSlug := strings.ToLower(strings.ReplaceAll(gameName, " ", "_"))
-	finalOutDir := filepath.Join(filepath.Clean(outDir), filepath.Clean(gameSlug), "regiments_of_renown")
-	if err := os.MkdirAll(finalOutDir, 0o750); err != nil {
+	cleanOutDir := filepath.Clean(outDir)
+	cleanGameSlug := filepath.Clean(gameSlug)
+	finalOutDir := filepath.Join(cleanOutDir, cleanGameSlug, "regiments_of_renown")
+	err := os.MkdirAll(finalOutDir, 0o750)
+	if err != nil {
 		fmt.Printf("Failed to create directory %s: %v\n", finalOutDir, err)
 		return
 	}
@@ -492,7 +528,8 @@ func (c *Converter) processRoRFile(cat Catalogue, gameName, outDir string) {
 
 		actualEntry := entry
 		if entry.TargetID != "" {
-			if target, ok := c.MasterEntries[entry.TargetID]; ok {
+			target, ok := c.MasterEntries[entry.TargetID]
+			if ok {
 				actualEntry = target
 			}
 		}
@@ -540,7 +577,8 @@ func (c *Converter) processRoRFile(cat Catalogue, gameName, outDir string) {
 			fmt.Printf("Error marshaling YAML for %s: %v\n", regimentName, err)
 			continue
 		}
-		if err := os.WriteFile(outPath, yamlData, 0o600); err != nil {
+		err = os.WriteFile(outPath, yamlData, 0o600)
+		if err != nil {
 			fmt.Printf("Failed to write YAML for %s: %v\n", regimentName, err)
 			continue
 		}

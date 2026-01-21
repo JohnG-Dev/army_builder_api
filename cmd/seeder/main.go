@@ -28,8 +28,13 @@ func main() {
 	}
 	defer dbpool.Close()
 
-	logger, _ := zap.NewDevelopment()
-	defer func() { _ = logger.Sync() }()
+	logger, err := zap.NewDevelopment()
+	if err != nil {
+		log.Fatalf("Failed to initialize logger: %v\n", err)
+	}
+	defer func() {
+		_ = logger.Sync()
+	}()
 
 	queries := database.New(dbpool)
 	s := &state.State{
@@ -67,8 +72,10 @@ func main() {
 		if err != nil {
 			return err
 		}
+
 		if !info.IsDir() && strings.HasSuffix(path, ".yaml") {
-			if err := sr.SeedFile(path); err != nil {
+			err = sr.SeedFile(path)
+			if err != nil {
 				s.Logger.Error("Failed to seed file",
 					zap.String("path", path),
 					zap.Error(err),
@@ -82,7 +89,8 @@ func main() {
 		s.Logger.Fatal("Failed to walk files", zap.Error(err))
 	}
 
-	if err := sr.LinkParents(); err != nil {
+	err = sr.LinkParents()
+	if err != nil {
 		s.Logger.Fatal("Failed to link parents", zap.Error(err))
 	}
 

@@ -31,7 +31,7 @@ func setupTestDB(t *testing.T) *state.State {
 	}
 
 	for _, table := range tables {
-		_, err := dbpool.Exec(ctx, "DELETE FROM "+table)
+		_, err = dbpool.Exec(ctx, "DELETE FROM "+table)
 		if err != nil {
 			t.Logf("WARNING: failed to clear table %s: %v", table, err)
 		}
@@ -61,29 +61,7 @@ func createTestGame(t *testing.T, s *state.State) uuid.UUID {
 		t.Fatalf("failed to create game: %v", err)
 	}
 
-	gameID := game.ID
-
-	return gameID
-}
-
-func createTestGameWithName(t *testing.T, s *state.State, name string) uuid.UUID {
-	ctx := context.Background()
-	if name == "" {
-		t.Fatalf("game name required")
-	}
-
-	game, err := s.DB.CreateGame(ctx, database.CreateGameParams{
-		Name:    name,
-		Edition: "Test Edition",
-		Version: "1.0",
-		Source:  "Test Source",
-	})
-	if err != nil {
-		t.Fatalf("failed to create game with name: %v", err)
-	}
-
-	gameID := game.ID
-	return gameID
+	return game.ID
 }
 
 func createTestFaction(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID {
@@ -103,30 +81,7 @@ func createTestFaction(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID
 		t.Fatalf("failed to create faction: %v", err)
 	}
 
-	factionID := faction.ID
-
-	return factionID
-}
-
-func createTestFactionWithName(t *testing.T, s *state.State, gameID uuid.UUID, name string) uuid.UUID {
-	ctx := context.Background()
-
-	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
-		GameID:             gameID,
-		Name:               name,
-		Allegiance:         "Test Allegiance",
-		Version:            "1.0",
-		Source:             "Test Source",
-		IsArmyOfRenown:     false,
-		IsRegimentOfRenown: false,
-		ParentFactionID:    uuid.NullUUID{},
-	})
-	if err != nil {
-		t.Fatalf("failed to create faction with name: %v", err)
-	}
-
-	factionID := faction.ID
-	return factionID
+	return faction.ID
 }
 
 func createTestUnit(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
@@ -156,13 +111,49 @@ func createTestUnit(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID
 	if err != nil {
 		t.Fatalf("failed to create unit: %v", err)
 	}
-	unitID := unit.ID
 
-	return unitID
+	return unit.ID
+}
+
+func createTestGameWithName(t *testing.T, s *state.State, name string) uuid.UUID {
+	ctx := context.Background()
+
+	game, err := s.DB.CreateGame(ctx, database.CreateGameParams{
+		Name:    name,
+		Edition: "Test Edition",
+		Version: "1.0",
+		Source:  "Test Source",
+	})
+	if err != nil {
+		t.Fatalf("failed to create game: %v", err)
+	}
+
+	return game.ID
+}
+
+func createTestFactionWithName(t *testing.T, s *state.State, gameID uuid.UUID, name string) uuid.UUID {
+	ctx := context.Background()
+
+	faction, err := s.DB.CreateFaction(ctx, database.CreateFactionParams{
+		GameID:             gameID,
+		Name:               name,
+		Allegiance:         "Test Allegiance",
+		Version:            "1.0",
+		Source:             "Test Source",
+		IsArmyOfRenown:     false,
+		IsRegimentOfRenown: false,
+		ParentFactionID:    uuid.NullUUID{},
+	})
+	if err != nil {
+		t.Fatalf("failed to create faction: %v", err)
+	}
+
+	return faction.ID
 }
 
 func createTestUnitWithName(t *testing.T, s *state.State, factionID uuid.UUID, name string) uuid.UUID {
 	ctx := context.Background()
+
 	unit, err := s.DB.CreateUnit(ctx, database.CreateUnitParams{
 		FactionID:       factionID,
 		Name:            name,
@@ -188,9 +179,7 @@ func createTestUnitWithName(t *testing.T, s *state.State, factionID uuid.UUID, n
 		t.Fatalf("failed to create unit: %v", err)
 	}
 
-	unitID := unit.ID
-
-	return unitID
+	return unit.ID
 }
 
 func createTestWeapon(t *testing.T, s *state.State, unitID uuid.UUID) uuid.UUID {
@@ -212,8 +201,7 @@ func createTestWeapon(t *testing.T, s *state.State, unitID uuid.UUID) uuid.UUID 
 		t.Fatalf("failed to create weapon: %v", err)
 	}
 
-	weaponID := weapon.ID
-	return weaponID
+	return weapon.ID
 }
 
 func createTestManifestation(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
@@ -241,12 +229,10 @@ func createTestManifestation(t *testing.T, s *state.State, factionID uuid.UUID) 
 		Source:          "Test Source",
 	})
 	if err != nil {
-		t.Fatalf("failed to create unit: %v", err)
+		t.Fatalf("failed to create manifestation: %v", err)
 	}
 
-	unitID := unit.ID
-
-	return unitID
+	return unit.ID
 }
 
 func createTestRule(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID {
@@ -265,9 +251,7 @@ func createTestRule(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID {
 		t.Fatalf("failed to create rule: %v", err)
 	}
 
-	ruleID := rule.ID
-
-	return ruleID
+	return rule.ID
 }
 
 func createTestBattleFormation(t *testing.T, s *state.State, gameID uuid.UUID, factionID uuid.UUID) uuid.UUID {
@@ -285,8 +269,7 @@ func createTestBattleFormation(t *testing.T, s *state.State, gameID uuid.UUID, f
 		t.Fatalf("failed to create battle formation: %v", err)
 	}
 
-	battleFormationID := battleFormation.ID
-	return battleFormationID
+	return battleFormation.ID
 }
 
 func createTestEnhancement(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
@@ -307,9 +290,7 @@ func createTestEnhancement(t *testing.T, s *state.State, factionID uuid.UUID) uu
 		t.Fatalf("failed to create enhancement: %v", err)
 	}
 
-	enhancementID := enhancement.ID
-
-	return enhancementID
+	return enhancement.ID
 }
 
 func createTestKeyword(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID {
@@ -326,9 +307,7 @@ func createTestKeyword(t *testing.T, s *state.State, gameID uuid.UUID) uuid.UUID
 		t.Fatalf("failed to create keyword: %v", err)
 	}
 
-	keywordID := keyword.ID
-
-	return keywordID
+	return keyword.ID
 }
 
 func createTestKeywordWithName(t *testing.T, s *state.State, gameID uuid.UUID, name string) uuid.UUID {
@@ -345,9 +324,7 @@ func createTestKeywordWithName(t *testing.T, s *state.State, gameID uuid.UUID, n
 		t.Fatalf("failed to create keyword: %v", err)
 	}
 
-	keywordID := keyword.ID
-
-	return keywordID
+	return keyword.ID
 }
 
 func createTestAbilityUnit(t *testing.T, s *state.State, unitID uuid.UUID) uuid.UUID {
@@ -366,8 +343,7 @@ func createTestAbilityUnit(t *testing.T, s *state.State, unitID uuid.UUID) uuid.
 		t.Fatalf("failed to create unit ability: %v", err)
 	}
 
-	abilityID := ability.ID
-	return abilityID
+	return ability.ID
 }
 
 func createTestAbilityFaction(t *testing.T, s *state.State, factionID uuid.UUID) uuid.UUID {
@@ -386,6 +362,5 @@ func createTestAbilityFaction(t *testing.T, s *state.State, factionID uuid.UUID)
 		t.Fatalf("failed to create faction ability: %v", err)
 	}
 
-	abilityID := ability.ID
-	return abilityID
+	return ability.ID
 }

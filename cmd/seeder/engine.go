@@ -40,13 +40,15 @@ func NewSeeder(ctx context.Context, s *state.State) *Seeder {
 }
 
 func (sr *Seeder) SeedFile(path string) error {
-	data, err := os.ReadFile(filepath.Clean(path))
+	cleanPath := filepath.Clean(path)
+	data, err := os.ReadFile(cleanPath)
 	if err != nil {
 		return err
 	}
 
 	var seed models.SeedData
-	if err := yaml.Unmarshal(data, &seed); err != nil {
+	err = yaml.Unmarshal(data, &seed)
+	if err != nil {
 		return err
 	}
 
@@ -59,7 +61,9 @@ func (sr *Seeder) SeedFile(path string) error {
 	if err != nil {
 		return fmt.Errorf("failed to begin transaction: %w", err)
 	}
-	defer func() { _ = tx.Rollback(sr.ctx) }()
+	defer func() {
+		_ = tx.Rollback(sr.ctx)
+	}()
 
 	sr.txQueries = sr.s.DB.WithTx(tx)
 
@@ -114,10 +118,12 @@ func (sr *Seeder) SeedFile(path string) error {
 			}
 		}
 	}
+
 	err = tx.Commit(sr.ctx)
 	if err != nil {
 		return fmt.Errorf("failed to commit transaction: %w", err)
 	}
+
 	sr.txQueries = nil
 	return nil
 }
@@ -127,7 +133,10 @@ func (sr *Seeder) LinkParents() error {
 	for factionID, parentName := range sr.pendingLinks {
 		parentID, exists := sr.factionMap[parentName]
 		if !exists {
-			sr.s.Logger.Warn("Parent faction not found", zap.String("parent", parentName), zap.String("child_id", factionID.String()))
+			sr.s.Logger.Warn("Parent faction not found",
+				zap.String("parent", parentName),
+				zap.String("child_id", factionID.String()),
+			)
 			continue
 		}
 
@@ -139,7 +148,11 @@ func (sr *Seeder) LinkParents() error {
 		if err != nil {
 			return fmt.Errorf("failed to link parent for faction %s: %w", factionID, err)
 		}
-		sr.s.Logger.Info("Linked Parent", zap.String("child_id", factionID.String()), zap.String("parent_id", parentID.String()))
+
+		sr.s.Logger.Info("Linked Parent",
+			zap.String("child_id", factionID.String()),
+			zap.String("parent_id", parentID.String()),
+		)
 	}
 	return nil
 }
@@ -174,6 +187,7 @@ func (sr *Seeder) getOrCreateGame(name string) (uuid.UUID, error) {
 		}
 		return uuid.Nil, err
 	}
+
 	sr.gameMap[name] = game.ID
 	return game.ID, nil
 }
@@ -182,12 +196,12 @@ func (sr *Seeder) createFaction(gameID uuid.UUID, f models.FactionSeed) (uuid.UU
 	faction, err := sr.getDB().CreateFaction(sr.ctx, database.CreateFactionParams{
 		GameID:             gameID,
 		Name:               f.Name,
-		Allegiance:         f.Allegiance,
-		Version:            f.Version,
-		Source:             f.Source,
 		IsArmyOfRenown:     f.IsArmyOfRenown,
 		IsRegimentOfRenown: f.IsRegimentOfRenown,
 		ParentFactionID:    uuid.NullUUID{},
+		Allegiance:         f.Allegiance,
+		Version:            f.Version,
+		Source:             f.Source,
 	})
 	if err != nil {
 		return uuid.Nil, err
@@ -201,6 +215,7 @@ func (sr *Seeder) createUnit(factionID uuid.UUID, u models.UnitSeed, version, so
 	if err != nil {
 		statsJSON = []byte("{}")
 	}
+
 	unit, err := sr.getDB().CreateUnit(sr.ctx, database.CreateUnitParams{
 		FactionID:         factionID,
 		Name:              u.Name,
@@ -254,7 +269,6 @@ func (sr *Seeder) seedUnitWeapons(unitID uuid.UUID, weapons []models.WeaponSeed,
 
 func (sr *Seeder) seedUnitKeywords(unitID uuid.UUID, gameID uuid.UUID, keywordNames []string, version, source string) error {
 	for _, name := range keywordNames {
-
 		keywordID, exists := sr.keywordMap[name]
 
 		if !exists {
@@ -272,6 +286,7 @@ func (sr *Seeder) seedUnitKeywords(unitID uuid.UUID, gameID uuid.UUID, keywordNa
 			keywordID = k.ID
 			sr.keywordMap[name] = keywordID
 		}
+
 		err := sr.getDB().AddKeywordToUnit(sr.ctx, database.AddKeywordToUnitParams{
 			UnitID:    unitID,
 			KeywordID: keywordID,
@@ -300,6 +315,7 @@ func (sr *Seeder) seedUnitAbilities(unitID, factionID, gameID uuid.UUID, abiliti
 		if err != nil {
 			return fmt.Errorf("failed to create ability %s: %w", a.Name, err)
 		}
+
 		for _, e := range a.Effects {
 			_, err := sr.getDB().CreateAbilityEffect(sr.ctx, database.CreateAbilityEffectParams{
 				AbilityID:   ability.ID,
