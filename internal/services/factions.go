@@ -15,25 +15,36 @@ import (
 
 func mapDBFactionToModel(f database.Faction) models.Faction {
 	return models.Faction{
-		ID:         f.ID,
-		GameID:     f.GameID,
-		Name:       f.Name,
-		Allegiance: f.Allegiance,
-		Version:    f.Version,
-		Source:     f.Source,
-		CreatedAt:  f.CreatedAt,
-		UpdatedAt:  f.UpdatedAt,
+		ID:                 f.ID,
+		GameID:             f.GameID,
+		IsArmyOfRenown:     f.IsArmyOfRenown,
+		IsRegimentOfRenown: f.IsRegimentOfRenown,
+		ParentFactionID:    database.NullUUIDToPtr(f.ParentFactionID),
+		Name:               f.Name,
+		Description:        f.Description,
+		Allegiance:         f.Allegiance,
+		Version:            f.Version,
+		Source:             f.Source,
+		CreatedAt:          f.CreatedAt,
+		UpdatedAt:          f.UpdatedAt,
 	}
 }
 
-func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]models.Faction, error) {
+type FactionFilter struct {
+	GameID             *uuid.UUID
+	IsArmyOfRenown     *bool
+	IsRegimentOfRenown *bool
+	ParentFactionID    *uuid.UUID
+}
+
+func GetFactions(s *state.State, ctx context.Context, filter FactionFilter) ([]models.Faction, error) {
 	var dbFactions []database.Faction
 	var err error
 
-	if gameID == nil {
+	if filter.GameID == nil {
 		dbFactions, err = s.DB.GetAllFactions(ctx)
 	} else {
-		dbFactions, err = s.DB.GetFactionsByID(ctx, *gameID)
+		dbFactions, err = s.DB.GetFactionsByID(ctx, *filter.GameID)
 	}
 
 	if err != nil {
@@ -47,9 +58,24 @@ func GetFactions(s *state.State, ctx context.Context, gameID *uuid.UUID) ([]mode
 		return []models.Faction{}, nil
 	}
 
-	factions := make([]models.Faction, len(dbFactions))
-	for i, f := range dbFactions {
-		factions[i] = mapDBFactionToModel(f)
+	factions := make([]models.Faction, 0, len(dbFactions))
+	for _, f := range dbFactions {
+		model := mapDBFactionToModel(f)
+
+		// Filter
+		if filter.IsArmyOfRenown != nil && model.IsArmyOfRenown != *filter.IsArmyOfRenown {
+			continue
+		}
+		if filter.IsRegimentOfRenown != nil && model.IsRegimentOfRenown != *filter.IsRegimentOfRenown {
+			continue
+		}
+		if filter.ParentFactionID != nil {
+			if model.ParentFactionID == nil || *model.ParentFactionID != *filter.ParentFactionID {
+				continue
+			}
+		}
+
+		factions = append(factions, model)
 	}
 
 	return factions, nil

@@ -8,7 +8,6 @@ import (
 	"go.uber.org/zap"
 
 	appErr "github.com/JohnG-Dev/army_builder_api/internal/errors"
-	"github.com/JohnG-Dev/army_builder_api/internal/models"
 	"github.com/JohnG-Dev/army_builder_api/internal/services"
 	"github.com/JohnG-Dev/army_builder_api/internal/state"
 )
@@ -30,20 +29,41 @@ func (h *FactionsHandlers) GetFactions(w http.ResponseWriter, r *http.Request) {
 
 func (h *FactionsHandlers) getAllFactions(w http.ResponseWriter, r *http.Request) {
 	gameIDStr := r.URL.Query().Get("game_id")
-	var factions []models.Faction
-	var err error
+	isAoRStr := r.URL.Query().Get("is_army_of_renown")
+	isRoRStr := r.URL.Query().Get("is_regiment_of_renown")
+	parentIDStr := r.URL.Query().Get("parent_id")
 
-	if gameIDStr == "" {
-		factions, err = services.GetFactions(h.S, r.Context(), nil)
-	} else {
-		gameID, parseErr := uuid.Parse(gameIDStr)
-		if parseErr != nil {
-			respondWithError(w, http.StatusBadRequest, "invalid game id", parseErr)
+	filter := services.FactionFilter{}
+
+	if gameIDStr != "" {
+		id, err := uuid.Parse(gameIDStr)
+		if err != nil {
+			respondWithError(w, http.StatusBadRequest, "invalid game id", err)
 			return
 		}
-		factions, err = services.GetFactions(h.S, r.Context(), &gameID)
+		filter.GameID = &id
 	}
 
+	if isAoRStr != "" {
+		val := isAoRStr == "true"
+		filter.IsArmyOfRenown = &val
+	}
+
+	if isRoRStr != "" {
+		val := isRoRStr == "true"
+		filter.IsRegimentOfRenown = &val
+	}
+
+	if parentIDStr != "" {
+		id, err := uuid.Parse(parentIDStr)
+		if err != nil {
+			respondWithError(w, http.StatusBadRequest, "invalid parent id", err)
+			return
+		}
+		filter.ParentFactionID = &id
+	}
+
+	factions, err := services.GetFactions(h.S, r.Context(), filter)
 	if err != nil {
 		switch {
 		case errors.Is(err, appErr.ErrMissingFactionID), errors.Is(err, appErr.ErrMissingID):

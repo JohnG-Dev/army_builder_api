@@ -3,7 +3,6 @@ run:
   tests: true
 
 linters:
-  disable-all: true
   enable:
     - gosec
     - errcheck
@@ -16,12 +15,10 @@ linters:
 linters-settings:
   gosec:
     excludes:
-      - G115 # Exclude integer overflow (safe for points/unit sizes in this context)
-      - G304 # Exclude file inclusion (safe because we use filepath.Clean)
+      - G115
+      - G304
 
 issues:
-  max-issues-per-linter: 0
-  max-same-issues: 0
   exclude-dirs:
     - tmp
     - bin
