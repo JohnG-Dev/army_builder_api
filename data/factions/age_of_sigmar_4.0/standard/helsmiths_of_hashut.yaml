@@ -9,236 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Ashen Elder
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - INFANTRY
-            - PRIEST (1)
-            - CHAOS
-          weapons:
-            - name: Black Hammer of Hashut
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Deathshrieker Rocket Battery
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - WAR MACHINE
-            - CHAOS
-          weapons:
-            - name: Hashu-Zharr Rockets
-              range: 24"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D3+2
-              version: ""
-              source: ""
-            - name: Artillerist Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Infernal Razers with Blunderbusses
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - INFANTRY
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - CHAMPION
-            - CHAOS
-          weapons:
-            - name: Grizmalok Blunderbusses
-              range: 18"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 2+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Weapon Butt
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Daemonsmith on Infernal Taurus
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "15"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 290
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - WAR MACHINE
-            - MONSTER
-            - FLY
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - WIZARD (1)
-            - CHAOS
-          weapons:
-            - name: Infernal Staff
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Hurled Daemonfire
-              range: 18"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Horns and Hooves
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
         - name: Bull Centaurs
           description: ""
           is_manifestation: false
@@ -275,299 +45,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: War Despot (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - INFANTRY
-            - CHAOS
-          weapons:
-            - name: Daemonflame Glaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Urak Taar, the First Daemonsmith
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "16"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 350
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - WARMASTER
-            - CHAOS
-            - WAR MACHINE
-            - MONSTER
-            - FLY
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - WIZARD (2)
-            - CHAOS
-          weapons:
-            - name: Dumakar
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Ruinous Torrents
-              range: 18"
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Ghorrakos's Horns and Hooves
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Infernal Razers with Flamehurlers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - INFANTRY
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - CHAMPION
-            - CHAOS
-          weapons:
-            - name: Karagthrun Flamehurlers
-              range: 12"
-              attacks: "3"
-              to_hit: 2+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Weapon Butt
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Infernal Cohort with Hashutite Spears
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "1"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - CHAOS
-          weapons:
-            - name: Hashutite Spear
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Anointed Sentinels
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "4"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - CHAMPION
-            - CAVALRY
-            - CHAOS
-          weapons:
-            - name: Thrice-cursed Glaive
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Tormentor Bombard
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - WAR MACHINE
-            - CHAOS
-          weapons:
-            - name: Torrent of Ruinous Energy
-              range: 30"
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Artillerist Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -696,7 +173,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: War Despot
+        - name: War Despot (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
@@ -709,7 +186,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 90
+          points: 140
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -732,6 +209,112 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Infernal Razers with Blunderbusses
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "1"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - INFANTRY
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - CHAMPION
+            - CHAOS
+          weapons:
+            - name: Grizmalok Blunderbusses
+              range: 18"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 2+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Weapon Butt
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ashen Elder
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - INFANTRY
+            - PRIEST (1)
+            - CHAOS
+          weapons:
+            - name: Black Hammer of Hashut
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -794,7 +377,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Infernal Cohort with Hashutite Blades
+        - name: Infernal Cohort with Hashutite Spears
           description: ""
           is_manifestation: false
           is_unique: false
@@ -807,7 +390,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 100
+          points: 110
           summon_cost: ""
           banishment: ""
           min_unit_size: 10
@@ -825,10 +408,255 @@ factions:
             - DUARDIN
             - CHAOS
           weapons:
-            - name: Hashutite Blade
+            - name: Hashutite Spear
               range: ""
               attacks: "2"
               to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Urak Taar, the First Daemonsmith
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "16"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 350
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - WARMASTER
+            - CHAOS
+            - WAR MACHINE
+            - MONSTER
+            - FLY
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - WIZARD (2)
+            - CHAOS
+          weapons:
+            - name: Dumakar
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Ruinous Torrents
+              range: 18"
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Ghorrakos's Horns and Hooves
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Daemonsmith on Infernal Taurus
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "15"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 290
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - WAR MACHINE
+            - MONSTER
+            - FLY
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - WIZARD (1)
+            - CHAOS
+          weapons:
+            - name: Infernal Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Hurled Daemonfire
+              range: 18"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Horns and Hooves
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: War Despot
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - INFANTRY
+            - CHAOS
+          weapons:
+            - name: Daemonflame Glaive
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Infernal Razers with Flamehurlers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "1"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - INFANTRY
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - CHAMPION
+            - CHAOS
+          weapons:
+            - name: Karagthrun Flamehurlers
+              range: 12"
+              attacks: "3"
+              to_hit: 2+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Weapon Butt
+              range: ""
+              attacks: "1"
+              to_hit: 4+
               to_wound: 4+
               rend: '-'
               damage: "1"
@@ -879,47 +707,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Infernal Cohort with Hashutite Blades (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "1"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - CHAOS
-            - HELSMITHS OF HASHUT
-            - DUARDIN
-            - CHAOS
-          weapons:
-            - name: Hashutite Blade
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -987,6 +774,219 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Infernal Cohort with Hashutite Blades
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "1"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - CHAOS
+          weapons:
+            - name: Hashutite Blade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Anointed Sentinels
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "4"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - CHAMPION
+            - CAVALRY
+            - CHAOS
+          weapons:
+            - name: Thrice-cursed Glaive
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Deathshrieker Rocket Battery
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - WAR MACHINE
+            - CHAOS
+          weapons:
+            - name: Hashu-Zharr Rockets
+              range: 24"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+2
+              version: ""
+              source: ""
+            - name: Artillerist Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Tormentor Bombard
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - WAR MACHINE
+            - CHAOS
+          weapons:
+            - name: Torrent of Ruinous Energy
+              range: 30"
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Artillerist Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Infernal Cohort with Hashutite Blades (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "1"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - CHAOS
+            - HELSMITHS OF HASHUT
+            - DUARDIN
+            - CHAOS
+          weapons:
+            - name: Hashutite Blade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []

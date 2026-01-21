@@ -9,7 +9,7 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Knight of Shrouds
+        - name: Scriptor Mortis
           description: ""
           is_manifestation: false
           is_unique: true
@@ -22,7 +22,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 100
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -39,79 +39,12 @@ factions:
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Sword of Stolen Hours
+            - name: Malicious Quill
               range: ""
-              attacks: "5"
+              attacks: "3"
               to_hit: 4+
               to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Krulghast Cruciator
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - INFANTRY
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Talons and Flensing Knives
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Phantasmal Torture
-              range: 12"
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
@@ -134,24 +67,24 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Grimghast Reapers
+        - name: Chainghasts
           description: ""
           is_manifestation: false
           is_unique: false
           move: 8"
-          health: "2"
+          health: "3"
           save: 6+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 210
+          points: 90
           summon_cost: ""
           banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
+          min_unit_size: 2
+          max_unit_size: 4
           matched_play: true
           version: ""
           source: Battlescribe Data
@@ -164,52 +97,22 @@ factions:
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Slasher Scythe
+            - name: Ghastflails
               range: ""
               attacks: "2"
               to_hit: 4+
               to_wound: 3+
-              rend: "1"
+              rend: "2"
               damage: "1"
               version: ""
               source: ""
-          abilities: []
-        - name: Myrmourn Banshees
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 4
-          max_unit_size: 8
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Chill Dagger
-              range: ""
+            - name: Ghastflails
+              range: 12"
               attacks: "2"
               to_hit: 4+
               to_wound: 3+
-              rend: "1"
-              damage: D3
+              rend: "2"
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -262,12 +165,131 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Lord Vitriolic
+        - name: Craventhrone Guard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DEATH
+            - CHAMPION
+            - FLY
+            - NIGHTHAUNT
+            - STANDARD BEARER (1/5)
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Wicked Sidearm
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulhunter’s Crossbow
+              range: 16"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Headsmen's Curse
           description: ""
           is_manifestation: false
           is_unique: true
           move: 8"
-          health: "5"
+          health: "3"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - WARD (6+)
+            - DEATH
+            - NIGHTHAUNT
+            - FLY
+            - DEATH
+          weapons:
+            - name: Terminus
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Tool of Judgement
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Tool of Judgement
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Tool of Judgement
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight of Shrouds on Ethereal Steed
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "7"
           save: 5+
           ward: ""
           invuln: ""
@@ -275,7 +297,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 160
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -288,26 +310,26 @@ factions:
             - DEATH
             - FLY
             - NIGHTHAUNT
-            - INFANTRY
+            - CAVALRY
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Hurled Vial
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Culler's Sickle
+            - name: Ethereal Steed’s Ghostly Hooves and Teeth
               range: ""
               attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sword of Stolen Hours
+              range: ""
+              attacks: "5"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: D3
+              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -329,42 +351,44 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Spirit Hosts
+        - name: Kurdoss Valentian, the Craven King
           description: ""
           is_manifestation: false
-          is_unique: false
+          is_unique: true
           move: 8"
-          health: "3"
-          save: 6+
+          health: "7"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 180
           summon_cost: ""
           banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
+          min_unit_size: 1
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
+            - HERO
             - DEATH
+            - UNIQUE
             - FLY
             - NIGHTHAUNT
+            - INFANTRY
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Spectral Claws and Daggers
+            - name: Sepulchral Sceptre
               range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
           abilities: []
@@ -472,12 +496,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Cairn Wraith
+        - name: Krulghast Cruciator
           description: ""
           is_manifestation: false
           is_unique: true
           move: 8"
-          health: "5"
+          health: "6"
           save: 5+
           ward: ""
           invuln: ""
@@ -485,7 +509,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 150
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -502,13 +526,22 @@ factions:
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Cairnoch Scythe
+            - name: Talons and Flensing Knives
               range: ""
-              attacks: "5"
+              attacks: "4"
               to_hit: 4+
               to_wound: 3+
-              rend: "2"
+              rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+            - name: Phantasmal Torture
+              range: 12"
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -587,7 +620,56 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Bladegheist Revenants
+        - name: Chainrasps
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DEATH
+            - CHAMPION
+            - FLY
+            - NIGHTHAUNT
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Malignant Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Malignant Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Grimghast Reapers
           description: ""
           is_manifestation: false
           is_unique: false
@@ -611,17 +693,172 @@ factions:
           keywords:
             - INFANTRY
             - DEATH
+            - CHAMPION
             - FLY
             - NIGHTHAUNT
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Tomb Greatblade
+            - name: Slasher Scythe
               range: ""
               attacks: "2"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Black Coach (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 310
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WAR MACHINE
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Wraiths' Spectral Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Black Coach's Iron-shod Wheels
+              range: ""
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight of Shrouds
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - INFANTRY
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Sword of Stolen Hours
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dreadblade Harrows
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - CAVALRY
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Dreadblade
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ethereal Steed’s Ghostly Hooves and Teeth
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
@@ -666,147 +903,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Glaivewraith Stalkers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 4
-          max_unit_size: 8
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - MUSICIAN (1/4)
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Hunter’s Glaive
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Awlrach the Drowner
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "7"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DEATH
-            - UNIQUE
-            - FLY
-            - NIGHTHAUNT
-            - WAR MACHINE
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Deathwood Oar
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Guardian of Souls
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - INFANTRY
-            - WIZARD (1)
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Chill Blade
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kurdoss Valentian, the Craven King
+        - name: Kurdoss Valentian, the Craven King (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
@@ -815,11 +912,11 @@ factions:
           save: 5+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 180
+          points: 190
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -840,116 +937,6 @@ factions:
             - name: Sepulchral Sceptre
               range: ""
               attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord Executioner
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - INFANTRY
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Decapitating Greataxe
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Nagash, Supreme Lord of the Undead
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "18"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "10"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 840
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - WIZARD (9)
-            - WARD (5+)
-            - FLY
-            - WARMASTER
-            - NIGHTHAUNT
-            - DEATH
-          weapons:
-            - name: Alakanash
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Zefet-nebtar
-              range: ""
-              attacks: "4"
               to_hit: 3+
               to_wound: 3+
               rend: "2"
@@ -1008,56 +995,224 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Chainghasts
+        - name: Spirit Torment
           description: ""
           is_manifestation: false
-          is_unique: false
+          is_unique: true
           move: 8"
-          health: "3"
-          save: 6+
+          health: "6"
+          save: 5+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 90
+          points: 120
           summon_cost: ""
           banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - INFANTRY
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Shacklegheist Chains
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Glaivewraith Stalkers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 4
+          max_unit_size: 8
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
             - INFANTRY
             - DEATH
-            - CHAMPION
+            - FLY
+            - NIGHTHAUNT
+            - MUSICIAN (1/4)
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Hunter’s Glaive
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Myrmourn Banshees
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 4
+          max_unit_size: 8
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DEATH
             - FLY
             - NIGHTHAUNT
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Ghastflails
+            - name: Chill Dagger
               range: ""
               attacks: "2"
               to_hit: 4+
               to_wound: 3+
-              rend: "2"
-              damage: "1"
+              rend: "1"
+              damage: D3
               version: ""
               source: ""
-            - name: Ghastflails
-              range: 12"
-              attacks: "2"
+          abilities: []
+        - name: Awlrach the Drowner
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DEATH
+            - UNIQUE
+            - FLY
+            - NIGHTHAUNT
+            - WAR MACHINE
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Deathwood Oar
+              range: ""
+              attacks: "4"
               to_hit: 4+
               to_wound: 3+
-              rend: "2"
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bladegheist Revenants
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Tomb Greatblade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Dreadblade Harrows
+        - name: Hexwraiths
           description: ""
           is_manifestation: false
           is_unique: false
@@ -1070,38 +1225,136 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 160
           summon_cost: ""
           banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
+          min_unit_size: 5
+          max_unit_size: 10
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
             - DEATH
+            - CHAMPION
             - FLY
             - NIGHTHAUNT
             - CAVALRY
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Dreadblade
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
             - name: Ethereal Steed’s Ghostly Hooves and Teeth
               range: ""
-              attacks: "3"
+              attacks: "2"
               to_hit: 5+
               to_wound: 3+
               rend: '-'
               damage: "1"
+              version: ""
+              source: ""
+            - name: Spectral Scythe
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Spirit Hosts
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Spectral Claws and Daggers
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Cairn Wraith
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - INFANTRY
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Cairnoch Scythe
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -1157,171 +1410,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Chainrasps
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - DEATH
-            - CHAMPION
-            - FLY
-            - NIGHTHAUNT
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Malignant Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Malignant Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Black Coach (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "12"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 310
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - WAR MACHINE
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Wraiths' Spectral Weapons
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Black Coach's Iron-shod Wheels
-              range: ""
-              attacks: "8"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Knight of Shrouds on Ethereal Steed
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "7"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - CAVALRY
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Ethereal Steed’s Ghostly Hooves and Teeth
-              range: ""
-              attacks: "3"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Sword of Stolen Hours
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Scriptor Mortis
+        - name: Lord Executioner
           description: ""
           is_manifestation: false
           is_unique: true
@@ -1334,7 +1423,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 170
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1351,13 +1440,13 @@ factions:
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Malicious Quill
+            - name: Decapitating Greataxe
               range: ""
-              attacks: "3"
-              to_hit: 4+
+              attacks: "5"
+              to_hit: 3+
               to_wound: 3+
-              rend: '-'
-              damage: "1"
+              rend: "2"
+              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -1446,53 +1535,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Kurdoss Valentian, the Craven King (Scourge of Ghyran)
+        - name: Lord Vitriolic
           description: ""
           is_manifestation: false
           is_unique: true
           move: 8"
-          health: "7"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DEATH
-            - UNIQUE
-            - FLY
-            - NIGHTHAUNT
-            - INFANTRY
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Sepulchral Sceptre
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Spirit Torment
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "6"
+          health: "5"
           save: 5+
           ward: ""
           invuln: ""
@@ -1517,9 +1565,77 @@ factions:
             - WARD (5+)
             - DEATH
           weapons:
-            - name: Shacklegheist Chains
+            - name: Hurled Vial
+              range: 10"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Culler's Sickle
               range: ""
-              attacks: "5"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Guardian of Souls
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - INFANTRY
+            - WIZARD (1)
+            - WARD (5+)
+            - DEATH
+          weapons:
+            - name: Chill Blade
+              range: ""
+              attacks: "3"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
@@ -1545,171 +1661,55 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Craventhrone Guard
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - DEATH
-            - CHAMPION
-            - FLY
-            - NIGHTHAUNT
-            - STANDARD BEARER (1/5)
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Wicked Sidearm
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulhunter’s Crossbow
-              range: 16"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Hexwraiths
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "3"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - CHAMPION
-            - FLY
-            - NIGHTHAUNT
-            - CAVALRY
-            - WARD (5+)
-            - DEATH
-          weapons:
-            - name: Ethereal Steed’s Ghostly Hooves and Teeth
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Spectral Scythe
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Headsmen's Curse
+        - name: Nagash, Supreme Lord of the Undead
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 8"
-          health: "3"
-          save: 4+
+          move: 10"
+          health: "18"
+          save: 3+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "10"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 840
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
+          max_unit_size: 1
+          matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - WARD (6+)
             - DEATH
-            - NIGHTHAUNT
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WIZARD (9)
+            - WARD (5+)
             - FLY
+            - WARMASTER
+            - NIGHTHAUNT
             - DEATH
           weapons:
-            - name: Terminus
+            - name: Alakanash
               range: ""
-              attacks: "3"
+              attacks: "4"
               to_hit: 3+
               to_wound: 3+
               rend: "2"
               damage: D6
               version: ""
               source: ""
-            - name: Tool of Judgement
+            - name: Zefet-nebtar
               range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Tool of Judgement
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Tool of Judgement
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
           abilities: []

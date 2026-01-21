@@ -9,6 +9,64 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Black Coach
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "12"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - FLY
+            - NIGHTHAUNT
+            - WAR MACHINE
+            - WARD (5+)
+            - CLATTERING PROCESSION
+            - DEATH
+          weapons:
+            - name: Soulreach Grasp
+              range: 10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Wraith's Spectral Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Relic Bearers’ Claws and Ethereal Steeds’ Hooves
+              range: ""
+              attacks: "14"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
         - name: Dreadblade Harrows
           description: ""
           is_manifestation: false
@@ -293,64 +351,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Black Coach
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "12"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - FLY
-            - NIGHTHAUNT
-            - WAR MACHINE
-            - WARD (5+)
-            - CLATTERING PROCESSION
-            - DEATH
-          weapons:
-            - name: Soulreach Grasp
-              range: 10"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Wraith's Spectral Weapons
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Relic Bearers’ Claws and Ethereal Steeds’ Hooves
-              range: ""
-              attacks: "14"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
               version: ""
               source: ""
           abilities: []

@@ -9,77 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Prince Vhordrai
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "18"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 470
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - MONSTER
-            - FLY
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - WIZARD (1)
-            - CRIMSON KEEP
-            - DEATH
-          weapons:
-            - name: Shordmaire's Claws
-              range: ""
-              attacks: "7"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Shordmaire's Maw
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: The Bloodlance
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Shordemaire's Miasma
-              range: 10"
-              attacks: D6
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
         - name: Vampire Lord on Nightmare Steed
           description: ""
           is_manifestation: false
@@ -255,6 +184,77 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Prince Vhordrai
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "18"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 470
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - MONSTER
+            - FLY
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WIZARD (1)
+            - CRIMSON KEEP
+            - DEATH
+          weapons:
+            - name: Shordmaire's Claws
+              range: ""
+              attacks: "7"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Shordmaire's Maw
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: The Bloodlance
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Shordemaire's Miasma
+              range: 10"
+              attacks: D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
               version: ""
               source: ""
           abilities: []

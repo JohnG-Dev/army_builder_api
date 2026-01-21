@@ -9,67 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Abhorrant Ghoul King (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - FLESH-EATER COURTS
-            - ABHORRANT
-            - FLY
-            - WIZARD (1)
-            - WARD (6+)
-            - INFANTRY
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Gory Talons and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
         - name: Crypt Flayers
           description: ""
           is_manifestation: false
@@ -121,73 +60,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Morbheg Knights
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "4"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - DEATH
-            - CHAMPION
-            - FLY
-            - CAVALRY
-            - STANDARD BEARER (1/3)
-            - MUSICIAN (1/3)
-            - FLESH-EATER COURTS
-            - KNIGHTS
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Nightshrieker’s Claws and Teeth
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Grisly Lance
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abhorrant Cardinal
+        - name: Crypt Haunter Courtier
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 6"
-          health: "5"
-          save: 6+
+          move: 7"
+          health: "6"
+          save: 5+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -201,18 +87,181 @@ factions:
             - FLESH-EATER COURTS
             - WARD (6+)
             - INFANTRY
-            - PRIEST (1)
-            - ABHORRANT
+            - NOBLE
             - NEW SUMMERCOURT
             - DEATH
           weapons:
-            - name: Cursed Crosier
+            - name: Massive Bone Club and Rancid Talons
               range: ""
-              attacks: "3"
+              attacks: "5"
               to_hit: 4+
               to_wound: 3+
-              rend: '-'
-              damage: D3
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Crypt Horrors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 7"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DEATH
+            - CHAMPION
+            - FLESH-EATER COURTS
+            - KNIGHTS
+            - INFANTRY
+            - UNDERSIZE UNIT
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Club and Septic Talons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abhorrant Ghoul King
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - FLESH-EATER COURTS
+            - ABHORRANT
+            - FLY
+            - WIZARD (1)
+            - WARD (6+)
+            - INFANTRY
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Bloodstained Talons and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abhorrant Ghoul King (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - FLESH-EATER COURTS
+            - ABHORRANT
+            - FLY
+            - WIZARD (1)
+            - WARD (6+)
+            - INFANTRY
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Gory Talons and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -295,6 +344,67 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Abhorrant Gorewarden (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "7"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - FLESH-EATER COURTS
+            - ABHORRANT
+            - FLY
+            - WIZARD (1)
+            - WARD (6+)
+            - INFANTRY
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Gory Talons and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Charnel Throne
           description: ""
           is_manifestation: false
@@ -323,20 +433,73 @@ factions:
             - DEATH
           weapons: []
           abilities: []
-        - name: Crypt Haunter Courtier
+        - name: Ushoran, Mortarch of Delusion
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 7"
-          health: "6"
-          save: 5+
+          move: 10"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARD (5+)
+            - WARMASTER
+            - FLESH-EATER COURTS
+            - WIZARD (2)
+            - ABHORRANT
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Sceptre of the Carrion King
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+            - name: Monstrous Talons
+              range: ""
+              attacks: "8"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abhorrant Cardinal
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 6+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 130
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -350,16 +513,105 @@ factions:
             - FLESH-EATER COURTS
             - WARD (6+)
             - INFANTRY
-            - NOBLE
+            - PRIEST (1)
+            - ABHORRANT
             - NEW SUMMERCOURT
             - DEATH
           weapons:
-            - name: Massive Bone Club and Rancid Talons
+            - name: Cursed Crosier
               range: ""
-              attacks: "5"
+              attacks: "3"
               to_hit: 4+
               to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abhorrant Ghoul King on Royal Zombie Dragon
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 360
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - MONSTER
+            - FLESH-EATER COURTS
+            - ABHORRANT
+            - FLY
+            - WIZARD (1)
+            - WARD (6+)
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Gory Talons and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Draconic Jaws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
               rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Draconic Claws
+              range: ""
+              attacks: "7"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Baneful Breath
+              range: 10"
+              attacks: D6
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
               damage: "3"
               version: ""
               source: ""
@@ -379,6 +631,128 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Crypt Infernal Courtier
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "6"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - FLESH-EATER COURTS
+            - WARD (6+)
+            - INFANTRY
+            - NOBLE
+            - FLY
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Piercing Death Screech
+              range: 10"
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Skewering Claws
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Morbheg Knights
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "4"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DEATH
+            - CHAMPION
+            - FLY
+            - CAVALRY
+            - STANDARD BEARER (1/3)
+            - MUSICIAN (1/3)
+            - FLESH-EATER COURTS
+            - KNIGHTS
+            - NEW SUMMERCOURT
+            - DEATH
+          weapons:
+            - name: Nightshrieker’s Claws and Teeth
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Grisly Lance
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -441,60 +815,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Varghulf Courtier
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "8"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - FLESH-EATER COURTS
-            - WARD (6+)
-            - BEAST
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Immense Claws
-              range: ""
-              attacks: "7"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Dagger-like Fangs
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abhorrant Ghoul King
+        - name: Abhorrant Archregent
           description: ""
           is_manifestation: false
           is_unique: true
           move: 6"
-          health: "5"
+          health: "6"
           save: 5+
           ward: ""
           invuln: ""
@@ -502,7 +828,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 140
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -514,15 +840,14 @@ factions:
             - DEATH
             - HERO
             - FLESH-EATER COURTS
-            - ABHORRANT
-            - FLY
-            - WIZARD (1)
             - WARD (6+)
             - INFANTRY
+            - ABHORRANT
+            - WIZARD (1)
             - NEW SUMMERCOURT
             - DEATH
           weapons:
-            - name: Bloodstained Talons and Fangs
+            - name: Gory Talons and Fangs
               range: ""
               attacks: "5"
               to_hit: 3+
@@ -638,94 +963,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Abhorrant Ghoul King on Royal Zombie Dragon
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "16"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 360
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - MONSTER
-            - FLESH-EATER COURTS
-            - ABHORRANT
-            - FLY
-            - WIZARD (1)
-            - WARD (6+)
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Gory Talons and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Draconic Jaws
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Draconic Claws
-              range: ""
-              attacks: "7"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Baneful Breath
-              range: 10"
-              attacks: D6
-              to_hit: 2+
-              to_wound: 4+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
         - name: Crypt Ghast Courtier
           description: ""
           is_manifestation: false
@@ -783,48 +1020,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Crypt Horrors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 7"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - DEATH
-            - CHAMPION
-            - FLESH-EATER COURTS
-            - KNIGHTS
-            - INFANTRY
-            - UNDERSIZE UNIT
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Club and Septic Talons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -887,210 +1082,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Abhorrant Archregent
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - FLESH-EATER COURTS
-            - WARD (6+)
-            - INFANTRY
-            - ABHORRANT
-            - WIZARD (1)
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Gory Talons and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abhorrant Gorewarden (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "7"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - FLESH-EATER COURTS
-            - ABHORRANT
-            - FLY
-            - WIZARD (1)
-            - WARD (6+)
-            - INFANTRY
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Gory Talons and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Crypt Infernal Courtier
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - FLESH-EATER COURTS
-            - WARD (6+)
-            - INFANTRY
-            - NOBLE
-            - FLY
-            - NEW SUMMERCOURT
-            - DEATH
-          weapons:
-            - name: Piercing Death Screech
-              range: 10"
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Skewering Claws
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ushoran, Mortarch of Delusion
+        - name: Varghulf Courtier
           description: ""
           is_manifestation: false
           is_unique: true
           move: 10"
-          health: "16"
-          save: 4+
+          health: "8"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "5"
+          control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 450
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1100,33 +1105,28 @@ factions:
           source: Battlescribe Data
           keywords:
             - DEATH
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - WARD (5+)
-            - WARMASTER
             - FLESH-EATER COURTS
-            - WIZARD (2)
-            - ABHORRANT
+            - WARD (6+)
+            - BEAST
             - NEW SUMMERCOURT
             - DEATH
           weapons:
-            - name: Sceptre of the Carrion King
+            - name: Immense Claws
               range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: D3+3
-              version: ""
-              source: ""
-            - name: Monstrous Talons
-              range: ""
-              attacks: "8"
-              to_hit: 3+
+              attacks: "7"
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+            - name: Dagger-like Fangs
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
           abilities: []

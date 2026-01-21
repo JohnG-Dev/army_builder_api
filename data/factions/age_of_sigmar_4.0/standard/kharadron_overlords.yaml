@@ -9,360 +9,12 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Vongrim Harpoon Crew
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "2"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - INFANTRY
-            - ORDER
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - SKYFARER
-            - FLY
-            - ORDER
-          weapons:
-            - name: Pioneer Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Skydrake Harpoon or Firearm
-              range: 12"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Zontari Endrin Dock
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: '-'
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 20
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - FACTION TERRAIN
-            - ORDER
-            - KHARADRON OVERLORDS
-            - FLY
-            - ORDER
-          weapons: []
-          abilities: []
-        - name: Arkanaut Admiral
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - INFANTRY
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - SKYFARER
-            - ORDER
-          weapons:
-            - name: Masterwork Volley Pistol
-              range: 10"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Skalfhammer
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Endrinmaster with Endrinharness
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - INFANTRY
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - SKYFARER
-            - ORDER
-          weapons:
-            - name: Aethermight Hammer
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Aether-Khemist
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - INFANTRY
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - SKYFARER
-            - ORDER
-          weapons:
-            - name: Heavy Instruments
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Atmospheric Anatomiser
-              range: 8"
-              attacks: 3D6
-              to_hit: 4+
-              to_wound: 4+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Endrinmaster with Dirigible Suit
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - INFANTRY
-            - FLY
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - SKYFARER
-            - ORDER
-          weapons:
-            - name: Aethercannon
-              range: 18"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Dirigible Suit Weapon Battery
-              range: 12"
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Upgraded Aethermatic Saw
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Arkanaut Ironclad
+        - name: Arkanaut Frigate
           description: ""
           is_manifestation: false
           is_unique: true
           move: 10"
-          health: "18"
+          health: "14"
           save: 2+
           ward: ""
           invuln: ""
@@ -370,11 +22,11 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 460
+          points: 300
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
@@ -387,22 +39,13 @@ factions:
             - SKYVESSEL
             - ORDER
           weapons:
-            - name: Great Sky Ordnance
+            - name: Heavy Sky Ordnance
               range: 24"
-              attacks: "6"
+              attacks: "4"
               to_hit: 4+
               to_wound: 2+
               rend: "2"
               damage: "3"
-              version: ""
-              source: ""
-            - name: Aethershock Torpedoes
-              range: 18"
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
               version: ""
               source: ""
             - name: Boarding Weapons
@@ -410,91 +53,6 @@ factions:
               attacks: "8"
               to_hit: 4+
               to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Endrinriggers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - INFANTRY
-            - ORDER
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - SKYFARER
-            - ORDER
-          weapons:
-            - name: Skyrigger Heavy Weapon
-              range: 15"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Gun Butt
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Rapid-fire Rivet Gun
-              range: 10"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Aethermatic Saw
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Aethermatic Volley Gun
-              range: 15"
-              attacks: 2D6
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Gun Butt
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
               rend: '-'
               damage: "1"
               version: ""
@@ -549,20 +107,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Aetheric Navigator
+        - name: Aether-Khemist
           description: ""
           is_manifestation: false
           is_unique: true
           move: 4"
           health: "5"
-          save: 3+
+          save: 4+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -579,22 +137,22 @@ factions:
             - SKYFARER
             - ORDER
           weapons:
-            - name: Ranging Pistol
-              range: 10"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Zephyrscope
+            - name: Heavy Instruments
               range: ""
               attacks: "3"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 4+
-              rend: "1"
+              rend: '-'
               damage: D3
+              version: ""
+              source: ""
+            - name: Atmospheric Anatomiser
+              range: 8"
+              attacks: 3D6
+              to_hit: 4+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -677,12 +235,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Codewright
+        - name: Drekki Flynt
           description: ""
           is_manifestation: false
           is_unique: true
           move: 4"
-          health: "5"
+          health: "6"
           save: 3+
           ward: ""
           invuln: ""
@@ -690,7 +248,57 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 90
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - ORDER
+            - INFANTRY
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - SKYFARER
+            - ORDER
+          weapons:
+            - name: The Aethermatic Equaliser Mk. III
+              range: 10"
+              attacks: 2D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Grunnsson’s Axe
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Endrinmaster with Endrinharness
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -707,22 +315,13 @@ factions:
             - SKYFARER
             - ORDER
           weapons:
-            - name: Battletome
+            - name: Aethermight Hammer
               range: ""
               attacks: "3"
               to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Aethershot Pistol
-              range: 10"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -811,24 +410,24 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Arkanaut Frigate
+        - name: Grundstok Gunhauler (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 10"
-          health: "14"
+          move: 14"
+          health: "10"
           save: 2+
           ward: ""
           invuln: ""
-          control: "5"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 300
+          points: 170
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 1
+          max_unit_size: 2
           matched_play: true
           version: ""
           source: Battlescribe Data
@@ -841,13 +440,71 @@ factions:
             - SKYVESSEL
             - ORDER
           weapons:
-            - name: Heavy Sky Ordnance
-              range: 24"
+            - name: Sky Ordinance
+              range: 15"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Bombs and Boarding Weapons
+              range: ""
               attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Arkanaut Ironclad
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "18"
+          save: 2+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 460
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - FLY
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - WAR MACHINE
+            - SKYVESSEL
+            - ORDER
+          weapons:
+            - name: Great Sky Ordnance
+              range: 24"
+              attacks: "6"
               to_hit: 4+
               to_wound: 2+
               rend: "2"
               damage: "3"
+              version: ""
+              source: ""
+            - name: Aethershock Torpedoes
+              range: 18"
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
             - name: Boarding Weapons
@@ -925,227 +582,6 @@ factions:
               to_wound: 4+
               rend: '-'
               damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Thundrik's Profiteers
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "2"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - DUARDIN
-            - KHARADRON OVERLORDS
-            - SKYFARER
-            - ORDER
-          weapons:
-            - name: Aethermatic Firearms
-              range: 12"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Skypike
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Arkanaut Cutter
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Aethermatic Firearms
-              range: 12"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arkanaut Cutter
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Aethermatic Firearms
-              range: 12"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arkanaut Cutter
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Aethermatic Firearms
-              range: 12"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arkanaut Cutter
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Aethermatic Anatomiser
-              range: 8"
-              attacks: 3D6
-              to_hit: 4+
-              to_wound: 4+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Grundstok Gunhauler (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "10"
-          save: 2+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - FLY
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - WAR MACHINE
-            - SKYVESSEL
-            - ORDER
-          weapons:
-            - name: Sky Ordinance
-              range: 15"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Bombs and Boarding Weapons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Drekki Flynt
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - ORDER
-            - INFANTRY
-            - KHARADRON OVERLORDS
-            - DUARDIN
-            - SKYFARER
-            - ORDER
-          weapons:
-            - name: The Aethermatic Equaliser Mk. III
-              range: 10"
-              attacks: 2D6
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Grunnsson’s Axe
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "3"
               version: ""
               source: ""
           abilities: []
@@ -1302,6 +738,414 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Endrinriggers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - ORDER
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - SKYFARER
+            - ORDER
+          weapons:
+            - name: Skyrigger Heavy Weapon
+              range: 15"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Gun Butt
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Rapid-fire Rivet Gun
+              range: 10"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Aethermatic Saw
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Aethermatic Volley Gun
+              range: 15"
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Gun Butt
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Aetheric Navigator
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - INFANTRY
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - SKYFARER
+            - ORDER
+          weapons:
+            - name: Ranging Pistol
+              range: 10"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Zephyrscope
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Arkanaut Admiral
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - INFANTRY
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - SKYFARER
+            - ORDER
+          weapons:
+            - name: Masterwork Volley Pistol
+              range: 10"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Skalfhammer
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Codewright
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - INFANTRY
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - SKYFARER
+            - ORDER
+          weapons:
+            - name: Battletome
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Aethershot Pistol
+              range: 10"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Thundrik's Profiteers
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "2"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - DUARDIN
+            - KHARADRON OVERLORDS
+            - SKYFARER
+            - ORDER
+          weapons:
+            - name: Aethermatic Firearms
+              range: 12"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Skypike
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Arkanaut Cutter
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Aethermatic Firearms
+              range: 12"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arkanaut Cutter
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Aethermatic Firearms
+              range: 12"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arkanaut Cutter
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Aethermatic Firearms
+              range: 12"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arkanaut Cutter
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Aethermatic Anatomiser
+              range: 8"
+              attacks: 3D6
+              to_hit: 4+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
         - name: Null-Khemist
           description: ""
           is_manifestation: false
@@ -1418,6 +1262,162 @@ factions:
               damage: "1"
               version: ""
               source: ""
+          abilities: []
+        - name: Endrinmaster with Dirigible Suit
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - INFANTRY
+            - FLY
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - SKYFARER
+            - ORDER
+          weapons:
+            - name: Aethercannon
+              range: 18"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Dirigible Suit Weapon Battery
+              range: 12"
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Upgraded Aethermatic Saw
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vongrim Harpoon Crew
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "2"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - ORDER
+            - KHARADRON OVERLORDS
+            - DUARDIN
+            - SKYFARER
+            - FLY
+            - ORDER
+          weapons:
+            - name: Pioneer Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Skydrake Harpoon or Firearm
+              range: 12"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Zontari Endrin Dock
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: '-'
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 20
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - FACTION TERRAIN
+            - ORDER
+            - KHARADRON OVERLORDS
+            - FLY
+            - ORDER
+          weapons: []
           abilities: []
       battle_formations: []
       enhancements: []

@@ -9,230 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Man-skewer Boltboyz
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - DESTRUCTION
-            - KRULEBOYZ
-            - MURKVAST MENAGERIE
-            - DESTRUCTION
-          weapons:
-            - name: 'Man-skewer Crossbow: Hasty Shot'
-              range: 12"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: 'Man-skewer Crossbow: Aimed Shot'
-              range: 18"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Jaggedy Blades
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Gutrippaz
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - DESTRUCTION
-            - KRULEBOYZ
-            - CHAMPION
-            - MUSICIAN (1/10)
-            - STANDARD BEARER (1/10)
-            - MURKVAST MENAGERIE
-            - DESTRUCTION
-          weapons:
-            - name: Stikka or Hacka
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Da Kunnin' Krew
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - DESTRUCTION
-            - KRULEBOYZ
-            - INFANTRY
-            - MURKVAST MENAGERIE
-            - DESTRUCTION
-          weapons:
-            - name: Krew Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Krew Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Krew Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Krew Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Krew Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Swampboss Skumdrekk (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "15"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - KRULEBOYZ
-            - UNIQUE
-            - MONSTER
-            - MURKVAST MENAGERIE
-            - DESTRUCTION
-          weapons:
-            - name: Sloppklaw’s Bite and Talons
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Snatcha-stikk
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
         - name: Swampboss Skumdrekk
           description: ""
           is_manifestation: false
@@ -288,6 +64,82 @@ factions:
               to_wound: 2+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Snatchaboss on Sludgeraker Beast
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - KRULEBOYZ
+            - MONSTER
+            - MURKVAST MENAGERIE
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Grappling Hook
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Sludgeraker’s Talons
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Sludgeraker’s Bite
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: D3+3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -435,6 +287,65 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Swampcalla Shaman with Pot-grot
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - KRULEBOYZ
+            - INFANTRY
+            - WIZARD (1)
+            - MURKVAST MENAGERIE
+            - RESTRICT GENERAL
+            - DESTRUCTION
+          weapons:
+            - name: Bogbark Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Kruleboyz Monsta-killaz
           description: ""
           is_manifestation: false
@@ -471,6 +382,228 @@ factions:
               to_hit: 4+
               to_wound: 3+
               rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gutrippaz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - DESTRUCTION
+            - KRULEBOYZ
+            - CHAMPION
+            - MUSICIAN (1/10)
+            - STANDARD BEARER (1/10)
+            - MURKVAST MENAGERIE
+            - DESTRUCTION
+          weapons:
+            - name: Stikka or Hacka
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Da Kunnin' Krew
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - DESTRUCTION
+            - KRULEBOYZ
+            - INFANTRY
+            - MURKVAST MENAGERIE
+            - DESTRUCTION
+          weapons:
+            - name: Krew Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Krew Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Krew Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Krew Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Krew Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Marshcrawla Sloggoth
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DESTRUCTION
+            - KRULEBOYZ
+            - WAR MACHINE
+            - MURKVAST MENAGERIE
+            - DESTRUCTION
+          weapons:
+            - name: Nets and Snatcha‑stikks
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sloggoth’s Claws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Man-skewer Boltboyz
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - DESTRUCTION
+            - KRULEBOYZ
+            - MURKVAST MENAGERIE
+            - DESTRUCTION
+          weapons:
+            - name: 'Man-skewer Crossbow: Hasty Shot'
+              range: 12"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: 'Man-skewer Crossbow: Aimed Shot'
+              range: 18"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Jaggedy Blades
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
@@ -594,12 +727,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Snatchaboss on Sludgeraker Beast
+        - name: Swampboss Skumdrekk (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
           move: 8"
-          health: "14"
+          health: "15"
           save: 4+
           ward: ""
           invuln: ""
@@ -607,7 +740,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 200
+          points: 230
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -619,160 +752,27 @@ factions:
             - HERO
             - DESTRUCTION
             - KRULEBOYZ
+            - UNIQUE
             - MONSTER
             - MURKVAST MENAGERIE
-            - RESTRICT GENERAL
             - DESTRUCTION
           weapons:
-            - name: Grappling Hook
+            - name: Sloppklaw’s Bite and Talons
               range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
               rend: "1"
               damage: "3"
               version: ""
               source: ""
-            - name: Sludgeraker’s Talons
+            - name: Snatcha-stikk
               range: ""
-              attacks: "6"
+              attacks: "5"
               to_hit: 4+
-              to_wound: 2+
+              to_wound: 3+
               rend: "1"
               damage: "2"
-              version: ""
-              source: ""
-            - name: Sludgeraker’s Bite
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: D3+3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Marshcrawla Sloggoth
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "10"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DESTRUCTION
-            - KRULEBOYZ
-            - WAR MACHINE
-            - MURKVAST MENAGERIE
-            - DESTRUCTION
-          weapons:
-            - name: Nets and Snatcha‑stikks
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Sloggoth’s Claws
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Swampcalla Shaman with Pot-grot
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - KRULEBOYZ
-            - INFANTRY
-            - WIZARD (1)
-            - MURKVAST MENAGERIE
-            - RESTRICT GENERAL
-            - DESTRUCTION
-          weapons:
-            - name: Bogbark Staff
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
               version: ""
               source: ""
           abilities: []

@@ -9,6 +9,174 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Akhelian Morrsarr Guard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "4"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - MUSICIAN (1/3)
+            - STANDARD BEARER (1/3)
+            - FLY
+            - ORDER
+            - IDONETH DEEPKIN
+            - AELF
+            - AKHELIAN
+            - ORDER
+          weapons:
+            - name: Voltspear
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Fangmora’s Fangs and Lashing Tail
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ikon of the Sea
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 7"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - IDONETH DEEPKIN
+            - AELF
+            - ORDER
+            - INFANTRY
+            - AKHELIAN
+            - ORDER
+          weapons:
+            - name: Tidal Glaive
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ikon of the Storm
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 7"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - IDONETH DEEPKIN
+            - AELF
+            - ORDER
+            - INFANTRY
+            - AKHELIAN
+            - ORDER
+          weapons:
+            - name: Maelstrom Blades
+              range: ""
+              attacks: "7"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Akhelian King
           description: ""
           is_manifestation: false
@@ -77,20 +245,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Akhelian Thrallmaster
+        - name: Eidolon of Mathlann, Aspect of the Sea
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
+          move: 10"
+          health: "12"
+          save: 3+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 90
+          points: 340
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -100,20 +268,32 @@ factions:
           source: Battlescribe Data
           keywords:
             - HERO
+            - FLY
+            - MONSTER
+            - WARD (5+)
             - IDONETH DEEPKIN
             - AELF
+            - EIDOLON
+            - WIZARD (2)
             - ORDER
-            - INFANTRY
-            - AKHELIAN
             - ORDER
           weapons:
-            - name: Esoteric Weapons
-              range: ""
-              attacks: "6"
+            - name: Blasts of Abyssal Energy
+              range: 12"
+              attacks: "3"
               to_hit: 3+
-              to_wound: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Psi-trident and Deep-sea Sceptre
+              range: ""
+              attacks: "7"
+              to_hit: 3+
+              to_wound: 3+
               rend: "1"
-              damage: "2"
+              damage: D3
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -254,6 +434,275 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Elathain's Soulraid
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - INFANTRY
+            - UNIQUE
+            - CHAMPION
+            - LEGENDS
+            - AELF
+            - AKHELIAN
+            - NAMARTI
+            - IDONETH DEEPKIN
+            - ORDER
+          weapons:
+            - name: Riptide Harpoon
+              range: 8"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Soulraid Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mathaela, Oracle of the Abyss
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "6"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - IDONETH DEEPKIN
+            - AELF
+            - UNIQUE
+            - ORDER
+            - INFANTRY
+            - ISHARANN
+            - WARD (6+)
+            - WIZARD (1)
+            - FLY
+            - ORDER
+          weapons:
+            - name: Riptide Blast
+              range: 18"
+              attacks: "3"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Staff of the Abyss
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Dark Shoal’s Ferocious Bites
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Isharann Soulrender
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - IDONETH DEEPKIN
+            - AELF
+            - ORDER
+            - ISHARANN
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Rakerdart’s Serrated Bill
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Talúnhook
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Volturnos, High King of the Deep
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - FLY
+            - IDONETH DEEPKIN
+            - AELF
+            - WARMASTER
+            - CAVALRY
+            - UNIQUE
+            - AKHELIAN
+            - ORDER
+            - ORDER
+          weapons:
+            - name: The Astra Solus
+              range: ""
+              attacks: "6"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Uasall’s Fangs, Talons and Lashing Tails
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
         - name: Akhelian Allopex
           description: ""
           is_manifestation: false
@@ -314,6 +763,117 @@ factions:
             - name: Retarius Net Launcher
               range: 18"
               attacks: "2"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Akhelian Ishlaen Guard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "4"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - MUSICIAN (1/3)
+            - STANDARD BEARER (1/3)
+            - FLY
+            - ORDER
+            - IDONETH DEEPKIN
+            - AELF
+            - AKHELIAN
+            - ORDER
+          weapons:
+            - name: Helsabre
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Fangmora’s Fangs and Lashing Tail
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Akhelian Leviadon
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "16"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 470
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - IDONETH DEEPKIN
+            - ORDER
+            - FLY
+            - AELF
+            - AKHELIAN
+            - MONSTER
+            - WARD (5+)
+            - ORDER
+          weapons:
+            - name: Crew’s Spears and Harpoons
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Leviadon’s Scythed Fins and Crushing Jaws
+              range: ""
+              attacks: "7"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Razorshell Harpoon Launchers
+              range: 18"
+              attacks: "4"
               to_hit: 3+
               to_wound: 2+
               rend: "1"
@@ -391,7 +951,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Akhelian Thrallmaster (Scourge of Ghyran)
+        - name: Akhelian Thrallmaster
           description: ""
           is_manifestation: false
           is_unique: true
@@ -446,478 +1006,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Mathaela, Oracle of the Abyss
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - IDONETH DEEPKIN
-            - AELF
-            - UNIQUE
-            - ORDER
-            - INFANTRY
-            - ISHARANN
-            - WARD (6+)
-            - WIZARD (1)
-            - FLY
-            - ORDER
-          weapons:
-            - name: Riptide Blast
-              range: 18"
-              attacks: "3"
-              to_hit: 2+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Staff of the Abyss
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Dark Shoal’s Ferocious Bites
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Eidolon of Mathlann, Aspect of the Sea
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "12"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 340
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - FLY
-            - MONSTER
-            - WARD (5+)
-            - IDONETH DEEPKIN
-            - AELF
-            - EIDOLON
-            - WIZARD (2)
-            - ORDER
-            - ORDER
-          weapons:
-            - name: Blasts of Abyssal Energy
-              range: 12"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Psi-trident and Deep-sea Sceptre
-              range: ""
-              attacks: "7"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Isharann Soulrender
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - IDONETH DEEPKIN
-            - AELF
-            - ORDER
-            - ISHARANN
-            - INFANTRY
-            - ORDER
-          weapons:
-            - name: Rakerdart’s Serrated Bill
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Talúnhook
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Namarti Thralls (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - IDONETH DEEPKIN
-            - AELF
-            - INFANTRY
-            - NAMARTI
-            - ORDER
-          weapons:
-            - name: Lanmari
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ikon of the Sea
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 7"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - IDONETH DEEPKIN
-            - AELF
-            - ORDER
-            - INFANTRY
-            - AKHELIAN
-            - ORDER
-          weapons:
-            - name: Tidal Glaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ikon of the Storm
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 7"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - IDONETH DEEPKIN
-            - AELF
-            - ORDER
-            - INFANTRY
-            - AKHELIAN
-            - ORDER
-          weapons:
-            - name: Maelstrom Blades
-              range: ""
-              attacks: "7"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Isharann Tidecaster
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - IDONETH DEEPKIN
-            - AELF
-            - ORDER
-            - WIZARD (1)
-            - ISHARANN
-            - ORDER
-          weapons:
-            - name: Pelagic Staff
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Akhelian Leviadon
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "16"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 470
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - IDONETH DEEPKIN
-            - ORDER
-            - FLY
-            - AELF
-            - AKHELIAN
-            - MONSTER
-            - WARD (5+)
-            - ORDER
-          weapons:
-            - name: Crew’s Spears and Harpoons
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Leviadon’s Scythed Fins and Crushing Jaws
-              range: ""
-              attacks: "7"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Razorshell Harpoon Launchers
-              range: 18"
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
               version: ""
               source: ""
           abilities: []
@@ -1010,6 +1098,162 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Akhelian Thrallmaster (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - IDONETH DEEPKIN
+            - AELF
+            - ORDER
+            - INFANTRY
+            - AKHELIAN
+            - ORDER
+          weapons:
+            - name: Esoteric Weapons
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Namarti Thralls (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - IDONETH DEEPKIN
+            - AELF
+            - INFANTRY
+            - NAMARTI
+            - ORDER
+          weapons:
+            - name: Lanmari
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Isharann Tidecaster
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - IDONETH DEEPKIN
+            - AELF
+            - ORDER
+            - WIZARD (1)
+            - ISHARANN
+            - ORDER
+          weapons:
+            - name: Pelagic Staff
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Lotann, Warden of the Soul Ledgers
           description: ""
           is_manifestation: false
@@ -1046,250 +1290,6 @@ factions:
               range: ""
               attacks: "8"
               to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Volturnos, High King of the Deep
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - FLY
-            - IDONETH DEEPKIN
-            - AELF
-            - WARMASTER
-            - CAVALRY
-            - UNIQUE
-            - AKHELIAN
-            - ORDER
-            - ORDER
-          weapons:
-            - name: The Astra Solus
-              range: ""
-              attacks: "6"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Uasall’s Fangs, Talons and Lashing Tails
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Akhelian Ishlaen Guard
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 14"
-          health: "4"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
-            - CHAMPION
-            - MUSICIAN (1/3)
-            - STANDARD BEARER (1/3)
-            - FLY
-            - ORDER
-            - IDONETH DEEPKIN
-            - AELF
-            - AKHELIAN
-            - ORDER
-          weapons:
-            - name: Helsabre
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Fangmora’s Fangs and Lashing Tail
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Akhelian Morrsarr Guard
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 14"
-          health: "4"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
-            - CHAMPION
-            - MUSICIAN (1/3)
-            - STANDARD BEARER (1/3)
-            - FLY
-            - ORDER
-            - IDONETH DEEPKIN
-            - AELF
-            - AKHELIAN
-            - ORDER
-          weapons:
-            - name: Voltspear
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Fangmora’s Fangs and Lashing Tail
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Elathain's Soulraid
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - INFANTRY
-            - UNIQUE
-            - CHAMPION
-            - LEGENDS
-            - AELF
-            - AKHELIAN
-            - NAMARTI
-            - IDONETH DEEPKIN
-            - ORDER
-          weapons:
-            - name: Riptide Harpoon
-              range: 8"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Soulraid Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
               to_wound: 4+
               rend: "1"
               damage: "1"

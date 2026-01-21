@@ -9,115 +9,12 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Cryptguard
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - DEATH
-            - CHAMPION
-            - FLESH-EATER COURTS
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - SERFS
-            - INFANTRY
-            - EQUINOX FEAST
-            - DEATH
-          weapons:
-            - name: Cursed Weapon
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abhorrant Cardinal
+        - name: Abhorrant Gorewarden
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 6"
-          health: "5"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - FLESH-EATER COURTS
-            - WARD (6+)
-            - INFANTRY
-            - PRIEST (1)
-            - ABHORRANT
-            - EQUINOX FEAST
-            - DEATH
-          weapons:
-            - name: Cursed Crosier
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abhorrant Ghoul King
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
+          move: 12"
+          health: "7"
           save: 5+
           ward: ""
           invuln: ""
@@ -125,7 +22,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 180
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -145,7 +42,7 @@ factions:
             - EQUINOX FEAST
             - DEATH
           weapons:
-            - name: Bloodstained Talons and Fangs
+            - name: Gory Talons and Fangs
               range: ""
               attacks: "5"
               to_hit: 3+
@@ -187,284 +84,6 @@ factions:
           leadership: ""
           additional_stats: {}
           points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - FLESH-EATER COURTS
-            - ABHORRANT
-            - FLY
-            - WIZARD (1)
-            - WARD (6+)
-            - INFANTRY
-            - EQUINOX FEAST
-            - DEATH
-          weapons:
-            - name: Gory Talons and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Crypt Ghast Courtier
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - INFANTRY
-            - LEGENDS
-            - WARD (6+)
-            - DEATH
-            - FLESH-EATER COURTS
-            - NOBLE
-            - EQUINOX FEAST
-            - DEATH
-          weapons:
-            - name: Bone Club and Filthy Claws
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Grymwatch
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - WARD (6+)
-            - DEATH
-            - FLESH-EATER COURTS
-            - SERFS
-            - EQUINOX FEAST
-            - DEATH
-          weapons:
-            - name: Great Halberd
-              range: ""
-              attacks: "4"
-              to_hit: 2+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Knightly Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Knightly Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Knightly Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Knightly Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Knightly Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Knightly Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abhorrant Archregent
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - FLESH-EATER COURTS
-            - WARD (6+)
-            - INFANTRY
-            - ABHORRANT
-            - WIZARD (1)
-            - EQUINOX FEAST
-            - DEATH
-          weapons:
-            - name: Gory Talons and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abhorrant Ghoul King (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -640,53 +259,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Royal Beastflayers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - DEATH
-            - FLESH-EATER COURTS
-            - INFANTRY
-            - SERFS
-            - CHAMPION (1/10)
-            - EQUINOX FEAST
-            - DEATH
-          weapons:
-            - name: Beastflayer Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Marrowscroll Herald
+        - name: Abhorrant Archregent
           description: ""
           is_manifestation: false
           is_unique: true
           move: 6"
-          health: "5"
+          health: "6"
           save: 5+
           ward: ""
           invuln: ""
@@ -694,7 +272,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 100
+          points: 140
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -708,14 +286,15 @@ factions:
             - FLESH-EATER COURTS
             - WARD (6+)
             - INFANTRY
-            - NOBLE
+            - ABHORRANT
+            - WIZARD (1)
             - EQUINOX FEAST
             - DEATH
           weapons:
-            - name: Bone Scythe
+            - name: Gory Talons and Fangs
               range: ""
               attacks: "5"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
               damage: "2"
@@ -740,12 +319,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Abhorrant Gorewarden
+        - name: Abhorrant Ghoul King (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 12"
-          health: "7"
+          move: 6"
+          health: "5"
           save: 5+
           ward: ""
           invuln: ""
@@ -753,7 +332,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 180
+          points: 110
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -801,10 +380,10 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Crypt Ghouls
+        - name: The Grymwatch
           description: ""
           is_manifestation: false
-          is_unique: false
+          is_unique: true
           move: 6"
           health: "1"
           save: 6+
@@ -814,31 +393,138 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 160
+          points: 80
           summon_cost: ""
           banishment: ""
-          min_unit_size: 20
-          max_unit_size: 40
-          matched_play: true
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
             - WARD (6+)
             - DEATH
-            - CHAMPION
             - FLESH-EATER COURTS
-            - INFANTRY
             - SERFS
             - EQUINOX FEAST
             - DEATH
           weapons:
-            - name: Sharpened Teeth and Filthy Claws
+            - name: Great Halberd
               range: ""
-              attacks: "2"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Knightly Weapons
+              range: ""
+              attacks: "3"
               to_hit: 4+
               to_wound: 4+
               rend: '-'
               damage: "1"
+              version: ""
+              source: ""
+            - name: Knightly Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Knightly Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Knightly Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Knightly Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Knightly Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: High Falconer Felgryn
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - UNIQUE
+            - HERO
+            - FLESH-EATER COURTS
+            - ABHORRANT
+            - INFANTRY
+            - WARD (6+)
+            - EQUINOX FEAST
+            - DEATH
+          weapons:
+            - name: Carrion Flock
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: D6
+              version: ""
+              source: ""
+            - name: Filthy Talons and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -921,6 +607,312 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Royal Beastflayers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DEATH
+            - FLESH-EATER COURTS
+            - INFANTRY
+            - SERFS
+            - CHAMPION (1/10)
+            - EQUINOX FEAST
+            - DEATH
+          weapons:
+            - name: Beastflayer Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abhorrant Cardinal
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - FLESH-EATER COURTS
+            - WARD (6+)
+            - INFANTRY
+            - PRIEST (1)
+            - ABHORRANT
+            - EQUINOX FEAST
+            - DEATH
+          weapons:
+            - name: Cursed Crosier
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abhorrant Ghoul King
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - FLESH-EATER COURTS
+            - ABHORRANT
+            - FLY
+            - WIZARD (1)
+            - WARD (6+)
+            - INFANTRY
+            - EQUINOX FEAST
+            - DEATH
+          weapons:
+            - name: Bloodstained Talons and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Crypt Ghast Courtier
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - INFANTRY
+            - LEGENDS
+            - WARD (6+)
+            - DEATH
+            - FLESH-EATER COURTS
+            - NOBLE
+            - EQUINOX FEAST
+            - DEATH
+          weapons:
+            - name: Bone Club and Filthy Claws
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Cryptguard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DEATH
+            - CHAMPION
+            - FLESH-EATER COURTS
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - SERFS
+            - INFANTRY
+            - EQUINOX FEAST
+            - DEATH
+          weapons:
+            - name: Cursed Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Crypt Ghouls
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 20
+          max_unit_size: 40
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DEATH
+            - CHAMPION
+            - FLESH-EATER COURTS
+            - INFANTRY
+            - SERFS
+            - EQUINOX FEAST
+            - DEATH
+          weapons:
+            - name: Sharpened Teeth and Filthy Claws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
         - name: Royal Decapitator
           description: ""
           is_manifestation: false
@@ -980,20 +972,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: High Falconer Felgryn
+        - name: Marrowscroll Herald
           description: ""
           is_manifestation: false
           is_unique: true
           move: 6"
           health: "5"
-          save: 4+
+          save: 5+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 100
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1003,31 +995,39 @@ factions:
           source: Battlescribe Data
           keywords:
             - DEATH
-            - UNIQUE
             - HERO
             - FLESH-EATER COURTS
-            - ABHORRANT
-            - INFANTRY
             - WARD (6+)
+            - INFANTRY
+            - NOBLE
             - EQUINOX FEAST
             - DEATH
           weapons:
-            - name: Carrion Flock
-              range: 12"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: D6
-              version: ""
-              source: ""
-            - name: Filthy Talons and Fangs
+            - name: Bone Scythe
               range: ""
               attacks: "5"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

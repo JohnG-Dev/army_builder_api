@@ -9,72 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Maw-grunta with Hakkin' Krew
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "12"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 250
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - MONSTER
-            - DESTRUCTION
-            - IRONJAWZ
-            - MAW-GRUNTA
-            - GRUNTA STAMPEDE
-            - DESTRUCTION
-          weapons:
-            - name: Choppas
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Maw-grunta’s Tusks
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Maw-grunta’s Trotters
-              range: ""
-              attacks: "4"
-              to_hit: 5+
-              to_wound: 2+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Kill-choppas
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Gore-gruntas
           description: ""
           is_manifestation: false
@@ -310,6 +244,72 @@ factions:
               to_wound: 2+
               rend: '-'
               damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Maw-grunta with Hakkin' Krew
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "12"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - MONSTER
+            - DESTRUCTION
+            - IRONJAWZ
+            - MAW-GRUNTA
+            - GRUNTA STAMPEDE
+            - DESTRUCTION
+          weapons:
+            - name: Choppas
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Maw-grunta’s Tusks
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Maw-grunta’s Trotters
+              range: ""
+              attacks: "4"
+              to_hit: 5+
+              to_wound: 2+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Kill-choppas
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
           abilities: []

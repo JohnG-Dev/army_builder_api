@@ -9,6 +9,92 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Kraken-eater Mega-Gargant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "35"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "20"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - MONSTER
+            - DESTRUCTION
+            - SONS OF BEHEMAT
+            - MEGA-GARGANT
+            - RESTRICT GENERAL
+            - BRODD'S STOMP
+            - DESTRUCTION
+          weapons:
+            - name: Hurled Debris
+              range: 18"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Death Grip
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Almighty Stomp
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Shipwrecka Warclub
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Mancrusher Gargant
           description: ""
           is_manifestation: false
@@ -525,92 +611,6 @@ factions:
               to_wound: 2+
               rend: "2"
               damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kraken-eater Mega-Gargant
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "35"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "20"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 450
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - MONSTER
-            - DESTRUCTION
-            - SONS OF BEHEMAT
-            - MEGA-GARGANT
-            - RESTRICT GENERAL
-            - BRODD'S STOMP
-            - DESTRUCTION
-          weapons:
-            - name: Hurled Debris
-              range: 18"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Death Grip
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Almighty Stomp
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Shipwrecka Warclub
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
               version: ""
               source: ""
           abilities: []

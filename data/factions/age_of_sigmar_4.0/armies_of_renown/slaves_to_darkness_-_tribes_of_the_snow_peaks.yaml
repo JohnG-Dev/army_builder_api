@@ -9,306 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Gunnar Brand
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - INFANTRY
-            - DARKOATH
-            - GUNNAR'S OATHSWORN
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Dual Axes
-              range: ""
-              attacks: "10"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Fellriders
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - CAVALRY
-            - CHAMPION
-            - DARKOATH
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Warsteed’s Hooves
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Broadsword
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Marauder Javelin
-              range: 10"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Marauder Javelin
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Marauders
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - DARKOATH
-            - CHAMPION
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Raider Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Savagers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - DARKOATH
-            - CHAMPION (1/10)
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Darkoath Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Wilderfiend
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "9"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - DARKOATH
-            - BEAST
-            - WARD (5+)
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Razor-sharp Claws
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Flesh-tearing Maw
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Chieftain
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - CHAOS
-            - DARKOATH
-            - SNOW PEAKS
-            - CHAOS
-          weapons:
-            - name: Cursed Broadsword
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
         - name: The Gnarlspirit Pack
           description: ""
           is_manifestation: false
@@ -473,6 +173,64 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Darkoath Chieftain
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - CHAOS
+            - DARKOATH
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Cursed Broadsword
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Darkoath Chieftain on Warsteed
           description: ""
           is_manifestation: false
@@ -596,6 +354,248 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Fellriders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
+            - CAVALRY
+            - CHAMPION
+            - DARKOATH
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Warsteed’s Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Broadsword
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Marauder Javelin
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Marauder Javelin
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Wilderfiend
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "9"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - DARKOATH
+            - BEAST
+            - WARD (5+)
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Razor-sharp Claws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Flesh-tearing Maw
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gunnar Brand
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - INFANTRY
+            - DARKOATH
+            - GUNNAR'S OATHSWORN
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Dual Axes
+              range: ""
+              attacks: "10"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Marauders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - DARKOATH
+            - CHAMPION
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Raider Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Savagers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - DARKOATH
+            - CHAMPION (1/10)
+            - SNOW PEAKS
+            - CHAOS
+          weapons:
+            - name: Darkoath Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []

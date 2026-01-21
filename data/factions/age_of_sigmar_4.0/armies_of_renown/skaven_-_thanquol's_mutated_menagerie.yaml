@@ -9,160 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Master Moulder
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - MOULDER
-            - MUTATED MENAGERIE
-            - CHAOS
-          weapons:
-            - name: Warpsyringe Pistol
-              range: 10"
-              attacks: D6
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Arsenal of Mutation
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Rat Ogors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - INFANTRY
-            - MOULDER
-            - MUTATED MENAGERIE
-            - CHAOS
-          weapons:
-            - name: Claws, Blades and Fangs
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warpfire Gun
-              range: 10"
-              attacks: 2D6
-              to_hit: 2+
-              to_wound: 4+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Hell Pit Abomination
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: D6+5"
-          health: "14"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SKAVEN
-            - CHAOS
-            - MOULDER
-            - MONSTER
-            - MUTATED MENAGERIE
-            - CHAOS
-          weapons:
-            - name: Gnashing Teeth and Flailing Fists
-              range: ""
-              attacks: "13"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
         - name: Brood Terror
           description: ""
           is_manifestation: false
@@ -449,6 +295,160 @@ factions:
               to_wound: 3+
               rend: "2"
               damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Master Moulder
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - MOULDER
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Warpsyringe Pistol
+              range: 10"
+              attacks: D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Arsenal of Mutation
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Rat Ogors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - INFANTRY
+            - MOULDER
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Claws, Blades and Fangs
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Warpfire Gun
+              range: 10"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 4+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hell Pit Abomination
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: D6+5"
+          health: "14"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SKAVEN
+            - CHAOS
+            - MOULDER
+            - MONSTER
+            - MUTATED MENAGERIE
+            - CHAOS
+          weapons:
+            - name: Gnashing Teeth and Flailing Fists
+              range: ""
+              attacks: "13"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
               version: ""
               source: ""
           abilities: []

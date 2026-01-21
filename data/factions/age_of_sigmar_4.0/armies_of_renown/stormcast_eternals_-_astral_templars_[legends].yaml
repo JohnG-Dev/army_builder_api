@@ -9,6 +9,651 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Vanguard-Raptors with Longstrike Crossbows
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - VANGUARD CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Heavy Stock
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Longstrike Crossbow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Aquilor
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "3"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - CAVALRY
+            - VANGUARD CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Heavy Boltstorm Pistol
+              range: 12"
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Starbound Blade and Shock Handaxe
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Gryph-charger’s Razor Beak
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Sequitors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - SACROSANCT CHAMBER
+            - INFANTRY
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - SACROSANCT CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Stormsmite Greatmace
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Sacrosanct Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stormstrike Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "10"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - WAR MACHINE
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Gryph-chargers’ Razor Beaks
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stormstrike Axe
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Great Stormbow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Tempestuous Spear
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vigilors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Stormcaller Bow
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stormblade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Annihilators
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 2+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Meteoric Hammer
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Castellant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Castellant’s Halberd
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Gryph-hound’s Beak
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Praetors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Soulguard’s Halberd
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vindictors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/5)
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Stormspear
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Retributors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Starsoul Mace
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Retributor Lightning Hammer
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Azyros
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - RUINATION CHAMBER
+            - FLY
+            - INFANTRY
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Star-blessed Weapon
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Evocators on Celestial Dracolines
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - SACROSANCT CHAMBER
+            - CAVALRY
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - SACROSANCT CHAMBER CAVALRY
+            - ORDER
+          weapons:
+            - name: Evocator Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Celestial Dracoline’s Claws
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
         - name: Knight-Draconis
           description: ""
           is_manifestation: false
@@ -86,814 +731,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Stormdrake Guard
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "9"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - FLY
-            - MONSTER
-            - EXTREMIS CHAMBER
-            - ASTRAL TEMPLARS
-            - UNDERSIZE UNIT
-            - ORDER
-          weapons:
-            - name: Draconith’s Fangs and Talons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Draconic Flamestream
-              range: 10"
-              attacks: "4"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Drakerider’s Lance
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Drakerider’s Warblade
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Yndrasta, the Celestial Spear
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 290
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - WARD (5+)
-            - UNIQUE
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARMASTER
-            - FLY
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Thengavar
-              range: 12"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Blade of the High Heavens
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Thengavar
-              range: ""
-              attacks: "2"
-              to_hit: 2+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vanguard-Hunters
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - STANDARD BEARER (1/5)
-            - ORDER
-            - STORMCAST ETERNALS
-            - VANGUARD CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Boltstorm Pistol
-              range: 10"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Stormwrought Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vanguard-Palladors with Starstrike Javelins
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 14"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 250
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - CAVALRY
-            - CHAMPION
-            - VANGUARD CHAMBER
-            - VANGUARD-PALLADORS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Starstrike Javelin
-              range: 12"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Starstrike Javelin
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Boltstorm Pistol
-              range: 10"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Gryph-charger’s Razor Beak
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Dracothian Guard Desolators
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - EXTREMIS CHAMBER
-            - CAVALRY
-            - UNDERSIZE UNIT
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Stormblast
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Thunderaxe
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Dracoth’s Claws and Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Knight-Incantor
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - SACROSANCT CHAMBER
-            - WIZARD (1)
-            - INFANTRY
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Incantor’s Staff
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Liberators
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - INFANTRY
-            - ORDER
-            - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Grandhammer
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warhammer
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Celestant
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Weapons of Legend
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Terminos
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - RUINATION CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: The Blade Terminos
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vanguard-Raptors with Longstrike Crossbows
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - VANGUARD CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Heavy Stock
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Longstrike Crossbow
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Evocators on Celestial Dracolines
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 240
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - SACROSANCT CHAMBER
-            - CAVALRY
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - SACROSANCT CHAMBER CAVALRY
-            - ORDER
-          weapons:
-            - name: Evocator Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Celestial Dracoline’s Claws
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Celestant on Dracoth
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - CAVALRY
-            - EXTREMIS CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Stormblast
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Dracoth’s Claws and Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Weapons of Legend
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vanguard-Palladors with Shock Handaxes
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 14"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 250
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - CAVALRY
-            - CHAMPION
-            - VANGUARD CHAMBER
-            - VANGUARD-PALLADORS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Shock Handaxe
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Boltstorm Pistol
-              range: 10"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Gryph-charger’s Razor Beak
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Hamilcar Bear-Eater
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 0
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - WARD (5+)
-            - UNIQUE
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - LEGENDS
-            - ORDER
-          weapons:
-            - name: Hamilcar's Halberd
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
         - name: Knight-Relictor
           description: ""
           is_manifestation: false
@@ -953,54 +790,221 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Protectors
+        - name: Lord-Arcanum on Tauralon
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "12"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 280
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - FLY
+            - ORDER
+            - STORMCAST ETERNALS
+            - MONSTER
+            - SACROSANCT CHAMBER
+            - WIZARD (1)
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Tauralon’s Hooves
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Aetherstave
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Aetherwings
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 4"
-          health: "3"
-          save: 3+
+          move: 12"
+          health: "2"
+          save: 6+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - VANGUARD CHAMBER
+            - BEAST
+            - FLY
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Beak and Claws
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gryph-hounds
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - BEAST
+            - CHAMPION
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Vicious Beak and Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Arcanum on Gryph-charger
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
           points: 220
           summon_cost: ""
           banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
+          min_unit_size: 1
+          max_unit_size: 1
           matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
-            - CHAMPION
+            - HERO
             - ORDER
             - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
+            - SACROSANCT CHAMBER
+            - CAVALRY
+            - WIZARD (1)
             - LEGENDS
             - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
             - ORDER
           weapons:
-            - name: Starsoul Mace
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Protector Stormstrike Glaive
+            - name: Aetherstave
               range: ""
               attacks: "4"
               to_hit: 3+
               to_wound: 3+
               rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Gryph-charger’s Razor Beak
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
               damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -1082,173 +1086,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Evocators
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - SACROSANCT CHAMBER
-            - INFANTRY
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - SACROSANCT CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Evocator Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Knight-Judicator with Gryph-hounds
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Terminus Greatbow
-              range: 18"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Judicator’s Warblade
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Relictor
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - PRIEST (1)
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Relic Hammer
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -1357,20 +1194,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Annihilators
+        - name: Vanguard-Raptors with Hurricane Crossbows
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 4"
-          health: "3"
-          save: 2+
+          move: 5"
+          health: "2"
+          save: 3+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 110
           summon_cost: ""
           banishment: ""
           min_unit_size: 3
@@ -1383,1003 +1220,35 @@ factions:
             - CHAMPION
             - ORDER
             - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Meteoric Hammer
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Knight-Questor
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Questor Warblade
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Knight-Zephyros
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 7"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
             - VANGUARD CHAMBER
             - ASTRAL TEMPLARS
             - ORDER
           weapons:
-            - name: Stormshot Pistol
+            - name: Hurricane Crossbow
               range: 12"
-              attacks: "3"
+              attacks: "4"
               to_hit: 3+
               to_wound: 3+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Tempest Axes
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vindictors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - STANDARD BEARER (1/5)
-            - ORDER
-            - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Stormspear
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Vigilant on Morrgryph
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "12"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - RUINATION CHAMBER
-            - MONSTER
-            - FLY
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Morrgryph's Talons
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Hallowed Glaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Decimators
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 240
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Starsoul Mace
+            - name: Heavy Stock
               range: ""
               attacks: "1"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Decimator Thunderaxe
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Dracothian Guard Tempestors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - EXTREMIS CHAMBER
-            - CAVALRY
-            - UNDERSIZE UNIT
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Volleystorm Crossbow
-              range: 12"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Warblade
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Dracoth’s Claws and Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Stormblast
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Vigilant on Gryph-stalker
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - RUINATION CHAMBER
-            - CAVALRY
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Gryph-stalker’s Beak and Talons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Hallowed Greataxe
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Praetors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Soulguard’s Halberd
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Sequitors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - SACROSANCT CHAMBER
-            - INFANTRY
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - SACROSANCT CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Stormsmite Greatmace
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Sacrosanct Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Annihilators with Meteoric Grandhammers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Meteoric Grandhammer
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Arcanum
+        - name: Lord-Ordinator
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
           health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - SACROSANCT CHAMBER
-            - WIZARD (1)
-            - INFANTRY
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Aetherstave
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Celestant on Stardrake
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "18"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 480
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - MONSTER
-            - FLY
-            - EXTREMIS CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Rain of Stars
-              range: 24"
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Stardrake's Cavernous Jaws
-              range: ""
-              attacks: "7"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Weapons of Legend
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Imperatant
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Blessed Warhammer
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Questor Soulsworn
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 6
-          max_unit_size: 12
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - ORDER
-            - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - CHAMPION (1/6)
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Questor Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Stormstrike Palladors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - CAVALRY
-            - CHAMPION
-            - WARRIOR CHAMBER
-            - MUSICIAN (1/3)
-            - STANDARD BEARER (1/3)
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Stormstrike Lance or Blade
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Gryph-charger’s Talons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Stormcoven
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - INFANTRY
-            - STORMCAST ETERNALS
-            - WIZARD (1)
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Azyrite Bolts
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Valedictor Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Emberwatch
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - STORMCAST ETERNALS
-            - CHAMPION
-            - VANGUARD CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Boltstorm Weapon
-              range: 10"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Stormwrought Weapon
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Stormwrought Weapon
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Boltstorm Weapon
-              range: 10"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Stormwrought Weapon
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Boltstorm Weapon
-              range: 10"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Dracothian Guard Fulminators
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "5"
           save: 3+
           ward: ""
           invuln: ""
@@ -2390,64 +1259,6 @@ factions:
           points: 100
           summon_cost: ""
           banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - EXTREMIS CHAMBER
-            - CAVALRY
-            - UNDERSIZE UNIT
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Stormblast
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Stormstrike Glaive
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Dracoth’s Claws and Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Knight-Venator
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
           min_unit_size: 1
           max_unit_size: 1
           matched_play: false
@@ -2458,172 +1269,14 @@ factions:
             - ORDER
             - STORMCAST ETERNALS
             - INFANTRY
-            - WARRIOR CHAMBER
-            - FLY
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Realmhunter’s Bow
-              range: 24"
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Bowstave
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Star-eagle’s Celestial Talons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Arcanum on Gryph-charger
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 220
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
             - SACROSANCT CHAMBER
-            - CAVALRY
-            - WIZARD (1)
             - LEGENDS
             - ASTRAL TEMPLARS
             - ORDER
           weapons:
-            - name: Aetherstave
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Gryph-charger’s Razor Beak
+            - name: Astral Weapons
               range: ""
               attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Arcanum on Tauralon
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "12"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 280
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - FLY
-            - ORDER
-            - STORMCAST ETERNALS
-            - MONSTER
-            - SACROSANCT CHAMBER
-            - WIZARD (1)
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Tauralon’s Hooves
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Aetherstave
-              range: ""
-              attacks: "4"
               to_hit: 3+
               to_wound: 3+
               rend: "1"
@@ -2699,191 +1352,7 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Stormstrike Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "10"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - WAR MACHINE
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Gryph-chargers’ Razor Beaks
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Stormstrike Axe
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Great Stormbow
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Tempestuous Spear
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Judicators with Boltstorm Crossbows
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Storm Gladius
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Boltstorm Crossbow
-              range: 15"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Thunderbolt Crossbow
-              range: 15"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Dracothian Guard Concussors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - EXTREMIS CHAMBER
-            - CAVALRY
-            - UNDERSIZE UNIT
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Stormblast
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Lightning Hammer
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Dracoth’s Claws and Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Retributors
+        - name: Protectors
           description: ""
           is_manifestation: false
           is_unique: false
@@ -2896,7 +1365,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 170
+          points: 220
           summon_cost: ""
           banishment: ""
           min_unit_size: 5
@@ -2924,30 +1393,30 @@ factions:
               damage: "3"
               version: ""
               source: ""
-            - name: Retributor Lightning Hammer
+            - name: Protector Stormstrike Glaive
               range: ""
-              attacks: "2"
+              attacks: "4"
               to_hit: 3+
               to_wound: 3+
               rend: "1"
-              damage: "2"
+              damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Aetherwings
+        - name: Vanguard-Palladors with Shock Handaxes
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 12"
-          health: "2"
-          save: 6+
+          move: 14"
+          health: "5"
+          save: 3+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 80
+          points: 250
           summon_cost: ""
           banishment: ""
           min_unit_size: 3
@@ -2958,127 +1427,29 @@ factions:
           keywords:
             - ORDER
             - STORMCAST ETERNALS
+            - CAVALRY
+            - CHAMPION
             - VANGUARD CHAMBER
-            - BEAST
-            - FLY
+            - VANGUARD-PALLADORS
             - ASTRAL TEMPLARS
             - ORDER
           weapons:
-            - name: Beak and Claws
+            - name: Shock Handaxe
               range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Boltstorm Pistol
+              range: 10"
               attacks: "2"
               to_hit: 4+
               to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Knight-Heraldor
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Sigmarite Broadsword
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Aquilor
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "3"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - CAVALRY
-            - VANGUARD CHAMBER
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Heavy Boltstorm Pistol
-              range: 12"
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
               rend: "1"
               damage: "1"
-              version: ""
-              source: ""
-            - name: Starbound Blade and Shock Handaxe
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
               version: ""
               source: ""
             - name: Gryph-charger’s Razor Beak
@@ -3090,145 +1461,8 @@ factions:
               damage: "1"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
           abilities: []
-        - name: Lord-Exorcist
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - SACROSANCT CHAMBER
-            - WIZARD (1)
-            - INFANTRY
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Redemption Stave
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lord-Ordinator
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - SACROSANCT CHAMBER
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Astral Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vanguard-Raptors with Hurricane Crossbows
+        - name: Castigators
           description: ""
           is_manifestation: false
           is_unique: false
@@ -3246,34 +1480,94 @@ factions:
           banishment: ""
           min_unit_size: 3
           max_unit_size: 6
-          matched_play: true
+          matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
             - CHAMPION
             - ORDER
             - STORMCAST ETERNALS
-            - VANGUARD CHAMBER
+            - SACROSANCT CHAMBER
+            - INFANTRY
+            - LEGENDS
             - ASTRAL TEMPLARS
+            - SACROSANCT CHAMBER INFANTRY
             - ORDER
           weapons:
-            - name: Hurricane Crossbow
-              range: 12"
-              attacks: "4"
+            - name: Thunderhead Greatbow
+              range: 15"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Greatbow Stock
+              range: ""
+              attacks: "1"
               to_hit: 3+
               to_wound: 3+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Heavy Stock
-              range: ""
+          abilities: []
+        - name: Dracothian Guard Fulminators
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - EXTREMIS CHAMBER
+            - CAVALRY
+            - UNDERSIZE UNIT
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Stormblast
+              range: 10"
               attacks: "1"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 3+
-              rend: '-'
-              damage: "1"
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Stormstrike Glaive
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Dracoth’s Claws and Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -3310,6 +1604,133 @@ factions:
             - name: Sigmarite Warblade
               range: ""
               attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Liberators
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - INFANTRY
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Grandhammer
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Warhammer
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Celestant on Stardrake
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "18"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 480
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - MONSTER
+            - FLY
+            - EXTREMIS CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Rain of Stars
+              range: 24"
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Stardrake's Cavernous Jaws
+              range: ""
+              attacks: "7"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Weapons of Legend
+              range: ""
+              attacks: "5"
               to_hit: 3+
               to_wound: 3+
               rend: "1"
@@ -3403,12 +1824,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Knight-Azyros
+        - name: Lord-Vigilant on Morrgryph
           description: ""
           is_manifestation: false
           is_unique: true
           move: 12"
-          health: "6"
+          health: "12"
           save: 3+
           ward: ""
           invuln: ""
@@ -3416,7 +1837,7 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 200
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -3429,12 +1850,21 @@ factions:
             - ORDER
             - STORMCAST ETERNALS
             - RUINATION CHAMBER
+            - MONSTER
             - FLY
-            - INFANTRY
             - ASTRAL TEMPLARS
             - ORDER
           weapons:
-            - name: Star-blessed Weapon
+            - name: Morrgryph's Talons
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Hallowed Glaive
               range: ""
               attacks: "5"
               to_hit: 3+
@@ -3459,6 +1889,333 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Judicators with Boltstorm Crossbows
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Storm Gladius
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Boltstorm Crossbow
+              range: 15"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Thunderbolt Crossbow
+              range: 15"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Celestant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Weapons of Legend
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanguard-Hunters
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/5)
+            - ORDER
+            - STORMCAST ETERNALS
+            - VANGUARD CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Boltstorm Pistol
+              range: 10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stormwrought Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stormstrike Palladors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - CAVALRY
+            - CHAMPION
+            - WARRIOR CHAMBER
+            - MUSICIAN (1/3)
+            - STANDARD BEARER (1/3)
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Stormstrike Lance or Blade
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Gryph-charger’s Talons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Annihilators with Meteoric Grandhammers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Meteoric Grandhammer
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dracothian Guard Tempestors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - EXTREMIS CHAMBER
+            - CAVALRY
+            - UNDERSIZE UNIT
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Volleystorm Crossbow
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Warblade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Dracoth’s Claws and Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Stormblast
+              range: 10"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
               version: ""
               source: ""
           abilities: []
@@ -3526,6 +2283,191 @@ factions:
               to_hit: 3+
               to_wound: 2+
               rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Incantor
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - SACROSANCT CHAMBER
+            - WIZARD (1)
+            - INFANTRY
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Incantor’s Staff
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Judicator with Gryph-hounds
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Terminus Greatbow
+              range: 18"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Judicator’s Warblade
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Questor
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Questor Warblade
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
               damage: "2"
               version: ""
               source: ""
@@ -3617,12 +2559,80 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Lord-Castellant
+        - name: Stormdrake Guard
           description: ""
           is_manifestation: false
-          is_unique: true
+          is_unique: false
+          move: 12"
+          health: "9"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - FLY
+            - MONSTER
+            - EXTREMIS CHAMBER
+            - ASTRAL TEMPLARS
+            - UNDERSIZE UNIT
+            - ORDER
+          weapons:
+            - name: Draconith’s Fangs and Talons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Draconic Flamestream
+              range: 10"
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Drakerider’s Lance
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Drakerider’s Warblade
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Evocators
+          description: ""
+          is_manifestation: false
+          is_unique: false
           move: 5"
-          health: "6"
+          health: "3"
           save: 3+
           ward: ""
           invuln: ""
@@ -3630,129 +2640,11 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - STORMCAST ETERNALS
-            - INFANTRY
-            - WARRIOR CHAMBER
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Castellant’s Halberd
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Gryph-hound’s Beak
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vigilors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
+          points: 180
           summon_cost: ""
           banishment: ""
           min_unit_size: 5
           max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - ORDER
-            - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Stormcaller Bow
-              range: 18"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Stormblade
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Castigators
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
           matched_play: false
           version: ""
           source: Battlescribe Data
@@ -3767,150 +2659,9 @@ factions:
             - SACROSANCT CHAMBER INFANTRY
             - ORDER
           weapons:
-            - name: Thunderhead Greatbow
-              range: 15"
+            - name: Evocator Weapons
+              range: ""
               attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Greatbow Stock
-              range: ""
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Gryph-hounds
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 9"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 6
-          max_unit_size: 12
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - BEAST
-            - CHAMPION
-            - ASTRAL TEMPLARS
-            - ORDER
-          weapons:
-            - name: Vicious Beak and Claws
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vanquishers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - MUSICIAN (1/5)
-            - STANDARD BEARER (1/5)
-            - ORDER
-            - STORMCAST ETERNALS
-            - WARRIOR CHAMBER
-            - ASTRAL TEMPLARS
-            - WARRIOR CHAMBER INFANTRY
-            - ORDER
-          weapons:
-            - name: Celestial Greatsword
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Celestar Ballista
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 3"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - STORMCAST ETERNALS
-            - SACROSANCT CHAMBER
-            - WAR MACHINE
-            - LEGENDS
-            - ASTRAL TEMPLARS
-            - SACROSANCT CHAMBER WAR MACHINE
-            - ORDER
-          weapons:
-            - name: Celestar Stormbolts
-              range: 18"
-              attacks: D6+6
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Sacristan Engineers’ Blades
-              range: ""
-              attacks: "2"
               to_hit: 3+
               to_wound: 3+
               rend: "1"
@@ -3975,6 +2726,1255 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Exorcist
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - SACROSANCT CHAMBER
+            - WIZARD (1)
+            - INFANTRY
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Redemption Stave
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Emberwatch
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - STORMCAST ETERNALS
+            - CHAMPION
+            - VANGUARD CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Boltstorm Weapon
+              range: 10"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stormwrought Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stormwrought Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Boltstorm Weapon
+              range: 10"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stormwrought Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Boltstorm Weapon
+              range: 10"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hamilcar Bear-Eater
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 0
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - WARD (5+)
+            - UNIQUE
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - LEGENDS
+            - ORDER
+          weapons:
+            - name: Hamilcar's Halberd
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Celestar Ballista
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 3"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - SACROSANCT CHAMBER
+            - WAR MACHINE
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - SACROSANCT CHAMBER WAR MACHINE
+            - ORDER
+          weapons:
+            - name: Celestar Stormbolts
+              range: 18"
+              attacks: D6+6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sacristan Engineers’ Blades
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Celestant on Dracoth
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - CAVALRY
+            - EXTREMIS CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Stormblast
+              range: 10"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Dracoth’s Claws and Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Weapons of Legend
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Relictor
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - PRIEST (1)
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Relic Hammer
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanquishers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - MUSICIAN (1/5)
+            - STANDARD BEARER (1/5)
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Celestial Greatsword
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Decimators
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Starsoul Mace
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Decimator Thunderaxe
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dracothian Guard Desolators
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - EXTREMIS CHAMBER
+            - CAVALRY
+            - UNDERSIZE UNIT
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Stormblast
+              range: 10"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Thunderaxe
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Dracoth’s Claws and Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Zephyros
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 7"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - VANGUARD CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Stormshot Pistol
+              range: 12"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Tempest Axes
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Terminos
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - RUINATION CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: The Blade Terminos
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Questor Soulsworn
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - ORDER
+            - STORMCAST ETERNALS
+            - WARRIOR CHAMBER
+            - CHAMPION (1/6)
+            - ASTRAL TEMPLARS
+            - WARRIOR CHAMBER INFANTRY
+            - ORDER
+          weapons:
+            - name: Questor Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Yndrasta, the Celestial Spear
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 290
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - WARD (5+)
+            - UNIQUE
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARMASTER
+            - FLY
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Thengavar
+              range: 12"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Blade of the High Heavens
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Thengavar
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stormcoven
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - INFANTRY
+            - STORMCAST ETERNALS
+            - WIZARD (1)
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Azyrite Bolts
+              range: 18"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Valedictor Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Dracothian Guard Concussors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - EXTREMIS CHAMBER
+            - CAVALRY
+            - UNDERSIZE UNIT
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Stormblast
+              range: 10"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Lightning Hammer
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Dracoth’s Claws and Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Heraldor
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Sigmarite Broadsword
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Knight-Venator
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - FLY
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Realmhunter’s Bow
+              range: 24"
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bowstave
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Star-eagle’s Celestial Talons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Imperatant
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - INFANTRY
+            - WARRIOR CHAMBER
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Blessed Warhammer
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vanguard-Palladors with Starstrike Javelins
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - STORMCAST ETERNALS
+            - CAVALRY
+            - CHAMPION
+            - VANGUARD CHAMBER
+            - VANGUARD-PALLADORS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Starstrike Javelin
+              range: 12"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Starstrike Javelin
+              range: ""
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Boltstorm Pistol
+              range: 10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Gryph-charger’s Razor Beak
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Arcanum
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - SACROSANCT CHAMBER
+            - WIZARD (1)
+            - INFANTRY
+            - LEGENDS
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Aetherstave
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lord-Vigilant on Gryph-stalker
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - STORMCAST ETERNALS
+            - RUINATION CHAMBER
+            - CAVALRY
+            - ASTRAL TEMPLARS
+            - ORDER
+          weapons:
+            - name: Gryph-stalker’s Beak and Talons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Hallowed Greataxe
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

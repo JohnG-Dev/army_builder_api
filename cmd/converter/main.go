@@ -121,8 +121,8 @@ func main() {
 
 		// If it's the RoR file, treat the whole thing as a mercenary faction
 		if strings.Contains(strings.ToLower(cleanBaseName), "renown") {
-			isRoR = true
-			subFolder = "regiments_of_renown"
+			cv.processRoRFile(catalogue, gameName, outDir)
+			continue
 		} else if strings.Contains(cleanBaseName, " - ") {
 			parts := strings.Split(cleanBaseName, " - ")
 			parentName = parts[0]

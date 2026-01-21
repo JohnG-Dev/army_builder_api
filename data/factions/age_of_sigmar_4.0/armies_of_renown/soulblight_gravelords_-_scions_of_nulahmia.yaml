@@ -9,127 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Bloodseeker Palanquin
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "12"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 220
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - WIZARD (1)
-            - WARD (6+)
-            - DEATH
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - WAR MACHINE
-            - FLY
-            - DEATH
-          weapons:
-            - name: Sanguinarch's Stiletto
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Spectral Host's Blades
-              range: ""
-              attacks: "10"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Sekhar, Fang of Nulahmia (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - INFANTRY
-            - WIZARD (2)
-            - SCIONS OF NULAHMIA
-            - DEATH
-          weapons:
-            - name: Nulahmian Warglaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ouboroth’s Godhusk Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
         - name: Vampire Lord on Nightmare Steed
           description: ""
           is_manifestation: false
@@ -470,6 +349,127 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bloodseeker Palanquin
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - WIZARD (1)
+            - WARD (6+)
+            - DEATH
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WAR MACHINE
+            - FLY
+            - DEATH
+          weapons:
+            - name: Sanguinarch's Stiletto
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Spectral Host's Blades
+              range: ""
+              attacks: "10"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Sekhar, Fang of Nulahmia (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - INFANTRY
+            - WIZARD (2)
+            - SCIONS OF NULAHMIA
+            - DEATH
+          weapons:
+            - name: Nulahmian Warglaive
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ouboroth’s Godhusk Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
               version: ""
               source: ""
           abilities: []

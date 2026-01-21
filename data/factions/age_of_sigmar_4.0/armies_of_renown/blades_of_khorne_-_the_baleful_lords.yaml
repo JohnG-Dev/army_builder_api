@@ -9,6 +9,128 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
+        - name: Wrath of Khorne Bloodthirster
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 400
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (5+)
+            - FLY
+            - BLADES OF KHORNE
+            - BLOODTHIRSTER
+            - BALEFUL LORDS
+            - CHAOS
+          weapons:
+            - name: Mighty Axe of Khorne and Bloodflail
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Hellfire Breath
+              range: 8"
+              attacks: 2D6
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skarbrand
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 410
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - UNIQUE
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (5+)
+            - BLADES OF KHORNE
+            - BLOODTHIRSTER
+            - BALEFUL LORDS
+            - CHAOS
+          weapons:
+            - name: Slaughter
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Carnage
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "8"
+              version: ""
+              source: ""
+          abilities: []
         - name: Bloodthirster of Insensate Rage
           description: ""
           is_manifestation: false
@@ -137,128 +259,6 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Wrath of Khorne Bloodthirster
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "16"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 400
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (5+)
-            - FLY
-            - BLADES OF KHORNE
-            - BLOODTHIRSTER
-            - BALEFUL LORDS
-            - CHAOS
-          weapons:
-            - name: Mighty Axe of Khorne and Bloodflail
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Hellfire Breath
-              range: 8"
-              attacks: 2D6
-              to_hit: 2+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skarbrand
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "16"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 410
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - UNIQUE
-            - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (5+)
-            - BLADES OF KHORNE
-            - BLOODTHIRSTER
-            - BALEFUL LORDS
-            - CHAOS
-          weapons:
-            - name: Slaughter
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Carnage
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "2"
-              damage: "8"
               version: ""
               source: ""
           abilities: []

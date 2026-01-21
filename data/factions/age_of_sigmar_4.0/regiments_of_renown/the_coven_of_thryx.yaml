@@ -1,0 +1,13 @@
+game_name: Age of Sigmar 4.0
+factions:
+    - name: The Coven of Thryx
+      description: ""
+      is_army_of_renown: false
+      is_regiment_of_renown: true
+      parent_faction_name: ""
+      allegiance: ""
+      version: ""
+      source: Battlescribe Data
+      units: []
+      battle_formations: []
+      enhancements: []

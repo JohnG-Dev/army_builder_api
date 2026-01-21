@@ -9,108 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Revenant Seekers (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
-            - CHAMPION
-            - STANDARD BEARER (1/3)
-            - MUSICIAN (1/3)
-            - FLY
-            - ORDER
-            - SYLVANETH
-            - EVERGREEN HUNT
-            - ORDER
-          weapons:
-            - name: Scourge Sickles
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Sharpened Mandibles
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Belthanos, First Thorn of Kurnoth
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "14"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 350
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - ORDER
-            - SYLVANETH
-            - FLY
-            - KURNOTHI
-            - EVERGREEN HUNT
-            - ORDER
-          weapons:
-            - name: Kurnoth Glaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Carnelian Greatspite’s Razor-like Mandibles
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
         - name: Arch-Revenant
           description: ""
           is_manifestation: false
@@ -398,6 +296,108 @@ factions:
               to_wound: 3+
               rend: '-'
               damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Revenant Seekers (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAMPION
+            - STANDARD BEARER (1/3)
+            - MUSICIAN (1/3)
+            - FLY
+            - ORDER
+            - SYLVANETH
+            - EVERGREEN HUNT
+            - ORDER
+          weapons:
+            - name: Scourge Sickles
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Sharpened Mandibles
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Belthanos, First Thorn of Kurnoth
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 350
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - ORDER
+            - SYLVANETH
+            - FLY
+            - KURNOTHI
+            - EVERGREEN HUNT
+            - ORDER
+          weapons:
+            - name: Kurnoth Glaive
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Carnelian Greatspite’s Razor-like Mandibles
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
           abilities: []

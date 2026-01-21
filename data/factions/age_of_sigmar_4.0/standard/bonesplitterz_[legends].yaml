@@ -9,144 +9,6 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Wurrgog Prophet
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - BONESPLITTERZ
-            - WARD (6+)
-            - INFANTRY
-            - WIZARD (2)
-            - ORRUK
-            - LEGENDS
-            - DESTRUCTION
-          weapons:
-            - name: Wurrgog Staff
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Deadly Green Bolts
-              range: 10"
-              attacks: D6
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Maniak Weirdnob
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "6"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - DESTRUCTION
-            - BONESPLITTERZ
-            - WARD (6+)
-            - ORRUK
-            - CAVALRY
-            - WIZARD (1)
-            - LEGENDS
-            - DESTRUCTION
-          weapons:
-            - name: Bonebeast Staff
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: War Boar’s Tusks and Hooves
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
         - name: Savage Big Boss
           description: ""
           is_manifestation: false
@@ -284,6 +146,46 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Savage Big Stabbas
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "4"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DESTRUCTION
+            - ORRUK
+            - BONESPLITTERZ
+            - INFANTRY
+            - LEGENDS
+            - DESTRUCTION
+          weapons:
+            - name: Gorktoof
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
         - name: Savage Boarboy Maniaks
           description: ""
           is_manifestation: false
@@ -388,6 +290,49 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Savage Orruk Morboys
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - WARD (6+)
+            - DESTRUCTION
+            - ORRUK
+            - BONESPLITTERZ
+            - LEGENDS
+            - DESTRUCTION
+          weapons:
+            - name: Paired Savage Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
         - name: Savage Orruk Arrowboys
           description: ""
           is_manifestation: false
@@ -433,6 +378,49 @@ factions:
             - name: Paired Savage Weapons
               range: ""
               attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Savage Orruks
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - CHAMPION
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - WARD (6+)
+            - DESTRUCTION
+            - ORRUK
+            - BONESPLITTERZ
+            - LEGENDS
+            - DESTRUCTION
+          weapons:
+            - name: Savage Weapons
+              range: ""
+              attacks: "2"
               to_hit: 4+
               to_wound: 3+
               rend: '-'
@@ -509,132 +497,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Savage Big Stabbas
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "4"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - DESTRUCTION
-            - ORRUK
-            - BONESPLITTERZ
-            - INFANTRY
-            - LEGENDS
-            - DESTRUCTION
-          weapons:
-            - name: Gorktoof
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Savage Orruk Morboys
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - WARD (6+)
-            - DESTRUCTION
-            - ORRUK
-            - BONESPLITTERZ
-            - LEGENDS
-            - DESTRUCTION
-          weapons:
-            - name: Paired Savage Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Savage Orruks
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - CHAMPION
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - WARD (6+)
-            - DESTRUCTION
-            - ORRUK
-            - BONESPLITTERZ
-            - LEGENDS
-            - DESTRUCTION
-          weapons:
-            - name: Savage Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Kragnos, the End of Empires
           description: ""
           is_manifestation: false
@@ -692,6 +554,144 @@ factions:
               to_wound: 2+
               rend: "1"
               damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Wurrgog Prophet
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - BONESPLITTERZ
+            - WARD (6+)
+            - INFANTRY
+            - WIZARD (2)
+            - ORRUK
+            - LEGENDS
+            - DESTRUCTION
+          weapons:
+            - name: Wurrgog Staff
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Deadly Green Bolts
+              range: 10"
+              attacks: D6
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Maniak Weirdnob
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "6"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - DESTRUCTION
+            - BONESPLITTERZ
+            - WARD (6+)
+            - ORRUK
+            - CAVALRY
+            - WIZARD (1)
+            - LEGENDS
+            - DESTRUCTION
+          weapons:
+            - name: Bonebeast Staff
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: War Boar’s Tusks and Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []

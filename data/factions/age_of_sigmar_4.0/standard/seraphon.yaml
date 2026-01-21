@@ -9,79 +9,68 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Ripperdactyl Chief
+        - name: Bastiladon with Ark of Sotek
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 14"
-          health: "5"
-          save: 5+
+          move: 5"
+          health: "12"
+          save: 2+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 110
+          points: 230
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 1
+          max_unit_size: 2
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
             - ORDER
             - SERAPHON
             - SKINK
-            - CAVALRY
-            - FLY
+            - MONSTER
             - ORDER
           weapons:
-            - name: Skyblade
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ripperdactyl’s Tearing Jaws
+            - name: Bludgeoning Tail
               range: ""
               attacks: "3"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Handlers’ Meteoric Javelins
+              range: 12"
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
+            - name: Ark of Sotek
               range: ""
-              attacks: D6+1
+              attacks: "20"
               to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Saurus Scar-Veteran on Aggradon
+        - name: Kroxigor
           description: ""
           is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "8"
+          is_unique: false
+          move: 5"
+          health: "6"
           save: 4+
           ward: ""
           invuln: ""
@@ -89,56 +78,37 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 200
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
+          min_unit_size: 3
+          max_unit_size: 6
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
+            - INFANTRY
             - ORDER
             - SERAPHON
-            - SAURUS
-            - CAVALRY
+            - KROXIGOR
             - ORDER
           weapons:
-            - name: Celestite Spear or Club
+            - name: Moonstone Hammer
               range: ""
               attacks: "4"
               to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Aggradon’s Rending Bites and Striking Talons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
+              to_wound: 2+
               rend: "1"
-              damage: D3+0
+              damage: "3"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Melee Weapon
+            - name: Drakebite Maul
               range: ""
-              attacks: D6+1
+              attacks: "4"
               to_hit: 4+
-              to_wound: 3+
+              to_wound: 2+
               rend: "1"
-              damage: D3+0
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -241,6 +211,1077 @@ factions:
               to_wound: 3+
               rend: "2"
               damage: D6
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ripperdactyl Chief
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SERAPHON
+            - SKINK
+            - CAVALRY
+            - FLY
+            - ORDER
+          weapons:
+            - name: Skyblade
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ripperdactyl’s Tearing Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Saurus Oldblood
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SERAPHON
+            - SAURUS
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Relic Celestite Weapon
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Saurus Oldblood on Carnosaur (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 320
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SERAPHON
+            - MONSTER
+            - SAURUS
+            - ORDER
+          weapons:
+            - name: Sunstone Spear and Sunbolt Gauntlet
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Carnosaur’s Massive Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "4"
+              version: ""
+              source: ""
+            - name: Carnosaur’s Clawed Forelimbs
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Sunblood Pack
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "3"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - SERAPHON
+            - SAURUS
+            - HERO
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Celestite Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Celestite Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Stegadon Chief
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SERAPHON
+            - MONSTER
+            - SKINK
+            - ORDER
+          weapons:
+            - name: Handlers’ Meteoric Javelins
+              range: 12"
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Meteoric Warspear
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Stegadon’s Horns and Jaws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Skystreak Bow
+              range: 18"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Sunfire Throwers
+              range: 10"
+              attacks: 2D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Terradon Riders
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 14"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 70
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - SERAPHON
+            - ORDER
+            - CAVALRY
+            - FLY
+            - SKINK
+            - UNDERSIZE UNIT
+            - SKINK CAVALRY
+            - NON-MONSTER SKINK
+            - ORDER
+          weapons:
+            - name: Javelins and Bolas
+              range: 10"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Terradon’s Razor-sharp Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Bastiladon with Solar Engine
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "12"
+          save: 2+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - SERAPHON
+            - MONSTER
+            - SKINK
+            - ORDER
+          weapons:
+            - name: Bludgeoning Tail
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Handlers’ Meteoric Javelins
+              range: 12"
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Solar Engine
+              range: 18"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Saurus Warriors
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - SERAPHON
+            - SAURUS
+            - ORDER
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - INFANTRY
+            - ORDER
+          weapons:
+            - name: Celestite Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Starblood Stalkers
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - INFANTRY
+            - UNIQUE
+            - CHAMPION
+            - LEGENDS
+            - SERAPHON
+            - SKINK
+            - SAURUS
+            - NON-MONSTER SKINK
+            - ORDER
+          weapons:
+            - name: Relic Celestite Weapon
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Starblood Weapons
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Starblood Weapons
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Starblood Weapons
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Starblood Weapons
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Starblood Weapons
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Saurus Astrolith Bearer
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SERAPHON
+            - INFANTRY
+            - SAURUS
+            - ORDER
+          weapons:
+            - name: Celestite Warclub
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Saurus Oldblood on Carnosaur
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 240
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SERAPHON
+            - MONSTER
+            - SAURUS
+            - ORDER
+          weapons:
+            - name: Sunbolt Gauntlet
+              range: 12"
+              attacks: D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Sunstone Spear
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Carnosaur’s Massive Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Carnosaur’s Clawed Forelimbs
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Engine of the Gods
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - SERAPHON
+            - MONSTER
+            - SKINK
+            - ORDER
+          weapons:
+            - name: Stegadon’s Horns and Jaws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Handlers’ Meteoric Javelins
+              range: 12"
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Hunters of Huanchi with Dartpipes
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SERAPHON
+            - ORDER
+            - MUSICIAN (1/5)
+            - SKINK
+            - INFANTRY
+            - WARD (5+)
+            - CHAMPION (1/5)
+            - NON-MONSTER SKINK
+            - ORDER
+          weapons:
+            - name: Feeble Claws
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Dartpipe
+              range: 10"
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Raptadon Chargers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - SERAPHON
+            - ORDER
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
+            - SKINK
+            - CAVALRY
+            - NON-MONSTER SKINK
+            - SKINK CAVALRY
+            - ORDER
+          weapons:
+            - name: Raptadon’s Serrated Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Tepok Lance
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Spawn of Chotec
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - ORDER
+            - SERAPHON
+            - BEAST
+            - SKINK
+            - NON-MONSTER SKINK
+            - ORDER
+          weapons:
+            - name: Stream of Fire
+              range: 10"
+              attacks: "5"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Glob of Flame Acid
+              range: 16"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D3+3
+              version: ""
+              source: ""
+            - name: Fiery Maw
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Terrawings
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 70
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SERAPHON
+            - ORDER
+            - BEAST
+            - FLY
+            - ORDER
+          weapons:
+            - name: Snapping Beaks
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Saurus Guard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - SERAPHON
+            - SAURUS
+            - ORDER
+            - INFANTRY
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
+            - ORDER
+          weapons:
+            - name: Celestite Polearm
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Skinks
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAMPION
+            - SERAPHON
+            - ORDER
+            - INFANTRY
+            - SKINK
+            - NON-MONSTER SKINK
+            - ORDER
+          weapons:
+            - name: Javelins and Boltspitters
+              range: 12"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Celestite Daggers and Moonstone Clubs
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 5+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -378,172 +1419,63 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Bastiladon with Solar Engine
+        - name: Slann Starmaster
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "12"
-          save: 2+
+          health: "9"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "5"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 220
+          points: 260
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
+            - HERO
+            - FLY
             - ORDER
+            - WIZARD (3)
             - SERAPHON
-            - MONSTER
-            - SKINK
+            - SLANN
+            - WARD (6+)
+            - INFANTRY
             - ORDER
           weapons:
-            - name: Bludgeoning Tail
+            - name: Azure Lightning
               range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Handlers’ Meteoric Javelins
-              range: 12"
               attacks: "6"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Solar Engine
-              range: 18"
-              attacks: "3"
               to_hit: 3+
               to_wound: 3+
-              rend: "2"
-              damage: "3"
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
-          abilities: []
-        - name: Raptadon Chargers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - SERAPHON
-            - ORDER
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - SKINK
-            - CAVALRY
-            - NON-MONSTER SKINK
-            - SKINK CAVALRY
-            - ORDER
-          weapons:
-            - name: Raptadon’s Serrated Fangs
-              range: ""
-              attacks: "3"
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
+              damage: D3+0
               version: ""
               source: ""
-            - name: Tepok Lance
+            - name: Emberstone-enhanced Melee Weapon
               range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Raptadon Hunters
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - SERAPHON
-            - ORDER
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - SKINK
-            - CAVALRY
-            - SKINK CAVALRY
-            - NON-MONSTER SKINK
-            - ORDER
-          weapons:
-            - name: Starstone Atlatl
-              range: 12"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Raptadon’s Serrated Fangs
-              range: ""
-              attacks: "3"
+              attacks: D6+1
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Weighted Moonstone Club
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -614,163 +1546,22 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Hunters of Huanchi with Dartpipes
+        - name: Saurus Scar-Veteran on Aggradon
           description: ""
           is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SERAPHON
-            - ORDER
-            - MUSICIAN (1/5)
-            - SKINK
-            - INFANTRY
-            - WARD (5+)
-            - CHAMPION (1/5)
-            - NON-MONSTER SKINK
-            - ORDER
-          weapons:
-            - name: Feeble Claws
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Dartpipe
-              range: 10"
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Saurus Warriors
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "2"
+          is_unique: true
+          move: 10"
+          health: "8"
           save: 4+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
           points: 150
           summon_cost: ""
           banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - SERAPHON
-            - SAURUS
-            - ORDER
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - INFANTRY
-            - ORDER
-          weapons:
-            - name: Celestite Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skinks
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - SERAPHON
-            - ORDER
-            - INFANTRY
-            - SKINK
-            - NON-MONSTER SKINK
-            - ORDER
-          weapons:
-            - name: Javelins and Boltspitters
-              range: 12"
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Celestite Daggers and Moonstone Clubs
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Saurus Oldblood on Carnosaur (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 320
-          summon_cost: ""
-          banishment: ""
           min_unit_size: 1
           max_unit_size: 1
           matched_play: true
@@ -780,91 +1571,25 @@ factions:
             - HERO
             - ORDER
             - SERAPHON
-            - MONSTER
             - SAURUS
+            - CAVALRY
             - ORDER
           weapons:
-            - name: Sunstone Spear and Sunbolt Gauntlet
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Carnosaur’s Massive Jaws
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "4"
-              version: ""
-              source: ""
-            - name: Carnosaur’s Clawed Forelimbs
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Saurus Astrolith Bearer
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - SERAPHON
-            - INFANTRY
-            - SAURUS
-            - ORDER
-          weapons:
-            - name: Celestite Warclub
+            - name: Celestite Spear or Club
               range: ""
               attacks: "4"
               to_hit: 3+
               to_wound: 3+
-              rend: "1"
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Aggradon’s Rending Bites and Striking Talons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
               damage: "2"
               version: ""
               source: ""
@@ -887,137 +1612,11 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Skink Oracle on Troglodon
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - SERAPHON
-            - MONSTER
-            - WIZARD (1)
-            - SKINK
-            - ORDER
-          weapons:
-            - name: Troglodon’s Noxious Spittle
-              range: 15"
-              attacks: D6
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Divining Rod
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Troglodon’s Jaws
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Troglodon’s Talons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Saurus Guard
+        - name: Raptadon Hunters
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAMPION
-            - SERAPHON
-            - SAURUS
-            - ORDER
-            - INFANTRY
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - ORDER
-          weapons:
-            - name: Celestite Polearm
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Terradon Riders
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 14"
+          move: 12"
           health: "3"
           save: 5+
           ward: ""
@@ -1026,11 +1625,11 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 70
+          points: 120
           summon_cost: ""
           banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
+          min_unit_size: 5
+          max_unit_size: 10
           matched_play: true
           version: ""
           source: Battlescribe Data
@@ -1038,253 +1637,43 @@ factions:
             - CHAMPION
             - SERAPHON
             - ORDER
-            - CAVALRY
-            - FLY
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
             - SKINK
-            - UNDERSIZE UNIT
+            - CAVALRY
             - SKINK CAVALRY
             - NON-MONSTER SKINK
             - ORDER
           weapons:
-            - name: Javelins and Bolas
-              range: 10"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Terradon’s Razor-sharp Jaws
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Terrawings
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "2"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 70
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SERAPHON
-            - ORDER
-            - BEAST
-            - FLY
-            - ORDER
-          weapons:
-            - name: Snapping Beaks
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Starblood Stalkers
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - INFANTRY
-            - UNIQUE
-            - CHAMPION
-            - LEGENDS
-            - SERAPHON
-            - SKINK
-            - SAURUS
-            - NON-MONSTER SKINK
-            - ORDER
-          weapons:
-            - name: Relic Celestite Weapon
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Starblood Weapons
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Starblood Weapons
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Starblood Weapons
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Starblood Weapons
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Starblood Weapons
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Stegadon Chief
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - SERAPHON
-            - MONSTER
-            - SKINK
-            - ORDER
-          weapons:
-            - name: Handlers’ Meteoric Javelins
+            - name: Starstone Atlatl
               range: 12"
-              attacks: "6"
+              attacks: "2"
               to_hit: 4+
               to_wound: 4+
-              rend: '-'
+              rend: "2"
               damage: "1"
               version: ""
               source: ""
-            - name: Meteoric Warspear
+            - name: Raptadon’s Serrated Fangs
               range: ""
               attacks: "3"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
               damage: "1"
               version: ""
               source: ""
-            - name: Stegadon’s Horns and Jaws
+            - name: Weighted Moonstone Club
               range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Skystreak Bow
-              range: 18"
               attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Sunfire Throwers
-              range: 10"
-              attacks: 2D6
-              to_hit: 3+
-              to_wound: 3+
+              to_hit: 4+
+              to_wound: 5+
               rend: '-'
               damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
               version: ""
               source: ""
           abilities: []
-        - name: Engine of the Gods
+        - name: Stegadon
           description: ""
           is_manifestation: false
           is_unique: true
@@ -1330,13 +1719,31 @@ factions:
               damage: "1"
               version: ""
               source: ""
+            - name: Skystreak Bow
+              range: 18"
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Sunfire Throwers
+              range: 10"
+              attacks: 2D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
           abilities: []
-        - name: Kroxigor Warspawned
+        - name: The Jaws of Itzl
           description: ""
           is_manifestation: false
-          is_unique: false
+          is_unique: true
           move: 5"
-          health: "6"
+          health: "3"
           save: 4+
           ward: ""
           invuln: ""
@@ -1344,111 +1751,65 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - ORDER
-            - SERAPHON
-            - KROXIGOR
-            - ORDER
-          weapons:
-            - name: Starfang Warpick
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Drakefang Warpick
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Spawn of Chotec
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "8"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
+          points: 120
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
+          max_unit_size: 1
+          matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
             - ORDER
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
             - SERAPHON
-            - BEAST
-            - SKINK
-            - NON-MONSTER SKINK
+            - SAURUS
             - ORDER
           weapons:
-            - name: Stream of Fire
-              range: 10"
-              attacks: "5"
-              to_hit: 2+
+            - name: Celestite Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
               damage: "1"
               version: ""
               source: ""
-            - name: Glob of Flame Acid
-              range: 16"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D3+3
-              version: ""
-              source: ""
-            - name: Fiery Maw
+            - name: Relic Celestite Warmace
               range: ""
-              attacks: "3"
+              attacks: "4"
               to_hit: 3+
               to_wound: 3+
-              rend: "2"
+              rend: "1"
               damage: "3"
               version: ""
               source: ""
+            - name: Celestite Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
           abilities: []
-        - name: Slann Starmaster
+        - name: Skink Starpriest
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 5"
-          health: "9"
-          save: 5+
+          move: 8"
+          health: "5"
+          save: 6+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 260
+          points: 90
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1458,22 +1819,20 @@ factions:
           source: Battlescribe Data
           keywords:
             - HERO
-            - FLY
             - ORDER
-            - WIZARD (3)
             - SERAPHON
-            - SLANN
-            - WARD (6+)
+            - SKINK
+            - WIZARD (1)
             - INFANTRY
             - ORDER
           weapons:
-            - name: Azure Lightning
+            - name: Serpent Staff
               range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
               rend: "1"
-              damage: "1"
+              damage: D3
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -1564,439 +1923,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Sunblood Pack
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "3"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - SERAPHON
-            - SAURUS
-            - HERO
-            - INFANTRY
-            - ORDER
-          weapons:
-            - name: Celestite Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Celestite Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Bastiladon with Ark of Sotek
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "12"
-          save: 2+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 230
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - SERAPHON
-            - SKINK
-            - MONSTER
-            - ORDER
-          weapons:
-            - name: Bludgeoning Tail
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Handlers’ Meteoric Javelins
-              range: 12"
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ark of Sotek
-              range: ""
-              attacks: "20"
-              to_hit: 4+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kroxigor
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - ORDER
-            - SERAPHON
-            - KROXIGOR
-            - ORDER
-          weapons:
-            - name: Moonstone Hammer
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Drakebite Maul
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Stegadon
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - ORDER
-            - SERAPHON
-            - MONSTER
-            - SKINK
-            - ORDER
-          weapons:
-            - name: Stegadon’s Horns and Jaws
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Handlers’ Meteoric Javelins
-              range: 12"
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Skystreak Bow
-              range: 18"
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Sunfire Throwers
-              range: 10"
-              attacks: 2D6
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Saurus Oldblood
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - SERAPHON
-            - SAURUS
-            - INFANTRY
-            - ORDER
-          weapons:
-            - name: Relic Celestite Weapon
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Saurus Oldblood on Carnosaur
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 240
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - SERAPHON
-            - MONSTER
-            - SAURUS
-            - ORDER
-          weapons:
-            - name: Sunbolt Gauntlet
-              range: 12"
-              attacks: D6
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Sunstone Spear
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Carnosaur’s Massive Jaws
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Carnosaur’s Clawed Forelimbs
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Skink Starpriest
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "5"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - ORDER
-            - SERAPHON
-            - SKINK
-            - WIZARD (1)
-            - INFANTRY
-            - ORDER
-          weapons:
-            - name: Serpent Staff
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
         - name: Ripperdactyl Riders
           description: ""
           is_manifestation: false
@@ -2049,12 +1975,97 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: The Jaws of Itzl
+        - name: Skink Oracle on Troglodon
           description: ""
           is_manifestation: false
           is_unique: true
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 230
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - ORDER
+            - SERAPHON
+            - MONSTER
+            - WIZARD (1)
+            - SKINK
+            - ORDER
+          weapons:
+            - name: Troglodon’s Noxious Spittle
+              range: 15"
+              attacks: D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Divining Rod
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Troglodon’s Jaws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Troglodon’s Talons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Kroxigor Warspawned
+          description: ""
+          is_manifestation: false
+          is_unique: false
           move: 5"
-          health: "3"
+          health: "6"
           save: 4+
           ward: ""
           invuln: ""
@@ -2062,48 +2073,37 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 210
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - ORDER
             - INFANTRY
-            - UNIQUE
-            - LEGENDS
+            - ORDER
             - SERAPHON
-            - SAURUS
+            - KROXIGOR
             - ORDER
           weapons:
-            - name: Celestite Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Relic Celestite Warmace
+            - name: Starfang Warpick
               range: ""
               attacks: "4"
               to_hit: 3+
-              to_wound: 3+
+              to_wound: 2+
               rend: "1"
               damage: "3"
               version: ""
               source: ""
-            - name: Celestite Weapon
+            - name: Drakefang Warpick
               range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
               rend: "1"
-              damage: "1"
+              damage: "2"
               version: ""
               source: ""
           abilities: []

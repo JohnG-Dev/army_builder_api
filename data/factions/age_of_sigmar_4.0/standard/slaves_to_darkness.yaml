@@ -9,1300 +9,11 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Darkoath Marauders
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - DARKOATH
-            - CHAMPION
-            - CHAOS
-          weapons:
-            - name: Raider Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Slaughterbrute
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 200
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - MONSTER
-            - DAEMON
-            - PLEDGED TO KHORNE
-            - CHAOS
-          weapons:
-            - name: Mighty Jaws
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Razor-tipped Claws
-              range: ""
-              attacks: "8"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Scions of the Flame
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 8
-          max_unit_size: 16
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - UNDIVIDED
-            - LEGENDS
-            - CHAMPION (1/8)
-            - CHAOS
-          weapons:
-            - name: Scion Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Flameburst Pots and Infernal Fires
-              range: 10"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Khagra's Ravagers
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - CHAMPION
-            - SLAVES TO DARKNESS
-            - WARRIORS OF CHAOS
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Hellforged Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Hellforged Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Hellforged Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Hellforged Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abraxia, Spear of the Everchosen
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "14"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 260
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - WARRIORS OF CHAOS
-            - WARD (5+)
-            - CHAOS
-          weapons:
-            - name: Gorbolga
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: The Thanatorg’s Claws and Fangs
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Be'lakor, the Dark Master
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "10"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 450
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - FLY
-            - WARMASTER
-            - WIZARD (2)
-            - SLAVES TO DARKNESS
-            - DAEMON
-            - WARD (6+)
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Blade of Shadows
-              range: ""
-              attacks: "8"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Fell Claw and Spearing Tail
-              range: ""
-              attacks: "2"
-              to_hit: 2+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Centaurion Marshal
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "10"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - CAVALRY
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Mauling Spear, Skull Bludgeon and Varanspire Gladius
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Exalted Hero of Chaos
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - WARRIORS OF CHAOS
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Blades of the Dark Champion
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ogroid Theridons
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 170
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - MUSICIAN (1/3)
-            - STANDARD BEARER (1/3)
-            - CHAOS
-          weapons:
-            - name: Goroan Weapons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Wilderfiend
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "9"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - DARKOATH
-            - BEAST
-            - WARD (5+)
-            - CHAOS
-          weapons:
-            - name: Razor-sharp Claws
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Flesh-tearing Maw
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Soul Grinder
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "16"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 330
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - DAEMON
-            - MONSTER
-            - WARD (6+)
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Harvester Cannon
-              range: 12"
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Piston-driven Legs and Daemonic Blade or Claw
-              range: ""
-              attacks: "8"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Hellforged Claw
-              range: ""
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Phlegm Bombardment
-              range: 12"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Tarantulos Brood
+        - name: Splintered Fang
           description: ""
           is_manifestation: false
           is_unique: false
           move: 6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - UNDIVIDED
-            - LEGENDS
-            - CHAMPION (1/13)
-            - CHAOS
-          weapons:
-            - name: Brood Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Envenomed Projectiles
-              range: 10"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Venomous Bites
-              range: ""
-              attacks: "4"
-              to_hit: 5+
-              to_wound: 5+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Lord on Daemonic Mount
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "8"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - CAVALRY
-            - WARRIORS OF CHAOS
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Cursed Weapons
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Daemonic Mount’s Mighty Hooves
-              range: ""
-              attacks: "3"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Lord on Manticore
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "12"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 260
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - MONSTER
-            - FLY
-            - CHAOS
-            - WARRIORS OF CHAOS
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Daemonbound Weapons
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Manticore’s Claws and Fangs
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Chieftain on Warsteed
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - DARKOATH
-            - CAVALRY
-            - CHAOS
-          weapons:
-            - name: Darkoath Cursed Weapon
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Warsteed’s Hooves
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Gaunt Summoner on Disc of Tzeentch
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 14"
-          health: "6"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - CAVALRY
-            - WIZARD (2)
-            - FLY
-            - WARD (6+)
-            - DAEMON
-            - CHAOS
-            - PLEDGED TO TZEENTCH
-            - CHAOS
-          weapons:
-            - name: Warptongue Blade
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Changestaff
-              range: 12"
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Disc’s Teeth and Horns
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Savagers
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - DARKOATH
-            - CHAMPION (1/10)
-            - CHAOS
-          weapons:
-            - name: Darkoath Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Raptoryx
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 6
-          max_unit_size: 12
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - BEAST
-            - CHAOS
-          weapons:
-            - name: Razor-sharp Beak and Talons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Horns of Hashut
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - UNDIVIDED
-            - LEGENDS
-            - CHAMPION (1/10)
-            - CHAOS
-          weapons:
-            - name: Forge Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Flamehurler
-              range: 8"
-              attacks: D6
-              to_hit: 2+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Iron Golem
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 7
-          max_unit_size: 14
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - UNDIVIDED
-            - LEGENDS
-            - CHAMPION (1/8)
-            - STANDARD BEARER (1/8)
-            - CHAOS
-          weapons:
-            - name: Legion Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Bolas
-              range: 8"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Legion Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Bolas
-              range: 8"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Chieftain
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - CHAOS
-            - DARKOATH
-            - CHAOS
-          weapons:
-            - name: Cursed Broadsword
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Warqueen
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - CHAOS
-            - DARKOATH
-            - WARD (5+)
-            - CHAOS
-          weapons:
-            - name: Rune-etched Axe
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Darkoath Fellriders
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "3"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - CAVALRY
-            - CHAMPION
-            - DARKOATH
-            - CHAOS
-          weapons:
-            - name: Warsteed’s Hooves
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Broadsword
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Marauder Javelin
-              range: 10"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
-              damage: D3
-              version: ""
-              source: ""
-            - name: Marauder Javelin
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Spire Tyrants
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
           health: "1"
           save: 5+
           ward: ""
@@ -1328,7 +39,7 @@ factions:
             - CHAMPION (1/9)
             - CHAOS
           weapons:
-            - name: Gladiator Weapons
+            - name: Poisoned Weapons
               range: ""
               attacks: "2"
               to_hit: 4+
@@ -1456,252 +167,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Chaos Lord
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - WARRIORS OF CHAOS
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Reaperblade
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Sorcerer Lord
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - WIZARD (1)
-            - INFANTRY
-            - WARRIORS OF CHAOS
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Sorcerer Staff and Runeblade
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Chosen
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 280
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - WARRIORS OF CHAOS
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - CHAMPION
-            - CHAOS
-          weapons:
-            - name: Soul Splitter
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Splintered Fang
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 8
-          max_unit_size: 16
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - UNDIVIDED
-            - LEGENDS
-            - CHAMPION (1/9)
-            - CHAOS
-          weapons:
-            - name: Poisoned Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Abraxia, Spear of the Everchosen (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "14"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 330
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - WARRIORS OF CHAOS
-            - WARD (5+)
-            - CHAOS
-          weapons:
-            - name: Gorbolga the Accurs'd
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: The Thanatorg’s Vicious Claws
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
         - name: Athol Khul
           description: ""
           is_manifestation: false
@@ -1802,16 +267,137 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Gunnar Brand
+        - name: Chaos Warriors
           description: ""
           is_manifestation: false
           is_unique: true
           move: 5"
-          health: "6"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - WARRIORS OF CHAOS
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - CHAMPION
+            - CHAOS
+          weapons:
+            - name: Rune-etched Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Marauders
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "1"
           save: 5+
           ward: ""
           invuln: ""
-          control: "2"
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - STANDARD BEARER (1/10)
+            - MUSICIAN (1/10)
+            - DARKOATH
+            - CHAMPION
+            - CHAOS
+          weapons:
+            - name: Raider Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Savagers
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - DARKOATH
+            - CHAMPION (1/10)
+            - CHAOS
+          weapons:
+            - name: Darkoath Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Slaughterbrute
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
@@ -1819,65 +405,167 @@ factions:
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 1
+          max_unit_size: 2
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - UNIQUE
-            - HERO
             - SLAVES TO DARKNESS
             - CHAOS
-            - INFANTRY
-            - DARKOATH
-            - GUNNAR'S OATHSWORN
+            - MONSTER
+            - DAEMON
+            - PLEDGED TO KHORNE
             - CHAOS
           weapons:
-            - name: Dual Axes
+            - name: Mighty Jaws
               range: ""
-              attacks: "10"
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Razor-tipped Claws
+              range: ""
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Soul Grinder
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "16"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 330
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - DAEMON
+            - MONSTER
+            - WARD (6+)
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Harvester Cannon
+              range: 12"
+              attacks: "6"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
               damage: "1"
               version: ""
               source: ""
+            - name: Piston-driven Legs and Daemonic Blade or Claw
+              range: ""
+              attacks: "8"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Hellforged Claw
+              range: ""
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Phlegm Bombardment
+              range: 12"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
           abilities: []
-        - name: Chaos Furies
+        - name: Khagra's Ravagers
           description: ""
           is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "1"
-          save: 6+
+          is_unique: true
+          move: 6"
+          health: "3"
+          save: 3+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 170
           summon_cost: ""
           banishment: ""
-          min_unit_size: 6
-          max_unit_size: 12
-          matched_play: true
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
           version: ""
           source: Battlescribe Data
           keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - DAEMON
-            - FLY
-            - WARD (6+)
             - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - CHAMPION
+            - SLAVES TO DARKNESS
+            - WARRIORS OF CHAOS
+            - CHAOS
             - CHAOS
           weapons:
-            - name: Razor-sharp Dagger and Claws
+            - name: Hellforged Weapons
               range: ""
               attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Hellforged Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Hellforged Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Hellforged Weapons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
               rend: "1"
               damage: "1"
               version: ""
@@ -1920,11 +608,198 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Mutalith Vortex Beast
+        - name: Archaon, the Everchosen
           description: ""
           is_manifestation: false
-          is_unique: false
-          move: 10"
+          is_unique: true
+          move: 14"
+          health: "25"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 810
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WARD (5+)
+            - FLY
+            - WARMASTER
+            - WIZARD (2)
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: The Slayer of Kings
+              range: ""
+              attacks: "4"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Dorghar’s Heads
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "5"
+              version: ""
+              source: ""
+            - name: Dorghar’s Claws and Tails
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Centaurion Marshal
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "10"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - CAVALRY
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Mauling Spear, Skull Bludgeon and Varanspire Gladius
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Lord on Manticore
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 260
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - MONSTER
+            - FLY
+            - CHAOS
+            - WARRIORS OF CHAOS
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Daemonbound Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Manticore’s Claws and Fangs
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Warshrine
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
           health: "14"
           save: 4+
           ward: ""
@@ -1933,38 +808,196 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 170
+          points: 250
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
-          max_unit_size: 2
+          max_unit_size: 1
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - PRIEST (1)
+            - WAR MACHINE
+            - WARRIORS OF CHAOS
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Sacrificial Blade
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Flailing Fists
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Warqueen
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
+            - HERO
             - SLAVES TO DARKNESS
+            - INFANTRY
             - CHAOS
-            - MONSTER
-            - DAEMON
-            - PLEDGED TO TZEENTCH
+            - DARKOATH
+            - WARD (5+)
             - CHAOS
           weapons:
-            - name: Crushing Claws
+            - name: Rune-etched Axe
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Chosen
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 280
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - WARRIORS OF CHAOS
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
+            - CHAMPION
+            - CHAOS
+          weapons:
+            - name: Soul Splitter
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ogroid Theridons
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - MUSICIAN (1/3)
+            - STANDARD BEARER (1/3)
+            - CHAOS
+          weapons:
+            - name: Goroan Weapons
               range: ""
               attacks: "4"
               to_hit: 4+
               to_wound: 2+
               rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Betentacled Maw
-              range: ""
-              attacks: "12"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -2012,6 +1045,104 @@ factions:
               attacks: "2"
               to_hit: 3+
               to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Spire Tyrants
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 8
+          max_unit_size: 16
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - UNDIVIDED
+            - LEGENDS
+            - CHAMPION (1/9)
+            - CHAOS
+          weapons:
+            - name: Gladiator Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Tarantulos Brood
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - UNDIVIDED
+            - LEGENDS
+            - CHAMPION (1/13)
+            - CHAOS
+          weapons:
+            - name: Brood Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Envenomed Projectiles
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Venomous Bites
+              range: ""
+              attacks: "4"
+              to_hit: 5+
+              to_wound: 5+
               rend: '-'
               damage: "1"
               version: ""
@@ -2112,20 +1243,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Chaos Lord on Karkadrak
+        - name: Darkoath Chieftain on Warsteed
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 9"
-          health: "10"
-          save: 3+
+          move: 12"
+          health: "7"
+          save: 4+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 190
+          points: 100
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2136,27 +1267,27 @@ factions:
           keywords:
             - HERO
             - SLAVES TO DARKNESS
-            - CAVALRY
-            - WARRIORS OF CHAOS
             - CHAOS
+            - DARKOATH
+            - CAVALRY
             - CHAOS
           weapons:
-            - name: Hexed Weapons
+            - name: Darkoath Cursed Weapon
               range: ""
               attacks: "5"
-              to_hit: 3+
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
               damage: "2"
               version: ""
               source: ""
-            - name: Karkadrak’s Claws and Horn
+            - name: Warsteed’s Hooves
               range: ""
-              attacks: "4"
-              to_hit: 4+
+              attacks: "2"
+              to_hit: 5+
               to_wound: 3+
-              rend: "1"
-              damage: "2"
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -2226,96 +1357,51 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Mindstealer Sphiranx
+        - name: Chaos Legionnaires
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 10"
-          health: "10"
-          save: 5+
+          move: 5"
+          health: "1"
+          save: 4+
           ward: ""
           invuln: ""
-          control: "5"
+          control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 150
+          points: 80
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
+          min_unit_size: 8
+          max_unit_size: 16
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - MONSTER
-            - CHAOS
-          weapons:
-            - name: Shredding Claws
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Varanguard
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 320
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CAVALRY
             - CHAOS
             - SLAVES TO DARKNESS
-            - WARRIORS OF CHAOS
+            - INFANTRY
+            - CHAMPION (1/8)
+            - UNDIVIDED
             - CHAOS
           weapons:
-            - name: Daemonforged Blades
+            - name: Darkiron Weapons
               range: ""
-              attacks: "3"
+              attacks: "2"
               to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Steed’s Tearing Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
+              to_wound: 4+
               rend: "1"
               damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Corvus Cabal
+        - name: Raptoryx
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 6"
-          health: "1"
+          move: 10"
+          health: "2"
           save: 6+
           ward: ""
           invuln: ""
@@ -2326,8 +1412,45 @@ factions:
           points: 100
           summon_cost: ""
           banishment: ""
-          min_unit_size: 9
-          max_unit_size: 18
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - BEAST
+            - CHAOS
+          weapons:
+            - name: Razor-sharp Beak and Talons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Iron Golem
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "1"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 7
+          max_unit_size: 14
           matched_play: false
           version: ""
           source: Battlescribe Data
@@ -2336,12 +1459,22 @@ factions:
             - SLAVES TO DARKNESS
             - INFANTRY
             - UNDIVIDED
-            - CHAMPION (1/9)
             - LEGENDS
+            - CHAMPION (1/8)
+            - STANDARD BEARER (1/8)
             - CHAOS
           weapons:
-            - name: Raven Darts
-              range: 10"
+            - name: Legion Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bolas
+              range: 8"
               attacks: "1"
               to_hit: 4+
               to_wound: 4+
@@ -2349,9 +1482,18 @@ factions:
               damage: "1"
               version: ""
               source: ""
-            - name: Hooked Weapons
+            - name: Legion Weapons
               range: ""
               attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Bolas
+              range: 8"
+              attacks: "1"
               to_hit: 4+
               to_wound: 4+
               rend: '-'
@@ -2359,69 +1501,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Untamed Beasts
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 8
-          max_unit_size: 16
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - UNDIVIDED
-            - LEGENDS
-            - CHAMPION (1/9)
-            - CHAOS
-          weapons:
-            - name: Ghurish Hunting Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ghurish Hunting Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Archaon, the Everchosen
+        - name: Abraxia, Spear of the Everchosen (Scourge of Ghyran)
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 14"
-          health: "25"
+          move: 10"
+          health: "14"
           save: 3+
           ward: ""
           invuln: ""
-          control: "10"
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 810
+          points: 330
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2433,41 +1526,147 @@ factions:
             - UNIQUE
             - HERO
             - MONSTER
-            - WARD (5+)
-            - FLY
-            - WARMASTER
-            - WIZARD (2)
             - SLAVES TO DARKNESS
-            - DAEMON
-            - WARRIORS OF CHAOS
             - CHAOS
+            - WARRIORS OF CHAOS
+            - WARD (5+)
             - CHAOS
           weapons:
-            - name: The Slayer of Kings
+            - name: Gorbolga the Accurs'd
               range: ""
-              attacks: "4"
-              to_hit: 2+
+              attacks: "5"
+              to_hit: 3+
               to_wound: 3+
               rend: "2"
               damage: "3"
               version: ""
               source: ""
-            - name: Dorghar’s Heads
-              range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "5"
-              version: ""
-              source: ""
-            - name: Dorghar’s Claws and Tails
+            - name: The Thanatorg’s Vicious Claws
               range: ""
               attacks: "6"
               to_hit: 4+
               to_wound: 2+
               rend: "2"
-              damage: "3"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Be'lakor, the Dark Master
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - FLY
+            - WARMASTER
+            - WIZARD (2)
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - WARD (6+)
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Blade of Shadows
+              range: ""
+              attacks: "8"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Fell Claw and Spearing Tail
+              range: ""
+              attacks: "2"
+              to_hit: 2+
+              to_wound: 2+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Lord on Karkadrak
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 9"
+          health: "10"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 190
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - CAVALRY
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Hexed Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Karkadrak’s Claws and Horn
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -2518,395 +1717,6 @@ factions:
               to_hit: 4+
               to_wound: 2+
               rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Ogroid Myrmidon
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "8"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - CHAOS
-            - CHAOS
-          weapons:
-            - name: Gladiator Spear
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "1"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Gladiator Spear
-              range: 10"
-              attacks: "1"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - WARRIORS OF CHAOS
-            - WAR MACHINE
-            - CHAOS
-          weapons:
-            - name: Chaos Steeds’ Trampling Hooves
-              range: ""
-              attacks: "4"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Lashing Whip
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Chaos Greatblade
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Chaos War-flail
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Legionnaires
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 5"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 80
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 8
-          max_unit_size: 16
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - CHAMPION (1/8)
-            - UNDIVIDED
-            - CHAOS
-          weapons:
-            - name: Darkiron Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Warriors
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "2"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - INFANTRY
-            - WARRIORS OF CHAOS
-            - STANDARD BEARER (1/10)
-            - MUSICIAN (1/10)
-            - CHAMPION
-            - CHAOS
-          weapons:
-            - name: Rune-etched Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Fomoroid Crusher
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "8"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - MONSTER
-            - CHAOS
-          weapons:
-            - name: Hurled Terrain
-              range: 12"
-              attacks: D3
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Crushing Fists and Swinging Masonry
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Gorebeast Chariot
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 9"
-          health: "8"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 100
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - CHAOS
-            - SLAVES TO DARKNESS
-            - WARRIORS OF CHAOS
-            - WAR MACHINE
-            - CHAOS
-          weapons:
-            - name: Gorebeast’s Crushing Fists
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Lashing Whip
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Chaos Greatblade
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Chaos War-flail
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Chaos Warshrine
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 250
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - SLAVES TO DARKNESS
-            - CHAOS
-            - PRIEST (1)
-            - WAR MACHINE
-            - WARRIORS OF CHAOS
-            - LEGENDS
-            - CHAOS
-          weapons:
-            - name: Sacrificial Blade
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Flailing Fists
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 3+
-              rend: '-'
               damage: "2"
               version: ""
               source: ""
@@ -2998,6 +1808,203 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Ogroid Myrmidon
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Gladiator Spear
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 2+
+              rend: "1"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Gladiator Spear
+              range: 10"
+              attacks: "1"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mindstealer Sphiranx
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "10"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - MONSTER
+            - CHAOS
+          weapons:
+            - name: Shredding Claws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Fomoroid Crusher
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - MONSTER
+            - CHAOS
+          weapons:
+            - name: Hurled Terrain
+              range: 12"
+              attacks: D3
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Crushing Fists and Swinging Masonry
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Horns of Hashut
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - UNDIVIDED
+            - LEGENDS
+            - CHAMPION (1/10)
+            - CHAOS
+          weapons:
+            - name: Forge Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Flamehurler
+              range: 8"
+              attacks: D6
+              to_hit: 2+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
         - name: Chaos Knights
           description: ""
           is_manifestation: false
@@ -3043,6 +2050,999 @@ factions:
               attacks: "3"
               to_hit: 3+
               to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Chieftain
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 80
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - CHAOS
+            - DARKOATH
+            - CHAOS
+          weapons:
+            - name: Cursed Broadsword
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Exalted Hero of Chaos
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Blades of the Dark Champion
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mutalith Vortex Beast
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 170
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - MONSTER
+            - DAEMON
+            - PLEDGED TO TZEENTCH
+            - CHAOS
+          weapons:
+            - name: Crushing Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Betentacled Maw
+              range: ""
+              attacks: "12"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Wilderfiend
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "9"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - DARKOATH
+            - BEAST
+            - WARD (5+)
+            - CHAOS
+          weapons:
+            - name: Razor-sharp Claws
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Flesh-tearing Maw
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Corvus Cabal
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 9
+          max_unit_size: 18
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - UNDIVIDED
+            - CHAMPION (1/9)
+            - LEGENDS
+            - CHAOS
+          weapons:
+            - name: Raven Darts
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Hooked Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Scions of the Flame
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 5"
+          health: "1"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 8
+          max_unit_size: 16
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - UNDIVIDED
+            - LEGENDS
+            - CHAMPION (1/8)
+            - CHAOS
+          weapons:
+            - name: Scion Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Flameburst Pots and Infernal Fires
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Untamed Beasts
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 8
+          max_unit_size: 16
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - UNDIVIDED
+            - LEGENDS
+            - CHAMPION (1/9)
+            - CHAOS
+          weapons:
+            - name: Ghurish Hunting Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ghurish Hunting Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Abraxia, Spear of the Everchosen
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 260
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - WARRIORS OF CHAOS
+            - WARD (5+)
+            - CHAOS
+          weapons:
+            - name: Gorbolga
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: The Thanatorg’s Claws and Fangs
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Lord
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - INFANTRY
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Reaperblade
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Lord on Daemonic Mount
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "8"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - CAVALRY
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Cursed Weapons
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Daemonic Mount’s Mighty Hooves
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Sorcerer Lord
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - WIZARD (1)
+            - INFANTRY
+            - WARRIORS OF CHAOS
+            - CHAOS
+            - CHAOS
+          weapons:
+            - name: Sorcerer Staff and Runeblade
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - WARRIORS OF CHAOS
+            - WAR MACHINE
+            - CHAOS
+          weapons:
+            - name: Chaos Steeds’ Trampling Hooves
+              range: ""
+              attacks: "4"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Lashing Whip
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Chaos Greatblade
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Chaos War-flail
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Darkoath Fellriders
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "3"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
+            - CAVALRY
+            - CHAMPION
+            - DARKOATH
+            - CHAOS
+          weapons:
+            - name: Warsteed’s Hooves
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Broadsword
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Marauder Javelin
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 3+
+              rend: '-'
+              damage: D3
+              version: ""
+              source: ""
+            - name: Marauder Javelin
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gorebeast Chariot
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 9"
+          health: "8"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 100
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - WARRIORS OF CHAOS
+            - WAR MACHINE
+            - CHAOS
+          weapons:
+            - name: Gorebeast’s Crushing Fists
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Lashing Whip
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Chaos Greatblade
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Chaos War-flail
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Varanguard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 10"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 320
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CAVALRY
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - WARRIORS OF CHAOS
+            - CHAOS
+          weapons:
+            - name: Daemonforged Blades
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Steed’s Tearing Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gaunt Summoner on Disc of Tzeentch
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 14"
+          health: "6"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - SLAVES TO DARKNESS
+            - CAVALRY
+            - WIZARD (2)
+            - FLY
+            - WARD (6+)
+            - DAEMON
+            - CHAOS
+            - PLEDGED TO TZEENTCH
+            - CHAOS
+          weapons:
+            - name: Warptongue Blade
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Changestaff
+              range: 12"
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Disc’s Teeth and Horns
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gunnar Brand
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "6"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 200
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - UNIQUE
+            - HERO
+            - SLAVES TO DARKNESS
+            - CHAOS
+            - INFANTRY
+            - DARKOATH
+            - GUNNAR'S OATHSWORN
+            - CHAOS
+          weapons:
+            - name: Dual Axes
+              range: ""
+              attacks: "10"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Chaos Furies
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - CHAOS
+            - SLAVES TO DARKNESS
+            - DAEMON
+            - FLY
+            - WARD (6+)
+            - INFANTRY
+            - CHAOS
+          weapons:
+            - name: Razor-sharp Dagger and Claws
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
               rend: "1"
               damage: "1"
               version: ""

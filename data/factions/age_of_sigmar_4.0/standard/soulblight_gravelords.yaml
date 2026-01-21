@@ -9,120 +9,53 @@ factions:
       version: ""
       source: Battlescribe Data
       units:
-        - name: Fell Bats
+        - name: Barrow Knights
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 12"
+          move: 10"
           health: "3"
-          save: 6+
+          save: 4+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 90
+          points: 210
           summon_cost: ""
           banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
+          min_unit_size: 5
+          max_unit_size: 10
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
             - DEATH
             - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - BEAST
-            - DEADWALKERS
-            - FLY
-            - DEATH
-          weapons:
-            - name: Chiropteran Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Zondara's Gravebreakers
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "2"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 2
-          matched_play: false
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - INFANTRY
-            - UNIQUE
-            - LEGENDS
-            - WARD (6+)
-            - DEATH
+            - CAVALRY
             - CHAMPION
+            - STANDARD BEARER (1/5)
             - SOULBLIGHT GRAVELORDS
-            - DEADWALKERS
+            - DEATHRATTLE
+            - MUSICIAN (1/5)
             - DEATH
           weapons:
-            - name: Graverobber’s Tools
+            - name: Skeletal Steed’s Hooves and Teeth
               range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Rending Claws
+            - name: Barrow Lance
               range: ""
-              attacks: "4"
+              attacks: "2"
               to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Graverobber’s Tools
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Graverobber’s Tools
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Graverobber’s Tools
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
               damage: "1"
               version: ""
               source: ""
@@ -169,620 +102,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Ivya Volga, the Outcast
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - WIZARD (1)
-            - INFANTRY
-            - DEATH
-          weapons:
-            - name: Heirloom Axe
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Bat Swarm's Needling Fangs
-              range: 12"
-              attacks: 2D6
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lady Annika, the Thirsting Blade
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - INFANTRY
-            - WARD (4+)
-            - DEATH
-          weapons:
-            - name: Blade Proboscian
-              range: ""
-              attacks: "7"
-              to_hit: 3+
-              to_wound: 4+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Prince Vhordrai
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "18"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 470
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - MONSTER
-            - FLY
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - WIZARD (1)
-            - DEATH
-          weapons:
-            - name: Shordmaire's Claws
-              range: ""
-              attacks: "7"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Shordmaire's Maw
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: The Bloodlance
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Shordemaire's Miasma
-              range: 10"
-              attacks: D6
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Barrow Guard
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "1"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - INFANTRY
-            - WARD (6+)
-            - CHAMPION
-            - SOULBLIGHT GRAVELORDS
-            - DEATHRATTLE
-            - STANDARD BEARER (1/5)
-            - MUSICIAN (1/5)
-            - DEATH
-          weapons:
-            - name: Wight Blade
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vargskyr
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "8"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 160
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - BEAST
-            - DEATH
-          weapons:
-            - name: Lacerating Fangs
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Raking Talons
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vampire Lord on Nightmare Steed
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "7"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 190
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - WIZARD (1)
-            - WARD (6+)
-            - DEATH
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - CAVALRY
-            - DEATH
-          weapons:
-            - name: Dynastic Cavalier Weapon
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Nightmare’s Hooves and Teeth
-              range: ""
-              attacks: "3"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Radukar the Beast
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 8"
-          health: "12"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 250
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - WIZARD (1)
-            - MONSTER
-            - DEATH
-          weapons:
-            - name: Blood-slick Claws
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Vyrkos Blood-born's Piercing Blades
-              range: ""
-              attacks: "6"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Radukar the Wolf
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "7"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 130
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - WIZARD (1)
-            - INFANTRY
-            - DEATH
-          weapons:
-            - name: Vyrkos Barrow-blade
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Watch Captain Halgrim
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - INFANTRY
-            - DEATHRATTLE
-            - DEATH
-          weapons:
-            - name: Cursed Halberd and Sabre
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Wight King
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - WARD (6+)
-            - DEATH
-            - SOULBLIGHT GRAVELORDS
-            - INFANTRY
-            - DEATHRATTLE
-            - DEATH
-          weapons:
-            - name: Baleful Tomb Blade
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Deadwalker Zombies
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "1"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 20
-          max_unit_size: 40
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - INFANTRY
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - DEADWALKERS
-            - DEATH
-          weapons:
-            - name: Crude Weapon or Infectious Bite
-              range: ""
-              attacks: "1"
-              to_hit: 5+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Terrorgheist
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 12"
-          health: "14"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 220
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - DEATH
-            - MONSTER
-            - FLY
-            - SOULBLIGHT GRAVELORDS
-            - DEATH
-          weapons:
-            - name: Death shriek
-              range: 10"
-              attacks: "1"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Fanged Maw
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Skeletal Talons
-              range: ""
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Lauka Vai, Mother of Nightmares
+        - name: Mortis Engine
           description: ""
           is_manifestation: false
           is_unique: true
           move: 10"
-          health: "11"
+          health: "12"
           save: 4+
           ward: ""
           invuln: ""
@@ -799,101 +124,66 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - DEATH
             - HERO
-            - UNIQUE
-            - WARD (6+)
-            - MONSTER
-            - FLY
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
             - WIZARD (1)
+            - WARD (6+)
+            - DEATH
+            - SOULBLIGHT GRAVELORDS
+            - WAR MACHINE
+            - FLY
             - DEATH
           weapons:
-            - name: Askurga Rapier
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Gore-drenched Talons
+            - name: Corpsemaster's Staff
               range: ""
               attacks: "3"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "3"
-              damage: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+            - name: Spectral Host's Blades
+              range: ""
+              attacks: "10"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
-        - name: Nagash, Supreme Lord of the Undead
+        - name: Wight King on Skeletal Steed
           description: ""
           is_manifestation: false
           is_unique: true
           move: 10"
-          health: "18"
+          health: "8"
           save: 3+
-          ward: ""
-          invuln: ""
-          control: "10"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 800
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - UNIQUE
-            - HERO
-            - MONSTER
-            - WIZARD (9)
-            - WARD (5+)
-            - FLY
-            - SOULBLIGHT GRAVELORDS
-            - DEATH
-          weapons:
-            - name: Alakanash
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: D6
-              version: ""
-              source: ""
-            - name: Zefet-nebtar
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Torgillius the Chamberlain
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 5"
-          health: "5"
-          save: 6+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 180
+          points: 200
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -902,81 +192,48 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - DEATH
             - HERO
-            - UNIQUE
             - WARD (6+)
+            - DEATH
             - SOULBLIGHT GRAVELORDS
-            - WIZARD (1)
-            - INFANTRY
-            - DEATH
-          weapons:
-            - name: Familiars’ Fangs and Claws
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Necrotising Bolts
-              range: 18"
-              attacks: "6"
-              to_hit: 4+
-              to_wound: 4+
-              rend: "1"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Blood Knights
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "3"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 220
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - WARD (6+)
+            - DEATHRATTLE
             - CAVALRY
-            - CHAMPION
-            - STANDARD BEARER (1/5)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
             - DEATH
           weapons:
-            - name: Nightmare’s Hooves and Teeth
+            - name: King's Relic Weapon
               range: ""
-              attacks: "3"
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Skeletal Steed’s Hooves and Teeth
+              range: ""
+              attacks: "2"
               to_hit: 5+
               to_wound: 3+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Templar Weapon
-              range: ""
-              attacks: "3"
-              to_hit: 3+
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -1050,20 +307,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: The Sons of Velmorn
+        - name: The Sepulchral Guard
           description: ""
           is_manifestation: false
           is_unique: true
           move: 4"
           health: "2"
-          save: 3+
+          save: 5+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 110
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1082,217 +339,66 @@ factions:
             - DEATHRATTLE
             - DEATH
           weapons:
-            - name: Royal Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Royal Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Royal Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Royal Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Royal Weapons
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Wight Lord on Skeletal Steed
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "7"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - WARD (6+)
-            - DEATH
-            - SOULBLIGHT GRAVELORDS
-            - DEATHRATTLE
-            - CAVALRY
-            - DEATH
-          weapons:
-            - name: Lord's Tomb Blade
-              range: ""
-              attacks: "4"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Skeletal Steed’s Hooves and Teeth
+            - name: Ancient Weapon
               range: ""
               attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
+              to_hit: 4+
+              to_wound: 4+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-          abilities: []
-        - name: Sekhar, Fang of Nulahmia (Scourge of Ghyran)
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - INFANTRY
-            - WIZARD (2)
-            - DEATH
-          weapons:
-            - name: Nulahmian Warglaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ouboroth’s Godhusk Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Barrow Knights
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 10"
-          health: "3"
-          save: 4+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 210
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 5
-          max_unit_size: 10
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - WARD (6+)
-            - CAVALRY
-            - CHAMPION
-            - STANDARD BEARER (1/5)
-            - SOULBLIGHT GRAVELORDS
-            - DEATHRATTLE
-            - MUSICIAN (1/5)
-            - DEATH
-          weapons:
-            - name: Skeletal Steed’s Hooves and Teeth
+            - name: Ancient Weapon
               range: ""
               attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
+              to_hit: 4+
+              to_wound: 4+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Barrow Lance
+            - name: Ancient Weapon
               range: ""
               attacks: "2"
               to_hit: 4+
-              to_wound: 3+
-              rend: "1"
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ancient Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ancient Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ancient Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Ancient Weapon
+              range: ""
+              attacks: "2"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
               damage: "1"
               version: ""
               source: ""
@@ -1355,146 +461,6 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Sekhar, Fang of Nulahmia
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "6"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 180
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - INFANTRY
-            - WIZARD (2)
-            - DEATH
-          weapons:
-            - name: Nulahmian Warglaive
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Ouboroth’s Godhusk Fangs
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: D3
-              version: ""
-              source: ""
-          abilities: []
-        - name: Corpse Cart
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 4"
-          health: "7"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 70
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - WARD (6+)
-            - DEATH
-            - SOULBLIGHT GRAVELORDS
-            - WAR MACHINE
-            - DEADWALKERS
-            - DEATH
-          weapons:
-            - name: Corpsemaster’s Weapon
-              range: ""
-              attacks: "3"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Zombies’ Rusty Blades
-              range: ""
-              attacks: 2D6
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Deathrattle Skeletons
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 4"
-          health: "1"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 90
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 10
-          max_unit_size: 20
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - INFANTRY
-            - WARD (6+)
-            - CHAMPION
-            - STANDARD BEARER (1/10)
-            - SOULBLIGHT GRAVELORDS
-            - DEATHRATTLE
-            - DEATH
-          weapons:
-            - name: Ancient Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
         - name: Belladamma Volga, First of the Vyrkos
           description: ""
           is_manifestation: false
@@ -1546,74 +512,12 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Neferata, Mortarch of Blood
+        - name: Sekhar, Fang of Nulahmia
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 12"
-          health: "14"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "5"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 450
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - WIZARD (2)
-            - UNIQUE
-            - WARD (6+)
-            - MONSTER
-            - FLY
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - WARMASTER
-            - DEATH
-          weapons:
-            - name: Aken-seth
-              range: ""
-              attacks: "3"
-              to_hit: 2+
-              to_wound: 3+
-              rend: "2"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Akmet-har
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Nagadron's Claws
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "3"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Wight King on Skeletal Steed
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "8"
+          move: 6"
+          health: "6"
           save: 3+
           ward: ""
           invuln: ""
@@ -1621,7 +525,108 @@ factions:
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 200
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - INFANTRY
+            - WIZARD (2)
+            - DEATH
+          weapons:
+            - name: Nulahmian Warglaive
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ouboroth’s Godhusk Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Torgillius the Chamberlain
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "5"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 180
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - WIZARD (1)
+            - INFANTRY
+            - DEATH
+          weapons:
+            - name: Familiars’ Fangs and Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Necrotising Bolts
+              range: 18"
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 4+
+              rend: "1"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vampire Lord
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1631,29 +636,21 @@ factions:
           source: Battlescribe Data
           keywords:
             - HERO
+            - WIZARD (1)
             - WARD (6+)
             - DEATH
             - SOULBLIGHT GRAVELORDS
-            - DEATHRATTLE
-            - CAVALRY
+            - INFANTRY
+            - VAMPIRE
             - DEATH
           weapons:
-            - name: King's Relic Weapon
+            - name: Dynastic War-relic
               range: ""
               attacks: "5"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
               damage: "2"
-              version: ""
-              source: ""
-            - name: Skeletal Steed’s Hooves and Teeth
-              range: ""
-              attacks: "2"
-              to_hit: 5+
-              to_wound: 3+
-              rend: '-'
-              damage: "1"
               version: ""
               source: ""
             - name: Emberstone-enhanced Ranged Weapon
@@ -1675,141 +672,72 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Askurgan Trueblades
+        - name: Vengorian Lord
           description: ""
           is_manifestation: false
-          is_unique: false
-          move: 6"
-          health: "2"
-          save: 5+
+          is_unique: true
+          move: 10"
+          health: "11"
+          save: 4+
           ward: ""
           invuln: ""
-          control: "1"
+          control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 130
+          points: 220
           summon_cost: ""
           banishment: ""
-          min_unit_size: 6
-          max_unit_size: 12
+          min_unit_size: 1
+          max_unit_size: 1
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - INFANTRY
+            - HERO
+            - WIZARD (1)
             - WARD (6+)
             - DEATH
-            - CHAMPION (1/8)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - DEATH
-          weapons:
-            - name: Askurgan Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Elongated Claws and Slavering Maw
-              range: ""
-              attacks: "5"
-              to_hit: 4+
-              to_wound: 3+
-              rend: "2"
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Askurgan Weapons
-              range: ""
-              attacks: "2"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vargheists
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 12"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 120
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - WARD (6+)
-            - CHAMPION
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - INFANTRY
+            - MONSTER
             - FLY
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
             - DEATH
           weapons:
-            - name: Murderous Fangs and Talons
+            - name: Gore-drenched Talons
               range: ""
               attacks: "3"
-              to_hit: 4+
+              to_hit: 3+
+              to_wound: 2+
+              rend: "3"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Nightmare Sabre
+              range: ""
+              attacks: "4"
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
               damage: "2"
               version: ""
               source: ""
-          abilities: []
-        - name: Vyrkos Blood-born
-          description: ""
-          is_manifestation: false
-          is_unique: false
-          move: 8"
-          health: "3"
-          save: 6+
-          ward: ""
-          invuln: ""
-          control: "1"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 150
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 3
-          max_unit_size: 6
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - INFANTRY
-            - VAMPIRE
-            - DEATH
-          weapons:
-            - name: Piercing Blade
-              range: ""
-              attacks: "3"
-              to_hit: 3+
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
               to_wound: 3+
               rend: "1"
-              damage: "2"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
               version: ""
               source: ""
           abilities: []
@@ -1969,20 +897,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Bloodseeker Palanquin
+        - name: Kritza, the Rat Prince
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 10"
-          health: "12"
-          save: 4+
+          move: 6"
+          health: "5"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "5"
+          control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 230
+          points: 70
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -1991,17 +919,16 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
-            - WIZARD (1)
-            - WARD (6+)
             - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
             - SOULBLIGHT GRAVELORDS
             - VAMPIRE
-            - WAR MACHINE
-            - FLY
+            - INFANTRY
             - DEATH
           weapons:
-            - name: Sanguinarch's Stiletto
+            - name: Gnawblade
               range: ""
               attacks: "5"
               to_hit: 3+
@@ -2010,31 +937,172 @@ factions:
               damage: "2"
               version: ""
               source: ""
-            - name: Spectral Host's Blades
+          abilities: []
+        - name: Radukar the Wolf
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "7"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WIZARD (1)
+            - INFANTRY
+            - DEATH
+          weapons:
+            - name: Vyrkos Barrow-blade
               range: ""
-              attacks: "10"
-              to_hit: 4+
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Deadwalker Zombies
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 4"
+          health: "1"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 140
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 20
+          max_unit_size: 40
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - INFANTRY
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - DEADWALKERS
+            - DEATH
+          weapons:
+            - name: Crude Weapon or Infectious Bite
+              range: ""
+              attacks: "1"
+              to_hit: 5+
               to_wound: 4+
               rend: '-'
               damage: "1"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
+          abilities: []
+        - name: Kosargi Nightguard
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "3"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 2
+          max_unit_size: 4
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - DEADWALKERS
+            - INFANTRY
+            - DEATH
+          weapons:
+            - name: Kosargi Bardiche
+              range: ""
+              attacks: "2"
               to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
               version: ""
               source: ""
-            - name: Emberstone-enhanced Melee Weapon
+          abilities: []
+        - name: Vargskyr
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "8"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 160
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - BEAST
+            - DEATH
+          weapons:
+            - name: Lacerating Fangs
               range: ""
-              attacks: D6+1
+              attacks: "2"
               to_hit: 4+
-              to_wound: 3+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Raking Talons
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 2+
               rend: "1"
-              damage: D3+0
+              damage: "2"
               version: ""
               source: ""
           abilities: []
@@ -2116,20 +1184,20 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Mannfred von Carstein, Mortarch of Night
+        - name: Lauka Vai, Mother of Nightmares
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 12"
-          health: "14"
-          save: 3+
+          move: 10"
+          health: "11"
+          save: 4+
           ward: ""
           invuln: ""
           control: "5"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 450
+          points: 230
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2140,26 +1208,127 @@ factions:
           keywords:
             - DEATH
             - HERO
-            - WIZARD (2)
             - UNIQUE
             - WARD (6+)
             - MONSTER
             - FLY
             - SOULBLIGHT GRAVELORDS
             - VAMPIRE
-            - WARMASTER
+            - WIZARD (1)
             - DEATH
           weapons:
-            - name: Ashigaroth's Claws
+            - name: Askurga Rapier
               range: ""
               attacks: "5"
-              to_hit: 4+
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Gore-drenched Talons
+              range: ""
+              attacks: "3"
+              to_hit: 3+
               to_wound: 2+
               rend: "3"
               damage: "3"
               version: ""
               source: ""
-            - name: Gheistvor
+          abilities: []
+        - name: Nagash, Supreme Lord of the Undead
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "18"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "10"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 800
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - UNIQUE
+            - HERO
+            - MONSTER
+            - WIZARD (9)
+            - WARD (5+)
+            - FLY
+            - SOULBLIGHT GRAVELORDS
+            - DEATH
+          weapons:
+            - name: Alakanash
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Zefet-nebtar
+              range: ""
+              attacks: "4"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Radukar the Beast
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 8"
+          health: "12"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 250
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WIZARD (1)
+            - MONSTER
+            - DEATH
+          weapons:
+            - name: Blood-slick Claws
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Vyrkos Blood-born's Piercing Blades
               range: ""
               attacks: "6"
               to_hit: 3+
@@ -2256,72 +1425,44 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Vengorian Lord
+        - name: Deathrattle Skeletons
           description: ""
           is_manifestation: false
-          is_unique: true
-          move: 10"
-          health: "11"
-          save: 4+
+          is_unique: false
+          move: 4"
+          health: "1"
+          save: 5+
           ward: ""
           invuln: ""
-          control: "5"
+          control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 220
+          points: 90
           summon_cost: ""
           banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
+          min_unit_size: 10
+          max_unit_size: 20
           matched_play: true
           version: ""
           source: Battlescribe Data
           keywords:
-            - HERO
-            - WIZARD (1)
-            - WARD (6+)
             - DEATH
-            - MONSTER
-            - FLY
+            - INFANTRY
+            - WARD (6+)
+            - CHAMPION
+            - STANDARD BEARER (1/10)
             - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
+            - DEATHRATTLE
             - DEATH
           weapons:
-            - name: Gore-drenched Talons
+            - name: Ancient Weapon
               range: ""
-              attacks: "3"
-              to_hit: 3+
-              to_wound: 2+
-              rend: "3"
-              damage: "3"
-              version: ""
-              source: ""
-            - name: Nightmare Sabre
-              range: ""
-              attacks: "4"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
+              attacks: "2"
               to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -2365,59 +1506,62 @@ factions:
               version: ""
               source: ""
           abilities: []
-        - name: Kosargi Nightguard
+        - name: Barrow Guard
           description: ""
           is_manifestation: false
           is_unique: false
-          move: 6"
-          health: "4"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "3"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 110
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 2
-          max_unit_size: 4
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - DEADWALKERS
-            - INFANTRY
-            - DEATH
-          weapons:
-            - name: Kosargi Bardiche
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 2+
-              rend: "2"
-              damage: "3"
-              version: ""
-              source: ""
-          abilities: []
-        - name: The Sepulchral Guard
-          description: ""
-          is_manifestation: false
-          is_unique: true
           move: 4"
-          health: "2"
-          save: 5+
+          health: "1"
+          save: 4+
           ward: ""
           invuln: ""
           control: "1"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 110
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 10
+          max_unit_size: 20
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - INFANTRY
+            - WARD (6+)
+            - CHAMPION
+            - SOULBLIGHT GRAVELORDS
+            - DEATHRATTLE
+            - STANDARD BEARER (1/5)
+            - MUSICIAN (1/5)
+            - DEATH
+          weapons:
+            - name: Wight Blade
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: The Sons of Velmorn
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "2"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2436,84 +1580,66 @@ factions:
             - DEATHRATTLE
             - DEATH
           weapons:
-            - name: Ancient Weapon
+            - name: Royal Weapons
               range: ""
-              attacks: "2"
+              attacks: "3"
               to_hit: 4+
-              to_wound: 4+
-              rend: '-'
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
-            - name: Ancient Weapon
+            - name: Royal Weapons
               range: ""
-              attacks: "2"
+              attacks: "3"
               to_hit: 4+
-              to_wound: 4+
-              rend: '-'
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
-            - name: Ancient Weapon
+            - name: Royal Weapons
               range: ""
-              attacks: "2"
+              attacks: "3"
               to_hit: 4+
-              to_wound: 4+
-              rend: '-'
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
-            - name: Ancient Weapon
+            - name: Royal Weapons
               range: ""
-              attacks: "2"
+              attacks: "3"
               to_hit: 4+
-              to_wound: 4+
-              rend: '-'
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
-            - name: Ancient Weapon
+            - name: Royal Weapons
               range: ""
-              attacks: "2"
+              attacks: "3"
               to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ancient Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
-              damage: "1"
-              version: ""
-              source: ""
-            - name: Ancient Weapon
-              range: ""
-              attacks: "2"
-              to_hit: 4+
-              to_wound: 4+
-              rend: '-'
+              to_wound: 3+
+              rend: "1"
               damage: "1"
               version: ""
               source: ""
           abilities: []
-        - name: Gorslav the Gravekeeper
+        - name: Vampire Lord on Nightmare Steed
           description: ""
           is_manifestation: false
           is_unique: true
-          move: 5"
-          health: "4"
-          save: 6+
+          move: 12"
+          health: "7"
+          save: 3+
           ward: ""
           invuln: ""
           control: "2"
           toughness: ""
           leadership: ""
           additional_stats: {}
-          points: 120
+          points: 190
           summon_cost: ""
           banishment: ""
           min_unit_size: 1
@@ -2522,26 +1648,53 @@ factions:
           version: ""
           source: Battlescribe Data
           keywords:
-            - DEATH
             - HERO
-            - UNIQUE
+            - WIZARD (1)
             - WARD (6+)
+            - DEATH
             - SOULBLIGHT GRAVELORDS
-            - INFANTRY
-            - DEADWALKERS
+            - VAMPIRE
+            - CAVALRY
             - DEATH
           weapons:
-            - name: Gravekeeper's Spade
+            - name: Dynastic Cavalier Weapon
               range: ""
               attacks: "5"
-              to_hit: 4+
+              to_hit: 3+
               to_wound: 3+
-              rend: "1"
+              rend: "2"
               damage: "2"
               version: ""
               source: ""
+            - name: Nightmare’s Hooves and Teeth
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
           abilities: []
-        - name: Mortis Engine
+        - name: Bloodseeker Palanquin
           description: ""
           is_manifestation: false
           is_unique: true
@@ -2568,17 +1721,18 @@ factions:
             - WARD (6+)
             - DEATH
             - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
             - WAR MACHINE
             - FLY
             - DEATH
           weapons:
-            - name: Corpsemaster's Staff
+            - name: Sanguinarch's Stiletto
               range: ""
-              attacks: "3"
-              to_hit: 4+
+              attacks: "5"
+              to_hit: 3+
               to_wound: 3+
               rend: "1"
-              damage: D3
+              damage: "2"
               version: ""
               source: ""
             - name: Spectral Host's Blades
@@ -2606,6 +1760,661 @@ factions:
               to_wound: 3+
               rend: "1"
               damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Lady Annika, the Thirsting Blade
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - INFANTRY
+            - WARD (4+)
+            - DEATH
+          weapons:
+            - name: Blade Proboscian
+              range: ""
+              attacks: "7"
+              to_hit: 3+
+              to_wound: 4+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Wight King
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "5"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - WARD (6+)
+            - DEATH
+            - SOULBLIGHT GRAVELORDS
+            - INFANTRY
+            - DEATHRATTLE
+            - DEATH
+          weapons:
+            - name: Baleful Tomb Blade
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
+        - name: Corpse Cart
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "7"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 70
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DEATH
+            - SOULBLIGHT GRAVELORDS
+            - WAR MACHINE
+            - DEADWALKERS
+            - DEATH
+          weapons:
+            - name: Corpsemaster’s Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Zombies’ Rusty Blades
+              range: ""
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Terrorgheist
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "14"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - WARD (6+)
+            - DEATH
+            - MONSTER
+            - FLY
+            - SOULBLIGHT GRAVELORDS
+            - DEATH
+          weapons:
+            - name: Death shriek
+              range: 10"
+              attacks: "1"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Fanged Maw
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: D6
+              version: ""
+              source: ""
+            - name: Skeletal Talons
+              range: ""
+              attacks: "6"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vargheists
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "4"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - WARD (6+)
+            - CHAMPION
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - INFANTRY
+            - FLY
+            - DEATH
+          weapons:
+            - name: Murderous Fangs and Talons
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Vyrkos Blood-born
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 8"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 150
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - INFANTRY
+            - VAMPIRE
+            - DEATH
+          weapons:
+            - name: Piercing Blade
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Zondara's Gravebreakers
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 4"
+          health: "2"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 2
+          matched_play: false
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - UNIQUE
+            - LEGENDS
+            - WARD (6+)
+            - DEATH
+            - CHAMPION
+            - SOULBLIGHT GRAVELORDS
+            - DEADWALKERS
+            - DEATH
+          weapons:
+            - name: Graverobber’s Tools
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Rending Claws
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Graverobber’s Tools
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Graverobber’s Tools
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Graverobber’s Tools
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Mannfred von Carstein, Mortarch of Night
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - WIZARD (2)
+            - UNIQUE
+            - WARD (6+)
+            - MONSTER
+            - FLY
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WARMASTER
+            - DEATH
+          weapons:
+            - name: Ashigaroth's Claws
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "3"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: Gheistvor
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Neferata, Mortarch of Blood
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "14"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 450
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - WIZARD (2)
+            - UNIQUE
+            - WARD (6+)
+            - MONSTER
+            - FLY
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WARMASTER
+            - DEATH
+          weapons:
+            - name: Aken-seth
+              range: ""
+              attacks: "3"
+              to_hit: 2+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Akmet-har
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Nagadron's Claws
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "3"
+              damage: "3"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Prince Vhordrai
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 12"
+          health: "18"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "5"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 470
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - MONSTER
+            - FLY
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WIZARD (1)
+            - DEATH
+          weapons:
+            - name: Shordmaire's Claws
+              range: ""
+              attacks: "7"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Shordmaire's Maw
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 2+
+              rend: "2"
+              damage: "3"
+              version: ""
+              source: ""
+            - name: The Bloodlance
+              range: ""
+              attacks: "6"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Shordemaire's Miasma
+              range: 10"
+              attacks: D6
+              to_hit: 3+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Askurgan Trueblades
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 6"
+          health: "2"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 130
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 6
+          max_unit_size: 12
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - INFANTRY
+            - WARD (6+)
+            - DEATH
+            - CHAMPION (1/8)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - DEATH
+          weapons:
+            - name: Askurgan Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Elongated Claws and Slavering Maw
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Askurgan Weapons
+              range: ""
+              attacks: "2"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Blood Knights
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 220
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 5
+          max_unit_size: 10
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - WARD (6+)
+            - CAVALRY
+            - CHAMPION
+            - STANDARD BEARER (1/5)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - DEATH
+          weapons:
+            - name: Nightmare’s Hooves and Teeth
+              range: ""
+              attacks: "3"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Templar Weapon
+              range: ""
+              attacks: "3"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "1"
               version: ""
               source: ""
           abilities: []
@@ -2666,6 +2475,297 @@ factions:
               version: ""
               source: ""
           abilities: []
+        - name: Sekhar, Fang of Nulahmia (Scourge of Ghyran)
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "6"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 210
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - INFANTRY
+            - WIZARD (2)
+            - DEATH
+          weapons:
+            - name: Nulahmian Warglaive
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Ouboroth’s Godhusk Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: D3
+              version: ""
+              source: ""
+          abilities: []
+        - name: Gorslav the Gravekeeper
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 5"
+          health: "4"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - INFANTRY
+            - DEADWALKERS
+            - DEATH
+          weapons:
+            - name: Gravekeeper's Spade
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Ivya Volga, the Outcast
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 5+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - VAMPIRE
+            - WIZARD (1)
+            - INFANTRY
+            - DEATH
+          weapons:
+            - name: Heirloom Axe
+              range: ""
+              attacks: "5"
+              to_hit: 3+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Bat Swarm's Needling Fangs
+              range: 12"
+              attacks: 2D6
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Watch Captain Halgrim
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 6"
+          health: "5"
+          save: 4+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 110
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - HERO
+            - UNIQUE
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - INFANTRY
+            - DEATHRATTLE
+            - DEATH
+          weapons:
+            - name: Cursed Halberd and Sabre
+              range: ""
+              attacks: "5"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "2"
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Fell Bats
+          description: ""
+          is_manifestation: false
+          is_unique: false
+          move: 12"
+          health: "3"
+          save: 6+
+          ward: ""
+          invuln: ""
+          control: "1"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 90
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 3
+          max_unit_size: 6
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - DEATH
+            - WARD (6+)
+            - SOULBLIGHT GRAVELORDS
+            - BEAST
+            - DEADWALKERS
+            - FLY
+            - DEATH
+          weapons:
+            - name: Chiropteran Fangs
+              range: ""
+              attacks: "3"
+              to_hit: 4+
+              to_wound: 4+
+              rend: '-'
+              damage: "2"
+              version: ""
+              source: ""
+          abilities: []
+        - name: Wight Lord on Skeletal Steed
+          description: ""
+          is_manifestation: false
+          is_unique: true
+          move: 10"
+          health: "7"
+          save: 3+
+          ward: ""
+          invuln: ""
+          control: "2"
+          toughness: ""
+          leadership: ""
+          additional_stats: {}
+          points: 120
+          summon_cost: ""
+          banishment: ""
+          min_unit_size: 1
+          max_unit_size: 1
+          matched_play: true
+          version: ""
+          source: Battlescribe Data
+          keywords:
+            - HERO
+            - WARD (6+)
+            - DEATH
+            - SOULBLIGHT GRAVELORDS
+            - DEATHRATTLE
+            - CAVALRY
+            - DEATH
+          weapons:
+            - name: Lord's Tomb Blade
+              range: ""
+              attacks: "4"
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: "2"
+              version: ""
+              source: ""
+            - name: Skeletal Steed’s Hooves and Teeth
+              range: ""
+              attacks: "2"
+              to_hit: 5+
+              to_wound: 3+
+              rend: '-'
+              damage: "1"
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Ranged Weapon
+              range: 15"
+              attacks: D3+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+            - name: Emberstone-enhanced Melee Weapon
+              range: ""
+              attacks: D6+1
+              to_hit: 4+
+              to_wound: 3+
+              rend: "1"
+              damage: D3+0
+              version: ""
+              source: ""
+          abilities: []
         - name: Corpse Cart (Scourge of Ghyran)
           description: ""
           is_manifestation: false
@@ -2702,106 +2802,6 @@ factions:
               to_wound: 4+
               rend: '-'
               damage: "1"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Kritza, the Rat Prince
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 5+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 70
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - DEATH
-            - HERO
-            - UNIQUE
-            - WARD (6+)
-            - SOULBLIGHT GRAVELORDS
-            - VAMPIRE
-            - INFANTRY
-            - DEATH
-          weapons:
-            - name: Gnawblade
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-          abilities: []
-        - name: Vampire Lord
-          description: ""
-          is_manifestation: false
-          is_unique: true
-          move: 6"
-          health: "5"
-          save: 3+
-          ward: ""
-          invuln: ""
-          control: "2"
-          toughness: ""
-          leadership: ""
-          additional_stats: {}
-          points: 140
-          summon_cost: ""
-          banishment: ""
-          min_unit_size: 1
-          max_unit_size: 1
-          matched_play: true
-          version: ""
-          source: Battlescribe Data
-          keywords:
-            - HERO
-            - WIZARD (1)
-            - WARD (6+)
-            - DEATH
-            - SOULBLIGHT GRAVELORDS
-            - INFANTRY
-            - VAMPIRE
-            - DEATH
-          weapons:
-            - name: Dynastic War-relic
-              range: ""
-              attacks: "5"
-              to_hit: 3+
-              to_wound: 3+
-              rend: "1"
-              damage: "2"
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Ranged Weapon
-              range: 15"
-              attacks: D3+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
-              version: ""
-              source: ""
-            - name: Emberstone-enhanced Melee Weapon
-              range: ""
-              attacks: D6+1
-              to_hit: 4+
-              to_wound: 3+
-              rend: "1"
-              damage: D3+0
               version: ""
               source: ""
           abilities: []
